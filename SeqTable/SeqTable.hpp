@@ -15,11 +15,10 @@ struct SeqTable {
 	size_t capacity_;
 	ElemType *array_;
 
-	SeqTable() : size_{0}, capacity_{0}, array_{nullptr} {}
 	explicit SeqTable(size_t size) :
 		size_{size},
 		capacity_{2 * size},
-		array_{size ? new ElemType[capacity_] : nullptr} {
+		array_{size ? new ElemType[capacity_]() : nullptr} {
 			if (size == 0)
 				throw std::invalid_argument("size of SeqTable can't be zero");
 	}
@@ -31,7 +30,7 @@ struct SeqTable {
 	SeqTable(const SeqTable& ano_table) :
 		size_{ano_table.size_},
 		capacity_{ano_table.capacity_},
-		array_{ano_table.size_ ? new ElemType[ano_table.capacity_] : nullptr} {
+		array_{ano_table.size_ ? new ElemType[ano_table.capacity_]() : nullptr} {
 			if (ano_table.size_ > 0) {
 				std::copy(ano_table.array_, ano_table.array_ + size_, array_);
 			}
@@ -45,7 +44,7 @@ struct SeqTable {
 
 		size_ = ano_table.size_;
 		capacity_ = ano_table.capacity_;
-		array_ = ano_table.size_ ? new ElemType[ano_table.capacity_] : nullptr;
+		array_ = ano_table.size_ ? new ElemType[ano_table.capacity_]() : nullptr;
 
 		if (ano_table.size_ > 0) {
 			std::copy(ano_table.array_, ano_table.array_ + size_, array_);
@@ -124,7 +123,7 @@ struct SeqTable {
 
 	void pop_back() {
 		if (size_ > 0)
-			--size;
+			--size_;
 	}
 
 	void erase(const size_t& pos) {
@@ -138,37 +137,45 @@ struct SeqTable {
 	}
 
 
-	[[nodiscard]] const ElemType& at (const size_t& pos) const {
+	const ElemType& at (const size_t& pos) const {
 		if (pos >= size_)
 			throw std::out_of_range("Index out of range");
 
 		return array_[pos];
 	}
 
-	[[nodiscard]] ElemType& operator[](const size_t& pos) {
+	ElemType& operator[](const size_t& pos) {
 		if (pos >= size_)
 			throw std::out_of_range("Index out of range");
 
 		return array_[pos];
 	}
 
-	[[nodiscard]] ElemType& front() {
+	ElemType& front() {
 		return array_[0];
 	}
 
-	[[nodiscard]] ElemType& back() {
+	ElemType& back() {
 		return array_[size_ - 1];
 	}
 
-	[[nodiscard]] size_t          empty()  const { return size_ == 0; }
+	[[nodiscard]] size_t          empty()    const { return size_ == 0; }
 
-	[[nodiscard]] size_t          size()   const { return size_; }
+	[[nodiscard]] size_t          size()     const { return size_; }
+	[[nodiscard]] size_t          capacity() const { return capacity_; }
 
-	[[nodiscard]] ElemType*       begin()  const { return array_; }
-	[[nodiscard]] const ElemType* cbegin() const { return array_; }
+	[[nodiscard]] ElemType*       begin()    const { return array_; }
+	[[nodiscard]] const ElemType* cbegin()   const { return array_; }
 
-	[[nodiscard]] ElemType*       end()    const { return array_ + size_; }
-	[[nodiscard]] const ElemType* cend()   const { return array_ + size_; }
+	[[nodiscard]] ElemType*       end()      const { return array_ + size_; }
+	[[nodiscard]] const ElemType* cend()     const { return array_ + size_; }
+
+	void print() const {
+		for (size_t i = 0; i < size_; ++i) {
+			std::cout << array_[i] << " ";
+		}
+		std::cout << std::endl;
+	}
 };
 
 

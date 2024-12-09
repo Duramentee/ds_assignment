@@ -94,7 +94,7 @@ TEST(LinkedListTest, EdgeCases) {
     ASSERT_TRUE(list.empty()); // 依然应为空
 }
 
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv); // 初始化 Google Test
-    return RUN_ALL_TESTS(); // 运行所有测试用例
-}
+// int main(int argc, char** argv) {
+//     ::testing::InitGoogleTest(&argc, argv); // 初始化 Google Test
+//     return RUN_ALL_TESTS(); // 运行所有测试用例
+// }

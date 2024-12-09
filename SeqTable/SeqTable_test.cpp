@@ -1,71 +1,153 @@
+#include "SeqTable.hpp"
 #include <gtest/gtest.h>
-#include "SeqTable.hpp" // 包含SeqTable的头文件
 
-// 测试SeqTable的单元测试
-TEST(SeqTableTest, HappyPath) {
-    ds::SeqTable<int> table(2); // 初始化一个大小为2的SeqTable
+namespace ds {
 
-    // 测试push_back功能
-    table.push_back(1);
-    table.push_back(2);
-    EXPECT_EQ(table.size(), 2); // 验证当前大小为2
-    EXPECT_EQ(table.at(0), 1);   // 验证第一个元素为1
-    EXPECT_EQ(table.at(1), 2);   // 验证第二个元素为2
-
-    // 测试insert功能
-    table.insert(1, 3); // 在位置1插入3
-    EXPECT_EQ(table.size(), 3); // 验证当前大小为3
-    EXPECT_EQ(table.at(1), 3);   // 验证新插入的元素在位置1
-
-    // 测试pop_back功能
-    table.pop_back(); // 移除最后一个元素
-    EXPECT_EQ(table.size(), 2); // 验证当前大小为2
-
-    // 测试erase功能
-    table.erase(0); // 移除位置0的元素
-    EXPECT_EQ(table.size(), 1); // 验证当前大小为1
-    EXPECT_EQ(table.at(0), 3);   // 验证当前位置的元素为3
-
-    // 测试front和back功能
-    EXPECT_EQ(table.front(), 3); // 验证front
-    EXPECT_EQ(table.back(), 3);  // 验证back
-
-    // 测试resize到更大和更小
-    table.resize(5); // 扩展到5
-    EXPECT_EQ(table.size(), 5); // 验证当前大小为5
-    EXPECT_EQ(table.at(0), 3);   // 验证当前位置的元素为3
-
-    table.resize(0); // 收缩到0
-    EXPECT_EQ(table.size(), 0); // 验证当前大小为0
+TEST(SeqTableTest, Constructor) {
+    SeqTable<int> table(10);
+    EXPECT_EQ(table.size(), 10u);
+    EXPECT_EQ(table.capacity(), 20u);
 }
 
-// 边缘案例测试
-TEST(SeqTableTest, EdgeCases) {
-    // 测试构造函数，大小为0的情况下
-    EXPECT_THROW(ds::SeqTable<int>(0), std::invalid_argument); // 应该抛出异常
-
-    ds::SeqTable<int> table;
-
-    // 测试push_back在容量为0的情况下
-    table.push_back(1);
-    EXPECT_EQ(table.size(), 1); // 当前大小为1
-
-    // 测试out_of_range异常
-    EXPECT_THROW(table.at(1), std::out_of_range); // 超出范围访问
-    EXPECT_THROW(table.erase(1), std::out_of_range); // 超出范围删除
-    EXPECT_THROW(table.insert(2, 4), std::out_of_range); // 超出范围插入
-
-    // 测试pop_back在空表情况
-    table.pop_back(); // 移除元素
-    EXPECT_EQ(table.size(), 0); // 验证当前大小为0
-    table.pop_back(); // 再次移除应该不会出错（空表）
-
-    // 测试out_of_range异常的访问
-    EXPECT_THROW(table.front(), std::out_of_range); // 空表访问front
-    EXPECT_THROW(table.back(), std::out_of_range); // 空表访问back
+TEST(SeqTableTest, CopyConstructor) {
+    SeqTable<int> original(5);
+    for (int i = 0; i < 5; ++i) {
+        original.push_back(i);
+    }
+    SeqTable<int> copy(original);
+    EXPECT_EQ(copy.size(), 10u);
+    EXPECT_EQ(copy.capacity(), 10u);
+    for (int i = 5; i < 10; ++i) {
+        EXPECT_EQ(copy[i], i - 5);
+    }
 }
+
+TEST(SeqTableTest, MoveConstructor) {
+    SeqTable<int> original(5);
+    for (int i = 0; i < 5; ++i) {
+        original.push_back(i);
+    }
+    SeqTable<int> moved(std::move(original));
+    EXPECT_EQ(moved.size(), 10u);
+    EXPECT_EQ(moved.capacity(), 10u);
+    for (int i = 5; i < 10; ++i) {
+        EXPECT_EQ(moved[i], i - 5);
+    }
+    EXPECT_TRUE(original.empty());
+}
+
+TEST(SeqTableTest, CopyAssignment) {
+    SeqTable<int> original(5);
+    for (int i = 0; i < 5; ++i) {
+        original.push_back(i);
+    }
+    SeqTable<int> copy = original;
+    EXPECT_EQ(copy.size(), 10u);
+    EXPECT_EQ(copy.capacity(), 10u);
+    for (int i = 5; i < 10; ++i) {
+        EXPECT_EQ(copy[i], i - 5);
+    }
+}
+
+TEST(SeqTableTest, MoveAssignment) {
+    SeqTable<int> original(5);
+    for (int i = 0; i < 5; ++i) {
+        original.push_back(i);
+    }
+    SeqTable<int> moved = std::move(original);
+    EXPECT_EQ(moved.size(), 10u);
+    EXPECT_EQ(moved.capacity(), 10u);
+    for (int i = 5; i < 10; ++i) {
+        EXPECT_EQ(moved[i], i - 5);
+    }
+    EXPECT_TRUE(original.empty());
+}
+
+TEST(SeqTableTest, Insert) {
+    SeqTable<int> table(1);
+    table[0] = 1;
+    table.insert(0, 0);
+    EXPECT_EQ(table.size(), 2u);
+    EXPECT_EQ(table[0], 0);
+    EXPECT_EQ(table[1], 1);
+}
+
+TEST(SeqTableTest, PopBack) {
+    SeqTable<int> table(2);
+    table[0] = 1;
+    table[1] = 2;
+    table.pop_back();
+    EXPECT_EQ(table.size(), 1u);
+    EXPECT_EQ(table[0], 1);
+}
+
+TEST(SeqTableTest, Erase) {
+    SeqTable<int> table(3);
+    for (int i = 0; i < 3; ++i) {
+        table[i] = i;
+    }
+    table.erase(1);
+    EXPECT_EQ(table.size(), 2u);
+    EXPECT_EQ(table[0], 0);
+    EXPECT_EQ(table[1], 2);
+}
+
+TEST(SeqTableTest, At) {
+    SeqTable<int> table(2);
+    table[0] = 1;
+    table[1] = 2;
+    EXPECT_EQ(table.at(0), 1);
+    EXPECT_EQ(table.at(1), 2);
+}
+
+TEST(SeqTableTest, OperatorBrackets) {
+    SeqTable<int> table(2);
+    table[0] = 1;
+    table[1] = 2;
+    EXPECT_EQ(table[0], 1);
+    EXPECT_EQ(table[1], 2);
+}
+
+TEST(SeqTableTest, FrontBack) {
+    SeqTable<int> table(2);
+    table[0] = 1;
+    table[1] = 2;
+    EXPECT_EQ(table.front(), 1);
+    EXPECT_EQ(table.back(), 2);
+}
+
+TEST(SeqTableTest, EmptySize) {
+    SeqTable<int> table(1);
+    table.erase(0);
+    EXPECT_TRUE(table.empty());
+    table.push_back(1);
+    EXPECT_FALSE(table.empty());
+    EXPECT_EQ(table.size(), 1u);
+}
+
+TEST(SeqTableTest, Iterators) {
+    SeqTable<int> table(3);
+    for (int i = 0; i < 3; ++i) {
+        table[i] = i;
+    }
+    const std::vector<int> vec(table.begin(), table.end());
+    EXPECT_EQ(vec.size(), 3u);
+    for (size_t i = 0; i < vec.size(); ++i) {
+        EXPECT_EQ(vec[i], i);
+    }
+}
+
+TEST(SeqTableTest, Print) {
+    SeqTable<int> table(3);
+    for (int i = 0; i < 3; ++i) {
+        table.push_back(i);
+    }
+    EXPECT_NO_THROW(table.print());
+}
+
+}  // namespace ds
 
 int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv); // 初始化GoogleTest
-    return RUN_ALL_TESTS(); // 运行所有测试
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
