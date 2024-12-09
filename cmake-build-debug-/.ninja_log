@@ -1,0 +1,6 @@
+# ninja log v6
+1	1102	1733714893933661588	CMakeFiles/ds.dir/main.cpp.o	8d75df3012458cd
+2	19	1733714918112662508	CMakeFiles/ds.dir/main.cpp.o	8c62ba7e03ddb954
+3	19	1733714918113662508	CMakeFiles/ds.dir/Stack_test.cpp.o	196e64769a82d66e
+3	1382	1733714918113662508	CMakeFiles/ds.dir/LinkedList_test.cpp.o	5c79b432bbd5ce99
+1382	1463	1733714919492662560	ds	a937742d5890ff0b

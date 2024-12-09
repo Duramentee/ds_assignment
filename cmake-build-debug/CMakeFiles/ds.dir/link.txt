@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ds.dir/main.cpp.o CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o CMakeFiles/ds.dir/Stack/Stack_test.cpp.o CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o CMakeFiles/ds.dir/Queue/Queue_test.cpp.o CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o -o ds  /usr/lib/x86_64-linux-gnu/libgtest.a -lpthread
