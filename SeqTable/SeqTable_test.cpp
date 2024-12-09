@@ -1,96 +1,71 @@
-//
-// Created by lsx31 on 24-12-9.
-//
-
 #include <gtest/gtest.h>
-#include "SeqTable.hpp"
+#include "SeqTable.hpp" // 包含SeqTable的头文件
 
-using namespace ds;
+// 测试SeqTable的单元测试
+TEST(SeqTableTest, HappyPath) {
+    ds::SeqTable<int> table(2); // 初始化一个大小为2的SeqTable
 
-// 测试单元类
-class SeqTableTest : public ::testing::Test {
-protected:
-    SeqTable<int> seqTable;
+    // 测试push_back功能
+    table.push_back(1);
+    table.push_back(2);
+    EXPECT_EQ(table.size(), 2); // 验证当前大小为2
+    EXPECT_EQ(table.at(0), 1);   // 验证第一个元素为1
+    EXPECT_EQ(table.at(1), 2);   // 验证第二个元素为2
 
-    // 测试前的准备
-    void SetUp() override {
-        seqTable.push_back(1);
-        seqTable.push_back(2);
-        seqTable.push_back(3);
-    }
+    // 测试insert功能
+    table.insert(1, 3); // 在位置1插入3
+    EXPECT_EQ(table.size(), 3); // 验证当前大小为3
+    EXPECT_EQ(table.at(1), 3);   // 验证新插入的元素在位置1
 
-    // 测试后的清理
-    void TearDown() override {
-        // 这里不需要做特别的清理，因为SeqTable会自动处理内存
-    }
-};
+    // 测试pop_back功能
+    table.pop_back(); // 移除最后一个元素
+    EXPECT_EQ(table.size(), 2); // 验证当前大小为2
 
-// 测试正常情况
-TEST_F(SeqTableTest, PushBackTest) {
-    EXPECT_EQ(seqTable.size(), 3); // 当前大小应该为3
-    seqTable.push_back(4);
-    EXPECT_EQ(seqTable.size(), 4); // 添加一个元素后，大小应该为4
-    EXPECT_EQ(seqTable.at(3), 4);   // 最后一个元素应该是4
+    // 测试erase功能
+    table.erase(0); // 移除位置0的元素
+    EXPECT_EQ(table.size(), 1); // 验证当前大小为1
+    EXPECT_EQ(table.at(0), 3);   // 验证当前位置的元素为3
+
+    // 测试front和back功能
+    EXPECT_EQ(table.front(), 3); // 验证front
+    EXPECT_EQ(table.back(), 3);  // 验证back
+
+    // 测试resize到更大和更小
+    table.resize(5); // 扩展到5
+    EXPECT_EQ(table.size(), 5); // 验证当前大小为5
+    EXPECT_EQ(table.at(0), 3);   // 验证当前位置的元素为3
+
+    table.resize(0); // 收缩到0
+    EXPECT_EQ(table.size(), 0); // 验证当前大小为0
 }
 
-// 测试插入元素
-TEST_F(SeqTableTest, InsertTest) {
-    seqTable.insert(1, 5); // 在位置1插入5
-    EXPECT_EQ(seqTable.at(1), 5); // 确保插入成功
-    EXPECT_EQ(seqTable.size(), 4); // 大小应该增加到4
+// 边缘案例测试
+TEST(SeqTableTest, EdgeCases) {
+    // 测试构造函数，大小为0的情况下
+    EXPECT_THROW(ds::SeqTable<int>(0), std::invalid_argument); // 应该抛出异常
+
+    ds::SeqTable<int> table;
+
+    // 测试push_back在容量为0的情况下
+    table.push_back(1);
+    EXPECT_EQ(table.size(), 1); // 当前大小为1
+
+    // 测试out_of_range异常
+    EXPECT_THROW(table.at(1), std::out_of_range); // 超出范围访问
+    EXPECT_THROW(table.erase(1), std::out_of_range); // 超出范围删除
+    EXPECT_THROW(table.insert(2, 4), std::out_of_range); // 超出范围插入
+
+    // 测试pop_back在空表情况
+    table.pop_back(); // 移除元素
+    EXPECT_EQ(table.size(), 0); // 验证当前大小为0
+    table.pop_back(); // 再次移除应该不会出错（空表）
+
+    // 测试out_of_range异常的访问
+    EXPECT_THROW(table.front(), std::out_of_range); // 空表访问front
+    EXPECT_THROW(table.back(), std::out_of_range); // 空表访问back
 }
 
-// 测试获得元素
-TEST_F(SeqTableTest, AtTest) {
-    EXPECT_EQ(seqTable.at(0), 1); // 第一个元素应该是1
-    EXPECT_EQ(seqTable.at(2), 3); // 第三个元素应该是3
-}
-
-// 测试边界情况：插入越界
-TEST_F(SeqTableTest, InsertOutOfRangeTest) {
-    EXPECT_THROW(seqTable.insert(5, 6), std::out_of_range); // 超出范围的插入应该抛出异常
-}
-
-// 测试删除元素
-TEST_F(SeqTableTest, EraseTest) {
-    seqTable.erase(1); // 删除索引为1的元素
-    EXPECT_EQ(seqTable.size(), 2); // 删除后大小应该为2
-    EXPECT_EQ(seqTable.at(1), 3); // 确保索引1的元素现在是3
-}
-
-// 测试边界情况：删除越界
-TEST_F(SeqTableTest, EraseOutOfRangeTest) {
-    EXPECT_THROW(seqTable.erase(3), std::out_of_range); // 超出范围的删除应该抛出异常
-}
-
-// 测试弹出最后一个元素
-TEST_F(SeqTableTest, PopBackTest) {
-    seqTable.pop_back(); // 弹出最后一个元素
-    EXPECT_EQ(seqTable.size(), 2); // 大小应该为2
-}
-
-// 测试空表
-TEST(SeqTableEmptyTest, EmptyTest) {
-    SeqTable<int> emptyTable;
-    EXPECT_TRUE(emptyTable.empty()); // 确保为空
-}
-
-// 测试调整大小
-TEST_F(SeqTableTest, ResizeTest) {
-    seqTable.resize(5); // 调整为更大的大小
-    EXPECT_EQ(seqTable.size(), 5); // 大小应该更新为5
-    EXPECT_EQ(seqTable.at(0), 1); // 原始元素应该保留
-    EXPECT_EQ(seqTable.at(1), 2);
-    EXPECT_EQ(seqTable.at(2), 3);
-}
-
-// 测试调整大小为零
-TEST_F(SeqTableTest, ResizeToZeroTest) {
-    seqTable.resize(0); // 调整为0
-    EXPECT_TRUE(seqTable.empty()); // 应该为空
-}
-
-// 测试异常：获取越界元素
-TEST_F(SeqTableTest, AtOutOfRangeTest) {
-    EXPECT_THROW(seqTable.at(5), std::out_of_range); // 超出范围的访问应该抛出异常
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv); // 初始化GoogleTest
+    return RUN_ALL_TESTS(); // 运行所有测试
 }
