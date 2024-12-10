@@ -139,125 +139,149 @@ ds/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/build
 .PHONY : ds/fast
 
-LinkedList/LinkedList_test.o: LinkedList/LinkedList_test.cpp.o
-.PHONY : LinkedList/LinkedList_test.o
+Graph/GraphTest.o: Graph/GraphTest.cpp.o
+.PHONY : Graph/GraphTest.o
 
 # target to build an object file
-LinkedList/LinkedList_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o
-.PHONY : LinkedList/LinkedList_test.cpp.o
+Graph/GraphTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Graph/GraphTest.cpp.o
+.PHONY : Graph/GraphTest.cpp.o
 
-LinkedList/LinkedList_test.i: LinkedList/LinkedList_test.cpp.i
-.PHONY : LinkedList/LinkedList_test.i
+Graph/GraphTest.i: Graph/GraphTest.cpp.i
+.PHONY : Graph/GraphTest.i
 
 # target to preprocess a source file
-LinkedList/LinkedList_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.i
-.PHONY : LinkedList/LinkedList_test.cpp.i
+Graph/GraphTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Graph/GraphTest.cpp.i
+.PHONY : Graph/GraphTest.cpp.i
 
-LinkedList/LinkedList_test.s: LinkedList/LinkedList_test.cpp.s
-.PHONY : LinkedList/LinkedList_test.s
+Graph/GraphTest.s: Graph/GraphTest.cpp.s
+.PHONY : Graph/GraphTest.s
 
 # target to generate assembly for a file
-LinkedList/LinkedList_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.s
-.PHONY : LinkedList/LinkedList_test.cpp.s
+Graph/GraphTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Graph/GraphTest.cpp.s
+.PHONY : Graph/GraphTest.cpp.s
 
-Queue/Queue_test.o: Queue/Queue_test.cpp.o
-.PHONY : Queue/Queue_test.o
+LinkedList/LinkedListTest.o: LinkedList/LinkedListTest.cpp.o
+.PHONY : LinkedList/LinkedListTest.o
 
 # target to build an object file
-Queue/Queue_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Queue/Queue_test.cpp.o
-.PHONY : Queue/Queue_test.cpp.o
+LinkedList/LinkedListTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o
+.PHONY : LinkedList/LinkedListTest.cpp.o
 
-Queue/Queue_test.i: Queue/Queue_test.cpp.i
-.PHONY : Queue/Queue_test.i
+LinkedList/LinkedListTest.i: LinkedList/LinkedListTest.cpp.i
+.PHONY : LinkedList/LinkedListTest.i
 
 # target to preprocess a source file
-Queue/Queue_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Queue/Queue_test.cpp.i
-.PHONY : Queue/Queue_test.cpp.i
+LinkedList/LinkedListTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.i
+.PHONY : LinkedList/LinkedListTest.cpp.i
 
-Queue/Queue_test.s: Queue/Queue_test.cpp.s
-.PHONY : Queue/Queue_test.s
+LinkedList/LinkedListTest.s: LinkedList/LinkedListTest.cpp.s
+.PHONY : LinkedList/LinkedListTest.s
 
 # target to generate assembly for a file
-Queue/Queue_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Queue/Queue_test.cpp.s
-.PHONY : Queue/Queue_test.cpp.s
+LinkedList/LinkedListTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.s
+.PHONY : LinkedList/LinkedListTest.cpp.s
 
-SeqTable/SeqTable_test.o: SeqTable/SeqTable_test.cpp.o
-.PHONY : SeqTable/SeqTable_test.o
+Queue/QueueTest.o: Queue/QueueTest.cpp.o
+.PHONY : Queue/QueueTest.o
 
 # target to build an object file
-SeqTable/SeqTable_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o
-.PHONY : SeqTable/SeqTable_test.cpp.o
+Queue/QueueTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Queue/QueueTest.cpp.o
+.PHONY : Queue/QueueTest.cpp.o
 
-SeqTable/SeqTable_test.i: SeqTable/SeqTable_test.cpp.i
-.PHONY : SeqTable/SeqTable_test.i
+Queue/QueueTest.i: Queue/QueueTest.cpp.i
+.PHONY : Queue/QueueTest.i
 
 # target to preprocess a source file
-SeqTable/SeqTable_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.i
-.PHONY : SeqTable/SeqTable_test.cpp.i
+Queue/QueueTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Queue/QueueTest.cpp.i
+.PHONY : Queue/QueueTest.cpp.i
 
-SeqTable/SeqTable_test.s: SeqTable/SeqTable_test.cpp.s
-.PHONY : SeqTable/SeqTable_test.s
+Queue/QueueTest.s: Queue/QueueTest.cpp.s
+.PHONY : Queue/QueueTest.s
 
 # target to generate assembly for a file
-SeqTable/SeqTable_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.s
-.PHONY : SeqTable/SeqTable_test.cpp.s
+Queue/QueueTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Queue/QueueTest.cpp.s
+.PHONY : Queue/QueueTest.cpp.s
 
-Stack/Stack_test.o: Stack/Stack_test.cpp.o
-.PHONY : Stack/Stack_test.o
+SeqTable/SeqTableTest.o: SeqTable/SeqTableTest.cpp.o
+.PHONY : SeqTable/SeqTableTest.o
 
 # target to build an object file
-Stack/Stack_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Stack/Stack_test.cpp.o
-.PHONY : Stack/Stack_test.cpp.o
+SeqTable/SeqTableTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o
+.PHONY : SeqTable/SeqTableTest.cpp.o
 
-Stack/Stack_test.i: Stack/Stack_test.cpp.i
-.PHONY : Stack/Stack_test.i
+SeqTable/SeqTableTest.i: SeqTable/SeqTableTest.cpp.i
+.PHONY : SeqTable/SeqTableTest.i
 
 # target to preprocess a source file
-Stack/Stack_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Stack/Stack_test.cpp.i
-.PHONY : Stack/Stack_test.cpp.i
+SeqTable/SeqTableTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.i
+.PHONY : SeqTable/SeqTableTest.cpp.i
 
-Stack/Stack_test.s: Stack/Stack_test.cpp.s
-.PHONY : Stack/Stack_test.s
+SeqTable/SeqTableTest.s: SeqTable/SeqTableTest.cpp.s
+.PHONY : SeqTable/SeqTableTest.s
 
 # target to generate assembly for a file
-Stack/Stack_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Stack/Stack_test.cpp.s
-.PHONY : Stack/Stack_test.cpp.s
+SeqTable/SeqTableTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.s
+.PHONY : SeqTable/SeqTableTest.cpp.s
 
-Tree/BinaryTree_test.o: Tree/BinaryTree_test.cpp.o
-.PHONY : Tree/BinaryTree_test.o
+Stack/StackTest.o: Stack/StackTest.cpp.o
+.PHONY : Stack/StackTest.o
 
 # target to build an object file
-Tree/BinaryTree_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o
-.PHONY : Tree/BinaryTree_test.cpp.o
+Stack/StackTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Stack/StackTest.cpp.o
+.PHONY : Stack/StackTest.cpp.o
 
-Tree/BinaryTree_test.i: Tree/BinaryTree_test.cpp.i
-.PHONY : Tree/BinaryTree_test.i
+Stack/StackTest.i: Stack/StackTest.cpp.i
+.PHONY : Stack/StackTest.i
 
 # target to preprocess a source file
-Tree/BinaryTree_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.i
-.PHONY : Tree/BinaryTree_test.cpp.i
+Stack/StackTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Stack/StackTest.cpp.i
+.PHONY : Stack/StackTest.cpp.i
 
-Tree/BinaryTree_test.s: Tree/BinaryTree_test.cpp.s
-.PHONY : Tree/BinaryTree_test.s
+Stack/StackTest.s: Stack/StackTest.cpp.s
+.PHONY : Stack/StackTest.s
 
 # target to generate assembly for a file
-Tree/BinaryTree_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.s
-.PHONY : Tree/BinaryTree_test.cpp.s
+Stack/StackTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Stack/StackTest.cpp.s
+.PHONY : Stack/StackTest.cpp.s
+
+Tree/BinaryTreeTest.o: Tree/BinaryTreeTest.cpp.o
+.PHONY : Tree/BinaryTreeTest.o
+
+# target to build an object file
+Tree/BinaryTreeTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o
+.PHONY : Tree/BinaryTreeTest.cpp.o
+
+Tree/BinaryTreeTest.i: Tree/BinaryTreeTest.cpp.i
+.PHONY : Tree/BinaryTreeTest.i
+
+# target to preprocess a source file
+Tree/BinaryTreeTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.i
+.PHONY : Tree/BinaryTreeTest.cpp.i
+
+Tree/BinaryTreeTest.s: Tree/BinaryTreeTest.cpp.s
+.PHONY : Tree/BinaryTreeTest.s
+
+# target to generate assembly for a file
+Tree/BinaryTreeTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.s
+.PHONY : Tree/BinaryTreeTest.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -293,21 +317,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ds"
-	@echo "... LinkedList/LinkedList_test.o"
-	@echo "... LinkedList/LinkedList_test.i"
-	@echo "... LinkedList/LinkedList_test.s"
-	@echo "... Queue/Queue_test.o"
-	@echo "... Queue/Queue_test.i"
-	@echo "... Queue/Queue_test.s"
-	@echo "... SeqTable/SeqTable_test.o"
-	@echo "... SeqTable/SeqTable_test.i"
-	@echo "... SeqTable/SeqTable_test.s"
-	@echo "... Stack/Stack_test.o"
-	@echo "... Stack/Stack_test.i"
-	@echo "... Stack/Stack_test.s"
-	@echo "... Tree/BinaryTree_test.o"
-	@echo "... Tree/BinaryTree_test.i"
-	@echo "... Tree/BinaryTree_test.s"
+	@echo "... Graph/GraphTest.o"
+	@echo "... Graph/GraphTest.i"
+	@echo "... Graph/GraphTest.s"
+	@echo "... LinkedList/LinkedListTest.o"
+	@echo "... LinkedList/LinkedListTest.i"
+	@echo "... LinkedList/LinkedListTest.s"
+	@echo "... Queue/QueueTest.o"
+	@echo "... Queue/QueueTest.i"
+	@echo "... Queue/QueueTest.s"
+	@echo "... SeqTable/SeqTableTest.o"
+	@echo "... SeqTable/SeqTableTest.i"
+	@echo "... SeqTable/SeqTableTest.s"
+	@echo "... Stack/StackTest.o"
+	@echo "... Stack/StackTest.i"
+	@echo "... Stack/StackTest.s"
+	@echo "... Tree/BinaryTreeTest.o"
+	@echo "... Tree/BinaryTreeTest.i"
+	@echo "... Tree/BinaryTreeTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

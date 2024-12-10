@@ -5,15 +5,17 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(ds main.cpp
         LinkedList/LinkedList.hpp
-        LinkedList/LinkedList_test.cpp
+        LinkedList/LinkedListTest.cpp
         Stack/Stack.hpp
-        Stack/Stack_test.cpp
+        Stack/StackTest.cpp
         SeqTable/SeqTable.hpp
-        SeqTable/SeqTable_test.cpp
+        SeqTable/SeqTableTest.cpp
         Queue/Queue.hpp
-        Queue/Queue_test.cpp
+        Queue/QueueTest.cpp
         Tree/BinaryTree.hpp
-        Tree/BinaryTree_test.cpp)
+        Tree/BinaryTreeTest.cpp
+        Graph/GraphTest.cpp
+        Graph/Graph.hpp)
 
 enable_testing()
 find_package(GTest REQUIRED)

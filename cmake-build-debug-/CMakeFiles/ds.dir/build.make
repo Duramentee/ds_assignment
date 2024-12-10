@@ -83,98 +83,114 @@ CMakeFiles/ds.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/main.cpp -o CMakeFiles/ds.dir/main.cpp.s
 
-CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o: CMakeFiles/ds.dir/flags.make
-CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o: /home/drowlia/code_save/ds/LinkedList/LinkedList_test.cpp
-CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o -MF CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o.d -o CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o -c /home/drowlia/code_save/ds/LinkedList/LinkedList_test.cpp
+CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o: CMakeFiles/ds.dir/flags.make
+CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o: /home/drowlia/code_save/ds/LinkedList/LinkedListTest.cpp
+CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o -MF CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o.d -o CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o -c /home/drowlia/code_save/ds/LinkedList/LinkedListTest.cpp
 
-CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/LinkedList/LinkedList_test.cpp > CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.i
+CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/LinkedList/LinkedListTest.cpp > CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.i
 
-CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/LinkedList/LinkedList_test.cpp -o CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.s
+CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/LinkedList/LinkedListTest.cpp -o CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.s
 
-CMakeFiles/ds.dir/Stack/Stack_test.cpp.o: CMakeFiles/ds.dir/flags.make
-CMakeFiles/ds.dir/Stack/Stack_test.cpp.o: /home/drowlia/code_save/ds/Stack/Stack_test.cpp
-CMakeFiles/ds.dir/Stack/Stack_test.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ds.dir/Stack/Stack_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/Stack/Stack_test.cpp.o -MF CMakeFiles/ds.dir/Stack/Stack_test.cpp.o.d -o CMakeFiles/ds.dir/Stack/Stack_test.cpp.o -c /home/drowlia/code_save/ds/Stack/Stack_test.cpp
+CMakeFiles/ds.dir/Stack/StackTest.cpp.o: CMakeFiles/ds.dir/flags.make
+CMakeFiles/ds.dir/Stack/StackTest.cpp.o: /home/drowlia/code_save/ds/Stack/StackTest.cpp
+CMakeFiles/ds.dir/Stack/StackTest.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ds.dir/Stack/StackTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/Stack/StackTest.cpp.o -MF CMakeFiles/ds.dir/Stack/StackTest.cpp.o.d -o CMakeFiles/ds.dir/Stack/StackTest.cpp.o -c /home/drowlia/code_save/ds/Stack/StackTest.cpp
 
-CMakeFiles/ds.dir/Stack/Stack_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/Stack/Stack_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/Stack/Stack_test.cpp > CMakeFiles/ds.dir/Stack/Stack_test.cpp.i
+CMakeFiles/ds.dir/Stack/StackTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/Stack/StackTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/Stack/StackTest.cpp > CMakeFiles/ds.dir/Stack/StackTest.cpp.i
 
-CMakeFiles/ds.dir/Stack/Stack_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/Stack/Stack_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/Stack/Stack_test.cpp -o CMakeFiles/ds.dir/Stack/Stack_test.cpp.s
+CMakeFiles/ds.dir/Stack/StackTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/Stack/StackTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/Stack/StackTest.cpp -o CMakeFiles/ds.dir/Stack/StackTest.cpp.s
 
-CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o: CMakeFiles/ds.dir/flags.make
-CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o: /home/drowlia/code_save/ds/SeqTable/SeqTable_test.cpp
-CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o -MF CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o.d -o CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o -c /home/drowlia/code_save/ds/SeqTable/SeqTable_test.cpp
+CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o: CMakeFiles/ds.dir/flags.make
+CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o: /home/drowlia/code_save/ds/SeqTable/SeqTableTest.cpp
+CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o -MF CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o.d -o CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o -c /home/drowlia/code_save/ds/SeqTable/SeqTableTest.cpp
 
-CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/SeqTable/SeqTable_test.cpp > CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.i
+CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/SeqTable/SeqTableTest.cpp > CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.i
 
-CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/SeqTable/SeqTable_test.cpp -o CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.s
+CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/SeqTable/SeqTableTest.cpp -o CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.s
 
-CMakeFiles/ds.dir/Queue/Queue_test.cpp.o: CMakeFiles/ds.dir/flags.make
-CMakeFiles/ds.dir/Queue/Queue_test.cpp.o: /home/drowlia/code_save/ds/Queue/Queue_test.cpp
-CMakeFiles/ds.dir/Queue/Queue_test.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ds.dir/Queue/Queue_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/Queue/Queue_test.cpp.o -MF CMakeFiles/ds.dir/Queue/Queue_test.cpp.o.d -o CMakeFiles/ds.dir/Queue/Queue_test.cpp.o -c /home/drowlia/code_save/ds/Queue/Queue_test.cpp
+CMakeFiles/ds.dir/Queue/QueueTest.cpp.o: CMakeFiles/ds.dir/flags.make
+CMakeFiles/ds.dir/Queue/QueueTest.cpp.o: /home/drowlia/code_save/ds/Queue/QueueTest.cpp
+CMakeFiles/ds.dir/Queue/QueueTest.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ds.dir/Queue/QueueTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/Queue/QueueTest.cpp.o -MF CMakeFiles/ds.dir/Queue/QueueTest.cpp.o.d -o CMakeFiles/ds.dir/Queue/QueueTest.cpp.o -c /home/drowlia/code_save/ds/Queue/QueueTest.cpp
 
-CMakeFiles/ds.dir/Queue/Queue_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/Queue/Queue_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/Queue/Queue_test.cpp > CMakeFiles/ds.dir/Queue/Queue_test.cpp.i
+CMakeFiles/ds.dir/Queue/QueueTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/Queue/QueueTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/Queue/QueueTest.cpp > CMakeFiles/ds.dir/Queue/QueueTest.cpp.i
 
-CMakeFiles/ds.dir/Queue/Queue_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/Queue/Queue_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/Queue/Queue_test.cpp -o CMakeFiles/ds.dir/Queue/Queue_test.cpp.s
+CMakeFiles/ds.dir/Queue/QueueTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/Queue/QueueTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/Queue/QueueTest.cpp -o CMakeFiles/ds.dir/Queue/QueueTest.cpp.s
 
-CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o: CMakeFiles/ds.dir/flags.make
-CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o: /home/drowlia/code_save/ds/Tree/BinaryTree_test.cpp
-CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o -MF CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o.d -o CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o -c /home/drowlia/code_save/ds/Tree/BinaryTree_test.cpp
+CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o: CMakeFiles/ds.dir/flags.make
+CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o: /home/drowlia/code_save/ds/Tree/BinaryTreeTest.cpp
+CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o -MF CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o.d -o CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o -c /home/drowlia/code_save/ds/Tree/BinaryTreeTest.cpp
 
-CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/Tree/BinaryTree_test.cpp > CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.i
+CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/Tree/BinaryTreeTest.cpp > CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.i
 
-CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/Tree/BinaryTree_test.cpp -o CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.s
+CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/Tree/BinaryTreeTest.cpp -o CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.s
+
+CMakeFiles/ds.dir/Graph/GraphTest.cpp.o: CMakeFiles/ds.dir/flags.make
+CMakeFiles/ds.dir/Graph/GraphTest.cpp.o: /home/drowlia/code_save/ds/Graph/GraphTest.cpp
+CMakeFiles/ds.dir/Graph/GraphTest.cpp.o: CMakeFiles/ds.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ds.dir/Graph/GraphTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ds.dir/Graph/GraphTest.cpp.o -MF CMakeFiles/ds.dir/Graph/GraphTest.cpp.o.d -o CMakeFiles/ds.dir/Graph/GraphTest.cpp.o -c /home/drowlia/code_save/ds/Graph/GraphTest.cpp
+
+CMakeFiles/ds.dir/Graph/GraphTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ds.dir/Graph/GraphTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drowlia/code_save/ds/Graph/GraphTest.cpp > CMakeFiles/ds.dir/Graph/GraphTest.cpp.i
+
+CMakeFiles/ds.dir/Graph/GraphTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ds.dir/Graph/GraphTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drowlia/code_save/ds/Graph/GraphTest.cpp -o CMakeFiles/ds.dir/Graph/GraphTest.cpp.s
 
 # Object files for target ds
 ds_OBJECTS = \
 "CMakeFiles/ds.dir/main.cpp.o" \
-"CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o" \
-"CMakeFiles/ds.dir/Stack/Stack_test.cpp.o" \
-"CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o" \
-"CMakeFiles/ds.dir/Queue/Queue_test.cpp.o" \
-"CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o"
+"CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o" \
+"CMakeFiles/ds.dir/Stack/StackTest.cpp.o" \
+"CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o" \
+"CMakeFiles/ds.dir/Queue/QueueTest.cpp.o" \
+"CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o" \
+"CMakeFiles/ds.dir/Graph/GraphTest.cpp.o"
 
 # External object files for target ds
 ds_EXTERNAL_OBJECTS =
 
 ds: CMakeFiles/ds.dir/main.cpp.o
-ds: CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o
-ds: CMakeFiles/ds.dir/Stack/Stack_test.cpp.o
-ds: CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o
-ds: CMakeFiles/ds.dir/Queue/Queue_test.cpp.o
-ds: CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o
+ds: CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o
+ds: CMakeFiles/ds.dir/Stack/StackTest.cpp.o
+ds: CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o
+ds: CMakeFiles/ds.dir/Queue/QueueTest.cpp.o
+ds: CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o
+ds: CMakeFiles/ds.dir/Graph/GraphTest.cpp.o
 ds: CMakeFiles/ds.dir/build.make
 ds: /usr/lib/x86_64-linux-gnu/libgtest.a
 ds: CMakeFiles/ds.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ds"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ds"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ds.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

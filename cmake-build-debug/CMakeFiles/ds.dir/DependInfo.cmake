@@ -8,11 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/drowlia/code_save/ds/LinkedList/LinkedList_test.cpp" "CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o" "gcc" "CMakeFiles/ds.dir/LinkedList/LinkedList_test.cpp.o.d"
-  "/home/drowlia/code_save/ds/Queue/Queue_test.cpp" "CMakeFiles/ds.dir/Queue/Queue_test.cpp.o" "gcc" "CMakeFiles/ds.dir/Queue/Queue_test.cpp.o.d"
-  "/home/drowlia/code_save/ds/SeqTable/SeqTable_test.cpp" "CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o" "gcc" "CMakeFiles/ds.dir/SeqTable/SeqTable_test.cpp.o.d"
-  "/home/drowlia/code_save/ds/Stack/Stack_test.cpp" "CMakeFiles/ds.dir/Stack/Stack_test.cpp.o" "gcc" "CMakeFiles/ds.dir/Stack/Stack_test.cpp.o.d"
-  "/home/drowlia/code_save/ds/Tree/BinaryTree_test.cpp" "CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o" "gcc" "CMakeFiles/ds.dir/Tree/BinaryTree_test.cpp.o.d"
+  "/home/drowlia/code_save/ds/Graph/GraphTest.cpp" "CMakeFiles/ds.dir/Graph/GraphTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Graph/GraphTest.cpp.o.d"
+  "/home/drowlia/code_save/ds/LinkedList/LinkedListTest.cpp" "CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o" "gcc" "CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o.d"
+  "/home/drowlia/code_save/ds/Queue/QueueTest.cpp" "CMakeFiles/ds.dir/Queue/QueueTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Queue/QueueTest.cpp.o.d"
+  "/home/drowlia/code_save/ds/SeqTable/SeqTableTest.cpp" "CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o" "gcc" "CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o.d"
+  "/home/drowlia/code_save/ds/Stack/StackTest.cpp" "CMakeFiles/ds.dir/Stack/StackTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Stack/StackTest.cpp.o.d"
+  "/home/drowlia/code_save/ds/Tree/BinaryTreeTest.cpp" "CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Tree/BinaryTreeTest.cpp.o.d"
   "/home/drowlia/code_save/ds/main.cpp" "CMakeFiles/ds.dir/main.cpp.o" "gcc" "CMakeFiles/ds.dir/main.cpp.o.d"
   )
 

@@ -31,9 +31,8 @@ struct SeqTable {
 		size_{ano_table.size_},
 		capacity_{ano_table.capacity_},
 		array_{ano_table.size_ ? new ElemType[ano_table.capacity_]() : nullptr} {
-			if (ano_table.size_ > 0) {
+			if (ano_table.size_ > 0)
 				std::copy(ano_table.array_, ano_table.array_ + size_, array_);
-			}
 	}
 
 	SeqTable& operator=(const SeqTable& ano_table) {
@@ -107,13 +106,11 @@ struct SeqTable {
 	}
 
 	void insert(const size_t& pos, const ElemType& elem) {
-		if (pos > size_) {
+		if (pos > size_)
 			throw std::out_of_range("Index out of range");
-		}
 
-		if (size_ >= capacity_) {
+		if (size_ >= capacity_)
 			resize(capacity_ == 0 ? 1 : capacity_ * 2);
-		}
 
 		std::move(array_ + pos, array_ + size_, array_ + pos + 1);
 
@@ -127,9 +124,8 @@ struct SeqTable {
 	}
 
 	void erase(const size_t& pos) {
-		if (pos >= size_) {
+		if (pos >= size_)
 			throw std::out_of_range("Index out of range");
-		}
 
 		std::move(array_ + pos + 1, array_ + size_, array_ + pos);
 
