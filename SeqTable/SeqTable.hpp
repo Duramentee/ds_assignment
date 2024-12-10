@@ -151,15 +151,15 @@ struct SeqTable {
 		return array_[pos];
 	}
 
-	ElemType& front() {
+	const ElemType& front() const {
 		return array_[0];
 	}
 
-	ElemType& back() {
+	const ElemType& back() const {
 		return array_[size_ - 1];
 	}
 
-	[[nodiscard]] size_t          empty()    const { return size_ == 0; }
+	[[nodiscard]] bool            empty()    const { return size_ == 0; }
 
 	[[nodiscard]] size_t          size()     const { return size_; }
 	[[nodiscard]] size_t          capacity() const { return capacity_; }
