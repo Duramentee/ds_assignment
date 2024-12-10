@@ -15,12 +15,12 @@ struct SeqTable {
 	size_t capacity_;
 	ElemType *array_;
 
+	SeqTable() : size_{0}, capacity_{0}, array_{nullptr} {}
+
 	explicit SeqTable(size_t size) :
 		size_{size},
-		capacity_{2 * size},
+		capacity_{size ? 2 * size : 0},
 		array_{size ? new ElemType[capacity_]() : nullptr} {
-			if (size == 0)
-				throw std::invalid_argument("size of SeqTable can't be zero");
 	}
 
 	~SeqTable() {
@@ -81,9 +81,9 @@ struct SeqTable {
 	void resize(const size_t& new_size) {
 		if (new_size == 0) {
 			delete[] array_;
-			array_ = nullptr;
 			size_ = 0;
 			capacity_ = 0;
+			array_ = nullptr;
 			return;
 		}
 
@@ -92,8 +92,12 @@ struct SeqTable {
 		std::copy(array_, array_ + copy_size, new_array);
 
 		delete[] array_;
-		size_ = new_size;
-		capacity_ = new_size * 2;
+
+		if (new_size < size_)
+			size_ = new_size;
+
+		capacity_ = new_size;
+
 		array_ = new_array;
 	}
 
@@ -133,7 +137,7 @@ struct SeqTable {
 	}
 
 
-	const ElemType& at (const size_t& pos) const {
+	const ElemType& at(const size_t& pos) const {
 		if (pos >= size_)
 			throw std::out_of_range("Index out of range");
 
@@ -173,7 +177,5 @@ struct SeqTable {
 		std::cout << std::endl;
 	}
 };
-
-
 
 }
