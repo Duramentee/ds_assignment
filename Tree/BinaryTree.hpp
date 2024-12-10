@@ -2,7 +2,21 @@
 // Created by lsx31 on 24-12-9.
 //
 
-#ifndef BINARYTREE_HPP
-#define BINARYTREE_HPP
+#pragma once
 
-#endif //BINARYTREE_HPP
+namespace ds {
+
+template <typename ElemType>
+struct BinaryTree {
+
+};
+
+
+
+
+
+
+
+
+
+}

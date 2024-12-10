@@ -25,6 +25,7 @@ struct SeqTable {
 
 	~SeqTable() {
 		delete[] array_;
+		array_ = nullptr;
 	}
 
 	SeqTable(const SeqTable& ano_table) :
