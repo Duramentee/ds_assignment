@@ -33,9 +33,11 @@ private:
 			insert_util(node->right_, value);
 		}
 	}
+
 	void visit(BinaryTreeNode<ElemType>* node) const {
 		std::cout << node->data_ << " ";
 	}
+
 	void pre_order_util(BinaryTreeNode<ElemType>* node) const {
 		if (node != nullptr) {
 			visit(node);
@@ -57,12 +59,35 @@ private:
 			visit(node);
 		}
 	}
+
 	void destroy_tree(BinaryTreeNode<ElemType>* node) {
 		if (node != nullptr) {
 			destroy_tree(node->left_);
 			destroy_tree(node->right_);
 			delete node;
 		}
+	}
+
+	bool search_util(const BinaryTreeNode<ElemType>* node, const ElemType& value) const {
+		if (node == nullptr)
+			return false;
+		if (value == node->data_) {
+			return true;
+		} else if (value < node->data_) {
+			return search_util(node->left_, value);
+		} else {
+			return search_util(node->right_, value);
+		}
+	}
+	ElemType find_max_util(const BinaryTreeNode<ElemType>* node) const {
+		if (node->right_ == nullptr)
+			return node->data_;
+		return find_max_util(node->right_);
+	}
+	ElemType find_min_util(const BinaryTreeNode<ElemType>* node) const {
+		if (node->left_ == nullptr)
+			return node->data_;
+		return find_min_util(node->left_);
 	}
 
 public:
@@ -114,6 +139,24 @@ public:
 		}
 		std::cout << std::endl;
 	}
+
+	bool search(const ElemType& value) const {
+		return search_util(root_, value);
+	}
+
+	ElemType find_max() const {
+		if (root_ == nullptr)
+			throw std::runtime_error("can't find on empty tree.");
+
+		return find_max_util(root_);
+	}
+
+	ElemType find_min() const {
+		if (root_ == nullptr)
+			throw std::runtime_error("can't find on empty tree.");
+
+		return find_min_util(root_);
+	}
 };
 
 
@@ -121,3 +164,24 @@ public:
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
