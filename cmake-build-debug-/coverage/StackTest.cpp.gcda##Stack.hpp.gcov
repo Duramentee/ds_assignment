@@ -1,0 +1,139 @@
+        -:    0:Source:/home/drowlia/code_save/ds/Stack/Stack.hpp
+        -:    0:Graph:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Stack/StackTest.cpp.gcno
+        -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Stack/StackTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:#include "../SeqTable/SeqTable.hpp"
+        -:    4:
+        -:    5:namespace ds {
+        -:    6:
+        -:    7:template <typename ElemType>
+        -:    8:struct Stack {
+        -:    9:	SeqTable<ElemType>* vec_;
+        -:   10:
+        -:   11:	Stack() = default;
+        -:   12:
+function _ZN2ds5StackIiEC2Em called 10 returned 100% blocks executed 100%
+       10:   13:	explicit Stack(size_t size) {
+       10:   14:		vec_ = new SeqTable<ElemType>();
+       10:   14-block 2
+call    0 returned 10
+call    1 returned 10
+       10:   15:		vec_->size_ = 0;
+       10:   16:		vec_->resize(size);
+call    0 returned 10
+       10:   17:	}
+        -:   18:
+function _ZN2ds5StackIiED2Ev called 14 returned 100% blocks executed 100%
+       14:   19:	~Stack() {
+       14:   20:		delete vec_;
+       14:   20-block 2
+branch  0 taken 12 (fallthrough)
+branch  1 taken 2
+       12:   20-block 3
+call    2 returned 12
+call    3 returned 12
+       14:   21:	}
+        -:   22:
+function _ZN2ds5StackIiEC2ERKS1_ called 2 returned 100% blocks executed 92%
+        2:   23:	Stack(const Stack& other) {
+        2:   24:		vec_ = new SeqTable<ElemType>();
+        2:   24-block 2
+call    0 returned 2
+call    1 returned 2
+        -:   25:
+        2:   26:		vec_->size_ = other.vec_->size_;
+        2:   27:		vec_->capacity_ = other.vec_->capacity_;
+       8*:   28:		vec_->array_ = new ElemType[vec_->capacity_]();
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   28-block 5
+    %%%%%:   28-block 6
+call    2 never executed
+        2:   28-block 7
+call    3 returned 2
+        6:   28-block 9
+        8:   28-block 10
+branch  4 taken 6
+branch  5 taken 2 (fallthrough)
+        -:   29:
+        8:   30:		for (size_t i = 0; i < vec_->size_; ++i) {
+        2:   30-block 11
+        8:   30-block 13
+branch  0 taken 6
+branch  1 taken 2 (fallthrough)
+        6:   31:			vec_->array_[i] = other.vec_->array_[i];
+        6:   31-block 12
+        -:   32:		}
+        2:   33:	}
+        -:   34:
+        -:   35:	Stack& operator=(const Stack& other) {
+        -:   36:		if (this != &other) {
+        -:   37:			delete vec_;
+        -:   38:
+        -:   39:			vec_ = new SeqTable<ElemType>();
+        -:   40:			vec_->size_ = other.vec_->size_;
+        -:   41:			vec_->capacity_ = other.vec_->capacity_;
+        -:   42:			vec_->array_ = new ElemType[vec_->capacity_]();
+        -:   43:
+        -:   44:			for (size_t i = 0; i < vec_->size_; ++i) {
+        -:   45:				vec_->array_[i] = other.vec_->array_[i];
+        -:   46:			}
+        -:   47:		}
+        -:   48:
+        -:   49:		return *this;
+        -:   50:	}
+        -:   51:
+function _ZN2ds5StackIiEC2EOS1_ called 2 returned 100% blocks executed 100%
+        2:   52:	Stack(Stack&& other) noexcept : vec_(other.vec_) {
+        2:   53:		other.vec_ = nullptr;
+        2:   54:	}
+        -:   55:
+        -:   56:	Stack& operator=(Stack&& other) noexcept {
+        -:   57:		if (this != &other) {
+        -:   58:			delete vec_;
+        -:   59:			vec_ = other.vec_;
+        -:   60:			other.vec_ = nullptr;
+        -:   61:		}
+        -:   62:		return *this;
+        -:   63:	}
+        -:   64:
+function _ZN2ds5StackIiE4pushEi called 25 returned 100% blocks executed 100%
+       25:   65:	void push(ElemType value) {
+       25:   66:		vec_->push_back(value);
+       25:   66-block 2
+call    0 returned 25
+       25:   67:	}
+        -:   68:
+function _ZN2ds5StackIiE3popEv called 25 returned 100% blocks executed 100%
+       25:   69:	void pop() {
+       25:   70:		vec_->pop_back();
+       25:   70-block 2
+call    0 returned 25
+       25:   71:	}
+        -:   72:
+function _ZNK2ds5StackIiE3topEv called 27 returned 100% blocks executed 100%
+       27:   73:	const ElemType& top() const {
+       27:   74:		return vec_->back();
+       27:   74-block 2
+call    0 returned 27
+        -:   75:	}
+        -:   76:
+function _ZNK2ds5StackIiE5emptyEv called 14 returned 100% blocks executed 100%
+       14:   77:	[[nodiscard]] bool empty() const {
+       14:   78:		return vec_->empty();
+       14:   78-block 2
+call    0 returned 14
+        -:   79:	}
+        -:   80:
+function _ZNK2ds5StackIiE4sizeEv called 18 returned 100% blocks executed 100%
+       18:   81:	[[nodiscard]] size_t size() const {
+       18:   82:		return vec_->size();
+       18:   82-block 2
+call    0 returned 18
+        -:   83:	}
+        -:   84:
+        -:   85:};
+        -:   86:
+        -:   87:}

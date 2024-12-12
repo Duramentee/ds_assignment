@@ -5,6 +5,7 @@
 #pragma once
 
 #include <iostream>
+#include <stdexcept>
 
 #include "../Queue/Queue.hpp"
 
@@ -24,6 +25,14 @@ struct BinaryTree {
 private:
 	BinaryTreeNode<ElemType>* root_;
 
+	void destroy_tree(BinaryTreeNode<ElemType>* node) {
+		if (node != nullptr) {
+			destroy_tree(node->left_);
+			destroy_tree(node->right_);
+			delete node;
+		}
+	}
+
 	void insert_util(BinaryTreeNode<ElemType>*& node, const ElemType& value) {
 		if (node == nullptr) {
 			node = new BinaryTreeNode<ElemType>(value);
@@ -34,7 +43,7 @@ private:
 		}
 	}
 
-	void visit(BinaryTreeNode<ElemType>* node) const {
+	static void visit(BinaryTreeNode<ElemType>* node) {
 		std::cout << node->data_ << " ";
 	}
 
@@ -60,14 +69,6 @@ private:
 		}
 	}
 
-	void destroy_tree(BinaryTreeNode<ElemType>* node) {
-		if (node != nullptr) {
-			destroy_tree(node->left_);
-			destroy_tree(node->right_);
-			delete node;
-		}
-	}
-
 	bool search_util(const BinaryTreeNode<ElemType>* node, const ElemType& value) const {
 		if (node == nullptr)
 			return false;
@@ -79,15 +80,33 @@ private:
 			return search_util(node->right_, value);
 		}
 	}
-	ElemType find_max_util(const BinaryTreeNode<ElemType>* node) const {
+	ElemType find_max_value_util(const BinaryTreeNode<ElemType>* node) const {
 		if (node->right_ == nullptr)
 			return node->data_;
-		return find_max_util(node->right_);
+		return find_max_value_util(node->right_);
 	}
-	ElemType find_min_util(const BinaryTreeNode<ElemType>* node) const {
+	ElemType find_min_value_util(const BinaryTreeNode<ElemType>* node) const {
 		if (node->left_ == nullptr)
 			return node->data_;
+		return find_min_value_util(node->left_);
+	}
+	BinaryTreeNode<ElemType>* find_max_util(BinaryTreeNode<ElemType>* node) const {
+		if (node->right_ == nullptr)
+			return node;
+		return find_max_util(node->right_);
+	}
+	BinaryTreeNode<ElemType>* find_min_util(BinaryTreeNode<ElemType>* node) const {
+		if (node->left_ == nullptr)
+			return node;
 		return find_min_util(node->left_);
+	}
+
+	ssize_t calculate_height_util(BinaryTreeNode<ElemType>* node) const {
+		if (node == nullptr) {
+			return 0;
+		} else {
+			return std::max(calculate_height_util(node->left_), calculate_height_util(node->right_)) + 1;
+		}
 	}
 
 public:
@@ -144,18 +163,36 @@ public:
 		return search_util(root_, value);
 	}
 
-	ElemType find_max() const {
+	ElemType find_max_value() const {
 		if (root_ == nullptr)
 			throw std::runtime_error("can't find on empty tree.");
+
+		return find_max_value_util(root_);
+	}
+
+	ElemType find_min_value() const {
+		if (root_ == nullptr)
+			throw std::runtime_error("can't find on empty tree.");
+
+		return find_min_value_util(root_);
+	}
+
+	BinaryTreeNode<ElemType>* find_max() const {
+		if (root_ == nullptr)
+			return nullptr;
 
 		return find_max_util(root_);
 	}
 
-	ElemType find_min() const {
+	BinaryTreeNode<ElemType>* find_min() const {
 		if (root_ == nullptr)
-			throw std::runtime_error("can't find on empty tree.");
+			return nullptr;
 
 		return find_min_util(root_);
+	}
+
+	[[nodiscard]] size_t calculate_height() const {
+		return calculate_height_util(root_);
 	}
 };
 

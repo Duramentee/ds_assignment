@@ -1,0 +1,218 @@
+        -:    0:Source:/home/drowlia/code_save/ds/Queue/Queue.hpp
+        -:    0:Graph:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Queue/QueueTest.cpp.gcno
+        -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Queue/QueueTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lsx31 on 24-12-9.
+        -:    3://
+        -:    4:
+        -:    5:#pragma once
+        -:    6:
+        -:    7:#include <stdexcept>
+        -:    8:
+        -:    9:namespace ds {
+        -:   10:
+        -:   11:template <typename ElemType>
+        -:   12:struct Node {
+        -:   13:	ElemType data_;
+        -:   14:	Node* next_{nullptr};
+        -:   15:
+function _ZN2ds4NodeIiEC2ERKi called 0 returned 0% blocks executed 0%
+    #####:   16:	explicit Node(const ElemType& val) : data_{val}, next_{nullptr} {
+    #####:   17:	}
+        -:   18:
+function _ZN2ds4NodeIiED2Ev called 0 returned 0% blocks executed 0%
+    #####:   19:	~Node() {
+    #####:   20:		next_ = nullptr;
+    #####:   21:	}
+        -:   22:
+        -:   23:	Node(const Node& ano_node) : data_{ano_node.data_}, next_{nullptr} {
+        -:   24:	}
+        -:   25:};
+        -:   26:
+        -:   27:template <typename ElemType>
+        -:   28:struct Queue {
+        -:   29:	Node<ElemType>* front_{nullptr};
+        -:   30:	Node<ElemType>* rear_{nullptr};
+        -:   31:
+function _ZN2ds5QueueIiEC2Ev called 9 returned 100% blocks executed 100%
+        9:   32:	Queue() : front_{nullptr}, rear_{nullptr} {}
+        -:   33:
+function _ZN2ds5QueueIiED2Ev called 10 returned 100% blocks executed 100%
+       10:   34:	~Queue() {
+       10:   35:		clear();
+       10:   35-block 2
+call    0 returned 10
+       10:   36:	}
+        -:   37:
+function _ZN2ds5QueueIiEC2ERKS1_ called 1 returned 100% blocks executed 100%
+        1:   38:	Queue(const Queue& ano_queue) : front_{nullptr}, rear_{nullptr} {
+        1:   39:		auto* current = ano_queue.front_;
+        3:   40:		while (current != nullptr) {
+        1:   40-block 2
+        3:   40-block 5
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:   41:			enqueue(current->data_);
+        2:   41-block 3
+call    0 returned 2
+        2:   42:			current = current->next_;
+        -:   43:		}
+        1:   44:	}
+        -:   45:
+function _ZN2ds5QueueIiEaSERKS1_ called 1 returned 100% blocks executed 89%
+        1:   46:	Queue& operator=(const Queue& ano_queue) {
+        1:   47:		if (this == &ano_queue)
+        1:   47-block 2
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   48:			return *this;
+    %%%%%:   48-block 3
+        -:   49:
+        1:   50:		clear();
+        1:   50-block 4
+call    0 returned 1
+        -:   51:
+        1:   52:		auto* current = ano_queue.front_;
+        3:   53:		while (current != nullptr) {
+        3:   53-block 8
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:   54:			enqueue(current->data_);
+        2:   54-block 6
+call    0 returned 2
+        2:   55:			current = current->next_;
+        -:   56:		}
+        -:   57:
+        1:   58:		return *this;
+        1:   58-block 9
+        -:   59:	}
+        -:   60:
+function _ZN2ds5QueueIiE8is_emptyEv called 44 returned 100% blocks executed 100%
+       44:   61:	bool is_empty() {
+       44:   62:		return front_ == nullptr;
+       44:   62-block 2
+        -:   63:	}
+        -:   64:
+function _ZN2ds5QueueIiE5clearEv called 12 returned 100% blocks executed 100%
+       12:   65:	void clear() {
+       23:   66:		while (!is_empty()) {
+       12:   66-block 2
+       23:   66-block 4
+call    0 returned 23
+branch  1 taken 11
+branch  2 taken 12 (fallthrough)
+       11:   67:			dequeue();
+       11:   67-block 3
+call    0 returned 11
+        -:   68:		}
+       12:   69:	}
+        -:   70:
+function _ZN2ds5QueueIiE7enqueueERKi called 13 returned 100% blocks executed 100%
+       13:   71:	void enqueue(const ElemType& val) {
+       13:   72:		auto* new_node = new Node<ElemType>(val);
+       13:   72-block 2
+call    0 returned 13
+call    1 returned 13
+       13:   73:		if (rear_)
+branch  0 taken 5 (fallthrough)
+branch  1 taken 8
+        5:   74:			rear_->next_ = new_node;
+        5:   74-block 5
+       13:   75:		rear_ = new_node;
+        -:   76:
+       13:   77:		if (!front_)
+       13:   77-block 6
+branch  0 taken 8 (fallthrough)
+branch  1 taken 5
+        8:   78:			front_ = rear_;
+        8:   78-block 7
+       13:   79:	}
+        -:   80:
+function _ZN2ds5QueueIiE7dequeueEv called 14 returned 93% blocks executed 93%
+       14:   81:	ElemType dequeue() {
+       14:   82:		if (is_empty())
+       14:   82-block 2
+call    0 returned 14
+branch  1 taken 1 (fallthrough)
+branch  2 taken 13
+        1:   83:			throw std::runtime_error("empty queue");
+        1:   83-block 4
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   83-block 6
+call    4 returned 0
+    $$$$$:   83-block 14
+call    5 never executed
+        -:   84:
+       13:   85:		auto* temp = front_;
+       13:   86:		ElemType val = front_->data_;
+        -:   87:
+       13:   88:		front_ = front_->next_;
+       13:   89:		if (front_ == nullptr)
+       13:   89-block 7
+branch  0 taken 8 (fallthrough)
+branch  1 taken 5
+        8:   90:			rear_ = nullptr;
+        8:   90-block 8
+        -:   91:
+       13:   92:		delete temp;
+       13:   92-block 9
+branch  0 taken 13 (fallthrough)
+branch  1 taken 0
+       13:   92-block 10
+call    2 returned 13
+call    3 returned 13
+       13:   93:		temp = nullptr;
+        -:   94:
+       13:   95:		return val;
+       13:   95-block 12
+       13:   95-block 13
+        -:   96:	}
+        -:   97:
+function _ZN2ds5QueueIiE4peekEv called 4 returned 75% blocks executed 89%
+        4:   98:	ElemType peek() {
+        4:   99:		if (is_empty()) {
+        4:   99-block 2
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:  100:			throw std::runtime_error("empty queue");
+        1:  100-block 4
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  100-block 6
+call    4 returned 0
+    $$$$$:  100-block 9
+call    5 never executed
+        -:  101:		}
+        3:  102:		return front_->data_;
+        3:  102-block 7
+        3:  102-block 8
+        -:  103:	}
+        -:  104:
+function _ZN2ds5QueueIiE4sizeEv called 7 returned 100% blocks executed 100%
+        7:  105:	size_t size() {
+        7:  106:		int counter = 0;
+        7:  107:		auto* current = front_;
+        -:  108:
+       16:  109:		while (current != nullptr) {
+        7:  109-block 2
+       16:  109-block 4
+branch  0 taken 9
+branch  1 taken 7 (fallthrough)
+        9:  110:			++counter;
+        9:  111:			current = current->next_;
+        9:  111-block 3
+        -:  112:		}
+        -:  113:
+        7:  114:		return counter;
+        7:  114-block 5
+        -:  115:	}
+        -:  116:};
+        -:  117:
+        -:  118:}

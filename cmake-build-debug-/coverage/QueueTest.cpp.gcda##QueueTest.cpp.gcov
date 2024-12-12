@@ -1,0 +1,1200 @@
+        -:    0:Source:/home/drowlia/code_save/ds/Queue/QueueTest.cpp
+        -:    0:Graph:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Queue/QueueTest.cpp.gcno
+        -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Queue/QueueTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lsx31 on 24-12-9.
+        -:    3://
+        -:    4:
+        -:    5:#include <gtest/gtest.h>
+        -:    6:#include "Queue.hpp" // 假设你的 Queue 类定义在这个头文件中
+        -:    7:
+        -:    8:using namespace ds;
+        -:    9:
+        -:   10:// 测试构造函数
+        4:   11:TEST(QueueTest, Constructor) {
+        1:   12:	Queue<int> q;
+       1*:   13:	EXPECT_TRUE(q.is_empty());
+        1:   14:}
+------------------
+_ZN26QueueTest_Constructor_TestC2Ev:
+function _ZN26QueueTest_Constructor_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST(QueueTest, Constructor) {
+        1:   11-block 2
+call    0 returned 1
+------------------
+_ZN26QueueTest_Constructor_TestD0Ev:
+function _ZN26QueueTest_Constructor_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST(QueueTest, Constructor) {
+        1:   11-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26QueueTest_Constructor_TestD2Ev:
+function _ZN26QueueTest_Constructor_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST(QueueTest, Constructor) {
+        1:   11-block 2
+call    0 returned 1
+------------------
+_ZN26QueueTest_Constructor_Test8TestBodyEv:
+function _ZN26QueueTest_Constructor_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   11:TEST(QueueTest, Constructor) {
+        1:   12:	Queue<int> q;
+        1:   12-block 2
+call    0 returned 1
+       1*:   13:	EXPECT_TRUE(q.is_empty());
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   13-block 7
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   13-block 8
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   13-block 9
+call   11 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   13-block 11
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   13-block 12
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   13-block 16
+call   21 returned 1
+    $$$$$:   13-block 19
+call   22 never executed
+    $$$$$:   13-block 21
+call   23 never executed
+    $$$$$:   13-block 23
+    $$$$$:   13-block 24
+    $$$$$:   13-block 25
+call   24 never executed
+    $$$$$:   13-block 27
+    $$$$$:   13-block 28
+call   25 never executed
+        1:   14:}
+call    0 returned 1
+    $$$$$:   14-block 31
+call    1 never executed
+------------------
+        -:   15:
+        -:   16:// 测试复制构造函数
+        4:   17:TEST(QueueTest, CopyConstructor) {
+        1:   18:	Queue<int> original;
+        1:   19:	original.enqueue(1);
+        1:   20:	original.enqueue(2);
+        -:   21:
+        1:   22:	Queue<int> copy = original;
+       1*:   23:	EXPECT_EQ(copy.size(), 2);
+       1*:   24:	EXPECT_EQ(copy.peek(), 1);
+        1:   25:}
+------------------
+_ZN30QueueTest_CopyConstructor_TestC2Ev:
+function _ZN30QueueTest_CopyConstructor_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   17:TEST(QueueTest, CopyConstructor) {
+        1:   17-block 2
+call    0 returned 1
+------------------
+_ZN30QueueTest_CopyConstructor_TestD0Ev:
+function _ZN30QueueTest_CopyConstructor_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   17:TEST(QueueTest, CopyConstructor) {
+        1:   17-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30QueueTest_CopyConstructor_TestD2Ev:
+function _ZN30QueueTest_CopyConstructor_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   17:TEST(QueueTest, CopyConstructor) {
+        1:   17-block 2
+call    0 returned 1
+------------------
+_ZN30QueueTest_CopyConstructor_Test8TestBodyEv:
+function _ZN30QueueTest_CopyConstructor_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:   17:TEST(QueueTest, CopyConstructor) {
+        1:   18:	Queue<int> original;
+        1:   18-block 2
+call    0 returned 1
+        1:   19:	original.enqueue(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   19-block 33
+        1:   20:	original.enqueue(2);
+        1:   20-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   20-block 34
+        -:   21:
+        1:   22:	Queue<int> copy = original;
+        1:   22-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   23:	EXPECT_EQ(copy.size(), 2);
+        1:   23-block 6
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   23-block 8
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   23-block 10
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   23-block 11
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   23-block 13
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   23-block 14
+call   17 never executed
+call   18 never executed
+        1:   23-block 17
+call   19 returned 1
+    $$$$$:   23-block 35
+    $$$$$:   23-block 36
+    $$$$$:   23-block 37
+call   20 never executed
+    $$$$$:   23-block 39
+    $$$$$:   23-block 40
+call   21 never executed
+    $$$$$:   23-block 42
+    $$$$$:   23-block 43
+call   22 never executed
+       1*:   24:	EXPECT_EQ(copy.peek(), 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block 19
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block 20
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   24-block 22
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   24-block 23
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   24-block 25
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   24-block 26
+call   19 never executed
+call   20 never executed
+        1:   24-block 29
+call   21 returned 1
+    $$$$$:   24-block 46
+    $$$$$:   24-block 47
+    $$$$$:   24-block 48
+call   22 never executed
+    $$$$$:   24-block 50
+    $$$$$:   24-block 51
+call   23 never executed
+    $$$$$:   24-block 53
+    $$$$$:   24-block 54
+call   24 never executed
+        1:   25:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   25-block 57
+call    2 never executed
+    $$$$$:   25-block 59
+call    3 never executed
+------------------
+        -:   26:
+        -:   27:// 测试赋值操作符
+        4:   28:TEST(QueueTest, AssignmentOperator) {
+        1:   29:	Queue<int> original;
+        1:   30:	original.enqueue(3);
+        1:   31:	original.enqueue(4);
+        -:   32:
+        1:   33:	Queue<int> assigned;
+        1:   34:	assigned = original;
+       1*:   35:	EXPECT_EQ(assigned.size(), 2);
+       1*:   36:	EXPECT_EQ(assigned.peek(), 3);
+        1:   37:}
+------------------
+_ZN33QueueTest_AssignmentOperator_TestC2Ev:
+function _ZN33QueueTest_AssignmentOperator_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(QueueTest, AssignmentOperator) {
+        1:   28-block 2
+call    0 returned 1
+------------------
+_ZN33QueueTest_AssignmentOperator_TestD0Ev:
+function _ZN33QueueTest_AssignmentOperator_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(QueueTest, AssignmentOperator) {
+        1:   28-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN33QueueTest_AssignmentOperator_TestD2Ev:
+function _ZN33QueueTest_AssignmentOperator_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(QueueTest, AssignmentOperator) {
+        1:   28-block 2
+call    0 returned 1
+------------------
+_ZN33QueueTest_AssignmentOperator_Test8TestBodyEv:
+function _ZN33QueueTest_AssignmentOperator_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   28:TEST(QueueTest, AssignmentOperator) {
+        1:   29:	Queue<int> original;
+        1:   29-block 2
+call    0 returned 1
+        1:   30:	original.enqueue(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   30-block 34
+        1:   31:	original.enqueue(4);
+        1:   31-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   31-block 35
+        -:   32:
+        1:   33:	Queue<int> assigned;
+        1:   33-block 5
+call    0 returned 1
+        1:   34:	assigned = original;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   35:	EXPECT_EQ(assigned.size(), 2);
+        1:   35-block 7
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   35-block 9
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   35-block 11
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   35-block 12
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   35-block 14
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   35-block 15
+call   17 never executed
+call   18 never executed
+        1:   35-block 18
+call   19 returned 1
+    $$$$$:   35-block 36
+    $$$$$:   35-block 37
+    $$$$$:   35-block 38
+call   20 never executed
+    $$$$$:   35-block 40
+    $$$$$:   35-block 41
+call   21 never executed
+    $$$$$:   35-block 43
+    $$$$$:   35-block 44
+call   22 never executed
+       1*:   36:	EXPECT_EQ(assigned.peek(), 3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block 20
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   36-block 21
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   36-block 23
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   36-block 24
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   36-block 26
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   36-block 27
+call   19 never executed
+call   20 never executed
+        1:   36-block 30
+call   21 returned 1
+    $$$$$:   36-block 47
+    $$$$$:   36-block 48
+    $$$$$:   36-block 49
+call   22 never executed
+    $$$$$:   36-block 51
+    $$$$$:   36-block 52
+call   23 never executed
+    $$$$$:   36-block 54
+    $$$$$:   36-block 55
+call   24 never executed
+        1:   37:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   37-block 58
+call    2 never executed
+    $$$$$:   37-block 60
+call    3 never executed
+------------------
+        -:   38:
+        -:   39:// 测试 enqueue 和 dequeue 方法
+        4:   40:TEST(QueueTest, EnqueueDequeue) {
+        1:   41:	Queue<int> q;
+        1:   42:	q.enqueue(5);
+        1:   43:	q.enqueue(6);
+       1*:   44:	EXPECT_EQ(q.size(), 2);
+        -:   45:
+       1*:   46:	EXPECT_EQ(q.dequeue(), 5);
+       1*:   47:	EXPECT_EQ(q.size(), 1);
+       1*:   48:	EXPECT_EQ(q.dequeue(), 6);
+       1*:   49:	EXPECT_TRUE(q.is_empty());
+        1:   50:}
+------------------
+_ZN29QueueTest_EnqueueDequeue_TestC2Ev:
+function _ZN29QueueTest_EnqueueDequeue_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST(QueueTest, EnqueueDequeue) {
+        1:   40-block 2
+call    0 returned 1
+------------------
+_ZN29QueueTest_EnqueueDequeue_TestD0Ev:
+function _ZN29QueueTest_EnqueueDequeue_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST(QueueTest, EnqueueDequeue) {
+        1:   40-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN29QueueTest_EnqueueDequeue_TestD2Ev:
+function _ZN29QueueTest_EnqueueDequeue_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST(QueueTest, EnqueueDequeue) {
+        1:   40-block 2
+call    0 returned 1
+------------------
+_ZN29QueueTest_EnqueueDequeue_Test8TestBodyEv:
+function _ZN29QueueTest_EnqueueDequeue_Test8TestBodyEv called 1 returned 100% blocks executed 24%
+        1:   40:TEST(QueueTest, EnqueueDequeue) {
+        1:   41:	Queue<int> q;
+        1:   41-block 2
+call    0 returned 1
+        1:   42:	q.enqueue(5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   42-block 69
+        1:   43:	q.enqueue(6);
+        1:   43-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   43-block 70
+       1*:   44:	EXPECT_EQ(q.size(), 2);
+        1:   44-block 5
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   44-block 7
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   44-block 9
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   44-block 10
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   44-block 12
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   44-block 13
+call   17 never executed
+call   18 never executed
+        1:   44-block 16
+call   19 returned 1
+    $$$$$:   44-block 71
+    $$$$$:   44-block 72
+    $$$$$:   44-block 73
+call   20 never executed
+    $$$$$:   44-block 75
+    $$$$$:   44-block 76
+call   21 never executed
+    $$$$$:   44-block 78
+    $$$$$:   44-block 79
+call   22 never executed
+        -:   45:
+       1*:   46:	EXPECT_EQ(q.dequeue(), 5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block 18
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46-block 19
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   46-block 21
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   46-block 22
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   46-block 24
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   46-block 25
+call   19 never executed
+call   20 never executed
+        1:   46-block 28
+call   21 returned 1
+    $$$$$:   46-block 82
+    $$$$$:   46-block 83
+    $$$$$:   46-block 84
+call   22 never executed
+    $$$$$:   46-block 86
+    $$$$$:   46-block 87
+call   23 never executed
+    $$$$$:   46-block 89
+    $$$$$:   46-block 90
+call   24 never executed
+       1*:   47:	EXPECT_EQ(q.size(), 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   47-block 31
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   47-block 33
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   47-block 34
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   47-block 36
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   47-block 37
+call   17 never executed
+call   18 never executed
+        1:   47-block 40
+call   19 returned 1
+    $$$$$:   47-block 93
+    $$$$$:   47-block 94
+    $$$$$:   47-block 95
+call   20 never executed
+    $$$$$:   47-block 97
+    $$$$$:   47-block 98
+call   21 never executed
+    $$$$$:   47-block 100
+    $$$$$:   47-block 101
+call   22 never executed
+       1*:   48:	EXPECT_EQ(q.dequeue(), 6);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block 42
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   48-block 43
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   48-block 45
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   48-block 46
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   48-block 48
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   48-block 49
+call   19 never executed
+call   20 never executed
+        1:   48-block 52
+call   21 returned 1
+    $$$$$:   48-block 104
+    $$$$$:   48-block 105
+    $$$$$:   48-block 106
+call   22 never executed
+    $$$$$:   48-block 108
+    $$$$$:   48-block 109
+call   23 never executed
+    $$$$$:   48-block 111
+    $$$$$:   48-block 112
+call   24 never executed
+       1*:   49:	EXPECT_TRUE(q.is_empty());
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   49-block 57
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   49-block 58
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   49-block 59
+call   11 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   49-block 61
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   49-block 62
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   49-block 66
+call   21 returned 1
+    $$$$$:   49-block 115
+call   22 never executed
+    $$$$$:   49-block 117
+call   23 never executed
+    $$$$$:   49-block 119
+    $$$$$:   49-block 120
+    $$$$$:   49-block 121
+call   24 never executed
+    $$$$$:   49-block 123
+    $$$$$:   49-block 124
+call   25 never executed
+        1:   50:}
+call    0 returned 1
+    $$$$$:   50-block 127
+call    1 never executed
+------------------
+        -:   51:
+        -:   52:// 测试 clear 方法
+        4:   53:TEST(QueueTest, Clear) {
+        1:   54:	Queue<int> q;
+        1:   55:	q.enqueue(7);
+        1:   56:	q.clear();
+       1*:   57:	EXPECT_TRUE(q.is_empty());
+        1:   58:}
+------------------
+_ZN20QueueTest_Clear_TestC2Ev:
+function _ZN20QueueTest_Clear_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   53:TEST(QueueTest, Clear) {
+        1:   53-block 2
+call    0 returned 1
+------------------
+_ZN20QueueTest_Clear_TestD0Ev:
+function _ZN20QueueTest_Clear_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   53:TEST(QueueTest, Clear) {
+        1:   53-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN20QueueTest_Clear_TestD2Ev:
+function _ZN20QueueTest_Clear_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   53:TEST(QueueTest, Clear) {
+        1:   53-block 2
+call    0 returned 1
+------------------
+_ZN20QueueTest_Clear_Test8TestBodyEv:
+function _ZN20QueueTest_Clear_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   53:TEST(QueueTest, Clear) {
+        1:   54:	Queue<int> q;
+        1:   54-block 2
+call    0 returned 1
+        1:   55:	q.enqueue(7);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   55-block 21
+        1:   56:	q.clear();
+        1:   56-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   57:	EXPECT_TRUE(q.is_empty());
+        1:   57-block 5
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   57-block 9
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   57-block 10
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   57-block 11
+call   11 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   57-block 13
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   57-block 14
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   57-block 18
+call   21 returned 1
+    $$$$$:   57-block 22
+call   22 never executed
+    $$$$$:   57-block 24
+call   23 never executed
+    $$$$$:   57-block 26
+    $$$$$:   57-block 27
+    $$$$$:   57-block 28
+call   24 never executed
+    $$$$$:   57-block 30
+    $$$$$:   57-block 31
+call   25 never executed
+        1:   58:}
+call    0 returned 1
+    $$$$$:   58-block 34
+call    1 never executed
+------------------
+        -:   59:
+        -:   60:// 测试 peek 方法
+        4:   61:TEST(QueueTest, Peek) {
+        1:   62:	Queue<int> q;
+        1:   63:	q.enqueue(8);
+       1*:   64:	EXPECT_EQ(q.peek(), 8);
+       1*:   65:	EXPECT_EQ(q.size(), 1); // 确保 peek 不改变队列状态
+        1:   66:}
+------------------
+_ZN19QueueTest_Peek_TestC2Ev:
+function _ZN19QueueTest_Peek_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   61:TEST(QueueTest, Peek) {
+        1:   61-block 2
+call    0 returned 1
+------------------
+_ZN19QueueTest_Peek_TestD0Ev:
+function _ZN19QueueTest_Peek_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   61:TEST(QueueTest, Peek) {
+        1:   61-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN19QueueTest_Peek_TestD2Ev:
+function _ZN19QueueTest_Peek_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   61:TEST(QueueTest, Peek) {
+        1:   61-block 2
+call    0 returned 1
+------------------
+_ZN19QueueTest_Peek_Test8TestBodyEv:
+function _ZN19QueueTest_Peek_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   61:TEST(QueueTest, Peek) {
+        1:   62:	Queue<int> q;
+        1:   62-block 2
+call    0 returned 1
+        1:   63:	q.enqueue(8);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   63-block 30
+       1*:   64:	EXPECT_EQ(q.peek(), 8);
+        1:   64-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64-block 5
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   64-block 6
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   64-block 8
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   64-block 9
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   64-block 11
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   64-block 12
+call   19 never executed
+call   20 never executed
+        1:   64-block 15
+call   21 returned 1
+    $$$$$:   64-block 31
+    $$$$$:   64-block 32
+    $$$$$:   64-block 33
+call   22 never executed
+    $$$$$:   64-block 35
+    $$$$$:   64-block 36
+call   23 never executed
+    $$$$$:   64-block 38
+    $$$$$:   64-block 39
+call   24 never executed
+       1*:   65:	EXPECT_EQ(q.size(), 1); // 确保 peek 不改变队列状态
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   65-block 18
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   65-block 20
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   65-block 21
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   65-block 23
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   65-block 24
+call   17 never executed
+call   18 never executed
+        1:   65-block 27
+call   19 returned 1
+    $$$$$:   65-block 42
+    $$$$$:   65-block 43
+    $$$$$:   65-block 44
+call   20 never executed
+    $$$$$:   65-block 46
+    $$$$$:   65-block 47
+call   21 never executed
+    $$$$$:   65-block 49
+    $$$$$:   65-block 50
+call   22 never executed
+        1:   66:}
+call    0 returned 1
+    $$$$$:   66-block 53
+call    1 never executed
+------------------
+        -:   67:
+        -:   68:// 测试 size 方法
+        4:   69:TEST(QueueTest, Size) {
+        1:   70:	Queue<int> q;
+       1*:   71:	EXPECT_EQ(q.size(), 0);
+        1:   72:	q.enqueue(9);
+       1*:   73:	EXPECT_EQ(q.size(), 1);
+        1:   74:}
+------------------
+_ZN19QueueTest_Size_TestC2Ev:
+function _ZN19QueueTest_Size_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   69:TEST(QueueTest, Size) {
+        1:   69-block 2
+call    0 returned 1
+------------------
+_ZN19QueueTest_Size_TestD0Ev:
+function _ZN19QueueTest_Size_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   69:TEST(QueueTest, Size) {
+        1:   69-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN19QueueTest_Size_TestD2Ev:
+function _ZN19QueueTest_Size_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   69:TEST(QueueTest, Size) {
+        1:   69-block 2
+call    0 returned 1
+------------------
+_ZN19QueueTest_Size_Test8TestBodyEv:
+function _ZN19QueueTest_Size_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   69:TEST(QueueTest, Size) {
+        1:   70:	Queue<int> q;
+        1:   70-block 2
+call    0 returned 1
+       1*:   71:	EXPECT_EQ(q.size(), 0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   71-block 5
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   71-block 7
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   71-block 8
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   71-block 10
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   71-block 11
+call   17 never executed
+call   18 never executed
+        1:   71-block 14
+call   19 returned 1
+    $$$$$:   71-block 30
+    $$$$$:   71-block 31
+    $$$$$:   71-block 32
+call   20 never executed
+    $$$$$:   71-block 34
+    $$$$$:   71-block 35
+call   21 never executed
+    $$$$$:   71-block 37
+    $$$$$:   71-block 38
+call   22 never executed
+        1:   72:	q.enqueue(9);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   72-block 41
+       1*:   73:	EXPECT_EQ(q.size(), 1);
+        1:   73-block 16
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   73-block 18
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   73-block 20
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   73-block 21
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   73-block 23
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   73-block 24
+call   17 never executed
+call   18 never executed
+        1:   73-block 27
+call   19 returned 1
+    $$$$$:   73-block 42
+    $$$$$:   73-block 43
+    $$$$$:   73-block 44
+call   20 never executed
+    $$$$$:   73-block 46
+    $$$$$:   73-block 47
+call   21 never executed
+    $$$$$:   73-block 49
+    $$$$$:   73-block 50
+call   22 never executed
+        1:   74:}
+call    0 returned 1
+    $$$$$:   74-block 53
+call    1 never executed
+------------------
+        -:   75:
+        -:   76:// 测试在空队列上调用 dequeue 和 peek 的行为
+        4:   77:TEST(QueueTest, EmptyQueueOperations) {
+        1:   78:	Queue<int> q;
+       1*:   79:	EXPECT_THROW(q.dequeue(), std::runtime_error);
+       1*:   80:	EXPECT_THROW(q.peek(), std::runtime_error);
+        1:   81:}
+------------------
+_ZN35QueueTest_EmptyQueueOperations_TestC2Ev:
+function _ZN35QueueTest_EmptyQueueOperations_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(QueueTest, EmptyQueueOperations) {
+        1:   77-block 2
+call    0 returned 1
+------------------
+_ZN35QueueTest_EmptyQueueOperations_TestD0Ev:
+function _ZN35QueueTest_EmptyQueueOperations_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(QueueTest, EmptyQueueOperations) {
+        1:   77-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN35QueueTest_EmptyQueueOperations_TestD2Ev:
+function _ZN35QueueTest_EmptyQueueOperations_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(QueueTest, EmptyQueueOperations) {
+        1:   77-block 2
+call    0 returned 1
+------------------
+_ZN35QueueTest_EmptyQueueOperations_Test8TestBodyEv:
+function _ZN35QueueTest_EmptyQueueOperations_Test8TestBodyEv called 1 returned 100% blocks executed 24%
+        1:   77:TEST(QueueTest, EmptyQueueOperations) {
+        1:   78:	Queue<int> q;
+        1:   78-block 2
+call    0 returned 1
+       1*:   79:	EXPECT_THROW(q.dequeue(), std::runtime_error);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   79-block 6
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   79-block 7
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   79-block 8
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+        1:   79-block 9
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:   79-block 10
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   79-block 11
+    %%%%%:   79-block 12
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   79-block 13
+call   20 never executed
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:   79-block 15
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:   79-block 16
+call   27 never executed
+call   28 never executed
+        1:   79-block 19
+call   29 returned 1
+        1:   79-block 39
+branch 30 taken 1
+branch 31 taken 0
+branch 32 taken 0
+        1:   79-block 40
+call   33 returned 1
+call   34 returned 1
+    $$$$$:   79-block 42
+call   35 never executed
+call   36 never executed
+branch 37 never executed (fallthrough)
+branch 38 never executed (throw)
+    $$$$$:   79-block 44
+call   39 never executed
+branch 40 never executed (fallthrough)
+branch 41 never executed (throw)
+    $$$$$:   79-block 45
+call   42 never executed
+branch 43 never executed (fallthrough)
+branch 44 never executed (throw)
+    $$$$$:   79-block 46
+call   45 never executed
+call   46 never executed
+branch 47 never executed (fallthrough)
+branch 48 never executed (throw)
+    $$$$$:   79-block 48
+call   49 never executed
+call   50 never executed
+branch 51 never executed (fallthrough)
+branch 52 never executed (throw)
+    $$$$$:   79-block 50
+call   53 never executed
+branch 54 never executed (fallthrough)
+branch 55 never executed (throw)
+    $$$$$:   79-block 51
+    $$$$$:   79-block 52
+call   56 never executed
+    $$$$$:   79-block 53
+call   57 never executed
+call   58 never executed
+branch 59 never executed (fallthrough)
+branch 60 never executed (throw)
+    $$$$$:   79-block 55
+    $$$$$:   79-block 56
+call   61 never executed
+branch 62 never executed (fallthrough)
+branch 63 never executed (throw)
+    $$$$$:   79-block 57
+call   64 never executed
+    $$$$$:   79-block 59
+    $$$$$:   79-block 60
+call   65 never executed
+    $$$$$:   79-block 62
+call   66 never executed
+    $$$$$:   79-block 64
+call   67 never executed
+    $$$$$:   79-block 66
+    $$$$$:   79-block 67
+call   68 never executed
+    $$$$$:   79-block 69
+    $$$$$:   79-block 70
+call   69 never executed
+       1*:   80:	EXPECT_THROW(q.peek(), std::runtime_error);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   80-block 23
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   80-block 24
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   80-block 25
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+        1:   80-block 26
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:   80-block 27
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   80-block 28
+    %%%%%:   80-block 29
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   80-block 30
+call   20 never executed
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:   80-block 32
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:   80-block 33
+call   27 never executed
+call   28 never executed
+        1:   80-block 36
+call   29 returned 1
+        1:   80-block 73
+branch 30 taken 1
+branch 31 taken 0
+branch 32 taken 0
+        1:   80-block 74
+call   33 returned 1
+call   34 returned 1
+    $$$$$:   80-block 76
+call   35 never executed
+call   36 never executed
+branch 37 never executed (fallthrough)
+branch 38 never executed (throw)
+    $$$$$:   80-block 78
+call   39 never executed
+branch 40 never executed (fallthrough)
+branch 41 never executed (throw)
+    $$$$$:   80-block 79
+call   42 never executed
+branch 43 never executed (fallthrough)
+branch 44 never executed (throw)
+    $$$$$:   80-block 80
+call   45 never executed
+call   46 never executed
+branch 47 never executed (fallthrough)
+branch 48 never executed (throw)
+    $$$$$:   80-block 82
+call   49 never executed
+call   50 never executed
+branch 51 never executed (fallthrough)
+branch 52 never executed (throw)
+    $$$$$:   80-block 84
+call   53 never executed
+branch 54 never executed (fallthrough)
+branch 55 never executed (throw)
+    $$$$$:   80-block 85
+    $$$$$:   80-block 86
+call   56 never executed
+    $$$$$:   80-block 87
+call   57 never executed
+call   58 never executed
+branch 59 never executed (fallthrough)
+branch 60 never executed (throw)
+    $$$$$:   80-block 89
+    $$$$$:   80-block 90
+call   61 never executed
+branch 62 never executed (fallthrough)
+branch 63 never executed (throw)
+    $$$$$:   80-block 91
+call   64 never executed
+    $$$$$:   80-block 93
+    $$$$$:   80-block 94
+call   65 never executed
+    $$$$$:   80-block 96
+call   66 never executed
+    $$$$$:   80-block 98
+call   67 never executed
+    $$$$$:   80-block 100
+    $$$$$:   80-block 101
+call   68 never executed
+    $$$$$:   80-block 103
+    $$$$$:   80-block 104
+call   69 never executed
+        1:   81:}
+call    0 returned 1
+    $$$$$:   81-block 107
+call    1 never executed
+------------------
