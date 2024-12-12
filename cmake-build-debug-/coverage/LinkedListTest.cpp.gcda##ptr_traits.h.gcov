@@ -135,22 +135,22 @@
         -:  131:       *  @return `addressof(__r)`
         -:  132:      */
         -:  133:      static _GLIBCXX20_CONSTEXPR pointer
-     1135:  134:      pointer_to(element_type& __r) noexcept
-     1135:  135:      { return std::addressof(__r); }
+     1116:  134:      pointer_to(element_type& __r) noexcept
+     1116:  135:      { return std::addressof(__r); }
 ------------------
 _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_:
-function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 873 returned 100% blocks executed 100%
-      873:  134:      pointer_to(element_type& __r) noexcept
-      873:  135:      { return std::addressof(__r); }
-      873:  135-block 2
-call    0 returned 873
+function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 832 returned 100% blocks executed 100%
+      832:  134:      pointer_to(element_type& __r) noexcept
+      832:  135:      { return std::addressof(__r); }
+      832:  135-block 2
+call    0 returned 832
 ------------------
 _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc:
-function _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc called 262 returned 100% blocks executed 100%
-      262:  134:      pointer_to(element_type& __r) noexcept
-      262:  135:      { return std::addressof(__r); }
-      262:  135-block 2
-call    0 returned 262
+function _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc called 284 returned 100% blocks executed 100%
+      284:  134:      pointer_to(element_type& __r) noexcept
+      284:  135:      { return std::addressof(__r); }
+      284:  135-block 2
+call    0 returned 284
 ------------------
         -:  136:    };
         -:  137:

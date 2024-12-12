@@ -551,10 +551,10 @@
         -:  547:    if consteval { return true; } else { return false; }
         -:  548:#elif __cplusplus >= 201103L && __has_builtin(__builtin_is_constant_evaluated)
         -:  549:# define _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED 1
-     181*:  550:    return __builtin_is_constant_evaluated();
-      157:  550-block 2
+     139*:  550:    return __builtin_is_constant_evaluated();
+      135:  550-block 2
     %%%%%:  550-block 2
-       20:  550-block 2
+    %%%%%:  550-block 2
     %%%%%:  550-block 2
     %%%%%:  550-block 4
     %%%%%:  550-block 4

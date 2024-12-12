@@ -133,7 +133,7 @@
         -:  129:                              int>::type = 0
         -:  130:#endif  // GTEST_HAS_ABSL
         -:  131:      >
-       14:  132:  inline Message& operator<<(const T& val) {
+    #####:  132:  inline Message& operator<<(const T& val) {
         -:  133:        // Some libraries overload << for STL containers.  These
         -:  134:    // overloads are defined in the global namespace instead of ::std.
         -:  135:    //
@@ -149,13 +149,13 @@
         -:  145:    // overloads of << defined in the global namespace and those
         -:  146:    // visible via Koenig lookup are both exposed in this function.
         -:  147:    using ::operator<<;
-       14:  148:    *ss_ << val;
-       14:  149:    return *this;
+    #####:  148:    *ss_ << val;
+    #####:  149:    return *this;
         -:  150:  }
 ------------------
 _ZN7testing7MessagelsIA5_cEERS0_RKT_:
-function _ZN7testing7MessagelsIA5_cEERS0_RKT_ called 2 returned 100% blocks executed 100%
-        2:  132:  inline Message& operator<<(const T& val) {
+function _ZN7testing7MessagelsIA5_cEERS0_RKT_ called 0 returned 0% blocks executed 0%
+    #####:  132:  inline Message& operator<<(const T& val) {
         -:  133:        // Some libraries overload << for STL containers.  These
         -:  134:    // overloads are defined in the global namespace instead of ::std.
         -:  135:    //
@@ -171,16 +171,16 @@ function _ZN7testing7MessagelsIA5_cEERS0_RKT_ called 2 returned 100% blocks exec
         -:  145:    // overloads of << defined in the global namespace and those
         -:  146:    // visible via Koenig lookup are both exposed in this function.
         -:  147:    using ::operator<<;
-        2:  148:    *ss_ << val;
-        2:  148-block 2
-call    0 returned 2
-call    1 returned 2
-        2:  149:    return *this;
+    #####:  148:    *ss_ << val;
+    %%%%%:  148-block 2
+call    0 never executed
+call    1 never executed
+    #####:  149:    return *this;
         -:  150:  }
 ------------------
 _ZN7testing7MessagelsINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERS0_RKT_:
-function _ZN7testing7MessagelsINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERS0_RKT_ called 4 returned 100% blocks executed 100%
-        4:  132:  inline Message& operator<<(const T& val) {
+function _ZN7testing7MessagelsINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERS0_RKT_ called 0 returned 0% blocks executed 0%
+    #####:  132:  inline Message& operator<<(const T& val) {
         -:  133:        // Some libraries overload << for STL containers.  These
         -:  134:    // overloads are defined in the global namespace instead of ::std.
         -:  135:    //
@@ -196,16 +196,16 @@ function _ZN7testing7MessagelsINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIc
         -:  145:    // overloads of << defined in the global namespace and those
         -:  146:    // visible via Koenig lookup are both exposed in this function.
         -:  147:    using ::operator<<;
-        4:  148:    *ss_ << val;
-        4:  148-block 2
-call    0 returned 4
-call    1 returned 4
-        4:  149:    return *this;
+    #####:  148:    *ss_ << val;
+    %%%%%:  148-block 2
+call    0 never executed
+call    1 never executed
+    #####:  149:    return *this;
         -:  150:  }
 ------------------
 _ZN7testing7MessagelsIA3_cEERS0_RKT_:
-function _ZN7testing7MessagelsIA3_cEERS0_RKT_ called 4 returned 100% blocks executed 100%
-        4:  132:  inline Message& operator<<(const T& val) {
+function _ZN7testing7MessagelsIA3_cEERS0_RKT_ called 0 returned 0% blocks executed 0%
+    #####:  132:  inline Message& operator<<(const T& val) {
         -:  133:        // Some libraries overload << for STL containers.  These
         -:  134:    // overloads are defined in the global namespace instead of ::std.
         -:  135:    //
@@ -221,16 +221,16 @@ function _ZN7testing7MessagelsIA3_cEERS0_RKT_ called 4 returned 100% blocks exec
         -:  145:    // overloads of << defined in the global namespace and those
         -:  146:    // visible via Koenig lookup are both exposed in this function.
         -:  147:    using ::operator<<;
-        4:  148:    *ss_ << val;
-        4:  148-block 2
-call    0 returned 4
-call    1 returned 4
-        4:  149:    return *this;
+    #####:  148:    *ss_ << val;
+    %%%%%:  148-block 2
+call    0 never executed
+call    1 never executed
+    #####:  149:    return *this;
         -:  150:  }
 ------------------
 _ZN7testing7MessagelsIA12_cEERS0_RKT_:
-function _ZN7testing7MessagelsIA12_cEERS0_RKT_ called 4 returned 100% blocks executed 100%
-        4:  132:  inline Message& operator<<(const T& val) {
+function _ZN7testing7MessagelsIA12_cEERS0_RKT_ called 0 returned 0% blocks executed 0%
+    #####:  132:  inline Message& operator<<(const T& val) {
         -:  133:        // Some libraries overload << for STL containers.  These
         -:  134:    // overloads are defined in the global namespace instead of ::std.
         -:  135:    //
@@ -246,11 +246,11 @@ function _ZN7testing7MessagelsIA12_cEERS0_RKT_ called 4 returned 100% blocks exe
         -:  145:    // overloads of << defined in the global namespace and those
         -:  146:    // visible via Koenig lookup are both exposed in this function.
         -:  147:    using ::operator<<;
-        4:  148:    *ss_ << val;
-        4:  148-block 2
-call    0 returned 4
-call    1 returned 4
-        4:  149:    return *this;
+    #####:  148:    *ss_ << val;
+    %%%%%:  148-block 2
+call    0 never executed
+call    1 never executed
+    #####:  149:    return *this;
         -:  150:  }
 ------------------
         -:  151:
@@ -283,24 +283,24 @@ call    1 returned 4
         -:  178:  // ensure consistent result across compilers, we always treat NULL
         -:  179:  // as "(null)".
         -:  180:  template <typename T>
-function _ZN7testing7MessagelsIKcEERS0_RKPT_ called 6 returned 100% blocks executed 71%
-        6:  181:  inline Message& operator<<(T* const& pointer) {  // NOLINT
-        6:  182:    if (pointer == nullptr) {
-        6:  182-block 2
-branch  0 taken 0 (fallthrough)
-branch  1 taken 6
+function _ZN7testing7MessagelsIKcEERS0_RKPT_ called 0 returned 0% blocks executed 0%
+    #####:  181:  inline Message& operator<<(T* const& pointer) {  // NOLINT
+    #####:  182:    if (pointer == nullptr) {
+    %%%%%:  182-block 2
+branch  0 never executed (fallthrough)
+branch  1 never executed
     #####:  183:      *ss_ << "(null)";
     %%%%%:  183-block 3
 call    0 never executed
 call    1 never executed
         -:  184:    } else {
-        6:  185:      *ss_ << pointer;
-        6:  185-block 5
-call    0 returned 6
-call    1 returned 6
+    #####:  185:      *ss_ << pointer;
+    %%%%%:  185-block 5
+call    0 never executed
+call    1 never executed
         -:  186:    }
-        6:  187:    return *this;
-        6:  187-block 7
+    #####:  187:    return *this;
+    %%%%%:  187-block 7
         -:  188:  }
         -:  189:
         -:  190:  // Since the basic IO manipulators are overloaded for both narrow

@@ -470,106 +470,154 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 0 returned 0% blocks e
         -:  453:template <class TestClass>
         -:  454:class TestFactoryImpl : public TestFactoryBase {
         -:  455: public:
-       10:  456:  Test* CreateTest() override { return new TestClass; }
+       17:  456:  Test* CreateTest() override { return new TestClass; }
+------------------
+_ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMin_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMin_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI40BinaryTreeTest_RightSkewedTreeIsBST_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI40BinaryTreeTest_RightSkewedTreeIsBST_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_LeftSkewedTreeIsBST_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_LeftSkewedTreeIsBST_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI30BinaryTreeTest_InvalidBST_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI30BinaryTreeTest_InvalidBST_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI28BinaryTreeTest_ValidBST_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI28BinaryTreeTest_ValidBST_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_SingleNodeTreeIsBST_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_SingleNodeTreeIsBST_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI34BinaryTreeTest_EmptyTreeIsBST_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI34BinaryTreeTest_EmptyTreeIsBST_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI35BinaryTreeTest_CalculateHeight_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI35BinaryTreeTest_CalculateHeight_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMax_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMax_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
 ------------------
 _ZN7testing8internal15TestFactoryImplI26BinaryTreeTest_Insert_TestE10CreateTestEv:
 function _ZN7testing8internal15TestFactoryImplI26BinaryTreeTest_Insert_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
-        1:  456:  Test* CreateTest() override { return new TestClass; }
-        1:  456-block 2
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  456-block 4
-        1:  456-block 5
-    $$$$$:  456-block 6
-branch  4 never executed (fallthrough)
-branch  5 never executed
-    $$$$$:  456-block 7
-call    6 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI37BinaryTreeTest_PreOrderTraversal_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI37BinaryTreeTest_PreOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
-        1:  456:  Test* CreateTest() override { return new TestClass; }
-        1:  456-block 2
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  456-block 4
-        1:  456-block 5
-    $$$$$:  456-block 6
-branch  4 never executed (fallthrough)
-branch  5 never executed
-    $$$$$:  456-block 7
-call    6 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_InOrderTraversal_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_InOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
-        1:  456:  Test* CreateTest() override { return new TestClass; }
-        1:  456-block 2
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  456-block 4
-        1:  456-block 5
-    $$$$$:  456-block 6
-branch  4 never executed (fallthrough)
-branch  5 never executed
-    $$$$$:  456-block 7
-call    6 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI38BinaryTreeTest_PostOrderTraversal_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI38BinaryTreeTest_PostOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
-        1:  456:  Test* CreateTest() override { return new TestClass; }
-        1:  456-block 2
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  456-block 4
-        1:  456-block 5
-    $$$$$:  456-block 6
-branch  4 never executed (fallthrough)
-branch  5 never executed
-    $$$$$:  456-block 7
-call    6 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_LevelOrderTraversal_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_LevelOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
-        1:  456:  Test* CreateTest() override { return new TestClass; }
-        1:  456-block 2
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  456-block 4
-        1:  456-block 5
-    $$$$$:  456-block 6
-branch  4 never executed (fallthrough)
-branch  5 never executed
-    $$$$$:  456-block 7
-call    6 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI30BinaryTreeTest_SearchTest_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI30BinaryTreeTest_SearchTest_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
-        1:  456:  Test* CreateTest() override { return new TestClass; }
-        1:  456-block 2
-call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:  456-block 4
-        1:  456-block 5
-    $$$$$:  456-block 6
-branch  4 never executed (fallthrough)
-branch  5 never executed
-    $$$$$:  456-block 7
-call    6 never executed
-------------------
-_ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_FindMaxValueTest_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_FindMaxValueTest_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
         1:  456:  Test* CreateTest() override { return new TestClass; }
         1:  456-block 2
 call    0 returned 1
@@ -600,8 +648,8 @@ branch  5 never executed
     $$$$$:  456-block 7
 call    6 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMin_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMin_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+_ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_FindMaxValueTest_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_FindMaxValueTest_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
         1:  456:  Test* CreateTest() override { return new TestClass; }
         1:  456-block 2
 call    0 returned 1
@@ -616,8 +664,72 @@ branch  5 never executed
     $$$$$:  456-block 7
 call    6 never executed
 ------------------
-_ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMax_TestE10CreateTestEv:
-function _ZN7testing8internal15TestFactoryImplI27BinaryTreeTest_FindMax_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+_ZN7testing8internal15TestFactoryImplI30BinaryTreeTest_SearchTest_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI30BinaryTreeTest_SearchTest_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_LevelOrderTraversal_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI39BinaryTreeTest_LevelOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI38BinaryTreeTest_PostOrderTraversal_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI38BinaryTreeTest_PostOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_InOrderTraversal_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI36BinaryTreeTest_InOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  456:  Test* CreateTest() override { return new TestClass; }
+        1:  456-block 2
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  456-block 4
+        1:  456-block 5
+    $$$$$:  456-block 6
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  456-block 7
+call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI37BinaryTreeTest_PreOrderTraversal_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI37BinaryTreeTest_PreOrderTraversal_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
         1:  456:  Test* CreateTest() override { return new TestClass; }
         1:  456-block 2
 call    0 returned 1

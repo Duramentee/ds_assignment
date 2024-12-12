@@ -52,20 +52,20 @@
         -:   48:   */
         -:   49:  template<typename _Tp>
         -:   50:    inline _GLIBCXX_CONSTEXPR _Tp*
-     1135:   51:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-     1135:   52:    { return __builtin_addressof(__r); }
+     1116:   51:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+     1116:   52:    { return __builtin_addressof(__r); }
 ------------------
 _ZSt11__addressofIKcEPT_RS1_:
-function _ZSt11__addressofIKcEPT_RS1_ called 873 returned 100% blocks executed 100%
-      873:   51:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-      873:   52:    { return __builtin_addressof(__r); }
-      873:   52-block 2
+function _ZSt11__addressofIKcEPT_RS1_ called 832 returned 100% blocks executed 100%
+      832:   51:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+      832:   52:    { return __builtin_addressof(__r); }
+      832:   52-block 2
 ------------------
 _ZSt11__addressofIcEPT_RS0_:
-function _ZSt11__addressofIcEPT_RS0_ called 262 returned 100% blocks executed 100%
-      262:   51:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-      262:   52:    { return __builtin_addressof(__r); }
-      262:   52-block 2
+function _ZSt11__addressofIcEPT_RS0_ called 284 returned 100% blocks executed 100%
+      284:   51:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+      284:   52:    { return __builtin_addressof(__r); }
+      284:   52-block 2
 ------------------
         -:   53:
         -:   54:#if __cplusplus >= 201103L
@@ -143,32 +143,32 @@ function _ZSt7forwardIRKcEOT_RNSt16remove_referenceIS2_E4typeE called 0 returned
         -:  124:  template<typename _Tp>
         -:  125:    _GLIBCXX_NODISCARD
         -:  126:    constexpr typename std::remove_reference<_Tp>::type&&
-      232:  127:    move(_Tp&& __t) noexcept
-      232:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+     221*:  127:    move(_Tp&& __t) noexcept
+     221*:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
 ------------------
 _ZSt4moveIRPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS9_:
-function _ZSt4moveIRPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS9_ called 4 returned 100% blocks executed 100%
-        4:  127:    move(_Tp&& __t) noexcept
-        4:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-        4:  128-block 2
+function _ZSt4moveIRPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS9_ called 0 returned 0% blocks executed 0%
+    #####:  127:    move(_Tp&& __t) noexcept
+    #####:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+    %%%%%:  128-block 2
 ------------------
 _ZSt4moveIRPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS9_:
-function _ZSt4moveIRPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS9_ called 22 returned 100% blocks executed 100%
-       22:  127:    move(_Tp&& __t) noexcept
-       22:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-       22:  128-block 2
+function _ZSt4moveIRPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS9_ called 0 returned 0% blocks executed 0%
+    #####:  127:    move(_Tp&& __t) noexcept
+    #####:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+    %%%%%:  128-block 2
 ------------------
 _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_:
-function _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_ called 56 returned 100% blocks executed 100%
-       56:  127:    move(_Tp&& __t) noexcept
-       56:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-       56:  128-block 2
+function _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_ called 63 returned 100% blocks executed 100%
+       63:  127:    move(_Tp&& __t) noexcept
+       63:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+       63:  128-block 2
 ------------------
 _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_:
-function _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_ called 150 returned 100% blocks executed 100%
-      150:  127:    move(_Tp&& __t) noexcept
-      150:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-      150:  128-block 2
+function _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_ called 158 returned 100% blocks executed 100%
+      158:  127:    move(_Tp&& __t) noexcept
+      158:  128:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+      158:  128-block 2
 ------------------
         -:  129:
         -:  130:
@@ -204,22 +204,22 @@ function _ZSt4moveIRSaIcEEONSt16remove_referenceIT_E4typeEOS3_ called 150 return
         -:  160:  template<typename _Tp>
         -:  161:    _GLIBCXX_NODISCARD
         -:  162:    inline _GLIBCXX17_CONSTEXPR _Tp*
-     1135:  163:    addressof(_Tp& __r) noexcept
-     1135:  164:    { return std::__addressof(__r); }
+     1116:  163:    addressof(_Tp& __r) noexcept
+     1116:  164:    { return std::__addressof(__r); }
 ------------------
 _ZSt9addressofIKcEPT_RS1_:
-function _ZSt9addressofIKcEPT_RS1_ called 873 returned 100% blocks executed 100%
-      873:  163:    addressof(_Tp& __r) noexcept
-      873:  164:    { return std::__addressof(__r); }
-      873:  164-block 2
-call    0 returned 873
+function _ZSt9addressofIKcEPT_RS1_ called 832 returned 100% blocks executed 100%
+      832:  163:    addressof(_Tp& __r) noexcept
+      832:  164:    { return std::__addressof(__r); }
+      832:  164-block 2
+call    0 returned 832
 ------------------
 _ZSt9addressofIcEPT_RS0_:
-function _ZSt9addressofIcEPT_RS0_ called 262 returned 100% blocks executed 100%
-      262:  163:    addressof(_Tp& __r) noexcept
-      262:  164:    { return std::__addressof(__r); }
-      262:  164-block 2
-call    0 returned 262
+function _ZSt9addressofIcEPT_RS0_ called 284 returned 100% blocks executed 100%
+      284:  163:    addressof(_Tp& __r) noexcept
+      284:  164:    { return std::__addressof(__r); }
+      284:  164-block 2
+call    0 returned 284
 ------------------
         -:  165:
         -:  166:  // _GLIBCXX_RESOLVE_LIB_DEFECTS

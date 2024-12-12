@@ -1389,6 +1389,37 @@ function _ZN7testing4Test5SetupEv called 0 returned 0% blocks executed 0%
     #####: 1379:                   FormatForComparisonFailureMessage(rhs, lhs), false);
         -: 1380:}
 ------------------
+_ZN7testing8internal18CmpHelperEQFailureImiEENS_15AssertionResultEPKcS4_RKT_RKT0_:
+function _ZN7testing8internal18CmpHelperEQFailureImiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####: 1374:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
+        -: 1375:                                   const char* rhs_expression, const T1& lhs,
+        -: 1376:                                   const T2& rhs) {
+        -: 1377:  return EqFailure(lhs_expression, rhs_expression,
+    #####: 1378:                   FormatForComparisonFailureMessage(lhs, rhs),
+    %%%%%: 1378-block 3
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%: 1378-block 6
+call    3 never executed
+    $$$$$: 1378-block 10
+call    4 never executed
+    $$$$$: 1378-block 12
+    #####: 1379:                   FormatForComparisonFailureMessage(rhs, lhs), false);
+    %%%%%: 1379-block 2
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%: 1379-block 4
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+call    6 never executed
+    %%%%%: 1379-block 9
+    $$$$$: 1379-block 13
+call    7 never executed
+        -: 1380:}
+------------------
 _ZN7testing8internal18CmpHelperEQFailureIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_:
 function _ZN7testing8internal18CmpHelperEQFailureIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 0 returned 0% blocks executed 0%
     #####: 1374:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
@@ -1471,6 +1502,25 @@ call    7 never executed
     #####: 1398:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
         -: 1399:}
 ------------------
+_ZN7testing8internal11CmpHelperEQImiEENS_15AssertionResultEPKcS4_RKT_RKT0_:
+function _ZN7testing8internal11CmpHelperEQImiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####: 1391:AssertionResult CmpHelperEQ(const char* lhs_expression,
+        -: 1392:                            const char* rhs_expression, const T1& lhs,
+        -: 1393:                            const T2& rhs) {
+    #####: 1394:  if (lhs == rhs) {
+    %%%%%: 1394-block 2
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####: 1395:    return AssertionSuccess();
+    %%%%%: 1395-block 3
+call    0 never executed
+        -: 1396:  }
+        -: 1397:
+    #####: 1398:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
+    %%%%%: 1398-block 4
+call    0 never executed
+        -: 1399:}
+------------------
 _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_:
 function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 0 returned 0% blocks executed 0%
     #####: 1391:AssertionResult CmpHelperEQ(const char* lhs_expression,
@@ -1526,6 +1576,16 @@ call    0 never executed
        4*: 1413:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
         -: 1414:  }
 ------------------
+_ZN7testing8internal8EqHelper7CompareImiLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_:
+function _ZN7testing8internal8EqHelper7CompareImiLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####: 1410:  static AssertionResult Compare(const char* lhs_expression,
+        -: 1411:                                 const char* rhs_expression, const T1& lhs,
+        -: 1412:                                 const T2& rhs) {
+    #####: 1413:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
+    %%%%%: 1413-block 2
+call    0 never executed
+        -: 1414:  }
+------------------
 _ZN7testing8internal8EqHelper7CompareIiiLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_:
 function _ZN7testing8internal8EqHelper7CompareIiiLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 0 returned 0% blocks executed 0%
     #####: 1410:  static AssertionResult Compare(const char* lhs_expression,
@@ -1574,81 +1634,81 @@ call    0 returned 4
         -: 1440:// frame size of CmpHelperOP. This helps reduce the overhead of some sanitizers
         -: 1441:// when calling EXPECT_OP in a tight loop.
         -: 1442:template <typename T1, typename T2>
-function _ZN7testing8internal18CmpHelperOpFailureIPN2ds14BinaryTreeNodeIiEEDnEENS_15AssertionResultEPKcS8_RKT_RKT0_S8_ called 2 returned 100% blocks executed 72%
-        2: 1443:AssertionResult CmpHelperOpFailure(const char* expr1, const char* expr2,
+function _ZN7testing8internal18CmpHelperOpFailureIPN2ds14BinaryTreeNodeIiEEDnEENS_15AssertionResultEPKcS8_RKT_RKT0_S8_ called 0 returned 0% blocks executed 0%
+    #####: 1443:AssertionResult CmpHelperOpFailure(const char* expr1, const char* expr2,
         -: 1444:                                   const T1& val1, const T2& val2,
         -: 1445:                                   const char* op) {
-        4: 1446:  return AssertionFailure()
-        2: 1446-block 2
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
+    #####: 1446:  return AssertionFailure()
+    %%%%%: 1446-block 2
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
     $$$$$: 1446-block 28
 call    3 never executed
-        2: 1447:         << "Expected: (" << expr1 << ") " << op << " (" << expr2
-        2: 1447-block 3
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        2: 1447-block 4
-call    3 returned 2
-branch  4 taken 2 (fallthrough)
-branch  5 taken 0 (throw)
-        2: 1447-block 5
-call    6 returned 2
-branch  7 taken 2 (fallthrough)
-branch  8 taken 0 (throw)
-        2: 1447-block 6
-call    9 returned 2
-branch 10 taken 2 (fallthrough)
-branch 11 taken 0 (throw)
-        2: 1447-block 7
-call   12 returned 2
-branch 13 taken 2 (fallthrough)
-branch 14 taken 0 (throw)
-        2: 1447-block 8
-call   15 returned 2
-branch 16 taken 2 (fallthrough)
-branch 17 taken 0 (throw)
-        4: 1448:         << "), actual: " << FormatForComparisonFailureMessage(val1, val2)
-        2: 1448-block 9
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        2: 1448-block 10
-call    3 returned 2
-branch  4 taken 2 (fallthrough)
-branch  5 taken 0 (throw)
-        2: 1448-block 11
-call    6 returned 2
-branch  7 taken 2 (fallthrough)
-branch  8 taken 0 (throw)
-call    9 returned 2
+    #####: 1447:         << "Expected: (" << expr1 << ") " << op << " (" << expr2
+    %%%%%: 1447-block 3
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%: 1447-block 4
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%: 1447-block 5
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%: 1447-block 6
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%: 1447-block 7
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%: 1447-block 8
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    #####: 1448:         << "), actual: " << FormatForComparisonFailureMessage(val1, val2)
+    %%%%%: 1448-block 9
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%: 1448-block 10
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%: 1448-block 11
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+call    9 never executed
     $$$$$: 1448-block 25
 call   10 never executed
     $$$$$: 1448-block 27
-        4: 1449:         << " vs " << FormatForComparisonFailureMessage(val2, val1);
-        2: 1449-block 12
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        2: 1449-block 13
-call    3 returned 2
-branch  4 taken 2 (fallthrough)
-branch  5 taken 0 (throw)
-        2: 1449-block 14
-call    6 returned 2
-branch  7 taken 2 (fallthrough)
-branch  8 taken 0 (throw)
-        2: 1449-block 15
-call    9 returned 2
-branch 10 taken 2 (fallthrough)
-branch 11 taken 0 (throw)
-        2: 1449-block 16
-        2: 1449-block 17
-call   12 returned 2
-call   13 returned 2
-        2: 1449-block 21
+    #####: 1449:         << " vs " << FormatForComparisonFailureMessage(val2, val1);
+    %%%%%: 1449-block 12
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%: 1449-block 13
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%: 1449-block 14
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%: 1449-block 15
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%: 1449-block 16
+    %%%%%: 1449-block 17
+call   12 never executed
+call   13 never executed
+    %%%%%: 1449-block 21
     $$$$$: 1449-block 22
 call   14 never executed
     $$$$$: 1449-block 24
@@ -1677,12 +1737,12 @@ call   14 never executed
 function _ZN7testing8internal11CmpHelperNEIPN2ds14BinaryTreeNodeIiEEDnEENS_15AssertionResultEPKcS8_RKT_RKT0_ called 2 returned 100% blocks executed 75%
        2*: 1472:GTEST_IMPL_CMP_HELPER_(NE, !=)
         2: 1472-block 2
-branch  0 taken 0 (fallthrough)
-branch  1 taken 2
-    %%%%%: 1472-block 3
-call    2 never executed
-        2: 1472-block 4
-call    3 returned 2
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2: 1472-block 3
+call    2 returned 2
+    %%%%%: 1472-block 4
+call    3 never executed
         -: 1473:// Implements the helper function for {ASSERT|EXPECT}_LE
         -: 1474:GTEST_IMPL_CMP_HELPER_(LE, <=)
         -: 1475:// Implements the helper function for {ASSERT|EXPECT}_LT

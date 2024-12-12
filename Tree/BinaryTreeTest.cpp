@@ -221,7 +221,66 @@ TEST(BinaryTreeTest, CalculateHeight) {
     EXPECT_EQ(tree.calculate_height(), 4);
 }
 
+TEST(BinaryTreeTest, EmptyTreeIsBST) {
+    BinaryTree<int> tree;
+    EXPECT_TRUE(tree.is_bst());
+}
 
+TEST(BinaryTreeTest, SingleNodeTreeIsBST) {
+    BinaryTree<int> tree;
+    tree.insert(10);
+    EXPECT_TRUE(tree.is_bst());
+}
+
+TEST(BinaryTreeTest, ValidBST) {
+    BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(12);
+    tree.insert(18);
+    EXPECT_TRUE(tree.is_bst());
+}
+
+TEST(BinaryTreeTest, InvalidBST) {
+    BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(12);
+    tree.insert(18);
+
+    // Manually modify the tree to make it invalid
+    tree.find_max()->data_ = 5; // This makes the tree invalid
+
+    EXPECT_FALSE(tree.is_bst());
+}
+
+TEST(BinaryTreeTest, LeftSkewedTreeIsBST) {
+    BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(9);
+    tree.insert(8);
+    tree.insert(7);
+    tree.insert(6);
+
+    EXPECT_TRUE(tree.is_bst());
+}
+
+TEST(BinaryTreeTest, RightSkewedTreeIsBST) {
+    BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(11);
+    tree.insert(12);
+    tree.insert(13);
+    tree.insert(14);
+
+    EXPECT_TRUE(tree.is_bst());
+}
 
 
 

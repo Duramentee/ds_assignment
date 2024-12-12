@@ -156,16 +156,16 @@
         -:  152:  // the argument is implicitly convertible to AssertionResult. In that case
         -:  153:  // we want AssertionResult's copy constructor to be used.
         -:  154:  template <typename T>
-function _ZN7testing15AssertionResultC2IbEERKT_PNSt9enable_ifIXntsrSt14is_convertibleIS2_S0_E5valueEvE4typeE called 40 returned 100% blocks executed 100%
-       40:  155:  explicit AssertionResult(
+function _ZN7testing15AssertionResultC2IbEERKT_PNSt9enable_ifIXntsrSt14is_convertibleIS2_S0_E5valueEvE4typeE called 46 returned 100% blocks executed 100%
+       46:  155:  explicit AssertionResult(
         -:  156:      const T& success,
         -:  157:      typename std::enable_if<
         -:  158:          !std::is_convertible<T, AssertionResult>::value>::type*
         -:  159:      /*enabler*/
         -:  160:      = nullptr)
-       40:  161:      : success_(success) {}
-       40:  161-block 2
-call    0 returned 40
+       46:  161:      : success_(success) {}
+       46:  161-block 2
+call    0 returned 46
         -:  162:
         -:  163:#if defined(_MSC_VER) && (_MSC_VER < 1910 || _MSC_VER >= 1920)
         -:  164:  GTEST_DISABLE_MSC_WARNINGS_POP_()
@@ -178,9 +178,9 @@ call    0 returned 40
         -:  171:  }
         -:  172:
         -:  173:  // Returns true if and only if the assertion succeeded.
-function _ZNK7testing15AssertionResultcvbEv called 161 returned 100% blocks executed 100%
-      161:  174:  operator bool() const { return success_; }  // NOLINT
-      161:  174-block 2
+function _ZNK7testing15AssertionResultcvbEv called 173 returned 100% blocks executed 100%
+      173:  174:  operator bool() const { return success_; }  // NOLINT
+      173:  174-block 2
         -:  175:
         -:  176:  // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
         -:  177:  AssertionResult operator!() const;
@@ -189,24 +189,24 @@ function _ZNK7testing15AssertionResultcvbEv called 161 returned 100% blocks exec
         -:  180:  // use it when they fail (i.e., the predicate's outcome doesn't match the
         -:  181:  // assertion's expectation). When nothing has been streamed into the
         -:  182:  // object, returns an empty string.
-function _ZNK7testing15AssertionResult7messageEv called 2 returned 100% blocks executed 86%
-        2:  183:  const char* message() const {
-       2*:  184:    return message_ != nullptr ? message_->c_str() : "";
-        2:  184-block 2
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0
-        2:  184-block 4
-call    3 returned 2
-call    4 returned 2
+function _ZNK7testing15AssertionResult7messageEv called 0 returned 0% blocks executed 0%
+    #####:  183:  const char* message() const {
+    #####:  184:    return message_ != nullptr ? message_->c_str() : "";
+    %%%%%:  184-block 2
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:  184-block 4
+call    3 never executed
+call    4 never executed
     %%%%%:  184-block 6
-        2:  184-block 7
+    %%%%%:  184-block 7
         -:  185:  }
         -:  186:  // Deprecated; please use message() instead.
-function _ZNK7testing15AssertionResult15failure_messageEv called 2 returned 100% blocks executed 100%
-        2:  187:  const char* failure_message() const { return message(); }
-        2:  187-block 2
-call    0 returned 2
+function _ZNK7testing15AssertionResult15failure_messageEv called 0 returned 0% blocks executed 0%
+    #####:  187:  const char* failure_message() const { return message(); }
+    %%%%%:  187-block 2
+call    0 never executed
         -:  188:
         -:  189:  // Streams a custom failure message into this object.
         -:  190:  template <typename T>

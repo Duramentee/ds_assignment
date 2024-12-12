@@ -88,47 +88,47 @@
         -:   84:      /// Calls `delete __ptr`
         -:   85:      _GLIBCXX23_CONSTEXPR
         -:   86:      void
-       26:   87:      operator()(_Tp* __ptr) const
+    #####:   87:      operator()(_Tp* __ptr) const
         -:   88:      {
         -:   89:	static_assert(!is_void<_Tp>::value,
         -:   90:		      "can't delete pointer to incomplete type");
         -:   91:	static_assert(sizeof(_Tp)>0,
         -:   92:		      "can't delete pointer to incomplete type");
-       26:   93:	delete __ptr;
-       26:   94:      }
+    #####:   93:	delete __ptr;
+    #####:   94:      }
 ------------------
 _ZNKSt14default_deleteINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEclEPS5_:
-function _ZNKSt14default_deleteINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEclEPS5_ called 4 returned 100% blocks executed 100%
-        4:   87:      operator()(_Tp* __ptr) const
+function _ZNKSt14default_deleteINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEclEPS5_ called 0 returned 0% blocks executed 0%
+    #####:   87:      operator()(_Tp* __ptr) const
         -:   88:      {
         -:   89:	static_assert(!is_void<_Tp>::value,
         -:   90:		      "can't delete pointer to incomplete type");
         -:   91:	static_assert(sizeof(_Tp)>0,
         -:   92:		      "can't delete pointer to incomplete type");
-        4:   93:	delete __ptr;
-        4:   93-block 2
-branch  0 taken 4 (fallthrough)
-branch  1 taken 0
-        4:   93-block 3
-call    2 returned 4
-call    3 returned 4
-        4:   94:      }
+    #####:   93:	delete __ptr;
+    %%%%%:   93-block 2
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   93-block 3
+call    2 never executed
+call    3 never executed
+    #####:   94:      }
 ------------------
 _ZNKSt14default_deleteINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEclEPS5_:
-function _ZNKSt14default_deleteINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEclEPS5_ called 22 returned 100% blocks executed 100%
-       22:   87:      operator()(_Tp* __ptr) const
+function _ZNKSt14default_deleteINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEclEPS5_ called 0 returned 0% blocks executed 0%
+    #####:   87:      operator()(_Tp* __ptr) const
         -:   88:      {
         -:   89:	static_assert(!is_void<_Tp>::value,
         -:   90:		      "can't delete pointer to incomplete type");
         -:   91:	static_assert(sizeof(_Tp)>0,
         -:   92:		      "can't delete pointer to incomplete type");
-       22:   93:	delete __ptr;
-       22:   93-block 2
-branch  0 taken 22 (fallthrough)
-branch  1 taken 0
-       22:   93-block 3
-call    2 returned 22
-       22:   94:      }
+    #####:   93:	delete __ptr;
+    %%%%%:   93-block 2
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   93-block 3
+call    2 never executed
+    #####:   94:      }
 ------------------
         -:   95:    };
         -:   96:
@@ -203,10 +203,10 @@ call    2 returned 22
         -:  165:		     "unique_ptr's deleter type must be a function object type"
         -:  166:		     " or an lvalue reference type" );
         -:  167:
-function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2Ev called 40 returned 100% blocks executed 100%
-       40:  168:      __uniq_ptr_impl() = default;
-       40:  168-block 2
-call    0 returned 40
+function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2Ev called 46 returned 100% blocks executed 100%
+       46:  168:      __uniq_ptr_impl() = default;
+       46:  168-block 2
+call    0 returned 46
         -:  169:      _GLIBCXX23_CONSTEXPR
         -:  170:      __uniq_ptr_impl(pointer __p) : _M_t() { _M_ptr() = __p; }
         -:  171:
@@ -229,39 +229,39 @@ call    0 returned 40
         -:  188:      }
         -:  189:
         -:  190:      _GLIBCXX23_CONSTEXPR
-      197:  191:      pointer&   _M_ptr() noexcept { return std::get<0>(_M_t); }
+     173*:  191:      pointer&   _M_ptr() noexcept { return std::get<0>(_M_t); }
 ------------------
 _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv:
-function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv called 175 returned 100% blocks executed 100%
-      175:  191:      pointer&   _M_ptr() noexcept { return std::get<0>(_M_t); }
-      175:  191-block 2
-call    0 returned 175
+function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv called 173 returned 100% blocks executed 100%
+      173:  191:      pointer&   _M_ptr() noexcept { return std::get<0>(_M_t); }
+      173:  191-block 2
+call    0 returned 173
 ------------------
 _ZNSt15__uniq_ptr_implINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv:
-function _ZNSt15__uniq_ptr_implINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv called 22 returned 100% blocks executed 100%
-       22:  191:      pointer&   _M_ptr() noexcept { return std::get<0>(_M_t); }
-       22:  191-block 2
-call    0 returned 22
+function _ZNSt15__uniq_ptr_implINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv called 0 returned 0% blocks executed 0%
+    #####:  191:      pointer&   _M_ptr() noexcept { return std::get<0>(_M_t); }
+    %%%%%:  191-block 2
+call    0 never executed
 ------------------
         -:  192:      _GLIBCXX23_CONSTEXPR
-function _ZNKSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv called 44 returned 100% blocks executed 100%
-       44:  193:      pointer    _M_ptr() const noexcept { return std::get<0>(_M_t); }
-       44:  193-block 2
-call    0 returned 44
+function _ZNKSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE6_M_ptrEv called 0 returned 0% blocks executed 0%
+    #####:  193:      pointer    _M_ptr() const noexcept { return std::get<0>(_M_t); }
+    %%%%%:  193-block 2
+call    0 never executed
         -:  194:      _GLIBCXX23_CONSTEXPR
-       30:  195:      _Dp&       _M_deleter() noexcept { return std::get<1>(_M_t); }
+    #####:  195:      _Dp&       _M_deleter() noexcept { return std::get<1>(_M_t); }
 ------------------
 _ZNSt15__uniq_ptr_implINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE10_M_deleterEv:
-function _ZNSt15__uniq_ptr_implINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE10_M_deleterEv called 22 returned 100% blocks executed 100%
-       22:  195:      _Dp&       _M_deleter() noexcept { return std::get<1>(_M_t); }
-       22:  195-block 2
-call    0 returned 22
+function _ZNSt15__uniq_ptr_implINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE10_M_deleterEv called 0 returned 0% blocks executed 0%
+    #####:  195:      _Dp&       _M_deleter() noexcept { return std::get<1>(_M_t); }
+    %%%%%:  195-block 2
+call    0 never executed
 ------------------
 _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE10_M_deleterEv:
-function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE10_M_deleterEv called 8 returned 100% blocks executed 100%
-        8:  195:      _Dp&       _M_deleter() noexcept { return std::get<1>(_M_t); }
-        8:  195-block 2
-call    0 returned 8
+function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE10_M_deleterEv called 0 returned 0% blocks executed 0%
+    #####:  195:      _Dp&       _M_deleter() noexcept { return std::get<1>(_M_t); }
+    %%%%%:  195-block 2
+call    0 never executed
 ------------------
         -:  196:      _GLIBCXX23_CONSTEXPR
         -:  197:      const _Dp& _M_deleter() const noexcept { return std::get<1>(_M_t); }
@@ -365,12 +365,12 @@ call    0 returned 8
         -:  295:
         -:  296:      /// Default constructor, creates a unique_ptr that owns nothing.
         -:  297:      template<typename _Del = _Dp, typename = _DeleterConstraint<_Del>>
-function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2IS7_vEEv called 40 returned 100% blocks executed 100%
-       40:  298:	constexpr unique_ptr() noexcept
-       40:  299:	: _M_t()
-       40:  299-block 2
-call    0 returned 40
-       40:  300:	{ }
+function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2IS7_vEEv called 46 returned 100% blocks executed 100%
+       46:  298:	constexpr unique_ptr() noexcept
+       46:  299:	: _M_t()
+       46:  299-block 2
+call    0 returned 46
+       46:  300:	{ }
         -:  301:
         -:  302:      /** Takes ownership of a pointer.
         -:  303:       *
@@ -463,55 +463,55 @@ call    0 returned 40
         -:  390:#if __cplusplus > 202002L && __cpp_constexpr_dynamic_alloc
         -:  391:      constexpr
         -:  392:#endif
-      187:  393:      ~unique_ptr() noexcept
+     173*:  393:      ~unique_ptr() noexcept
         -:  394:      {
         -:  395:	static_assert(__is_invocable<deleter_type&, pointer>::value,
         -:  396:		      "unique_ptr's deleter must be invocable with a pointer");
-      187:  397:	auto& __ptr = _M_t._M_ptr();
-      187:  398:	if (__ptr != nullptr)
-       26:  399:	  get_deleter()(std::move(__ptr));
-      187:  400:	__ptr = pointer();
-      187:  401:      }
+     173*:  397:	auto& __ptr = _M_t._M_ptr();
+     173*:  398:	if (__ptr != nullptr)
+    #####:  399:	  get_deleter()(std::move(__ptr));
+     173*:  400:	__ptr = pointer();
+     173*:  401:      }
 ------------------
 _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EED2Ev:
-function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EED2Ev called 165 returned 100% blocks executed 100%
-      165:  393:      ~unique_ptr() noexcept
+function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EED2Ev called 173 returned 100% blocks executed 50%
+      173:  393:      ~unique_ptr() noexcept
         -:  394:      {
         -:  395:	static_assert(__is_invocable<deleter_type&, pointer>::value,
         -:  396:		      "unique_ptr's deleter must be invocable with a pointer");
-      165:  397:	auto& __ptr = _M_t._M_ptr();
-      165:  397-block 2
-call    0 returned 165
-      165:  398:	if (__ptr != nullptr)
-branch  0 taken 4 (fallthrough)
-branch  1 taken 161
-        4:  399:	  get_deleter()(std::move(__ptr));
-        4:  399-block 4
-call    0 returned 4
-call    1 returned 4
-call    2 returned 4
-      165:  400:	__ptr = pointer();
-      165:  401:      }
+      173:  397:	auto& __ptr = _M_t._M_ptr();
+      173:  397-block 2
+call    0 returned 173
+      173:  398:	if (__ptr != nullptr)
+branch  0 taken 0 (fallthrough)
+branch  1 taken 173
+    #####:  399:	  get_deleter()(std::move(__ptr));
+    %%%%%:  399-block 4
+call    0 never executed
+call    1 never executed
+call    2 never executed
+      173:  400:	__ptr = pointer();
+      173:  401:      }
 ------------------
 _ZNSt10unique_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EED2Ev:
-function _ZNSt10unique_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EED2Ev called 22 returned 100% blocks executed 100%
-       22:  393:      ~unique_ptr() noexcept
+function _ZNSt10unique_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EED2Ev called 0 returned 0% blocks executed 0%
+    #####:  393:      ~unique_ptr() noexcept
         -:  394:      {
         -:  395:	static_assert(__is_invocable<deleter_type&, pointer>::value,
         -:  396:		      "unique_ptr's deleter must be invocable with a pointer");
-       22:  397:	auto& __ptr = _M_t._M_ptr();
-       22:  397-block 2
-call    0 returned 22
-       22:  398:	if (__ptr != nullptr)
-branch  0 taken 22 (fallthrough)
-branch  1 taken 0
-       22:  399:	  get_deleter()(std::move(__ptr));
-       22:  399-block 4
-call    0 returned 22
-call    1 returned 22
-call    2 returned 22
-       22:  400:	__ptr = pointer();
-       22:  401:      }
+    #####:  397:	auto& __ptr = _M_t._M_ptr();
+    %%%%%:  397-block 2
+call    0 never executed
+    #####:  398:	if (__ptr != nullptr)
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  399:	  get_deleter()(std::move(__ptr));
+    %%%%%:  399-block 4
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  400:	__ptr = pointer();
+    #####:  401:      }
 ------------------
         -:  402:
         -:  403:      // Assignment.
@@ -566,43 +566,43 @@ call    2 returned 22
         -:  452:      /// Return the stored pointer.
         -:  453:      _GLIBCXX23_CONSTEXPR
         -:  454:      pointer
-function _ZNKSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEptEv called 22 returned 100% blocks executed 100%
-       22:  455:      operator->() const noexcept
+function _ZNKSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEptEv called 0 returned 0% blocks executed 0%
+    #####:  455:      operator->() const noexcept
         -:  456:      {
         -:  457:	_GLIBCXX_DEBUG_PEDASSERT(get() != pointer());
-       22:  458:	return get();
-       22:  458-block 2
-call    0 returned 22
+    #####:  458:	return get();
+    %%%%%:  458-block 2
+call    0 never executed
         -:  459:      }
         -:  460:
         -:  461:      /// Return the stored pointer.
         -:  462:      _GLIBCXX23_CONSTEXPR
         -:  463:      pointer
-function _ZNKSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE3getEv called 44 returned 100% blocks executed 100%
-       44:  464:      get() const noexcept
-       44:  465:      { return _M_t._M_ptr(); }
-       44:  465-block 2
-call    0 returned 44
+function _ZNKSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE3getEv called 0 returned 0% blocks executed 0%
+    #####:  464:      get() const noexcept
+    #####:  465:      { return _M_t._M_ptr(); }
+    %%%%%:  465-block 2
+call    0 never executed
         -:  466:
         -:  467:      /// Return a reference to the stored deleter.
         -:  468:      _GLIBCXX23_CONSTEXPR
         -:  469:      deleter_type&
-       26:  470:      get_deleter() noexcept
-       26:  471:      { return _M_t._M_deleter(); }
+    #####:  470:      get_deleter() noexcept
+    #####:  471:      { return _M_t._M_deleter(); }
 ------------------
 _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE11get_deleterEv:
-function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE11get_deleterEv called 4 returned 100% blocks executed 100%
-        4:  470:      get_deleter() noexcept
-        4:  471:      { return _M_t._M_deleter(); }
-        4:  471-block 2
-call    0 returned 4
+function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE11get_deleterEv called 0 returned 0% blocks executed 0%
+    #####:  470:      get_deleter() noexcept
+    #####:  471:      { return _M_t._M_deleter(); }
+    %%%%%:  471-block 2
+call    0 never executed
 ------------------
 _ZNSt10unique_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE11get_deleterEv:
-function _ZNSt10unique_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE11get_deleterEv called 22 returned 100% blocks executed 100%
-       22:  470:      get_deleter() noexcept
-       22:  471:      { return _M_t._M_deleter(); }
-       22:  471-block 2
-call    0 returned 22
+function _ZNSt10unique_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EE11get_deleterEv called 0 returned 0% blocks executed 0%
+    #####:  470:      get_deleter() noexcept
+    #####:  471:      { return _M_t._M_deleter(); }
+    %%%%%:  471-block 2
+call    0 never executed
 ------------------
         -:  472:
         -:  473:      /// Return a reference to the stored deleter.
@@ -613,11 +613,11 @@ call    0 returned 22
         -:  478:
         -:  479:      /// Return @c true if the stored pointer is not null.
         -:  480:      _GLIBCXX23_CONSTEXPR
-function _ZNKSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEcvbEv called 22 returned 100% blocks executed 100%
-       22:  481:      explicit operator bool() const noexcept
-       22:  482:      { return get() == pointer() ? false : true; }
-       22:  482-block 2
-call    0 returned 22
+function _ZNKSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEcvbEv called 0 returned 0% blocks executed 0%
+    #####:  481:      explicit operator bool() const noexcept
+    #####:  482:      { return get() == pointer() ? false : true; }
+    %%%%%:  482-block 2
+call    0 never executed
         -:  483:
         -:  484:      // Modifiers.
         -:  485:
@@ -981,11 +981,11 @@ call    0 returned 22
         -:  843:  template<typename _Tp, typename _Dp>
         -:  844:    _GLIBCXX_NODISCARD _GLIBCXX23_CONSTEXPR
         -:  845:    inline bool
-function _ZSteqINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEbRKSt10unique_ptrIT_T0_EDn called 22 returned 100% blocks executed 100%
-       22:  846:    operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
-       22:  847:    { return !__x; }
-       22:  847-block 2
-call    0 returned 22
+function _ZSteqINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEbRKSt10unique_ptrIT_T0_EDn called 0 returned 0% blocks executed 0%
+    #####:  846:    operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+    #####:  847:    { return !__x; }
+    %%%%%:  847-block 2
+call    0 never executed
         -:  848:
         -:  849:#ifndef __cpp_lib_three_way_comparison
         -:  850:  /// unique_ptr comparison with nullptr

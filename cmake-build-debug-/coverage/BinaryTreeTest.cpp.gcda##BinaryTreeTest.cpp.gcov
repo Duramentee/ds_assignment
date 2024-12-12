@@ -1734,8 +1734,8 @@ call    1 never executed
         -:  154:
         1:  155:    ds::BinaryTreeNode<int>* min_node = tree.find_min();
        1*:  156:    ASSERT_NE(min_node, nullptr); // 确保返回的节点不为空
-    #####:  157:    EXPECT_EQ(min_node->data_, 3);
-       1*:  158:}
+       1*:  157:    EXPECT_EQ(min_node->data_, 3);
+        1:  158:}
 ------------------
 _ZN27BinaryTreeTest_FindMin_TestC2Ev:
 function _ZN27BinaryTreeTest_FindMin_TestC2Ev called 1 returned 100% blocks executed 100%
@@ -1816,30 +1816,30 @@ branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:  156-block 12
 call    3 returned 1
-branch  4 taken 1 (fallthrough)
-branch  5 taken 0
-        1:  156-block 14
-call    6 returned 1
-branch  7 taken 1 (fallthrough)
-branch  8 taken 0 (throw)
-        1:  156-block 15
-call    9 returned 1
-call   10 returned 1
-branch 11 taken 1 (fallthrough)
-branch 12 taken 0 (throw)
-        1:  156-block 17
-call   13 returned 1
-branch 14 taken 1 (fallthrough)
-branch 15 taken 0 (throw)
-        1:  156-block 18
-call   16 returned 1
-call   17 returned 1
-    %%%%%:  156-block 21
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  156-block 14
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  156-block 15
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  156-block 17
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  156-block 18
+call   16 never executed
+call   17 never executed
+        1:  156-block 21
         1:  156-block 22
 call   18 returned 1
-branch 19 taken 0 (fallthrough)
-branch 20 taken 1
-    %%%%%:  156-block 24
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  156-block 24
     $$$$$:  156-block 51
     $$$$$:  156-block 52
 call   21 never executed
@@ -1849,15 +1849,15 @@ call   22 never executed
     $$$$$:  156-block 57
     $$$$$:  156-block 58
 call   23 never executed
-    #####:  157:    EXPECT_EQ(min_node->data_, 3);
-    %%%%%:  157-block 25
-call    0 never executed
-branch  1 never executed (fallthrough)
-branch  2 never executed (throw)
-    %%%%%:  157-block 27
-call    3 never executed
-branch  4 never executed (fallthrough)
-branch  5 never executed
+       1*:  157:    EXPECT_EQ(min_node->data_, 3);
+        1:  157-block 25
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  157-block 27
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
     %%%%%:  157-block 29
 call    6 never executed
 branch  7 never executed (fallthrough)
@@ -1874,8 +1874,8 @@ branch 15 never executed (throw)
     %%%%%:  157-block 33
 call   16 never executed
 call   17 never executed
-    %%%%%:  157-block 36
-call   18 never executed
+        1:  157-block 36
+call   18 returned 1
     $$$$$:  157-block 61
     $$$$$:  157-block 62
 call   19 never executed
@@ -1885,11 +1885,11 @@ call   20 never executed
     $$$$$:  157-block 67
     $$$$$:  157-block 68
 call   21 never executed
-       1*:  158:}
+        1:  158:}
         1:  158-block 38
 call    0 returned 1
-branch  1 taken 0 (fallthrough)
-branch  2 taken 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
     $$$$$:  158-block 71
 call    3 never executed
 ------------------
@@ -1906,8 +1906,8 @@ call    3 never executed
         -:  169:
         1:  170:    ds::BinaryTreeNode<int>* max_node = tree.find_max();
        1*:  171:    ASSERT_NE(max_node, nullptr); // 确保返回的节点不为空
-    #####:  172:    EXPECT_EQ(max_node->data_, 18);
-       1*:  173:}
+       1*:  172:    EXPECT_EQ(max_node->data_, 18);
+        1:  173:}
 ------------------
 _ZN27BinaryTreeTest_FindMax_TestC2Ev:
 function _ZN27BinaryTreeTest_FindMax_TestC2Ev called 1 returned 100% blocks executed 100%
@@ -1988,30 +1988,30 @@ branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         1:  171-block 12
 call    3 returned 1
-branch  4 taken 1 (fallthrough)
-branch  5 taken 0
-        1:  171-block 14
-call    6 returned 1
-branch  7 taken 1 (fallthrough)
-branch  8 taken 0 (throw)
-        1:  171-block 15
-call    9 returned 1
-call   10 returned 1
-branch 11 taken 1 (fallthrough)
-branch 12 taken 0 (throw)
-        1:  171-block 17
-call   13 returned 1
-branch 14 taken 1 (fallthrough)
-branch 15 taken 0 (throw)
-        1:  171-block 18
-call   16 returned 1
-call   17 returned 1
-    %%%%%:  171-block 21
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  171-block 14
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  171-block 15
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  171-block 17
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  171-block 18
+call   16 never executed
+call   17 never executed
+        1:  171-block 21
         1:  171-block 22
 call   18 returned 1
-branch 19 taken 0 (fallthrough)
-branch 20 taken 1
-    %%%%%:  171-block 24
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  171-block 24
     $$$$$:  171-block 51
     $$$$$:  171-block 52
 call   21 never executed
@@ -2021,15 +2021,15 @@ call   22 never executed
     $$$$$:  171-block 57
     $$$$$:  171-block 58
 call   23 never executed
-    #####:  172:    EXPECT_EQ(max_node->data_, 18);
-    %%%%%:  172-block 25
-call    0 never executed
-branch  1 never executed (fallthrough)
-branch  2 never executed (throw)
-    %%%%%:  172-block 27
-call    3 never executed
-branch  4 never executed (fallthrough)
-branch  5 never executed
+       1*:  172:    EXPECT_EQ(max_node->data_, 18);
+        1:  172-block 25
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  172-block 27
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
     %%%%%:  172-block 29
 call    6 never executed
 branch  7 never executed (fallthrough)
@@ -2046,8 +2046,8 @@ branch 15 never executed (throw)
     %%%%%:  172-block 33
 call   16 never executed
 call   17 never executed
-    %%%%%:  172-block 36
-call   18 never executed
+        1:  172-block 36
+call   18 returned 1
     $$$$$:  172-block 61
     $$$$$:  172-block 62
 call   19 never executed
@@ -2057,11 +2057,1048 @@ call   20 never executed
     $$$$$:  172-block 67
     $$$$$:  172-block 68
 call   21 never executed
-       1*:  173:}
+        1:  173:}
         1:  173-block 38
 call    0 returned 1
-branch  1 taken 0 (fallthrough)
-branch  2 taken 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
     $$$$$:  173-block 71
 call    3 never executed
 ------------------
+        -:  174:
+        4:  175:TEST(BinaryTreeTest, CalculateHeight) {
+        1:  176:    BinaryTree<int> tree;
+        -:  177:
+        -:  178:    // Empty tree height should be 0
+       1*:  179:    EXPECT_EQ(tree.calculate_height(), 0);
+        -:  180:
+        -:  181:    // Single node tree height should be 1
+        1:  182:    tree.insert(10);
+       1*:  183:    EXPECT_EQ(tree.calculate_height(), 1);
+        -:  184:
+        -:  185:    // Tree with multiple levels
+        1:  186:    tree.insert(5);
+        1:  187:    tree.insert(15);
+        1:  188:    tree.insert(3);
+        1:  189:    tree.insert(7);
+        1:  190:    tree.insert(12);
+        1:  191:    tree.insert(18);
+        -:  192:
+        -:  193:    // The tree structure should be:
+        -:  194:    //         10
+        -:  195:    //        /  \
+        -:  196:    //       5    15
+        -:  197:    //      / \   / \
+        -:  198:    //     3   7 12  18
+        -:  199:    // Height should be 3
+       1*:  200:    EXPECT_EQ(tree.calculate_height(), 3);
+        -:  201:
+        -:  202:    // Adding more nodes to increase the height
+        1:  203:    tree.insert(2);
+        1:  204:    tree.insert(4);
+        1:  205:    tree.insert(6);
+        1:  206:    tree.insert(8);
+        1:  207:    tree.insert(11);
+        1:  208:    tree.insert(13);
+        1:  209:    tree.insert(17);
+        1:  210:    tree.insert(19);
+        -:  211:
+        -:  212:    // The tree structure should be:
+        -:  213:    //               10
+        -:  214:    //            /      \
+        -:  215:    //           5        15
+        -:  216:    //          / \      /  \
+        -:  217:    //         3   7    12   18
+        -:  218:    //        / \ / \  / \   / \
+        -:  219:    //       2  4 6 8 11 13 17 19
+        -:  220:    // Height should be 4
+       1*:  221:    EXPECT_EQ(tree.calculate_height(), 4);
+        1:  222:}
+------------------
+_ZN35BinaryTreeTest_CalculateHeight_TestC2Ev:
+function _ZN35BinaryTreeTest_CalculateHeight_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  175:TEST(BinaryTreeTest, CalculateHeight) {
+        1:  175-block 2
+call    0 returned 1
+------------------
+_ZN35BinaryTreeTest_CalculateHeight_TestD0Ev:
+function _ZN35BinaryTreeTest_CalculateHeight_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  175:TEST(BinaryTreeTest, CalculateHeight) {
+        1:  175-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN35BinaryTreeTest_CalculateHeight_TestD2Ev:
+function _ZN35BinaryTreeTest_CalculateHeight_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  175:TEST(BinaryTreeTest, CalculateHeight) {
+        1:  175-block 2
+call    0 returned 1
+------------------
+_ZN35BinaryTreeTest_CalculateHeight_Test8TestBodyEv:
+function _ZN35BinaryTreeTest_CalculateHeight_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:  175:TEST(BinaryTreeTest, CalculateHeight) {
+        1:  176:    BinaryTree<int> tree;
+        1:  176-block 2
+call    0 returned 1
+        -:  177:
+        -:  178:    // Empty tree height should be 0
+       1*:  179:    EXPECT_EQ(tree.calculate_height(), 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  179-block 4
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  179-block 5
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  179-block 7
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  179-block 8
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  179-block 10
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  179-block 11
+call   19 never executed
+call   20 never executed
+        1:  179-block 14
+call   21 returned 1
+    $$$$$:  179-block 68
+    $$$$$:  179-block 69
+    $$$$$:  179-block 70
+call   22 never executed
+    $$$$$:  179-block 72
+    $$$$$:  179-block 73
+call   23 never executed
+    $$$$$:  179-block 75
+    $$$$$:  179-block 76
+call   24 never executed
+        -:  180:
+        -:  181:    // Single node tree height should be 1
+        1:  182:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  182-block 79
+       1*:  183:    EXPECT_EQ(tree.calculate_height(), 1);
+        1:  183-block 16
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  183-block 17
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  183-block 18
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  183-block 20
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  183-block 21
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  183-block 23
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  183-block 24
+call   19 never executed
+call   20 never executed
+        1:  183-block 27
+call   21 returned 1
+    $$$$$:  183-block 80
+    $$$$$:  183-block 81
+    $$$$$:  183-block 82
+call   22 never executed
+    $$$$$:  183-block 84
+    $$$$$:  183-block 85
+call   23 never executed
+    $$$$$:  183-block 87
+    $$$$$:  183-block 88
+call   24 never executed
+        -:  184:
+        -:  185:    // Tree with multiple levels
+        1:  186:    tree.insert(5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  186-block 91
+        1:  187:    tree.insert(15);
+        1:  187-block 29
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  187-block 92
+        1:  188:    tree.insert(3);
+        1:  188-block 30
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  188-block 93
+        1:  189:    tree.insert(7);
+        1:  189-block 31
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  189-block 94
+        1:  190:    tree.insert(12);
+        1:  190-block 32
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  190-block 95
+        1:  191:    tree.insert(18);
+        1:  191-block 33
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  191-block 96
+        -:  192:
+        -:  193:    // The tree structure should be:
+        -:  194:    //         10
+        -:  195:    //        /  \
+        -:  196:    //       5    15
+        -:  197:    //      / \   / \
+        -:  198:    //     3   7 12  18
+        -:  199:    // Height should be 3
+       1*:  200:    EXPECT_EQ(tree.calculate_height(), 3);
+        1:  200-block 34
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  200-block 35
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  200-block 36
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  200-block 38
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  200-block 39
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  200-block 41
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  200-block 42
+call   19 never executed
+call   20 never executed
+        1:  200-block 45
+call   21 returned 1
+    $$$$$:  200-block 97
+    $$$$$:  200-block 98
+    $$$$$:  200-block 99
+call   22 never executed
+    $$$$$:  200-block 101
+    $$$$$:  200-block 102
+call   23 never executed
+    $$$$$:  200-block 104
+    $$$$$:  200-block 105
+call   24 never executed
+        -:  201:
+        -:  202:    // Adding more nodes to increase the height
+        1:  203:    tree.insert(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  203-block 108
+        1:  204:    tree.insert(4);
+        1:  204-block 47
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  204-block 109
+        1:  205:    tree.insert(6);
+        1:  205-block 48
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  205-block 110
+        1:  206:    tree.insert(8);
+        1:  206-block 49
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  206-block 111
+        1:  207:    tree.insert(11);
+        1:  207-block 50
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  207-block 112
+        1:  208:    tree.insert(13);
+        1:  208-block 51
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  208-block 113
+        1:  209:    tree.insert(17);
+        1:  209-block 52
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  209-block 114
+        1:  210:    tree.insert(19);
+        1:  210-block 53
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  210-block 115
+        -:  211:
+        -:  212:    // The tree structure should be:
+        -:  213:    //               10
+        -:  214:    //            /      \
+        -:  215:    //           5        15
+        -:  216:    //          / \      /  \
+        -:  217:    //         3   7    12   18
+        -:  218:    //        / \ / \  / \   / \
+        -:  219:    //       2  4 6 8 11 13 17 19
+        -:  220:    // Height should be 4
+       1*:  221:    EXPECT_EQ(tree.calculate_height(), 4);
+        1:  221-block 54
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  221-block 55
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  221-block 56
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  221-block 58
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  221-block 59
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  221-block 61
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  221-block 62
+call   19 never executed
+call   20 never executed
+        1:  221-block 65
+call   21 returned 1
+    $$$$$:  221-block 116
+    $$$$$:  221-block 117
+    $$$$$:  221-block 118
+call   22 never executed
+    $$$$$:  221-block 120
+    $$$$$:  221-block 121
+call   23 never executed
+    $$$$$:  221-block 123
+    $$$$$:  221-block 124
+call   24 never executed
+        1:  222:}
+call    0 returned 1
+    $$$$$:  222-block 127
+call    1 never executed
+------------------
+        -:  223:
+        4:  224:TEST(BinaryTreeTest, EmptyTreeIsBST) {
+        1:  225:    BinaryTree<int> tree;
+       1*:  226:    EXPECT_TRUE(tree.is_bst());
+        1:  227:}
+------------------
+_ZN34BinaryTreeTest_EmptyTreeIsBST_TestC2Ev:
+function _ZN34BinaryTreeTest_EmptyTreeIsBST_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  224:TEST(BinaryTreeTest, EmptyTreeIsBST) {
+        1:  224-block 2
+call    0 returned 1
+------------------
+_ZN34BinaryTreeTest_EmptyTreeIsBST_TestD0Ev:
+function _ZN34BinaryTreeTest_EmptyTreeIsBST_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  224:TEST(BinaryTreeTest, EmptyTreeIsBST) {
+        1:  224-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN34BinaryTreeTest_EmptyTreeIsBST_TestD2Ev:
+function _ZN34BinaryTreeTest_EmptyTreeIsBST_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  224:TEST(BinaryTreeTest, EmptyTreeIsBST) {
+        1:  224-block 2
+call    0 returned 1
+------------------
+_ZN34BinaryTreeTest_EmptyTreeIsBST_Test8TestBodyEv:
+function _ZN34BinaryTreeTest_EmptyTreeIsBST_Test8TestBodyEv called 1 returned 100% blocks executed 27%
+        1:  224:TEST(BinaryTreeTest, EmptyTreeIsBST) {
+        1:  225:    BinaryTree<int> tree;
+        1:  225-block 2
+call    0 returned 1
+       1*:  226:    EXPECT_TRUE(tree.is_bst());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  226-block 4
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  226-block 7
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  226-block 8
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  226-block 9
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  226-block 11
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  226-block 12
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:  226-block 16
+call   23 returned 1
+    $$$$$:  226-block 19
+    $$$$$:  226-block 20
+call   24 never executed
+    $$$$$:  226-block 22
+call   25 never executed
+    $$$$$:  226-block 24
+    $$$$$:  226-block 25
+    $$$$$:  226-block 26
+call   26 never executed
+    $$$$$:  226-block 28
+    $$$$$:  226-block 29
+call   27 never executed
+        1:  227:}
+call    0 returned 1
+    $$$$$:  227-block 32
+call    1 never executed
+------------------
+        -:  228:
+        4:  229:TEST(BinaryTreeTest, SingleNodeTreeIsBST) {
+        1:  230:    BinaryTree<int> tree;
+        1:  231:    tree.insert(10);
+       1*:  232:    EXPECT_TRUE(tree.is_bst());
+        1:  233:}
+------------------
+_ZN39BinaryTreeTest_SingleNodeTreeIsBST_TestC2Ev:
+function _ZN39BinaryTreeTest_SingleNodeTreeIsBST_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  229:TEST(BinaryTreeTest, SingleNodeTreeIsBST) {
+        1:  229-block 2
+call    0 returned 1
+------------------
+_ZN39BinaryTreeTest_SingleNodeTreeIsBST_TestD0Ev:
+function _ZN39BinaryTreeTest_SingleNodeTreeIsBST_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  229:TEST(BinaryTreeTest, SingleNodeTreeIsBST) {
+        1:  229-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN39BinaryTreeTest_SingleNodeTreeIsBST_TestD2Ev:
+function _ZN39BinaryTreeTest_SingleNodeTreeIsBST_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  229:TEST(BinaryTreeTest, SingleNodeTreeIsBST) {
+        1:  229-block 2
+call    0 returned 1
+------------------
+_ZN39BinaryTreeTest_SingleNodeTreeIsBST_Test8TestBodyEv:
+function _ZN39BinaryTreeTest_SingleNodeTreeIsBST_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:  229:TEST(BinaryTreeTest, SingleNodeTreeIsBST) {
+        1:  230:    BinaryTree<int> tree;
+        1:  230-block 2
+call    0 returned 1
+        1:  231:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  231-block 20
+       1*:  232:    EXPECT_TRUE(tree.is_bst());
+        1:  232-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  232-block 5
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  232-block 8
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  232-block 9
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  232-block 10
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  232-block 12
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  232-block 13
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:  232-block 17
+call   23 returned 1
+    $$$$$:  232-block 21
+    $$$$$:  232-block 22
+call   24 never executed
+    $$$$$:  232-block 24
+call   25 never executed
+    $$$$$:  232-block 26
+    $$$$$:  232-block 27
+    $$$$$:  232-block 28
+call   26 never executed
+    $$$$$:  232-block 30
+    $$$$$:  232-block 31
+call   27 never executed
+        1:  233:}
+call    0 returned 1
+    $$$$$:  233-block 34
+call    1 never executed
+------------------
+        -:  234:
+        4:  235:TEST(BinaryTreeTest, ValidBST) {
+        1:  236:    BinaryTree<int> tree;
+        1:  237:    tree.insert(10);
+        1:  238:    tree.insert(5);
+        1:  239:    tree.insert(15);
+        1:  240:    tree.insert(3);
+        1:  241:    tree.insert(7);
+        1:  242:    tree.insert(12);
+        1:  243:    tree.insert(18);
+       1*:  244:    EXPECT_TRUE(tree.is_bst());
+        1:  245:}
+------------------
+_ZN28BinaryTreeTest_ValidBST_TestC2Ev:
+function _ZN28BinaryTreeTest_ValidBST_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  235:TEST(BinaryTreeTest, ValidBST) {
+        1:  235-block 2
+call    0 returned 1
+------------------
+_ZN28BinaryTreeTest_ValidBST_TestD0Ev:
+function _ZN28BinaryTreeTest_ValidBST_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  235:TEST(BinaryTreeTest, ValidBST) {
+        1:  235-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN28BinaryTreeTest_ValidBST_TestD2Ev:
+function _ZN28BinaryTreeTest_ValidBST_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  235:TEST(BinaryTreeTest, ValidBST) {
+        1:  235-block 2
+call    0 returned 1
+------------------
+_ZN28BinaryTreeTest_ValidBST_Test8TestBodyEv:
+function _ZN28BinaryTreeTest_ValidBST_Test8TestBodyEv called 1 returned 100% blocks executed 34%
+        1:  235:TEST(BinaryTreeTest, ValidBST) {
+        1:  236:    BinaryTree<int> tree;
+        1:  236-block 2
+call    0 returned 1
+        1:  237:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  237-block 26
+        1:  238:    tree.insert(5);
+        1:  238-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  238-block 27
+        1:  239:    tree.insert(15);
+        1:  239-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  239-block 28
+        1:  240:    tree.insert(3);
+        1:  240-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  240-block 29
+        1:  241:    tree.insert(7);
+        1:  241-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  241-block 30
+        1:  242:    tree.insert(12);
+        1:  242-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  242-block 31
+        1:  243:    tree.insert(18);
+        1:  243-block 9
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  243-block 32
+       1*:  244:    EXPECT_TRUE(tree.is_bst());
+        1:  244-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  244-block 11
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  244-block 14
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  244-block 15
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  244-block 16
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  244-block 18
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  244-block 19
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:  244-block 23
+call   23 returned 1
+    $$$$$:  244-block 33
+    $$$$$:  244-block 34
+call   24 never executed
+    $$$$$:  244-block 36
+call   25 never executed
+    $$$$$:  244-block 38
+    $$$$$:  244-block 39
+    $$$$$:  244-block 40
+call   26 never executed
+    $$$$$:  244-block 42
+    $$$$$:  244-block 43
+call   27 never executed
+        1:  245:}
+call    0 returned 1
+    $$$$$:  245-block 46
+call    1 never executed
+------------------
+        -:  246:
+        4:  247:TEST(BinaryTreeTest, InvalidBST) {
+        1:  248:    BinaryTree<int> tree;
+        1:  249:    tree.insert(10);
+        1:  250:    tree.insert(5);
+        1:  251:    tree.insert(15);
+        1:  252:    tree.insert(3);
+        1:  253:    tree.insert(7);
+        1:  254:    tree.insert(12);
+        1:  255:    tree.insert(18);
+        -:  256:
+        -:  257:    // Manually modify the tree to make it invalid
+        1:  258:    tree.find_max()->data_ = 5; // This makes the tree invalid
+        -:  259:
+       1*:  260:    EXPECT_FALSE(tree.is_bst());
+        1:  261:}
+------------------
+_ZN30BinaryTreeTest_InvalidBST_TestC2Ev:
+function _ZN30BinaryTreeTest_InvalidBST_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  247:TEST(BinaryTreeTest, InvalidBST) {
+        1:  247-block 2
+call    0 returned 1
+------------------
+_ZN30BinaryTreeTest_InvalidBST_TestD0Ev:
+function _ZN30BinaryTreeTest_InvalidBST_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  247:TEST(BinaryTreeTest, InvalidBST) {
+        1:  247-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30BinaryTreeTest_InvalidBST_TestD2Ev:
+function _ZN30BinaryTreeTest_InvalidBST_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  247:TEST(BinaryTreeTest, InvalidBST) {
+        1:  247-block 2
+call    0 returned 1
+------------------
+_ZN30BinaryTreeTest_InvalidBST_Test8TestBodyEv:
+function _ZN30BinaryTreeTest_InvalidBST_Test8TestBodyEv called 1 returned 100% blocks executed 35%
+        1:  247:TEST(BinaryTreeTest, InvalidBST) {
+        1:  248:    BinaryTree<int> tree;
+        1:  248-block 2
+call    0 returned 1
+        1:  249:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  249-block 27
+        1:  250:    tree.insert(5);
+        1:  250-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  250-block 28
+        1:  251:    tree.insert(15);
+        1:  251-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  251-block 29
+        1:  252:    tree.insert(3);
+        1:  252-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  252-block 30
+        1:  253:    tree.insert(7);
+        1:  253-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  253-block 31
+        1:  254:    tree.insert(12);
+        1:  254-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  254-block 32
+        1:  255:    tree.insert(18);
+        1:  255-block 9
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  255-block 33
+        -:  256:
+        -:  257:    // Manually modify the tree to make it invalid
+        1:  258:    tree.find_max()->data_ = 5; // This makes the tree invalid
+        1:  258-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  259:
+       1*:  260:    EXPECT_FALSE(tree.is_bst());
+        1:  260-block 11
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  260-block 12
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  260-block 15
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  260-block 16
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  260-block 17
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  260-block 19
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  260-block 20
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:  260-block 24
+call   23 returned 1
+    $$$$$:  260-block 34
+    $$$$$:  260-block 35
+call   24 never executed
+    $$$$$:  260-block 37
+call   25 never executed
+    $$$$$:  260-block 39
+    $$$$$:  260-block 40
+    $$$$$:  260-block 41
+call   26 never executed
+    $$$$$:  260-block 43
+    $$$$$:  260-block 44
+call   27 never executed
+        1:  261:}
+call    0 returned 1
+    $$$$$:  261-block 47
+call    1 never executed
+------------------
+        -:  262:
+        4:  263:TEST(BinaryTreeTest, LeftSkewedTreeIsBST) {
+        1:  264:    BinaryTree<int> tree;
+        1:  265:    tree.insert(10);
+        1:  266:    tree.insert(9);
+        1:  267:    tree.insert(8);
+        1:  268:    tree.insert(7);
+        1:  269:    tree.insert(6);
+        -:  270:
+       1*:  271:    EXPECT_TRUE(tree.is_bst());
+        1:  272:}
+------------------
+_ZN39BinaryTreeTest_LeftSkewedTreeIsBST_TestC2Ev:
+function _ZN39BinaryTreeTest_LeftSkewedTreeIsBST_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  263:TEST(BinaryTreeTest, LeftSkewedTreeIsBST) {
+        1:  263-block 2
+call    0 returned 1
+------------------
+_ZN39BinaryTreeTest_LeftSkewedTreeIsBST_TestD0Ev:
+function _ZN39BinaryTreeTest_LeftSkewedTreeIsBST_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  263:TEST(BinaryTreeTest, LeftSkewedTreeIsBST) {
+        1:  263-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN39BinaryTreeTest_LeftSkewedTreeIsBST_TestD2Ev:
+function _ZN39BinaryTreeTest_LeftSkewedTreeIsBST_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  263:TEST(BinaryTreeTest, LeftSkewedTreeIsBST) {
+        1:  263-block 2
+call    0 returned 1
+------------------
+_ZN39BinaryTreeTest_LeftSkewedTreeIsBST_Test8TestBodyEv:
+function _ZN39BinaryTreeTest_LeftSkewedTreeIsBST_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:  263:TEST(BinaryTreeTest, LeftSkewedTreeIsBST) {
+        1:  264:    BinaryTree<int> tree;
+        1:  264-block 2
+call    0 returned 1
+        1:  265:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  265-block 24
+        1:  266:    tree.insert(9);
+        1:  266-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  266-block 25
+        1:  267:    tree.insert(8);
+        1:  267-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  267-block 26
+        1:  268:    tree.insert(7);
+        1:  268-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  268-block 27
+        1:  269:    tree.insert(6);
+        1:  269-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  269-block 28
+        -:  270:
+       1*:  271:    EXPECT_TRUE(tree.is_bst());
+        1:  271-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  271-block 9
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  271-block 12
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  271-block 13
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  271-block 14
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  271-block 16
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  271-block 17
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:  271-block 21
+call   23 returned 1
+    $$$$$:  271-block 29
+    $$$$$:  271-block 30
+call   24 never executed
+    $$$$$:  271-block 32
+call   25 never executed
+    $$$$$:  271-block 34
+    $$$$$:  271-block 35
+    $$$$$:  271-block 36
+call   26 never executed
+    $$$$$:  271-block 38
+    $$$$$:  271-block 39
+call   27 never executed
+        1:  272:}
+call    0 returned 1
+    $$$$$:  272-block 42
+call    1 never executed
+------------------
+        -:  273:
+        4:  274:TEST(BinaryTreeTest, RightSkewedTreeIsBST) {
+        1:  275:    BinaryTree<int> tree;
+        1:  276:    tree.insert(10);
+        1:  277:    tree.insert(11);
+        1:  278:    tree.insert(12);
+        1:  279:    tree.insert(13);
+        1:  280:    tree.insert(14);
+        -:  281:
+       1*:  282:    EXPECT_TRUE(tree.is_bst());
+        1:  283:}
+------------------
+_ZN40BinaryTreeTest_RightSkewedTreeIsBST_TestC2Ev:
+function _ZN40BinaryTreeTest_RightSkewedTreeIsBST_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  274:TEST(BinaryTreeTest, RightSkewedTreeIsBST) {
+        1:  274-block 2
+call    0 returned 1
+------------------
+_ZN40BinaryTreeTest_RightSkewedTreeIsBST_TestD0Ev:
+function _ZN40BinaryTreeTest_RightSkewedTreeIsBST_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  274:TEST(BinaryTreeTest, RightSkewedTreeIsBST) {
+        1:  274-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN40BinaryTreeTest_RightSkewedTreeIsBST_TestD2Ev:
+function _ZN40BinaryTreeTest_RightSkewedTreeIsBST_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  274:TEST(BinaryTreeTest, RightSkewedTreeIsBST) {
+        1:  274-block 2
+call    0 returned 1
+------------------
+_ZN40BinaryTreeTest_RightSkewedTreeIsBST_Test8TestBodyEv:
+function _ZN40BinaryTreeTest_RightSkewedTreeIsBST_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:  274:TEST(BinaryTreeTest, RightSkewedTreeIsBST) {
+        1:  275:    BinaryTree<int> tree;
+        1:  275-block 2
+call    0 returned 1
+        1:  276:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  276-block 24
+        1:  277:    tree.insert(11);
+        1:  277-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  277-block 25
+        1:  278:    tree.insert(12);
+        1:  278-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  278-block 26
+        1:  279:    tree.insert(13);
+        1:  279-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  279-block 27
+        1:  280:    tree.insert(14);
+        1:  280-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  280-block 28
+        -:  281:
+       1*:  282:    EXPECT_TRUE(tree.is_bst());
+        1:  282-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  282-block 9
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  282-block 12
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  282-block 13
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  282-block 14
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  282-block 16
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  282-block 17
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:  282-block 21
+call   23 returned 1
+    $$$$$:  282-block 29
+    $$$$$:  282-block 30
+call   24 never executed
+    $$$$$:  282-block 32
+call   25 never executed
+    $$$$$:  282-block 34
+    $$$$$:  282-block 35
+    $$$$$:  282-block 36
+call   26 never executed
+    $$$$$:  282-block 38
+    $$$$$:  282-block 39
+call   27 never executed
+        1:  283:}
+call    0 returned 1
+    $$$$$:  283-block 42
+call    1 never executed
+------------------
+        -:  284:
+        -:  285:
+        -:  286:
+        -:  287:
+        -:  288:
+        -:  289:
+        -:  290:
+        -:  291:
+        -:  292:
+        -:  293:

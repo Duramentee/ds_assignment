@@ -438,7 +438,7 @@
         -:  434:// of a Test object.
         -:  435:class TestFactoryBase {
         -:  436: public:
-      56*:  437:  virtual ~TestFactoryBase() = default;
+      63*:  437:  virtual ~TestFactoryBase() = default;
 ------------------
 _ZN7testing8internal15TestFactoryBaseD0Ev:
 function _ZN7testing8internal15TestFactoryBaseD0Ev called 0 returned 0% blocks executed 0%
@@ -448,8 +448,8 @@ call    0 never executed
 call    1 never executed
 ------------------
 _ZN7testing8internal15TestFactoryBaseD2Ev:
-function _ZN7testing8internal15TestFactoryBaseD2Ev called 56 returned 100% blocks executed 100%
-       56:  437:  virtual ~TestFactoryBase() = default;
+function _ZN7testing8internal15TestFactoryBaseD2Ev called 63 returned 100% blocks executed 100%
+       63:  437:  virtual ~TestFactoryBase() = default;
 ------------------
         -:  438:
         -:  439:  // Creates a test instance to run. The instance is both created and destroyed
@@ -457,8 +457,8 @@ function _ZN7testing8internal15TestFactoryBaseD2Ev called 56 returned 100% block
         -:  441:  virtual Test* CreateTest() = 0;
         -:  442:
         -:  443: protected:
-function _ZN7testing8internal15TestFactoryBaseC2Ev called 56 returned 100% blocks executed 100%
-       56:  444:  TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseC2Ev called 63 returned 100% blocks executed 100%
+       63:  444:  TestFactoryBase() {}
         -:  445:
         -:  446: private:
         -:  447:  TestFactoryBase(const TestFactoryBase&) = delete;
@@ -700,12 +700,12 @@ call    6 never executed
         -:  474:using TearDownTestSuiteFunc = void (*)();
         -:  475:
         -:  476:struct CodeLocation {
-function _ZN7testing8internal12CodeLocationC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 56 returned 100% blocks executed 100%
-       56:  477:  CodeLocation(std::string a_file, int a_line)
-       56:  478:      : file(std::move(a_file)), line(a_line) {}
-       56:  478-block 2
-call    0 returned 56
-call    1 returned 56
+function _ZN7testing8internal12CodeLocationC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 63 returned 100% blocks executed 100%
+       63:  477:  CodeLocation(std::string a_file, int a_line)
+       63:  478:      : file(std::move(a_file)), line(a_line) {}
+       63:  478-block 2
+call    0 returned 63
+call    1 returned 63
         -:  479:
         -:  480:  std::string file;
         -:  481:  int line;
@@ -717,16 +717,16 @@ call    1 returned 56
         -:  487:// Utility functions to help SuiteApiResolver
         -:  488:using SetUpTearDownSuiteFuncType = void (*)();
         -:  489:
-function _ZN7testing8internal19GetNotDefaultOrNullEPFvvES2_ called 224 returned 100% blocks executed 80%
-      224:  490:inline SetUpTearDownSuiteFuncType GetNotDefaultOrNull(
+function _ZN7testing8internal19GetNotDefaultOrNullEPFvvES2_ called 252 returned 100% blocks executed 80%
+      252:  490:inline SetUpTearDownSuiteFuncType GetNotDefaultOrNull(
         -:  491:    SetUpTearDownSuiteFuncType a, SetUpTearDownSuiteFuncType def) {
-     224*:  492:  return a == def ? nullptr : a;
-      224:  492-block 2
+     252*:  492:  return a == def ? nullptr : a;
+      252:  492-block 2
 branch  0 taken 0 (fallthrough)
-branch  1 taken 224
+branch  1 taken 252
     %%%%%:  492-block 3
-      224:  492-block 4
-      224:  492-block 5
+      252:  492-block 4
+      252:  492-block 5
         -:  493:}
         -:  494:
         -:  495:template <typename T>
@@ -739,30 +739,30 @@ branch  1 taken 224
         -:  502:  using Test =
         -:  503:      typename std::conditional<sizeof(T) != 0, ::testing::Test, void>::type;
         -:  504:
-function _ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci called 56 returned 100% blocks executed 44%
-       56:  505:  static SetUpTearDownSuiteFuncType GetSetUpCaseOrSuite(const char* filename,
+function _ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci called 63 returned 100% blocks executed 44%
+       63:  505:  static SetUpTearDownSuiteFuncType GetSetUpCaseOrSuite(const char* filename,
         -:  506:                                                        int line_num) {
         -:  507:#ifndef GTEST_REMOVE_LEGACY_TEST_CASEAPI_
         -:  508:    SetUpTearDownSuiteFuncType test_case_fp =
-       56:  509:        GetNotDefaultOrNull(&T::SetUpTestCase, &Test::SetUpTestCase);
-       56:  509-block 2
-call    0 returned 56
+       63:  509:        GetNotDefaultOrNull(&T::SetUpTestCase, &Test::SetUpTestCase);
+       63:  509-block 2
+call    0 returned 63
         -:  510:    SetUpTearDownSuiteFuncType test_suite_fp =
-       56:  511:        GetNotDefaultOrNull(&T::SetUpTestSuite, &Test::SetUpTestSuite);
-call    0 returned 56
+       63:  511:        GetNotDefaultOrNull(&T::SetUpTestSuite, &Test::SetUpTestSuite);
+call    0 returned 63
         -:  512:
-      56*:  513:    GTEST_CHECK_(!test_case_fp || !test_suite_fp)
+      63*:  513:    GTEST_CHECK_(!test_case_fp || !test_suite_fp)
 branch  0 taken 0 (fallthrough)
-branch  1 taken 56
+branch  1 taken 63
     %%%%%:  513-block 5
 branch  2 never executed (fallthrough)
 branch  3 never executed
-       56:  513-block 6
+       63:  513-block 6
     %%%%%:  513-block 7
-       56:  513-block 8
-call    4 returned 56
+       63:  513-block 8
+call    4 returned 63
 branch  5 taken 0 (fallthrough)
-branch  6 taken 56
+branch  6 taken 63
     %%%%%:  513-block 10
 call    7 never executed
 branch  8 never executed (fallthrough)
@@ -796,14 +796,14 @@ call   12 never executed
 branch 13 never executed (fallthrough)
 branch 14 never executed (throw)
         -:  517:
-      56*:  518:    return test_case_fp != nullptr ? test_case_fp : test_suite_fp;
-       56:  518-block 19
+      63*:  518:    return test_case_fp != nullptr ? test_case_fp : test_suite_fp;
+       63:  518-block 19
 branch  0 taken 0 (fallthrough)
-branch  1 taken 56
+branch  1 taken 63
     %%%%%:  518-block 20
-       56:  518-block 21
-       56:  518-block 22
-       56:  518-block 23
+       63:  518-block 21
+       63:  518-block 22
+       63:  518-block 23
         -:  519:#else
         -:  520:    (void)(filename);
         -:  521:    (void)(line_num);
@@ -811,30 +811,30 @@ branch  1 taken 56
         -:  523:#endif
         -:  524:  }
         -:  525:
-function _ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci called 56 returned 100% blocks executed 44%
-       56:  526:  static SetUpTearDownSuiteFuncType GetTearDownCaseOrSuite(const char* filename,
+function _ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci called 63 returned 100% blocks executed 44%
+       63:  526:  static SetUpTearDownSuiteFuncType GetTearDownCaseOrSuite(const char* filename,
         -:  527:                                                           int line_num) {
         -:  528:#ifndef GTEST_REMOVE_LEGACY_TEST_CASEAPI_
         -:  529:    SetUpTearDownSuiteFuncType test_case_fp =
-       56:  530:        GetNotDefaultOrNull(&T::TearDownTestCase, &Test::TearDownTestCase);
-       56:  530-block 2
-call    0 returned 56
+       63:  530:        GetNotDefaultOrNull(&T::TearDownTestCase, &Test::TearDownTestCase);
+       63:  530-block 2
+call    0 returned 63
         -:  531:    SetUpTearDownSuiteFuncType test_suite_fp =
-       56:  532:        GetNotDefaultOrNull(&T::TearDownTestSuite, &Test::TearDownTestSuite);
-call    0 returned 56
+       63:  532:        GetNotDefaultOrNull(&T::TearDownTestSuite, &Test::TearDownTestSuite);
+call    0 returned 63
         -:  533:
-      56*:  534:    GTEST_CHECK_(!test_case_fp || !test_suite_fp)
+      63*:  534:    GTEST_CHECK_(!test_case_fp || !test_suite_fp)
 branch  0 taken 0 (fallthrough)
-branch  1 taken 56
+branch  1 taken 63
     %%%%%:  534-block 5
 branch  2 never executed (fallthrough)
 branch  3 never executed
-       56:  534-block 6
+       63:  534-block 6
     %%%%%:  534-block 7
-       56:  534-block 8
-call    4 returned 56
+       63:  534-block 8
+call    4 returned 63
 branch  5 taken 0 (fallthrough)
-branch  6 taken 56
+branch  6 taken 63
     %%%%%:  534-block 10
 call    7 never executed
 branch  8 never executed (fallthrough)
@@ -868,14 +868,14 @@ call   12 never executed
 branch 13 never executed (fallthrough)
 branch 14 never executed (throw)
         -:  538:
-      56*:  539:    return test_case_fp != nullptr ? test_case_fp : test_suite_fp;
-       56:  539-block 19
+      63*:  539:    return test_case_fp != nullptr ? test_case_fp : test_suite_fp;
+       63:  539-block 19
 branch  0 taken 0 (fallthrough)
-branch  1 taken 56
+branch  1 taken 63
     %%%%%:  539-block 20
-       56:  539-block 21
-       56:  539-block 22
-       56:  539-block 23
+       63:  539-block 21
+       63:  539-block 22
+       63:  539-block 23
         -:  540:#else
         -:  541:    (void)(filename);
         -:  542:    (void)(line_num);

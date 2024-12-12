@@ -101,12 +101,24 @@ private:
 		return find_min_util(node->left_);
 	}
 
-	ssize_t calculate_height_util(BinaryTreeNode<ElemType>* node) const {
+	size_t calculate_height_util(BinaryTreeNode<ElemType>* node) const {
 		if (node == nullptr) {
 			return 0;
 		} else {
 			return std::max(calculate_height_util(node->left_), calculate_height_util(node->right_)) + 1;
 		}
+	}
+
+	bool is_bst_util(BinaryTreeNode<ElemType>* node, const ElemType& min, const ElemType& max) const {
+		if (node == nullptr)
+			return true;
+
+		if (node->data_ <= min || node->data_ >= max) {
+			return false;
+		}
+
+		return is_bst_util(node->left_, min, node->data_) &&
+			   is_bst_util(node->right_, node->data_, max);
 	}
 
 public:
@@ -193,6 +205,10 @@ public:
 
 	[[nodiscard]] size_t calculate_height() const {
 		return calculate_height_util(root_);
+	}
+
+	[[nodiscard]] bool is_bst() const {
+		return is_bst_util(root_, std::numeric_limits<ElemType>::min(), std::numeric_limits<ElemType>::max());
 	}
 };
 
