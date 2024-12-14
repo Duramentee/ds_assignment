@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "LinkedList.hpp" // 假设你的 LinkedList 类定义在这个头文件中
+#include "LinkedList.hpp"
 
 using namespace ds;
 
@@ -9,126 +9,122 @@ TEST(LinkedListTest, DefaultConstructor) {
     EXPECT_TRUE(list.empty());
 }
 
-// 测试带参数构造函数
-TEST(LinkedListTest, ParamConstructor) {
+// 测试带参数的构造函数
+TEST(LinkedListTest, ParameterizedConstructor) {
     LinkedList<int> list(42);
     EXPECT_FALSE(list.empty());
-    EXPECT_TRUE(list.find(42));
-}
-
-// 测试复制构造函数
-TEST(LinkedListTest, CopyConstructor) {
-    LinkedList<int> original;
-    original.push_back(1);
-    original.push_back(2);
-
-    LinkedList<int> copy = original;
-    EXPECT_FALSE(copy.empty());
-    EXPECT_TRUE(copy.find(1));
-    EXPECT_TRUE(copy.find(2));
-}
-
-// 测试赋值操作符
-TEST(LinkedListTest, AssignmentOperator) {
-    LinkedList<int> original;
-    original.push_back(3);
-    original.push_back(4);
-
-    LinkedList<int> assigned;
-    assigned = original;
-    EXPECT_FALSE(assigned.empty());
-    EXPECT_TRUE(assigned.find(3));
-    EXPECT_TRUE(assigned.find(4));
+    EXPECT_EQ(*list.begin(), 42);
 }
 
 // 测试 push_front 方法
 TEST(LinkedListTest, PushFront) {
     LinkedList<int> list;
-    list.push_front(5);
-    list.push_front(6);
-    EXPECT_EQ(list.find(5), true);
-    EXPECT_EQ(list.find(6), true);
+    list.push_front(1);
+    EXPECT_EQ(*list.begin(), 1);
+    list.push_front(2);
+    EXPECT_EQ(*list.begin(), 2);
+    EXPECT_EQ(*(++list.begin()), 1);
 }
 
 // 测试 push_back 方法
 TEST(LinkedListTest, PushBack) {
     LinkedList<int> list;
-    list.push_back(7);
-    list.push_back(8);
-    EXPECT_EQ(list.find(7), true);
-    EXPECT_EQ(list.find(8), true);
+    list.push_back(1);
+    EXPECT_EQ(*list.begin(), 1);
+    list.push_back(2);
+    EXPECT_EQ(*list.begin(), 1);
+    EXPECT_EQ(*(++list.begin()), 2);
 }
 
 // 测试 insert 方法
 TEST(LinkedListTest, Insert) {
     LinkedList<int> list;
-    list.push_back(10);
-    list.insert(0, 9); // 插入到头部
-    list.insert(2, 11); // 插入到尾部
-    list.insert(1, 10.5); // 插入到中间
-    EXPECT_EQ(list.find(9), true);
-    EXPECT_EQ(list.find(10.5), true);
-    EXPECT_EQ(list.find(11), true);
+    list.push_back(1);
+    list.push_back(3);
+    auto it = list.insert(++list.begin(), 2);
+    EXPECT_EQ(*it, 2);
+    EXPECT_EQ(*list.begin(), 1);
+    EXPECT_EQ(*(++list.begin()), 2);
+    EXPECT_EQ(*(++++list.begin()), 3);
 }
 
 // 测试 pop_front 方法
 TEST(LinkedListTest, PopFront) {
     LinkedList<int> list;
-    list.push_back(12);
-    list.push_back(13);
+    list.push_front(1);
+    list.push_front(2);
     list.pop_front();
-    EXPECT_FALSE(list.find(12));
-    EXPECT_TRUE(list.find(13));
+    EXPECT_EQ(*list.begin(), 1);
+    list.pop_front();
+    EXPECT_TRUE(list.empty());
 }
 
 // 测试 pop_back 方法
 TEST(LinkedListTest, PopBack) {
     LinkedList<int> list;
-    list.push_back(14);
-    list.push_back(15);
+    list.push_back(1);
+    list.push_back(2);
     list.pop_back();
-    EXPECT_TRUE(list.find(14));
-    EXPECT_FALSE(list.find(15));
+    EXPECT_EQ(*list.begin(), 1);
+    list.pop_back();
+    EXPECT_TRUE(list.empty());
 }
 
 // 测试 erase 方法
 TEST(LinkedListTest, Erase) {
     LinkedList<int> list;
-    list.push_back(16);
-    list.push_back(17);
-    list.erase(0); // 删除头部元素
-    EXPECT_FALSE(list.find(16));
-    EXPECT_TRUE(list.find(17));
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+    auto it = list.erase(++list.begin());
+    EXPECT_EQ(*it, 3);
+    EXPECT_EQ(*list.begin(), 1);
+    EXPECT_EQ(*(++list.begin()), 3);
 }
 
 // 测试 find 方法
 TEST(LinkedListTest, Find) {
     LinkedList<int> list;
-    list.push_back(18);
-    EXPECT_TRUE(list.find(18));
-    EXPECT_FALSE(list.find(19)); // 不在列表中的元素
-}
-
-// 测试 empty 方法
-TEST(LinkedListTest, Empty) {
-    LinkedList<int> list;
-    EXPECT_TRUE(list.empty());
-    list.push_back(20);
-    EXPECT_FALSE(list.empty());
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+    EXPECT_TRUE(list.find(2));
+    EXPECT_FALSE(list.find(4));
 }
 
 // 测试 clear 方法
 TEST(LinkedListTest, Clear) {
     LinkedList<int> list;
-    list.push_back(21);
+    list.push_back(1);
+    list.push_back(2);
     list.clear();
     EXPECT_TRUE(list.empty());
 }
 
-// 测试 print 方法（这是一个输出测试，通常不会在自动测试中进行）
-// TEST(LinkedListTest, Print) {
-//     LinkedList<int> list;
-//     list.push_back(22);
-//     list.print(); // 这个测试需要人工检查输出
-// }
+// 测试 copy 构造函数
+TEST(LinkedListTest, CopyConstructor) {
+    LinkedList<int> list1;
+    list1.push_back(1);
+    list1.push_back(2);
+    LinkedList<int> list2 = list1;
+    EXPECT_EQ(*list2.begin(), 1);
+    EXPECT_EQ(*(++list2.begin()), 2);
+    EXPECT_NE(&(*list1.begin()), &(*list2.begin()));
+}
 
+// 测试赋值操作符
+TEST(LinkedListTest, AssignmentOperator) {
+    LinkedList<int> list1;
+    list1.push_back(1);
+    list1.push_back(2);
+    LinkedList<int> list2;
+    list2 = list1;
+    EXPECT_EQ(*list2.begin(), 1);
+    EXPECT_EQ(*(++list2.begin()), 2);
+    EXPECT_NE(&(*list1.begin()), &(*list2.begin()));
+}
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
