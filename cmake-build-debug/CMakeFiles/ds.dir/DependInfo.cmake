@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/drowlia/code_save/ds/Graph/GraphTest.cpp" "CMakeFiles/ds.dir/Graph/GraphTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Graph/GraphTest.cpp.o.d"
   "/home/drowlia/code_save/ds/HashTable/HashTableTest.cpp" "CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.o" "gcc" "CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.o.d"
   "/home/drowlia/code_save/ds/LinkedList/LinkedListTest.cpp" "CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o" "gcc" "CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o.d"
+  "/home/drowlia/code_save/ds/Pair/PairTest.cpp" "CMakeFiles/ds.dir/Pair/PairTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Pair/PairTest.cpp.o.d"
   "/home/drowlia/code_save/ds/Queue/QueueTest.cpp" "CMakeFiles/ds.dir/Queue/QueueTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Queue/QueueTest.cpp.o.d"
   "/home/drowlia/code_save/ds/SeqTable/SeqTableTest.cpp" "CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o" "gcc" "CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o.d"
   "/home/drowlia/code_save/ds/Stack/StackTest.cpp" "CMakeFiles/ds.dir/Stack/StackTest.cpp.o" "gcc" "CMakeFiles/ds.dir/Stack/StackTest.cpp.o.d"

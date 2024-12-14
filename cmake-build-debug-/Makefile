@@ -211,6 +211,30 @@ LinkedList/LinkedListTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.s
 .PHONY : LinkedList/LinkedListTest.cpp.s
 
+Pair/PairTest.o: Pair/PairTest.cpp.o
+.PHONY : Pair/PairTest.o
+
+# target to build an object file
+Pair/PairTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Pair/PairTest.cpp.o
+.PHONY : Pair/PairTest.cpp.o
+
+Pair/PairTest.i: Pair/PairTest.cpp.i
+.PHONY : Pair/PairTest.i
+
+# target to preprocess a source file
+Pair/PairTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Pair/PairTest.cpp.i
+.PHONY : Pair/PairTest.cpp.i
+
+Pair/PairTest.s: Pair/PairTest.cpp.s
+.PHONY : Pair/PairTest.s
+
+# target to generate assembly for a file
+Pair/PairTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Pair/PairTest.cpp.s
+.PHONY : Pair/PairTest.cpp.s
+
 Queue/QueueTest.o: Queue/QueueTest.cpp.o
 .PHONY : Queue/QueueTest.o
 
@@ -350,6 +374,9 @@ help:
 	@echo "... LinkedList/LinkedListTest.o"
 	@echo "... LinkedList/LinkedListTest.i"
 	@echo "... LinkedList/LinkedListTest.s"
+	@echo "... Pair/PairTest.o"
+	@echo "... Pair/PairTest.i"
+	@echo "... Pair/PairTest.s"
 	@echo "... Queue/QueueTest.o"
 	@echo "... Queue/QueueTest.i"
 	@echo "... Queue/QueueTest.s"

@@ -18,6 +18,8 @@ add_executable(ds main.cpp
         Graph/Graph.hpp
         HashTable/HashTable.hpp
         HashTable/HashTableTest.cpp
+        Pair/Pair.hpp
+        Pair/PairTest.cpp
 )
 
 enable_testing()

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.o.d"
   "CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o"
   "CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.o.d"
+  "CMakeFiles/ds.dir/Pair/PairTest.cpp.o"
+  "CMakeFiles/ds.dir/Pair/PairTest.cpp.o.d"
   "CMakeFiles/ds.dir/Queue/QueueTest.cpp.o"
   "CMakeFiles/ds.dir/Queue/QueueTest.cpp.o.d"
   "CMakeFiles/ds.dir/SeqTable/SeqTableTest.cpp.o"
