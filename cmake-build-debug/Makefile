@@ -163,6 +163,30 @@ Graph/GraphTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/Graph/GraphTest.cpp.s
 .PHONY : Graph/GraphTest.cpp.s
 
+HashTable/HashTableTest.o: HashTable/HashTableTest.cpp.o
+.PHONY : HashTable/HashTableTest.o
+
+# target to build an object file
+HashTable/HashTableTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.o
+.PHONY : HashTable/HashTableTest.cpp.o
+
+HashTable/HashTableTest.i: HashTable/HashTableTest.cpp.i
+.PHONY : HashTable/HashTableTest.i
+
+# target to preprocess a source file
+HashTable/HashTableTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.i
+.PHONY : HashTable/HashTableTest.cpp.i
+
+HashTable/HashTableTest.s: HashTable/HashTableTest.cpp.s
+.PHONY : HashTable/HashTableTest.s
+
+# target to generate assembly for a file
+HashTable/HashTableTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds.dir/build.make CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.s
+.PHONY : HashTable/HashTableTest.cpp.s
+
 LinkedList/LinkedListTest.o: LinkedList/LinkedListTest.cpp.o
 .PHONY : LinkedList/LinkedListTest.o
 
@@ -320,6 +344,9 @@ help:
 	@echo "... Graph/GraphTest.o"
 	@echo "... Graph/GraphTest.i"
 	@echo "... Graph/GraphTest.s"
+	@echo "... HashTable/HashTableTest.o"
+	@echo "... HashTable/HashTableTest.i"
+	@echo "... HashTable/HashTableTest.s"
 	@echo "... LinkedList/LinkedListTest.o"
 	@echo "... LinkedList/LinkedListTest.i"
 	@echo "... LinkedList/LinkedListTest.s"

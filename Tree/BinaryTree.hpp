@@ -121,6 +121,33 @@ private:
 			   is_bst_util(node->right_, node->data_, max);
 	}
 
+	BinaryTreeNode<ElemType>* erase_util(BinaryTreeNode<ElemType>* node, const ElemType& data) {
+		if (node == nullptr) {
+			return nullptr;
+		}
+
+		if (data < node->data_) {
+			node->left_ = erase_util(node->left_, data);
+		} else if (data > node->data_) {
+			node->right_ = erase_util(node->right_, data);
+		} else {
+			if (node->left_ == nullptr) {
+				BinaryTreeNode<ElemType>* temp = node->right_;
+				delete node;
+				return temp;
+			} else if (node->right_ == nullptr) {
+				BinaryTreeNode<ElemType>* temp = node->left_;
+				delete node;
+				return temp;
+			}
+
+			BinaryTreeNode<ElemType>* temp = find_min_util(node->right_);
+			node->data_ = temp->data_;
+			node->right_ = erase_util(node->right_, temp->data_);
+		}
+		return node;
+	}
+
 public:
 	BinaryTree() : root_{nullptr} {}
 
@@ -209,6 +236,10 @@ public:
 
 	[[nodiscard]] bool is_bst() const {
 		return is_bst_util(root_, std::numeric_limits<ElemType>::min(), std::numeric_limits<ElemType>::max());
+	}
+
+	void erase(const ElemType& data) {
+		root_ = erase_util(root_, data);
 	}
 };
 

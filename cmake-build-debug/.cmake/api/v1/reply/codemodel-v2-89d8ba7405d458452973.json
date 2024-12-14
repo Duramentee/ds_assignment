@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ds::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ds-Debug-3eb6149a25a4e5ce0f56.json",
+					"jsonFile" : "target-ds-Debug-983eb759995e9f329a7b.json",
 					"name" : "ds",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/drowlia/code_save/ds/cmake-build-debug-",
+		"build" : "/home/drowlia/code_save/ds/cmake-build-debug",
 		"source" : "/home/drowlia/code_save/ds"
 	},
 	"version" : 

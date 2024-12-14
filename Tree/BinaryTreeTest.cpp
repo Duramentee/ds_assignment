@@ -282,7 +282,73 @@ TEST(BinaryTreeTest, RightSkewedTreeIsBST) {
     EXPECT_TRUE(tree.is_bst());
 }
 
+TEST(BinaryTreeTest, EraseLeafNode) {
+    ds::BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(12);
+    tree.insert(18);
 
+    tree.erase(3); // 删除叶子节点
+    std::string output = captureStdout([&tree]() { tree.in_order(); });
+    EXPECT_EQ(output, "5 7 10 12 15 18 \n");
+}
+
+TEST(BinaryTreeTest, EraseNodeWithOneChild) {
+    ds::BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(12);
+    tree.insert(18);
+
+    tree.erase(5); // 删除只有一个右子节点的节点
+    std::string output = captureStdout([&tree]() { tree.in_order(); });
+    EXPECT_EQ(output, "3 7 10 12 15 18 \n");
+
+    tree.erase(18); // 删除只有一个左子节点的节点
+    output = captureStdout([&tree]() { tree.in_order(); });
+    EXPECT_EQ(output, "3 7 10 12 15 \n");
+}
+
+TEST(BinaryTreeTest, EraseNodeWithTwoChildren) {
+    ds::BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(12);
+    tree.insert(18);
+
+    tree.erase(15); // 删除有两个子节点的节点
+    std::string output = captureStdout([&tree]() { tree.in_order(); });
+    EXPECT_EQ(output, "3 5 7 10 12 18 \n");
+
+    tree.erase(10); // 删除根节点，它有两个子节点
+    output = captureStdout([&tree]() { tree.in_order(); });
+    EXPECT_EQ(output, "3 5 7 12 18 \n");
+}
+
+TEST(BinaryTreeTest, EraseNonExistentNode) {
+    ds::BinaryTree<int> tree;
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(3);
+    tree.insert(7);
+    tree.insert(12);
+    tree.insert(18);
+
+    tree.erase(20); // 尝试删除不存在的节点
+    std::string output = captureStdout([&tree]() { tree.in_order(); });
+    EXPECT_EQ(output, "3 5 7 10 12 15 18 \n");
+}
 
 
 

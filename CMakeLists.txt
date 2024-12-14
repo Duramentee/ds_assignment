@@ -15,7 +15,10 @@ add_executable(ds main.cpp
         Tree/BinaryTree.hpp
         Tree/BinaryTreeTest.cpp
         Graph/GraphTest.cpp
-        Graph/Graph.hpp)
+        Graph/Graph.hpp
+        HashTable/HashTable.hpp
+        HashTable/HashTableTest.cpp
+)
 
 enable_testing()
 find_package(GTest REQUIRED)
