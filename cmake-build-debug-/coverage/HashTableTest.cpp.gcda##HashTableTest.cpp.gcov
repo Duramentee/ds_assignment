@@ -1,0 +1,720 @@
+        -:    0:Source:/home/drowlia/code_save/ds/HashTable/HashTableTest.cpp
+        -:    0:Graph:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.gcno
+        -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lsx31 on 24-12-12.
+        -:    3://
+        -:    4:
+        -:    5:#include <gtest/gtest.h>
+        -:    6:#include "HashTable.hpp" // 确保路径正确
+        -:    7:
+        4:    8:TEST(HashTableTest, InsertAndFind) {
+        1:    9:    ds::HashTable<int, std::string> hash_table(5);
+        -:   10:
+        -:   11:    // 插入元素
+        2:   12:    hash_table.insert(1, "one");
+        1:   13:    hash_table.insert(2, "two");
+        -:   14:
+        1:   15:    std::string value;
+        -:   16:
+        -:   17:    // 查找存在的元素
+       1*:   18:    EXPECT_TRUE(hash_table.find(1, value));
+       1*:   19:    EXPECT_EQ(value, "one");
+        -:   20:
+       1*:   21:    EXPECT_TRUE(hash_table.find(2, value));
+       1*:   22:    EXPECT_EQ(value, "two");
+        -:   23:
+        -:   24:    // 查找不存在的元素
+       1*:   25:    EXPECT_FALSE(hash_table.find(3, value));
+        1:   26:}
+------------------
+_ZN32HashTableTest_InsertAndFind_TestC2Ev:
+function _ZN32HashTableTest_InsertAndFind_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(HashTableTest, InsertAndFind) {
+        1:    8-block 2
+call    0 returned 1
+------------------
+_ZN32HashTableTest_InsertAndFind_TestD0Ev:
+function _ZN32HashTableTest_InsertAndFind_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(HashTableTest, InsertAndFind) {
+        1:    8-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN32HashTableTest_InsertAndFind_TestD2Ev:
+function _ZN32HashTableTest_InsertAndFind_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(HashTableTest, InsertAndFind) {
+        1:    8-block 2
+call    0 returned 1
+------------------
+_ZN32HashTableTest_InsertAndFind_Test8TestBodyEv:
+function _ZN32HashTableTest_InsertAndFind_Test8TestBodyEv called 1 returned 100% blocks executed 26%
+        1:    8:TEST(HashTableTest, InsertAndFind) {
+        1:    9:    ds::HashTable<int, std::string> hash_table(5);
+        1:    9-block 2
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   10:
+        -:   11:    // 插入元素
+        2:   12:    hash_table.insert(1, "one");
+        1:   12-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block 6
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   12-block 7
+call    6 returned 1
+        1:   12-block 9
+    $$$$$:   12-block 83
+    $$$$$:   12-block 84
+call    7 never executed
+    $$$$$:   12-block 88
+    $$$$$:   12-block 89
+        1:   13:    hash_table.insert(2, "two");
+        1:   13-block 11
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block 12
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   13-block 13
+call    6 returned 1
+    $$$$$:   13-block 90
+    $$$$$:   13-block 91
+call    7 never executed
+    $$$$$:   13-block 95
+    $$$$$:   13-block 96
+        -:   14:
+        1:   15:    std::string value;
+        1:   15-block 15
+call    0 returned 1
+        -:   16:
+        -:   17:    // 查找存在的元素
+       1*:   18:    EXPECT_TRUE(hash_table.find(1, value));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block 17
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   18-block 20
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   18-block 21
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   18-block 22
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   18-block 24
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   18-block 25
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   18-block 29
+call   23 returned 1
+    $$$$$:   18-block 97
+    $$$$$:   18-block 98
+    $$$$$:   18-block 99
+call   24 never executed
+    $$$$$:   18-block 101
+call   25 never executed
+    $$$$$:   18-block 103
+    $$$$$:   18-block 104
+    $$$$$:   18-block 105
+call   26 never executed
+    $$$$$:   18-block 107
+    $$$$$:   18-block 108
+call   27 never executed
+       1*:   19:    EXPECT_EQ(value, "one");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block 31
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   19-block 33
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   19-block 34
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   19-block 36
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   19-block 37
+call   16 never executed
+call   17 never executed
+        1:   19-block 40
+call   18 returned 1
+    $$$$$:   19-block 111
+call   19 never executed
+    $$$$$:   19-block 113
+    $$$$$:   19-block 114
+call   20 never executed
+    $$$$$:   19-block 116
+    $$$$$:   19-block 117
+call   21 never executed
+        -:   20:
+       1*:   21:    EXPECT_TRUE(hash_table.find(2, value));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block 42
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   21-block 45
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   21-block 46
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   21-block 47
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   21-block 49
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   21-block 50
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   21-block 54
+call   23 returned 1
+    $$$$$:   21-block 120
+    $$$$$:   21-block 121
+    $$$$$:   21-block 122
+call   24 never executed
+    $$$$$:   21-block 124
+call   25 never executed
+    $$$$$:   21-block 126
+    $$$$$:   21-block 127
+    $$$$$:   21-block 128
+call   26 never executed
+    $$$$$:   21-block 130
+    $$$$$:   21-block 131
+call   27 never executed
+       1*:   22:    EXPECT_EQ(value, "two");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block 56
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   22-block 58
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   22-block 59
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   22-block 61
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   22-block 62
+call   16 never executed
+call   17 never executed
+        1:   22-block 65
+call   18 returned 1
+    $$$$$:   22-block 134
+call   19 never executed
+    $$$$$:   22-block 136
+    $$$$$:   22-block 137
+call   20 never executed
+    $$$$$:   22-block 139
+    $$$$$:   22-block 140
+call   21 never executed
+        -:   23:
+        -:   24:    // 查找不存在的元素
+       1*:   25:    EXPECT_FALSE(hash_table.find(3, value));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block 67
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   25-block 70
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   25-block 71
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   25-block 72
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   25-block 74
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   25-block 75
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   25-block 79
+call   23 returned 1
+    $$$$$:   25-block 143
+    $$$$$:   25-block 144
+    $$$$$:   25-block 145
+call   24 never executed
+    $$$$$:   25-block 147
+call   25 never executed
+    $$$$$:   25-block 149
+    $$$$$:   25-block 150
+    $$$$$:   25-block 151
+call   26 never executed
+    $$$$$:   25-block 153
+    $$$$$:   25-block 154
+call   27 never executed
+        1:   26:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   26-block 157
+call    2 never executed
+    $$$$$:   26-block 159
+call    3 never executed
+------------------
+        -:   27:
+        4:   28:TEST(HashTableTest, Remove) {
+        1:   29:    ds::HashTable<int, std::string> hash_table(5);
+        -:   30:
+        -:   31:    // 插入元素
+        2:   32:    hash_table.insert(1, "one");
+        1:   33:    hash_table.insert(2, "two");
+        -:   34:
+        -:   35:    // 删除存在的元素
+       1*:   36:    EXPECT_TRUE(hash_table.remove(1));
+        -:   37:
+        -:   38:    // 再次查找已删除的元素
+        2:   39:    std::string value;
+       1*:   40:    EXPECT_FALSE(hash_table.find(1, value));
+        -:   41:
+        -:   42:    // 删除不存在的元素
+       1*:   43:    EXPECT_FALSE(hash_table.remove(3));
+        1:   44:}
+------------------
+_ZN25HashTableTest_Remove_TestC2Ev:
+function _ZN25HashTableTest_Remove_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(HashTableTest, Remove) {
+        1:   28-block 2
+call    0 returned 1
+------------------
+_ZN25HashTableTest_Remove_TestD0Ev:
+function _ZN25HashTableTest_Remove_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(HashTableTest, Remove) {
+        1:   28-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN25HashTableTest_Remove_TestD2Ev:
+function _ZN25HashTableTest_Remove_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(HashTableTest, Remove) {
+        1:   28-block 2
+call    0 returned 1
+------------------
+_ZN25HashTableTest_Remove_Test8TestBodyEv:
+function _ZN25HashTableTest_Remove_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   28:TEST(HashTableTest, Remove) {
+        1:   29:    ds::HashTable<int, std::string> hash_table(5);
+        1:   29-block 2
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   30:
+        -:   31:    // 插入元素
+        2:   32:    hash_table.insert(1, "one");
+        1:   32-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block 6
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   32-block 7
+call    6 returned 1
+        1:   32-block 9
+    $$$$$:   32-block 61
+    $$$$$:   32-block 62
+call    7 never executed
+    $$$$$:   32-block 66
+    $$$$$:   32-block 67
+        1:   33:    hash_table.insert(2, "two");
+        1:   33-block 11
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block 12
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   33-block 13
+call    6 returned 1
+    $$$$$:   33-block 68
+    $$$$$:   33-block 69
+call    7 never executed
+    $$$$$:   33-block 73
+    $$$$$:   33-block 74
+        -:   34:
+        -:   35:    // 删除存在的元素
+       1*:   36:    EXPECT_TRUE(hash_table.remove(1));
+        1:   36-block 15
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block 16
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   36-block 19
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   36-block 20
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   36-block 21
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   36-block 23
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   36-block 24
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   36-block 28
+call   23 returned 1
+    $$$$$:   36-block 75
+    $$$$$:   36-block 76
+    $$$$$:   36-block 77
+call   24 never executed
+    $$$$$:   36-block 79
+call   25 never executed
+    $$$$$:   36-block 81
+    $$$$$:   36-block 82
+    $$$$$:   36-block 83
+call   26 never executed
+    $$$$$:   36-block 85
+    $$$$$:   36-block 86
+call   27 never executed
+        -:   37:
+        -:   38:    // 再次查找已删除的元素
+        2:   39:    std::string value;
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   39-block 117
+call    2 never executed
+       1*:   40:    EXPECT_FALSE(hash_table.find(1, value));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block 31
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   40-block 34
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   40-block 35
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   40-block 36
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   40-block 38
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   40-block 39
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   40-block 43
+call   23 returned 1
+    $$$$$:   40-block 89
+    $$$$$:   40-block 90
+    $$$$$:   40-block 91
+call   24 never executed
+    $$$$$:   40-block 93
+call   25 never executed
+    $$$$$:   40-block 95
+    $$$$$:   40-block 96
+    $$$$$:   40-block 97
+call   26 never executed
+    $$$$$:   40-block 99
+    $$$$$:   40-block 100
+call   27 never executed
+        -:   41:
+        -:   42:    // 删除不存在的元素
+       1*:   43:    EXPECT_FALSE(hash_table.remove(3));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block 45
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   43-block 48
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   43-block 49
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   43-block 50
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   43-block 52
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   43-block 53
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   43-block 57
+call   23 returned 1
+    $$$$$:   43-block 103
+    $$$$$:   43-block 104
+    $$$$$:   43-block 105
+call   24 never executed
+    $$$$$:   43-block 107
+call   25 never executed
+    $$$$$:   43-block 109
+    $$$$$:   43-block 110
+    $$$$$:   43-block 111
+call   26 never executed
+    $$$$$:   43-block 113
+    $$$$$:   43-block 114
+call   27 never executed
+        1:   44:}
+call    0 returned 1
+    $$$$$:   44-block 119
+call    1 never executed
+------------------
+        -:   45:
+        4:   46:TEST(HashTableTest, UpdateValue) {
+        1:   47:    ds::HashTable<int, std::string> hash_table(5);
+        -:   48:
+        -:   49:    // 插入元素
+        2:   50:    hash_table.insert(1, "one");
+        -:   51:
+        -:   52:    // 更新元素值
+        1:   53:    hash_table.insert(1, "updated_one");
+        -:   54:
+        -:   55:    // 查找更新后的元素
+        1:   56:    std::string value;
+       1*:   57:    EXPECT_TRUE(hash_table.find(1, value));
+       1*:   58:    EXPECT_EQ(value, "updated_one");
+        1:   59:}
+------------------
+_ZN30HashTableTest_UpdateValue_TestC2Ev:
+function _ZN30HashTableTest_UpdateValue_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   46:TEST(HashTableTest, UpdateValue) {
+        1:   46-block 2
+call    0 returned 1
+------------------
+_ZN30HashTableTest_UpdateValue_TestD0Ev:
+function _ZN30HashTableTest_UpdateValue_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   46:TEST(HashTableTest, UpdateValue) {
+        1:   46-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30HashTableTest_UpdateValue_TestD2Ev:
+function _ZN30HashTableTest_UpdateValue_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   46:TEST(HashTableTest, UpdateValue) {
+        1:   46-block 2
+call    0 returned 1
+------------------
+_ZN30HashTableTest_UpdateValue_Test8TestBodyEv:
+function _ZN30HashTableTest_UpdateValue_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:   46:TEST(HashTableTest, UpdateValue) {
+        1:   47:    ds::HashTable<int, std::string> hash_table(5);
+        1:   47-block 2
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   48:
+        -:   49:    // 插入元素
+        2:   50:    hash_table.insert(1, "one");
+        1:   50-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block 6
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   50-block 7
+call    6 returned 1
+        1:   50-block 9
+    $$$$$:   50-block 44
+    $$$$$:   50-block 45
+call    7 never executed
+    $$$$$:   50-block 49
+    $$$$$:   50-block 50
+        -:   51:
+        -:   52:    // 更新元素值
+        1:   53:    hash_table.insert(1, "updated_one");
+        1:   53-block 11
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   53-block 12
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   53-block 13
+call    6 returned 1
+    $$$$$:   53-block 51
+    $$$$$:   53-block 52
+call    7 never executed
+    $$$$$:   53-block 56
+    $$$$$:   53-block 57
+        -:   54:
+        -:   55:    // 查找更新后的元素
+        1:   56:    std::string value;
+        1:   56-block 15
+call    0 returned 1
+       1*:   57:    EXPECT_TRUE(hash_table.find(1, value));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57-block 17
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   57-block 20
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   57-block 21
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   57-block 22
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   57-block 24
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   57-block 25
+call   20 never executed
+call   21 never executed
+call   22 never executed
+        1:   57-block 29
+call   23 returned 1
+    $$$$$:   57-block 58
+    $$$$$:   57-block 59
+    $$$$$:   57-block 60
+call   24 never executed
+    $$$$$:   57-block 62
+call   25 never executed
+    $$$$$:   57-block 64
+    $$$$$:   57-block 65
+    $$$$$:   57-block 66
+call   26 never executed
+    $$$$$:   57-block 68
+    $$$$$:   57-block 69
+call   27 never executed
+       1*:   58:    EXPECT_EQ(value, "updated_one");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58-block 31
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   58-block 33
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   58-block 34
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   58-block 36
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   58-block 37
+call   16 never executed
+call   17 never executed
+        1:   58-block 40
+call   18 returned 1
+    $$$$$:   58-block 72
+call   19 never executed
+    $$$$$:   58-block 74
+    $$$$$:   58-block 75
+call   20 never executed
+    $$$$$:   58-block 77
+    $$$$$:   58-block 78
+call   21 never executed
+        1:   59:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   59-block 81
+call    2 never executed
+    $$$$$:   59-block 83
+call    3 never executed
+------------------
+        -:   60:
+        -:   61:

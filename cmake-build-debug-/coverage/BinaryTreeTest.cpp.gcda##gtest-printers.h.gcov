@@ -467,6 +467,38 @@ call    0 never executed
     #####:  380:    return ::testing::PrintToString(value);
         -:  381:  }
 ------------------
+_ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA14_cE6FormatERKS7_:
+function _ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA14_cE6FormatERKS7_ called 0 returned 0% blocks executed 0%
+    #####:  379:  static ::std::string Format(const ToPrint& value) {
+    #####:  380:    return ::testing::PrintToString(value);
+    %%%%%:  380-block 2
+call    0 never executed
+        -:  381:  }
+------------------
+_ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA17_cE6FormatERKS7_:
+function _ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA17_cE6FormatERKS7_ called 0 returned 0% blocks executed 0%
+    #####:  379:  static ::std::string Format(const ToPrint& value) {
+    #####:  380:    return ::testing::PrintToString(value);
+    %%%%%:  380-block 2
+call    0 never executed
+        -:  381:  }
+------------------
+_ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA15_cE6FormatERKS7_:
+function _ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA15_cE6FormatERKS7_ called 0 returned 0% blocks executed 0%
+    #####:  379:  static ::std::string Format(const ToPrint& value) {
+    #####:  380:    return ::testing::PrintToString(value);
+    %%%%%:  380-block 2
+call    0 never executed
+        -:  381:  }
+------------------
+_ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA18_cE6FormatERKS7_:
+function _ZN7testing8internal19FormatForComparisonINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA18_cE6FormatERKS7_ called 0 returned 0% blocks executed 0%
+    #####:  379:  static ::std::string Format(const ToPrint& value) {
+    #####:  380:    return ::testing::PrintToString(value);
+    %%%%%:  380-block 2
+call    0 never executed
+        -:  381:  }
+------------------
 _ZN7testing8internal19FormatForComparisonIimE6FormatB5cxx11ERKi:
 function _ZN7testing8internal19FormatForComparisonIimE6FormatB5cxx11ERKi called 0 returned 0% blocks executed 0%
     #####:  379:  static ::std::string Format(const ToPrint& value) {
@@ -521,12 +553,50 @@ call    0 never executed
         -:  385:template <typename ToPrint, size_t N, typename OtherOperand>
         -:  386:class FormatForComparison<ToPrint[N], OtherOperand> {
         -:  387: public:
+    #####:  388:  static ::std::string Format(const ToPrint* value) {
+    #####:  389:    return FormatForComparison<const ToPrint*, OtherOperand>::Format(value);
+        -:  390:  }
+------------------
+_ZN7testing8internal19FormatForComparisonIA14_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc:
+function _ZN7testing8internal19FormatForComparisonIA14_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc called 0 returned 0% blocks executed 0%
+    #####:  388:  static ::std::string Format(const ToPrint* value) {
+    #####:  389:    return FormatForComparison<const ToPrint*, OtherOperand>::Format(value);
+    %%%%%:  389-block 2
+call    0 never executed
+        -:  390:  }
+------------------
+_ZN7testing8internal19FormatForComparisonIA17_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc:
+function _ZN7testing8internal19FormatForComparisonIA17_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc called 0 returned 0% blocks executed 0%
+    #####:  388:  static ::std::string Format(const ToPrint* value) {
+    #####:  389:    return FormatForComparison<const ToPrint*, OtherOperand>::Format(value);
+    %%%%%:  389-block 2
+call    0 never executed
+        -:  390:  }
+------------------
+_ZN7testing8internal19FormatForComparisonIA15_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc:
+function _ZN7testing8internal19FormatForComparisonIA15_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc called 0 returned 0% blocks executed 0%
+    #####:  388:  static ::std::string Format(const ToPrint* value) {
+    #####:  389:    return FormatForComparison<const ToPrint*, OtherOperand>::Format(value);
+    %%%%%:  389-block 2
+call    0 never executed
+        -:  390:  }
+------------------
+_ZN7testing8internal19FormatForComparisonIA18_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc:
+function _ZN7testing8internal19FormatForComparisonIA18_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc called 0 returned 0% blocks executed 0%
+    #####:  388:  static ::std::string Format(const ToPrint* value) {
+    #####:  389:    return FormatForComparison<const ToPrint*, OtherOperand>::Format(value);
+    %%%%%:  389-block 2
+call    0 never executed
+        -:  390:  }
+------------------
+_ZN7testing8internal19FormatForComparisonIA20_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc:
 function _ZN7testing8internal19FormatForComparisonIA20_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6FormatEPKc called 0 returned 0% blocks executed 0%
     #####:  388:  static ::std::string Format(const ToPrint* value) {
     #####:  389:    return FormatForComparison<const ToPrint*, OtherOperand>::Format(value);
     %%%%%:  389-block 2
 call    0 never executed
         -:  390:  }
+------------------
         -:  391:};
         -:  392:
         -:  393:// By default, print C string as pointers to be safe, as we don't know
@@ -601,6 +671,78 @@ call    0 never executed
     #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
         -:  460:                                              const T2& /* other_operand */) {
     #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageIA14_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageIA14_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA14_cEES7_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA14_cEES7_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageIA17_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageIA17_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA17_cEES7_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA17_cEES7_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageIA15_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageIA15_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA15_cEES7_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA15_cEES7_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageIA18_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageIA18_cNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES8_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
+        -:  462:}
+------------------
+_ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA18_cEES7_RKT_RKT0_:
+function _ZN7testing8internal33FormatForComparisonFailureMessageINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEA18_cEES7_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####:  459:std::string FormatForComparisonFailureMessage(const T1& value,
+        -:  460:                                              const T2& /* other_operand */) {
+    #####:  461:  return FormatForComparison<T1, T2>::Format(value);
+    %%%%%:  461-block 2
+call    0 never executed
         -:  462:}
 ------------------
 _ZN7testing8internal33FormatForComparisonFailureMessageIimEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_RKT0_:

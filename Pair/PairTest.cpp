@@ -8,29 +8,29 @@ namespace ds {
 
 TEST(PairTest, DefaultConstructor) {
     Pair<int, std::string> pair;
-    EXPECT_EQ(pair.first_, 0);
-    EXPECT_EQ(pair.second_, "");
+    EXPECT_EQ(pair.first, 0);
+    EXPECT_EQ(pair.second, "");
 }
 
 TEST(PairTest, ParameterizedConstructor) {
     Pair<int, std::string> pair(42, "Hello");
-    EXPECT_EQ(pair.first_, 42);
-    EXPECT_EQ(pair.second_, "Hello");
+    EXPECT_EQ(pair.first, 42);
+    EXPECT_EQ(pair.second, "Hello");
 }
 
 TEST(PairTest, AssignmentOperator) {
     Pair<int, std::string> pair1(42, "Hello");
     Pair<int, std::string> pair2;
     pair2 = pair1;
-    EXPECT_EQ(pair2.first_, 42);
-    EXPECT_EQ(pair2.second_, "Hello");
+    EXPECT_EQ(pair2.first, 42);
+    EXPECT_EQ(pair2.second, "Hello");
 }
 
 TEST(PairTest, SelfAssignment) {
     Pair<int, std::string> pair(42, "Hello");
     pair = pair;
-    EXPECT_EQ(pair.first_, 42);
-    EXPECT_EQ(pair.second_, "Hello");
+    EXPECT_EQ(pair.first, 42);
+    EXPECT_EQ(pair.second, "Hello");
 }
 
 TEST(PairTest, EqualityOperator) {

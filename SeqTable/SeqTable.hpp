@@ -137,7 +137,6 @@ struct SeqTable {
 		--size_;
 	}
 
-
 	const ElemType& at(const size_t& pos) const {
 		if (pos >= size_)
 			throw std::out_of_range("Index out of range");
@@ -146,6 +145,13 @@ struct SeqTable {
 	}
 
 	ElemType& operator[](const size_t& pos) {
+		if (pos >= size_)
+			throw std::out_of_range("Index out of range");
+
+		return array_[pos];
+	}
+
+	const ElemType& operator[](const size_t& pos) const {
 		if (pos >= size_)
 			throw std::out_of_range("Index out of range");
 

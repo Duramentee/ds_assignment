@@ -418,15 +418,19 @@ branch  2 never executed
 call    3 never executed
 branch  4 never executed (fallthrough)
 branch  5 never executed
-    %%%%%:  356-block 8
+    %%%%%:  356-block 45
 call    6 never executed
 branch  7 never executed (fallthrough)
 branch  8 never executed
+    %%%%%:  356-block 8
 call    9 never executed
 branch 10 never executed (fallthrough)
 branch 11 never executed
-branch 12 never executed (fallthrough)
-branch 13 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed
     #####:  357:	  for (size_type __i = 0; __i <= _S_local_capacity; ++__i)
     %%%%%:  357-block 14
     %%%%%:  357-block 16
@@ -436,21 +440,26 @@ branch  1 never executed (fallthrough)
     %%%%%:  357-block 16
 branch  2 never executed
 branch  3 never executed (fallthrough)
-    %%%%%:  357-block 10
-    %%%%%:  357-block 12
+    %%%%%:  357-block 47
+    %%%%%:  357-block 49
 branch  4 never executed
 branch  5 never executed (fallthrough)
-    %%%%%:  357-block 23
-    %%%%%:  357-block 25
+    %%%%%:  357-block 10
+    %%%%%:  357-block 12
 branch  6 never executed
 branch  7 never executed (fallthrough)
-    %%%%%:  357-block 9
-    %%%%%:  357-block 11
+    %%%%%:  357-block 23
+    %%%%%:  357-block 25
 branch  8 never executed
 branch  9 never executed (fallthrough)
+    %%%%%:  357-block 9
+    %%%%%:  357-block 11
+branch 10 never executed
+branch 11 never executed (fallthrough)
     #####:  358:	    _M_local_buf[__i] = _CharT();
     %%%%%:  358-block 15
     %%%%%:  358-block 15
+    %%%%%:  358-block 48
     %%%%%:  358-block 11
     %%%%%:  358-block 24
     %%%%%:  358-block 10
@@ -458,6 +467,7 @@ branch  9 never executed (fallthrough)
     #####:  360:      }
     %%%%%:  360-block 17
     %%%%%:  360-block 17
+    %%%%%:  360-block 50
     %%%%%:  360-block 13
     %%%%%:  360-block 26
     %%%%%:  360-block 12
@@ -471,8 +481,10 @@ branch  9 never executed (fallthrough)
         -:  368:	_M_init_local_buf();
         -:  369:#endif
     #####:  370:	return _M_local_data();
-    %%%%%:  370-block 27
+    %%%%%:  370-block 51
 call    0 never executed
+    %%%%%:  370-block 27
+call    1 never executed
         -:  371:      }
         -:  372:
         -:  373:    private:
@@ -1115,66 +1127,133 @@ call    0 never executed
         -:  855:      // 2063. Contradictory requirements for string move assignment
         -:  856:      _GLIBCXX20_CONSTEXPR
         -:  857:      basic_string&
-        -:  858:      operator=(basic_string&& __str)
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_ called 2 returned 100% blocks executed 46%
+        2:  858:      operator=(basic_string&& __str)
         -:  859:      noexcept(_Alloc_traits::_S_nothrow_move())
         -:  860:      {
-        -:  861:	const bool __equal_allocs = _Alloc_traits::_S_always_equal()
+        2:  861:	const bool __equal_allocs = _Alloc_traits::_S_always_equal()
         -:  862:	  || _M_get_allocator() == __str._M_get_allocator();
-        -:  863:	if (!_M_is_local() && _Alloc_traits::_S_propagate_on_move_assign()
-        -:  864:	    && !__equal_allocs)
+       4*:  863:	if (!_M_is_local() && _Alloc_traits::_S_propagate_on_move_assign()
+        2:  863-block 2
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
+        2:  863-block 6
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0
+        2:  863-block 7
+    %%%%%:  863-block 8
+        2:  864:	    && !__equal_allocs)
+        2:  864-block 9
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
         -:  865:	  {
         -:  866:	    // Destroy existing storage before replacing allocator.
-        -:  867:	    _M_destroy(_M_allocated_capacity);
-        -:  868:	    _M_data(_M_local_data());
-        -:  869:	    _M_set_length(0);
+    #####:  867:	    _M_destroy(_M_allocated_capacity);
+    %%%%%:  867-block 10
+call    0 never executed
+    #####:  868:	    _M_data(_M_local_data());
+call    0 never executed
+call    1 never executed
+    #####:  869:	    _M_set_length(0);
+call    0 never executed
         -:  870:	  }
         -:  871:	// Replace allocator if POCMA is true.
-        -:  872:	std::__alloc_on_move(_M_get_allocator(), __str._M_get_allocator());
+        2:  872:	std::__alloc_on_move(_M_get_allocator(), __str._M_get_allocator());
+        2:  872-block 14
+call    0 returned 2
+call    1 returned 2
         -:  873:
-        -:  874:	if (__str._M_is_local())
+        2:  874:	if (__str._M_is_local())
+        2:  874-block 18
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
         -:  875:	  {
         -:  876:	    // We've always got room for a short string, just copy it
         -:  877:	    // (unless this is a self-move, because that would violate the
         -:  878:	    // char_traits::copy precondition that the ranges don't overlap).
-        -:  879:	    if (__builtin_expect(std::__addressof(__str) != this, true))
+        2:  879:	    if (__builtin_expect(std::__addressof(__str) != this, true))
+        2:  879-block 20
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
         -:  880:	      {
-        -:  881:		if (__str.size())
-        -:  882:		  this->_S_copy(_M_data(), __str._M_data(), __str.size());
-        -:  883:		_M_set_length(__str.size());
+        2:  881:		if (__str.size())
+        2:  881-block 22
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
+        2:  882:		  this->_S_copy(_M_data(), __str._M_data(), __str.size());
+        2:  882-block 24
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+        2:  883:		_M_set_length(__str.size());
+        2:  883-block 28
+call    0 returned 2
+call    1 returned 2
         -:  884:	      }
         -:  885:	  }
-        -:  886:	else if (_Alloc_traits::_S_propagate_on_move_assign() || __equal_allocs)
+    #####:  886:	else if (_Alloc_traits::_S_propagate_on_move_assign() || __equal_allocs)
+    %%%%%:  886-block 32
+branch  0 never executed (fallthrough)
+branch  1 never executed
         -:  887:	  {
         -:  888:	    // Just move the allocated pointer, our allocator can free it.
-        -:  889:	    pointer __data = nullptr;
+    #####:  889:	    pointer __data = nullptr;
         -:  890:	    size_type __capacity;
-        -:  891:	    if (!_M_is_local())
+    #####:  891:	    if (!_M_is_local())
+    %%%%%:  891-block 33
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
         -:  892:	      {
         -:  893:		if (__equal_allocs)
         -:  894:		  {
         -:  895:		    // __str can reuse our existing storage.
-        -:  896:		    __data = _M_data();
-        -:  897:		    __capacity = _M_allocated_capacity;
+    #####:  896:		    __data = _M_data();
+    %%%%%:  896-block 35
+call    0 never executed
+    #####:  897:		    __capacity = _M_allocated_capacity;
         -:  898:		  }
         -:  899:		else // __str can't use it, so free it.
         -:  900:		  _M_destroy(_M_allocated_capacity);
         -:  901:	      }
         -:  902:
-        -:  903:	    _M_data(__str._M_data());
-        -:  904:	    _M_length(__str.length());
-        -:  905:	    _M_capacity(__str._M_allocated_capacity);
-        -:  906:	    if (__data)
+    #####:  903:	    _M_data(__str._M_data());
+    %%%%%:  903-block 37
+call    0 never executed
+call    1 never executed
+    #####:  904:	    _M_length(__str.length());
+call    0 never executed
+call    1 never executed
+    #####:  905:	    _M_capacity(__str._M_allocated_capacity);
+call    0 never executed
+    #####:  906:	    if (__data)
+branch  0 never executed (fallthrough)
+branch  1 never executed
         -:  907:	      {
-        -:  908:		__str._M_data(__data);
-        -:  909:		__str._M_capacity(__capacity);
+    #####:  908:		__str._M_data(__data);
+    %%%%%:  908-block 43
+call    0 never executed
+    #####:  909:		__str._M_capacity(__capacity);
+call    0 never executed
         -:  910:	      }
         -:  911:	    else
-        -:  912:	      __str._M_data(__str._M_use_local_data());
+    #####:  912:	      __str._M_data(__str._M_use_local_data());
+    %%%%%:  912-block 53
+call    0 never executed
         -:  913:	  }
         -:  914:	else // Need to do a deep copy
-        -:  915:	  _M_assign(__str);
-        -:  916:	__str.clear();
-        -:  917:	return *this;
+    #####:  915:	  _M_assign(__str);
+    %%%%%:  915-block 54
+call    0 never executed
+        2:  916:	__str.clear();
+        2:  916-block 55
+call    0 returned 2
+        2:  917:	return *this;
         -:  918:      }
         -:  919:
         -:  920:      /**
@@ -1495,8 +1574,11 @@ branch  2 never executed
         -: 1219:       */
         -: 1220:      _GLIBCXX20_CONSTEXPR
         -: 1221:      void
-        -: 1222:      clear() _GLIBCXX_NOEXCEPT
-        -: 1223:      { _M_set_length(0); }
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5clearEv called 2 returned 100% blocks executed 100%
+        2: 1222:      clear() _GLIBCXX_NOEXCEPT
+        2: 1223:      { _M_set_length(0); }
+        2: 1223-block 2
+call    0 returned 2
         -: 1224:
         -: 1225:      /**
         -: 1226:       *  Returns true if the %string is empty.  Equivalent to 
@@ -4119,26 +4201,26 @@ call    0 never executed
         -: 3769:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 3770:    _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 3771:    inline bool
-function _ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_ called 4 returned 100% blocks executed 91%
-        4: 3772:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_ called 17 returned 100% blocks executed 91%
+       17: 3772:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 3773:	       const _CharT* __rhs)
         -: 3774:    {
-        4: 3775:      return __lhs.size() == _Traits::length(__rhs)
-        4: 3775-block 2
-call    0 returned 4
-call    1 returned 4
-       4*: 3776:	       && !_Traits::compare(__lhs.data(), __rhs, __lhs.size());
-branch  0 taken 4 (fallthrough)
+       17: 3775:      return __lhs.size() == _Traits::length(__rhs)
+       17: 3775-block 2
+call    0 returned 17
+call    1 returned 17
+      17*: 3776:	       && !_Traits::compare(__lhs.data(), __rhs, __lhs.size());
+branch  0 taken 17 (fallthrough)
 branch  1 taken 0
-        4: 3776-block 5
-call    2 returned 4
-call    3 returned 4
-call    4 returned 4
-branch  5 taken 4 (fallthrough)
+       17: 3776-block 5
+call    2 returned 17
+call    3 returned 17
+call    4 returned 17
+branch  5 taken 17 (fallthrough)
 branch  6 taken 0
-        4: 3776-block 9
+       17: 3776-block 9
     %%%%%: 3776-block 10
-        4: 3776-block 11
+       17: 3776-block 11
         -: 3777:    }
         -: 3778:
         -: 3779:#if __cpp_lib_three_way_comparison

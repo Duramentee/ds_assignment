@@ -61,8 +61,56 @@
         -:   57:
         -:   58:  template<typename _Res, typename _Fn, typename... _Args>
         -:   59:    constexpr _Res
-        4:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
-        4:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+       10:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+       10:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+------------------
+_ZSt13__invoke_implIvRZN40BinaryTreeTest_EraseNonExistentNode_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_:
+function _ZSt13__invoke_implIvRZN40BinaryTreeTest_EraseNonExistentNode_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_ called 1 returned 100% blocks executed 100%
+        1:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+        1:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+        1:   61-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZSt13__invoke_implIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE0_JEET_St14__invoke_otherOT0_DpOT1_:
+function _ZSt13__invoke_implIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE0_JEET_St14__invoke_otherOT0_DpOT1_ called 1 returned 100% blocks executed 100%
+        1:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+        1:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+        1:   61-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZSt13__invoke_implIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_:
+function _ZSt13__invoke_implIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_ called 1 returned 100% blocks executed 100%
+        1:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+        1:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+        1:   61-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZSt13__invoke_implIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE0_JEET_St14__invoke_otherOT0_DpOT1_:
+function _ZSt13__invoke_implIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE0_JEET_St14__invoke_otherOT0_DpOT1_ called 1 returned 100% blocks executed 100%
+        1:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+        1:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+        1:   61-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZSt13__invoke_implIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_:
+function _ZSt13__invoke_implIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_ called 1 returned 100% blocks executed 100%
+        1:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+        1:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+        1:   61-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZSt13__invoke_implIvRZN33BinaryTreeTest_EraseLeafNode_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_:
+function _ZSt13__invoke_implIvRZN33BinaryTreeTest_EraseLeafNode_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_ called 1 returned 100% blocks executed 100%
+        1:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+        1:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+        1:   61-block 2
+call    0 returned 1
+call    1 returned 1
 ------------------
 _ZSt13__invoke_implIvRZN39BinaryTreeTest_LevelOrderTraversal_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_:
 function _ZSt13__invoke_implIvRZN39BinaryTreeTest_LevelOrderTraversal_Test8TestBodyEvEUlvE_JEET_St14__invoke_otherOT0_DpOT1_ called 1 returned 100% blocks executed 100%
@@ -138,20 +186,140 @@ call    1 returned 1
         -:  101:  // INVOKE<R>: Invoke a callable object and convert the result to R.
         -:  102:  template<typename _Res, typename _Callable, typename... _Args>
         -:  103:    constexpr enable_if_t<is_invocable_r_v<_Res, _Callable, _Args...>, _Res>
-        4:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
+       10:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
         -:  105:    noexcept(is_nothrow_invocable_r_v<_Res, _Callable, _Args...>)
         -:  106:    {
         -:  107:      using __result = __invoke_result<_Callable, _Args...>;
         -:  108:      using __type = typename __result::type;
         -:  109:      using __tag = typename __result::__invoke_type;
         -:  110:      if constexpr (is_void_v<_Res>)
-        4:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+       10:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
         -:  112:					std::forward<_Args>(__args)...);
         -:  113:      else
         -:  114:	return std::__invoke_impl<__type>(__tag{},
         -:  115:					  std::forward<_Callable>(__fn),
         -:  116:					  std::forward<_Args>(__args)...);
-        4:  117:    }
+       10:  117:    }
+------------------
+_ZSt10__invoke_rIvRZN40BinaryTreeTest_EraseNonExistentNode_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_:
+function _ZSt10__invoke_rIvRZN40BinaryTreeTest_EraseNonExistentNode_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_ called 1 returned 100% blocks executed 100%
+        1:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
+        -:  105:    noexcept(is_nothrow_invocable_r_v<_Res, _Callable, _Args...>)
+        -:  106:    {
+        -:  107:      using __result = __invoke_result<_Callable, _Args...>;
+        -:  108:      using __type = typename __result::type;
+        -:  109:      using __tag = typename __result::__invoke_type;
+        -:  110:      if constexpr (is_void_v<_Res>)
+        1:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+        1:  111-block 2
+call    0 returned 1
+call    1 returned 1
+        -:  112:					std::forward<_Args>(__args)...);
+        -:  113:      else
+        -:  114:	return std::__invoke_impl<__type>(__tag{},
+        -:  115:					  std::forward<_Callable>(__fn),
+        -:  116:					  std::forward<_Args>(__args)...);
+        1:  117:    }
+------------------
+_ZSt10__invoke_rIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE0_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_:
+function _ZSt10__invoke_rIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE0_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_ called 1 returned 100% blocks executed 100%
+        1:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
+        -:  105:    noexcept(is_nothrow_invocable_r_v<_Res, _Callable, _Args...>)
+        -:  106:    {
+        -:  107:      using __result = __invoke_result<_Callable, _Args...>;
+        -:  108:      using __type = typename __result::type;
+        -:  109:      using __tag = typename __result::__invoke_type;
+        -:  110:      if constexpr (is_void_v<_Res>)
+        1:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+        1:  111-block 2
+call    0 returned 1
+call    1 returned 1
+        -:  112:					std::forward<_Args>(__args)...);
+        -:  113:      else
+        -:  114:	return std::__invoke_impl<__type>(__tag{},
+        -:  115:					  std::forward<_Callable>(__fn),
+        -:  116:					  std::forward<_Args>(__args)...);
+        1:  117:    }
+------------------
+_ZSt10__invoke_rIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_:
+function _ZSt10__invoke_rIvRZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_ called 1 returned 100% blocks executed 100%
+        1:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
+        -:  105:    noexcept(is_nothrow_invocable_r_v<_Res, _Callable, _Args...>)
+        -:  106:    {
+        -:  107:      using __result = __invoke_result<_Callable, _Args...>;
+        -:  108:      using __type = typename __result::type;
+        -:  109:      using __tag = typename __result::__invoke_type;
+        -:  110:      if constexpr (is_void_v<_Res>)
+        1:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+        1:  111-block 2
+call    0 returned 1
+call    1 returned 1
+        -:  112:					std::forward<_Args>(__args)...);
+        -:  113:      else
+        -:  114:	return std::__invoke_impl<__type>(__tag{},
+        -:  115:					  std::forward<_Callable>(__fn),
+        -:  116:					  std::forward<_Args>(__args)...);
+        1:  117:    }
+------------------
+_ZSt10__invoke_rIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE0_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_:
+function _ZSt10__invoke_rIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE0_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_ called 1 returned 100% blocks executed 100%
+        1:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
+        -:  105:    noexcept(is_nothrow_invocable_r_v<_Res, _Callable, _Args...>)
+        -:  106:    {
+        -:  107:      using __result = __invoke_result<_Callable, _Args...>;
+        -:  108:      using __type = typename __result::type;
+        -:  109:      using __tag = typename __result::__invoke_type;
+        -:  110:      if constexpr (is_void_v<_Res>)
+        1:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+        1:  111-block 2
+call    0 returned 1
+call    1 returned 1
+        -:  112:					std::forward<_Args>(__args)...);
+        -:  113:      else
+        -:  114:	return std::__invoke_impl<__type>(__tag{},
+        -:  115:					  std::forward<_Callable>(__fn),
+        -:  116:					  std::forward<_Args>(__args)...);
+        1:  117:    }
+------------------
+_ZSt10__invoke_rIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_:
+function _ZSt10__invoke_rIvRZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_ called 1 returned 100% blocks executed 100%
+        1:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
+        -:  105:    noexcept(is_nothrow_invocable_r_v<_Res, _Callable, _Args...>)
+        -:  106:    {
+        -:  107:      using __result = __invoke_result<_Callable, _Args...>;
+        -:  108:      using __type = typename __result::type;
+        -:  109:      using __tag = typename __result::__invoke_type;
+        -:  110:      if constexpr (is_void_v<_Res>)
+        1:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+        1:  111-block 2
+call    0 returned 1
+call    1 returned 1
+        -:  112:					std::forward<_Args>(__args)...);
+        -:  113:      else
+        -:  114:	return std::__invoke_impl<__type>(__tag{},
+        -:  115:					  std::forward<_Callable>(__fn),
+        -:  116:					  std::forward<_Args>(__args)...);
+        1:  117:    }
+------------------
+_ZSt10__invoke_rIvRZN33BinaryTreeTest_EraseLeafNode_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_:
+function _ZSt10__invoke_rIvRZN33BinaryTreeTest_EraseLeafNode_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_ called 1 returned 100% blocks executed 100%
+        1:  104:    __invoke_r(_Callable&& __fn, _Args&&... __args)
+        -:  105:    noexcept(is_nothrow_invocable_r_v<_Res, _Callable, _Args...>)
+        -:  106:    {
+        -:  107:      using __result = __invoke_result<_Callable, _Args...>;
+        -:  108:      using __type = typename __result::type;
+        -:  109:      using __tag = typename __result::__invoke_type;
+        -:  110:      if constexpr (is_void_v<_Res>)
+        1:  111:	std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+        1:  111-block 2
+call    0 returned 1
+call    1 returned 1
+        -:  112:					std::forward<_Args>(__args)...);
+        -:  113:      else
+        -:  114:	return std::__invoke_impl<__type>(__tag{},
+        -:  115:					  std::forward<_Callable>(__fn),
+        -:  116:					  std::forward<_Args>(__args)...);
+        1:  117:    }
 ------------------
 _ZSt10__invoke_rIvRZN39BinaryTreeTest_LevelOrderTraversal_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_:
 function _ZSt10__invoke_rIvRZN39BinaryTreeTest_LevelOrderTraversal_Test8TestBodyEvEUlvE_JEENSt9enable_ifIX16is_invocable_r_vIT_T0_JDpT1_EEES4_E4typeEOS5_DpOS6_ called 1 returned 100% blocks executed 100%

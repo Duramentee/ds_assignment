@@ -3,7 +3,7 @@
         -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/LinkedList/LinkedListTest.cpp.gcda
         -:    0:Runs:1
         -:    1:#include <gtest/gtest.h>
-        -:    2:#include "LinkedList.hpp" // 假设你的 LinkedList 类定义在这个头文件中
+        -:    2:#include "LinkedList.hpp"
         -:    3:
         -:    4:using namespace ds;
         -:    5:
@@ -84,35 +84,35 @@ call    0 returned 1
 call    1 never executed
 ------------------
         -:   11:
-        -:   12:// 测试带参数构造函数
-        4:   13:TEST(LinkedListTest, ParamConstructor) {
+        -:   12:// 测试带参数的构造函数
+        4:   13:TEST(LinkedListTest, ParameterizedConstructor) {
         1:   14:    LinkedList<int> list(42);
        1*:   15:    EXPECT_FALSE(list.empty());
-       1*:   16:    EXPECT_TRUE(list.find(42));
+       1*:   16:    EXPECT_EQ(*list.begin(), 42);
         1:   17:}
 ------------------
-_ZN36LinkedListTest_ParamConstructor_TestC2Ev:
-function _ZN36LinkedListTest_ParamConstructor_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   13:TEST(LinkedListTest, ParamConstructor) {
+_ZN44LinkedListTest_ParameterizedConstructor_TestC2Ev:
+function _ZN44LinkedListTest_ParameterizedConstructor_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   13:TEST(LinkedListTest, ParameterizedConstructor) {
         1:   13-block 2
 call    0 returned 1
 ------------------
-_ZN36LinkedListTest_ParamConstructor_TestD0Ev:
-function _ZN36LinkedListTest_ParamConstructor_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   13:TEST(LinkedListTest, ParamConstructor) {
+_ZN44LinkedListTest_ParameterizedConstructor_TestD0Ev:
+function _ZN44LinkedListTest_ParameterizedConstructor_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   13:TEST(LinkedListTest, ParameterizedConstructor) {
         1:   13-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
-_ZN36LinkedListTest_ParamConstructor_TestD2Ev:
-function _ZN36LinkedListTest_ParamConstructor_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   13:TEST(LinkedListTest, ParamConstructor) {
+_ZN44LinkedListTest_ParameterizedConstructor_TestD2Ev:
+function _ZN44LinkedListTest_ParameterizedConstructor_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   13:TEST(LinkedListTest, ParameterizedConstructor) {
         1:   13-block 2
 call    0 returned 1
 ------------------
-_ZN36LinkedListTest_ParamConstructor_Test8TestBodyEv:
-function _ZN36LinkedListTest_ParamConstructor_Test8TestBodyEv called 1 returned 100% blocks executed 24%
-        1:   13:TEST(LinkedListTest, ParamConstructor) {
+_ZN44LinkedListTest_ParameterizedConstructor_Test8TestBodyEv:
+function _ZN44LinkedListTest_ParameterizedConstructor_Test8TestBodyEv called 1 returned 100% blocks executed 27%
+        1:   13:TEST(LinkedListTest, ParameterizedConstructor) {
         1:   14:    LinkedList<int> list(42);
         1:   14-block 2
 call    0 returned 1
@@ -148,1620 +148,1734 @@ call   19 never executed
 call   20 never executed
         1:   15-block 16
 call   21 returned 1
-    $$$$$:   15-block 33
+    $$$$$:   15-block 32
 call   22 never executed
-    $$$$$:   15-block 35
+    $$$$$:   15-block 34
 call   23 never executed
+    $$$$$:   15-block 36
     $$$$$:   15-block 37
     $$$$$:   15-block 38
-    $$$$$:   15-block 39
 call   24 never executed
+    $$$$$:   15-block 40
     $$$$$:   15-block 41
-    $$$$$:   15-block 42
 call   25 never executed
-       1*:   16:    EXPECT_TRUE(list.find(42));
+       1*:   16:    EXPECT_EQ(*list.begin(), 42);
 call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   16-block 21
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block 18
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   16-block 20
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
     %%%%%:   16-block 22
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
     %%%%%:   16-block 23
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
     %%%%%:   16-block 25
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
     %%%%%:   16-block 26
-call   18 never executed
-call   19 never executed
 call   20 never executed
-        1:   16-block 30
-call   21 returned 1
+call   21 never executed
+        1:   16-block 29
+call   22 returned 1
+    $$$$$:   16-block 44
     $$$$$:   16-block 45
-call   22 never executed
-    $$$$$:   16-block 47
+    $$$$$:   16-block 46
 call   23 never executed
+    $$$$$:   16-block 48
     $$$$$:   16-block 49
-    $$$$$:   16-block 50
-    $$$$$:   16-block 51
 call   24 never executed
-    $$$$$:   16-block 53
-    $$$$$:   16-block 54
+    $$$$$:   16-block 51
+    $$$$$:   16-block 52
 call   25 never executed
         1:   17:}
 call    0 returned 1
-    $$$$$:   17-block 57
+    $$$$$:   17-block 55
 call    1 never executed
 ------------------
         -:   18:
-        -:   19:// 测试复制构造函数
-        4:   20:TEST(LinkedListTest, CopyConstructor) {
-        1:   21:    LinkedList<int> original;
-        1:   22:    original.push_back(1);
-        1:   23:    original.push_back(2);
-        -:   24:
-        1:   25:    LinkedList<int> copy = original;
-       1*:   26:    EXPECT_FALSE(copy.empty());
-       1*:   27:    EXPECT_TRUE(copy.find(1));
-       1*:   28:    EXPECT_TRUE(copy.find(2));
-        1:   29:}
-------------------
-_ZN35LinkedListTest_CopyConstructor_TestC2Ev:
-function _ZN35LinkedListTest_CopyConstructor_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   20:TEST(LinkedListTest, CopyConstructor) {
-        1:   20-block 2
-call    0 returned 1
-------------------
-_ZN35LinkedListTest_CopyConstructor_TestD0Ev:
-function _ZN35LinkedListTest_CopyConstructor_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   20:TEST(LinkedListTest, CopyConstructor) {
-        1:   20-block 2
-call    0 returned 1
-call    1 returned 1
-------------------
-_ZN35LinkedListTest_CopyConstructor_TestD2Ev:
-function _ZN35LinkedListTest_CopyConstructor_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   20:TEST(LinkedListTest, CopyConstructor) {
-        1:   20-block 2
-call    0 returned 1
-------------------
-_ZN35LinkedListTest_CopyConstructor_Test8TestBodyEv:
-function _ZN35LinkedListTest_CopyConstructor_Test8TestBodyEv called 1 returned 100% blocks executed 25%
-        1:   20:TEST(LinkedListTest, CopyConstructor) {
-        1:   21:    LinkedList<int> original;
-        1:   21-block 2
-call    0 returned 1
-        1:   22:    original.push_back(1);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   22-block 51
-        1:   23:    original.push_back(2);
-        1:   23-block 4
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   23-block 52
-        -:   24:
-        1:   25:    LinkedList<int> copy = original;
-        1:   25-block 5
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-       1*:   26:    EXPECT_FALSE(copy.empty());
-        1:   26-block 6
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   26-block 10
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   26-block 11
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   26-block 12
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   26-block 14
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   26-block 15
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   26-block 19
-call   21 returned 1
-    $$$$$:   26-block 53
-call   22 never executed
-    $$$$$:   26-block 55
-call   23 never executed
-    $$$$$:   26-block 57
-    $$$$$:   26-block 58
-    $$$$$:   26-block 59
-call   24 never executed
-    $$$$$:   26-block 61
-    $$$$$:   26-block 62
-call   25 never executed
-       1*:   27:    EXPECT_TRUE(copy.find(1));
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   27-block 24
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   27-block 25
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   27-block 26
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   27-block 28
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   27-block 29
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   27-block 33
-call   21 returned 1
-    $$$$$:   27-block 65
-call   22 never executed
-    $$$$$:   27-block 67
-call   23 never executed
-    $$$$$:   27-block 69
-    $$$$$:   27-block 70
-    $$$$$:   27-block 71
-call   24 never executed
-    $$$$$:   27-block 73
-    $$$$$:   27-block 74
-call   25 never executed
-       1*:   28:    EXPECT_TRUE(copy.find(2));
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   28-block 38
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   28-block 39
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   28-block 40
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   28-block 42
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   28-block 43
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   28-block 47
-call   21 returned 1
-    $$$$$:   28-block 77
-call   22 never executed
-    $$$$$:   28-block 79
-call   23 never executed
-    $$$$$:   28-block 81
-    $$$$$:   28-block 82
-    $$$$$:   28-block 83
-call   24 never executed
-    $$$$$:   28-block 85
-    $$$$$:   28-block 86
-call   25 never executed
-        1:   29:}
-call    0 returned 1
-call    1 returned 1
-    $$$$$:   29-block 89
-call    2 never executed
-    $$$$$:   29-block 91
-call    3 never executed
-------------------
-        -:   30:
-        -:   31:// 测试赋值操作符
-        4:   32:TEST(LinkedListTest, AssignmentOperator) {
-        1:   33:    LinkedList<int> original;
-        1:   34:    original.push_back(3);
-        1:   35:    original.push_back(4);
-        -:   36:
-        1:   37:    LinkedList<int> assigned;
-        1:   38:    assigned = original;
-       1*:   39:    EXPECT_FALSE(assigned.empty());
-       1*:   40:    EXPECT_TRUE(assigned.find(3));
-       1*:   41:    EXPECT_TRUE(assigned.find(4));
-        1:   42:}
-------------------
-_ZN38LinkedListTest_AssignmentOperator_TestC2Ev:
-function _ZN38LinkedListTest_AssignmentOperator_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   32:TEST(LinkedListTest, AssignmentOperator) {
-        1:   32-block 2
-call    0 returned 1
-------------------
-_ZN38LinkedListTest_AssignmentOperator_TestD0Ev:
-function _ZN38LinkedListTest_AssignmentOperator_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   32:TEST(LinkedListTest, AssignmentOperator) {
-        1:   32-block 2
-call    0 returned 1
-call    1 returned 1
-------------------
-_ZN38LinkedListTest_AssignmentOperator_TestD2Ev:
-function _ZN38LinkedListTest_AssignmentOperator_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   32:TEST(LinkedListTest, AssignmentOperator) {
-        1:   32-block 2
-call    0 returned 1
-------------------
-_ZN38LinkedListTest_AssignmentOperator_Test8TestBodyEv:
-function _ZN38LinkedListTest_AssignmentOperator_Test8TestBodyEv called 1 returned 100% blocks executed 26%
-        1:   32:TEST(LinkedListTest, AssignmentOperator) {
-        1:   33:    LinkedList<int> original;
-        1:   33-block 2
-call    0 returned 1
-        1:   34:    original.push_back(3);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   34-block 52
-        1:   35:    original.push_back(4);
-        1:   35-block 4
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   35-block 53
-        -:   36:
-        1:   37:    LinkedList<int> assigned;
-        1:   37-block 5
-call    0 returned 1
-        1:   38:    assigned = original;
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-       1*:   39:    EXPECT_FALSE(assigned.empty());
-        1:   39-block 7
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   39-block 11
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   39-block 12
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   39-block 13
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   39-block 15
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   39-block 16
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   39-block 20
-call   21 returned 1
-    $$$$$:   39-block 54
-call   22 never executed
-    $$$$$:   39-block 56
-call   23 never executed
-    $$$$$:   39-block 58
-    $$$$$:   39-block 59
-    $$$$$:   39-block 60
-call   24 never executed
-    $$$$$:   39-block 62
-    $$$$$:   39-block 63
-call   25 never executed
-       1*:   40:    EXPECT_TRUE(assigned.find(3));
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   40-block 25
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   40-block 26
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   40-block 27
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   40-block 29
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   40-block 30
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   40-block 34
-call   21 returned 1
-    $$$$$:   40-block 66
-call   22 never executed
-    $$$$$:   40-block 68
-call   23 never executed
-    $$$$$:   40-block 70
-    $$$$$:   40-block 71
-    $$$$$:   40-block 72
-call   24 never executed
-    $$$$$:   40-block 74
-    $$$$$:   40-block 75
-call   25 never executed
-       1*:   41:    EXPECT_TRUE(assigned.find(4));
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   41-block 39
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   41-block 40
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   41-block 41
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   41-block 43
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   41-block 44
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   41-block 48
-call   21 returned 1
-    $$$$$:   41-block 78
-call   22 never executed
-    $$$$$:   41-block 80
-call   23 never executed
-    $$$$$:   41-block 82
-    $$$$$:   41-block 83
-    $$$$$:   41-block 84
-call   24 never executed
-    $$$$$:   41-block 86
-    $$$$$:   41-block 87
-call   25 never executed
-        1:   42:}
-call    0 returned 1
-call    1 returned 1
-    $$$$$:   42-block 90
-call    2 never executed
-    $$$$$:   42-block 92
-call    3 never executed
-------------------
-        -:   43:
-        -:   44:// 测试 push_front 方法
-        4:   45:TEST(LinkedListTest, PushFront) {
-        1:   46:    LinkedList<int> list;
-        1:   47:    list.push_front(5);
-        1:   48:    list.push_front(6);
-       1*:   49:    EXPECT_EQ(list.find(5), true);
-       1*:   50:    EXPECT_EQ(list.find(6), true);
-        1:   51:}
+        -:   19:// 测试 push_front 方法
+        4:   20:TEST(LinkedListTest, PushFront) {
+        1:   21:    LinkedList<int> list;
+        1:   22:    list.push_front(1);
+       1*:   23:    EXPECT_EQ(*list.begin(), 1);
+        1:   24:    list.push_front(2);
+       1*:   25:    EXPECT_EQ(*list.begin(), 2);
+       1*:   26:    EXPECT_EQ(*(++list.begin()), 1);
+        1:   27:}
 ------------------
 _ZN29LinkedListTest_PushFront_TestC2Ev:
 function _ZN29LinkedListTest_PushFront_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   45:TEST(LinkedListTest, PushFront) {
-        1:   45-block 2
+        1:   20:TEST(LinkedListTest, PushFront) {
+        1:   20-block 2
 call    0 returned 1
 ------------------
 _ZN29LinkedListTest_PushFront_TestD0Ev:
 function _ZN29LinkedListTest_PushFront_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   45:TEST(LinkedListTest, PushFront) {
-        1:   45-block 2
+        1:   20:TEST(LinkedListTest, PushFront) {
+        1:   20-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN29LinkedListTest_PushFront_TestD2Ev:
 function _ZN29LinkedListTest_PushFront_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   45:TEST(LinkedListTest, PushFront) {
-        1:   45-block 2
+        1:   20:TEST(LinkedListTest, PushFront) {
+        1:   20-block 2
 call    0 returned 1
 ------------------
 _ZN29LinkedListTest_PushFront_Test8TestBodyEv:
-function _ZN29LinkedListTest_PushFront_Test8TestBodyEv called 1 returned 100% blocks executed 28%
-        1:   45:TEST(LinkedListTest, PushFront) {
-        1:   46:    LinkedList<int> list;
-        1:   46-block 2
+function _ZN29LinkedListTest_PushFront_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:   20:TEST(LinkedListTest, PushFront) {
+        1:   21:    LinkedList<int> list;
+        1:   21-block 2
 call    0 returned 1
-        1:   47:    list.push_front(5);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   47-block 31
-        1:   48:    list.push_front(6);
-        1:   48-block 4
+        1:   22:    list.push_front(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   48-block 32
-       1*:   49:    EXPECT_EQ(list.find(5), true);
-        1:   49-block 5
+    $$$$$:   22-block 47
+       1*:   23:    EXPECT_EQ(*list.begin(), 1);
+        1:   23-block 4
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   49-block 7
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block 5
+call    3 returned 1
 call    4 returned 1
-branch  5 taken 0 (fallthrough)
-branch  6 taken 1
-    %%%%%:   49-block 9
-call    7 never executed
-branch  8 never executed (fallthrough)
-branch  9 never executed (throw)
-    %%%%%:   49-block 10
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   23-block 7
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   23-block 9
 call   10 never executed
-call   11 never executed
-branch 12 never executed (fallthrough)
-branch 13 never executed (throw)
-    %%%%%:   49-block 12
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   23-block 10
+call   13 never executed
 call   14 never executed
 branch 15 never executed (fallthrough)
 branch 16 never executed (throw)
-    %%%%%:   49-block 13
+    %%%%%:   23-block 12
 call   17 never executed
-call   18 never executed
-        1:   49-block 16
-call   19 returned 1
-    $$$$$:   49-block 33
-    $$$$$:   49-block 34
-    $$$$$:   49-block 35
-    $$$$$:   49-block 36
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   23-block 13
 call   20 never executed
-    $$$$$:   49-block 38
-    $$$$$:   49-block 39
 call   21 never executed
-    $$$$$:   49-block 41
-    $$$$$:   49-block 42
-call   22 never executed
-       1*:   50:    EXPECT_EQ(list.find(6), true);
+        1:   23-block 16
+call   22 returned 1
+    $$$$$:   23-block 48
+    $$$$$:   23-block 49
+    $$$$$:   23-block 50
+call   23 never executed
+    $$$$$:   23-block 52
+    $$$$$:   23-block 53
+call   24 never executed
+    $$$$$:   23-block 55
+    $$$$$:   23-block 56
+call   25 never executed
+        1:   24:    list.push_front(2);
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   50-block 19
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   24-block 59
+       1*:   25:    EXPECT_EQ(*list.begin(), 2);
+        1:   25-block 18
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block 19
+call    3 returned 1
 call    4 returned 1
-branch  5 taken 0 (fallthrough)
-branch  6 taken 1
-    %%%%%:   50-block 21
-call    7 never executed
-branch  8 never executed (fallthrough)
-branch  9 never executed (throw)
-    %%%%%:   50-block 22
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   25-block 21
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   25-block 23
 call   10 never executed
-call   11 never executed
-branch 12 never executed (fallthrough)
-branch 13 never executed (throw)
-    %%%%%:   50-block 24
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   25-block 24
+call   13 never executed
 call   14 never executed
 branch 15 never executed (fallthrough)
 branch 16 never executed (throw)
-    %%%%%:   50-block 25
+    %%%%%:   25-block 26
 call   17 never executed
-call   18 never executed
-        1:   50-block 28
-call   19 returned 1
-    $$$$$:   50-block 45
-    $$$$$:   50-block 46
-    $$$$$:   50-block 47
-    $$$$$:   50-block 48
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   25-block 27
 call   20 never executed
-    $$$$$:   50-block 50
-    $$$$$:   50-block 51
 call   21 never executed
-    $$$$$:   50-block 53
-    $$$$$:   50-block 54
-call   22 never executed
-        1:   51:}
+        1:   25-block 30
+call   22 returned 1
+    $$$$$:   25-block 60
+    $$$$$:   25-block 61
+    $$$$$:   25-block 62
+call   23 never executed
+    $$$$$:   25-block 64
+    $$$$$:   25-block 65
+call   24 never executed
+    $$$$$:   25-block 67
+    $$$$$:   25-block 68
+call   25 never executed
+       1*:   26:    EXPECT_EQ(*(++list.begin()), 1);
 call    0 returned 1
-    $$$$$:   51-block 57
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block 32
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   26-block 35
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   26-block 37
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   26-block 38
+call   14 never executed
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   26-block 40
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   26-block 41
+call   21 never executed
+call   22 never executed
+        1:   26-block 44
+call   23 returned 1
+    $$$$$:   26-block 71
+    $$$$$:   26-block 72
+    $$$$$:   26-block 73
+call   24 never executed
+    $$$$$:   26-block 75
+    $$$$$:   26-block 76
+call   25 never executed
+    $$$$$:   26-block 78
+    $$$$$:   26-block 79
+call   26 never executed
+        1:   27:}
+call    0 returned 1
+    $$$$$:   27-block 82
 call    1 never executed
 ------------------
-        -:   52:
-        -:   53:// 测试 push_back 方法
-        4:   54:TEST(LinkedListTest, PushBack) {
-        1:   55:    LinkedList<int> list;
-        1:   56:    list.push_back(7);
-        1:   57:    list.push_back(8);
-       1*:   58:    EXPECT_EQ(list.find(7), true);
-       1*:   59:    EXPECT_EQ(list.find(8), true);
-        1:   60:}
+        -:   28:
+        -:   29:// 测试 push_back 方法
+        4:   30:TEST(LinkedListTest, PushBack) {
+        1:   31:    LinkedList<int> list;
+        1:   32:    list.push_back(1);
+       1*:   33:    EXPECT_EQ(*list.begin(), 1);
+        1:   34:    list.push_back(2);
+       1*:   35:    EXPECT_EQ(*list.begin(), 1);
+       1*:   36:    EXPECT_EQ(*(++list.begin()), 2);
+        1:   37:}
 ------------------
 _ZN28LinkedListTest_PushBack_TestC2Ev:
 function _ZN28LinkedListTest_PushBack_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   54:TEST(LinkedListTest, PushBack) {
-        1:   54-block 2
+        1:   30:TEST(LinkedListTest, PushBack) {
+        1:   30-block 2
 call    0 returned 1
 ------------------
 _ZN28LinkedListTest_PushBack_TestD0Ev:
 function _ZN28LinkedListTest_PushBack_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   54:TEST(LinkedListTest, PushBack) {
-        1:   54-block 2
+        1:   30:TEST(LinkedListTest, PushBack) {
+        1:   30-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN28LinkedListTest_PushBack_TestD2Ev:
 function _ZN28LinkedListTest_PushBack_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   54:TEST(LinkedListTest, PushBack) {
-        1:   54-block 2
+        1:   30:TEST(LinkedListTest, PushBack) {
+        1:   30-block 2
 call    0 returned 1
 ------------------
 _ZN28LinkedListTest_PushBack_Test8TestBodyEv:
-function _ZN28LinkedListTest_PushBack_Test8TestBodyEv called 1 returned 100% blocks executed 28%
-        1:   54:TEST(LinkedListTest, PushBack) {
-        1:   55:    LinkedList<int> list;
-        1:   55-block 2
+function _ZN28LinkedListTest_PushBack_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:   30:TEST(LinkedListTest, PushBack) {
+        1:   31:    LinkedList<int> list;
+        1:   31-block 2
 call    0 returned 1
-        1:   56:    list.push_back(7);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   56-block 31
-        1:   57:    list.push_back(8);
-        1:   57-block 4
+        1:   32:    list.push_back(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   57-block 32
-       1*:   58:    EXPECT_EQ(list.find(7), true);
-        1:   58-block 5
+    $$$$$:   32-block 47
+       1*:   33:    EXPECT_EQ(*list.begin(), 1);
+        1:   33-block 4
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   58-block 7
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block 5
+call    3 returned 1
 call    4 returned 1
-branch  5 taken 0 (fallthrough)
-branch  6 taken 1
-    %%%%%:   58-block 9
-call    7 never executed
-branch  8 never executed (fallthrough)
-branch  9 never executed (throw)
-    %%%%%:   58-block 10
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   33-block 7
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   33-block 9
 call   10 never executed
-call   11 never executed
-branch 12 never executed (fallthrough)
-branch 13 never executed (throw)
-    %%%%%:   58-block 12
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   33-block 10
+call   13 never executed
 call   14 never executed
 branch 15 never executed (fallthrough)
 branch 16 never executed (throw)
-    %%%%%:   58-block 13
+    %%%%%:   33-block 12
 call   17 never executed
-call   18 never executed
-        1:   58-block 16
-call   19 returned 1
-    $$$$$:   58-block 33
-    $$$$$:   58-block 34
-    $$$$$:   58-block 35
-    $$$$$:   58-block 36
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   33-block 13
 call   20 never executed
-    $$$$$:   58-block 38
-    $$$$$:   58-block 39
 call   21 never executed
-    $$$$$:   58-block 41
-    $$$$$:   58-block 42
-call   22 never executed
-       1*:   59:    EXPECT_EQ(list.find(8), true);
+        1:   33-block 16
+call   22 returned 1
+    $$$$$:   33-block 48
+    $$$$$:   33-block 49
+    $$$$$:   33-block 50
+call   23 never executed
+    $$$$$:   33-block 52
+    $$$$$:   33-block 53
+call   24 never executed
+    $$$$$:   33-block 55
+    $$$$$:   33-block 56
+call   25 never executed
+        1:   34:    list.push_back(2);
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   59-block 19
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   34-block 59
+       1*:   35:    EXPECT_EQ(*list.begin(), 1);
+        1:   35-block 18
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block 19
+call    3 returned 1
 call    4 returned 1
-branch  5 taken 0 (fallthrough)
-branch  6 taken 1
-    %%%%%:   59-block 21
-call    7 never executed
-branch  8 never executed (fallthrough)
-branch  9 never executed (throw)
-    %%%%%:   59-block 22
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   35-block 21
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   35-block 23
 call   10 never executed
-call   11 never executed
-branch 12 never executed (fallthrough)
-branch 13 never executed (throw)
-    %%%%%:   59-block 24
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   35-block 24
+call   13 never executed
 call   14 never executed
 branch 15 never executed (fallthrough)
 branch 16 never executed (throw)
-    %%%%%:   59-block 25
+    %%%%%:   35-block 26
 call   17 never executed
-call   18 never executed
-        1:   59-block 28
-call   19 returned 1
-    $$$$$:   59-block 45
-    $$$$$:   59-block 46
-    $$$$$:   59-block 47
-    $$$$$:   59-block 48
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   35-block 27
 call   20 never executed
-    $$$$$:   59-block 50
-    $$$$$:   59-block 51
 call   21 never executed
-    $$$$$:   59-block 53
-    $$$$$:   59-block 54
-call   22 never executed
-        1:   60:}
+        1:   35-block 30
+call   22 returned 1
+    $$$$$:   35-block 60
+    $$$$$:   35-block 61
+    $$$$$:   35-block 62
+call   23 never executed
+    $$$$$:   35-block 64
+    $$$$$:   35-block 65
+call   24 never executed
+    $$$$$:   35-block 67
+    $$$$$:   35-block 68
+call   25 never executed
+       1*:   36:    EXPECT_EQ(*(++list.begin()), 2);
 call    0 returned 1
-    $$$$$:   60-block 57
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block 32
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   36-block 35
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   36-block 37
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   36-block 38
+call   14 never executed
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   36-block 40
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   36-block 41
+call   21 never executed
+call   22 never executed
+        1:   36-block 44
+call   23 returned 1
+    $$$$$:   36-block 71
+    $$$$$:   36-block 72
+    $$$$$:   36-block 73
+call   24 never executed
+    $$$$$:   36-block 75
+    $$$$$:   36-block 76
+call   25 never executed
+    $$$$$:   36-block 78
+    $$$$$:   36-block 79
+call   26 never executed
+        1:   37:}
+call    0 returned 1
+    $$$$$:   37-block 82
 call    1 never executed
 ------------------
-        -:   61:
-        -:   62:// 测试 insert 方法
-        4:   63:TEST(LinkedListTest, Insert) {
-        1:   64:    LinkedList<int> list;
-        1:   65:    list.push_back(10);
-        1:   66:    list.insert(0, 9); // 插入到头部
-        1:   67:    list.insert(2, 11); // 插入到尾部
-        1:   68:    list.insert(1, 10.5); // 插入到中间
-       1*:   69:    EXPECT_EQ(list.find(9), true);
-       1*:   70:    EXPECT_EQ(list.find(10.5), true);
-       1*:   71:    EXPECT_EQ(list.find(11), true);
-        1:   72:}
+        -:   38:
+        -:   39:// 测试 insert 方法
+        4:   40:TEST(LinkedListTest, Insert) {
+        1:   41:    LinkedList<int> list;
+        1:   42:    list.push_back(1);
+        1:   43:    list.push_back(3);
+        1:   44:    auto it = list.insert(++list.begin(), 2);
+       1*:   45:    EXPECT_EQ(*it, 2);
+       1*:   46:    EXPECT_EQ(*list.begin(), 1);
+       1*:   47:    EXPECT_EQ(*(++list.begin()), 2);
+       1*:   48:    EXPECT_EQ(*(++++list.begin()), 3);
+        1:   49:}
 ------------------
 _ZN26LinkedListTest_Insert_TestC2Ev:
 function _ZN26LinkedListTest_Insert_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   63:TEST(LinkedListTest, Insert) {
-        1:   63-block 2
+        1:   40:TEST(LinkedListTest, Insert) {
+        1:   40-block 2
 call    0 returned 1
 ------------------
 _ZN26LinkedListTest_Insert_TestD0Ev:
 function _ZN26LinkedListTest_Insert_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   63:TEST(LinkedListTest, Insert) {
-        1:   63-block 2
+        1:   40:TEST(LinkedListTest, Insert) {
+        1:   40-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN26LinkedListTest_Insert_TestD2Ev:
 function _ZN26LinkedListTest_Insert_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   63:TEST(LinkedListTest, Insert) {
-        1:   63-block 2
+        1:   40:TEST(LinkedListTest, Insert) {
+        1:   40-block 2
 call    0 returned 1
 ------------------
 _ZN26LinkedListTest_Insert_Test8TestBodyEv:
-function _ZN26LinkedListTest_Insert_Test8TestBodyEv called 1 returned 100% blocks executed 26%
-        1:   63:TEST(LinkedListTest, Insert) {
-        1:   64:    LinkedList<int> list;
-        1:   64-block 2
+function _ZN26LinkedListTest_Insert_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   40:TEST(LinkedListTest, Insert) {
+        1:   41:    LinkedList<int> list;
+        1:   41-block 2
 call    0 returned 1
-        1:   65:    list.push_back(10);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   65-block 45
-        1:   66:    list.insert(0, 9); // 插入到头部
-        1:   66-block 4
+        1:   42:    list.push_back(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   66-block 46
-    $$$$$:   66-block 47
-        1:   67:    list.insert(2, 11); // 插入到尾部
-        1:   67-block 5
+    $$$$$:   42-block 64
+        1:   43:    list.push_back(3);
+        1:   43-block 4
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   67-block 48
-    $$$$$:   67-block 49
-        1:   68:    list.insert(1, 10.5); // 插入到中间
-        1:   68-block 6
+    $$$$$:   43-block 65
+        1:   44:    auto it = list.insert(++list.begin(), 2);
+        1:   44-block 5
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   68-block 50
-    $$$$$:   68-block 51
-       1*:   69:    EXPECT_EQ(list.find(9), true);
-        1:   69-block 7
+        1:   44-block 6
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:   44-block 66
+    $$$$$:   44-block 67
+       1*:   45:    EXPECT_EQ(*it, 2);
+        1:   45-block 8
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   69-block 9
+        1:   45-block 10
 call    4 returned 1
 branch  5 taken 0 (fallthrough)
 branch  6 taken 1
-    %%%%%:   69-block 11
+    %%%%%:   45-block 12
 call    7 never executed
 branch  8 never executed (fallthrough)
 branch  9 never executed (throw)
-    %%%%%:   69-block 12
+    %%%%%:   45-block 13
 call   10 never executed
 call   11 never executed
 branch 12 never executed (fallthrough)
 branch 13 never executed (throw)
-    %%%%%:   69-block 14
+    %%%%%:   45-block 15
 call   14 never executed
 branch 15 never executed (fallthrough)
 branch 16 never executed (throw)
-    %%%%%:   69-block 15
+    %%%%%:   45-block 16
 call   17 never executed
 call   18 never executed
-        1:   69-block 18
+        1:   45-block 19
 call   19 returned 1
-    $$$$$:   69-block 52
-    $$$$$:   69-block 53
-    $$$$$:   69-block 54
-    $$$$$:   69-block 55
+    $$$$$:   45-block 68
+    $$$$$:   45-block 69
 call   20 never executed
-    $$$$$:   69-block 57
-    $$$$$:   69-block 58
+    $$$$$:   45-block 71
+    $$$$$:   45-block 72
 call   21 never executed
-    $$$$$:   69-block 60
-    $$$$$:   69-block 61
+    $$$$$:   45-block 74
+    $$$$$:   45-block 75
 call   22 never executed
-       1*:   70:    EXPECT_EQ(list.find(10.5), true);
+       1*:   46:    EXPECT_EQ(*list.begin(), 1);
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   70-block 21
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block 21
+call    3 returned 1
 call    4 returned 1
-branch  5 taken 0 (fallthrough)
-branch  6 taken 1
-    %%%%%:   70-block 23
-call    7 never executed
-branch  8 never executed (fallthrough)
-branch  9 never executed (throw)
-    %%%%%:   70-block 24
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   46-block 23
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   46-block 25
 call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   46-block 26
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   46-block 28
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   46-block 29
+call   20 never executed
+call   21 never executed
+        1:   46-block 32
+call   22 returned 1
+    $$$$$:   46-block 78
+    $$$$$:   46-block 79
+    $$$$$:   46-block 80
+call   23 never executed
+    $$$$$:   46-block 82
+    $$$$$:   46-block 83
+call   24 never executed
+    $$$$$:   46-block 85
+    $$$$$:   46-block 86
+call   25 never executed
+       1*:   47:    EXPECT_EQ(*(++list.begin()), 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block 34
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   47-block 37
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   47-block 39
 call   11 never executed
 branch 12 never executed (fallthrough)
 branch 13 never executed (throw)
-    %%%%%:   70-block 26
+    %%%%%:   47-block 40
 call   14 never executed
-branch 15 never executed (fallthrough)
-branch 16 never executed (throw)
-    %%%%%:   70-block 27
-call   17 never executed
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   47-block 42
 call   18 never executed
-        1:   70-block 30
-call   19 returned 1
-    $$$$$:   70-block 64
-    $$$$$:   70-block 65
-    $$$$$:   70-block 66
-    $$$$$:   70-block 67
-call   20 never executed
-    $$$$$:   70-block 69
-    $$$$$:   70-block 70
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   47-block 43
 call   21 never executed
-    $$$$$:   70-block 72
-    $$$$$:   70-block 73
 call   22 never executed
-       1*:   71:    EXPECT_EQ(list.find(11), true);
+        1:   47-block 46
+call   23 returned 1
+    $$$$$:   47-block 89
+    $$$$$:   47-block 90
+    $$$$$:   47-block 91
+call   24 never executed
+    $$$$$:   47-block 93
+    $$$$$:   47-block 94
+call   25 never executed
+    $$$$$:   47-block 96
+    $$$$$:   47-block 97
+call   26 never executed
+       1*:   48:    EXPECT_EQ(*(++++list.begin()), 3);
 call    0 returned 1
-call    1 returned 1
-branch  2 taken 1 (fallthrough)
-branch  3 taken 0 (throw)
-        1:   71-block 33
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block 48
+call    3 returned 1
 call    4 returned 1
-branch  5 taken 0 (fallthrough)
-branch  6 taken 1
-    %%%%%:   71-block 35
-call    7 never executed
-branch  8 never executed (fallthrough)
-branch  9 never executed (throw)
-    %%%%%:   71-block 36
-call   10 never executed
-call   11 never executed
-branch 12 never executed (fallthrough)
-branch 13 never executed (throw)
-    %%%%%:   71-block 38
-call   14 never executed
-branch 15 never executed (fallthrough)
-branch 16 never executed (throw)
-    %%%%%:   71-block 39
-call   17 never executed
-call   18 never executed
-        1:   71-block 42
-call   19 returned 1
-    $$$$$:   71-block 76
-    $$$$$:   71-block 77
-    $$$$$:   71-block 78
-    $$$$$:   71-block 79
-call   20 never executed
-    $$$$$:   71-block 81
-    $$$$$:   71-block 82
-call   21 never executed
-    $$$$$:   71-block 84
-    $$$$$:   71-block 85
+call    5 returned 1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   48-block 52
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   48-block 54
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   48-block 55
+call   15 never executed
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   48-block 57
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   48-block 58
 call   22 never executed
-        1:   72:}
+call   23 never executed
+        1:   48-block 61
+call   24 returned 1
+    $$$$$:   48-block 100
+    $$$$$:   48-block 101
+    $$$$$:   48-block 102
+call   25 never executed
+    $$$$$:   48-block 104
+    $$$$$:   48-block 105
+call   26 never executed
+    $$$$$:   48-block 107
+    $$$$$:   48-block 108
+call   27 never executed
+        1:   49:}
 call    0 returned 1
-    $$$$$:   72-block 88
+    $$$$$:   49-block 111
 call    1 never executed
 ------------------
-        -:   73:
-        -:   74:// 测试 pop_front 方法
-        4:   75:TEST(LinkedListTest, PopFront) {
-        1:   76:    LinkedList<int> list;
-        1:   77:    list.push_back(12);
-        1:   78:    list.push_back(13);
-        1:   79:    list.pop_front();
-       1*:   80:    EXPECT_FALSE(list.find(12));
-       1*:   81:    EXPECT_TRUE(list.find(13));
-        1:   82:}
+        -:   50:
+        -:   51:// 测试 pop_front 方法
+        4:   52:TEST(LinkedListTest, PopFront) {
+        1:   53:    LinkedList<int> list;
+        1:   54:    list.push_front(1);
+        1:   55:    list.push_front(2);
+        1:   56:    list.pop_front();
+       1*:   57:    EXPECT_EQ(*list.begin(), 1);
+        1:   58:    list.pop_front();
+       1*:   59:    EXPECT_TRUE(list.empty());
+        1:   60:}
 ------------------
 _ZN28LinkedListTest_PopFront_TestC2Ev:
 function _ZN28LinkedListTest_PopFront_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   75:TEST(LinkedListTest, PopFront) {
-        1:   75-block 2
+        1:   52:TEST(LinkedListTest, PopFront) {
+        1:   52-block 2
 call    0 returned 1
 ------------------
 _ZN28LinkedListTest_PopFront_TestD0Ev:
 function _ZN28LinkedListTest_PopFront_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   75:TEST(LinkedListTest, PopFront) {
-        1:   75-block 2
+        1:   52:TEST(LinkedListTest, PopFront) {
+        1:   52-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN28LinkedListTest_PopFront_TestD2Ev:
 function _ZN28LinkedListTest_PopFront_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   75:TEST(LinkedListTest, PopFront) {
-        1:   75-block 2
+        1:   52:TEST(LinkedListTest, PopFront) {
+        1:   52-block 2
 call    0 returned 1
 ------------------
 _ZN28LinkedListTest_PopFront_Test8TestBodyEv:
-function _ZN28LinkedListTest_PopFront_Test8TestBodyEv called 1 returned 100% blocks executed 27%
-        1:   75:TEST(LinkedListTest, PopFront) {
-        1:   76:    LinkedList<int> list;
-        1:   76-block 2
+function _ZN28LinkedListTest_PopFront_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   52:TEST(LinkedListTest, PopFront) {
+        1:   53:    LinkedList<int> list;
+        1:   53-block 2
 call    0 returned 1
-        1:   77:    list.push_back(12);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   77-block 36
-        1:   78:    list.push_back(13);
-        1:   78-block 4
+        1:   54:    list.push_front(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   78-block 37
-        1:   79:    list.pop_front();
-        1:   79-block 5
+    $$$$$:   54-block 36
+        1:   55:    list.push_front(2);
+        1:   55-block 4
 call    0 returned 1
-       1*:   80:    EXPECT_FALSE(list.find(12));
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   55-block 37
+        1:   56:    list.pop_front();
+        1:   56-block 5
+call    0 returned 1
+       1*:   57:    EXPECT_EQ(*list.begin(), 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57-block 7
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   57-block 9
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   57-block 11
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   57-block 12
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   57-block 14
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   57-block 15
+call   20 never executed
+call   21 never executed
+        1:   57-block 18
+call   22 returned 1
+    $$$$$:   57-block 38
+    $$$$$:   57-block 39
+    $$$$$:   57-block 40
+call   23 never executed
+    $$$$$:   57-block 42
+    $$$$$:   57-block 43
+call   24 never executed
+    $$$$$:   57-block 45
+    $$$$$:   57-block 46
+call   25 never executed
+        1:   58:    list.pop_front();
+call    0 returned 1
+       1*:   59:    EXPECT_TRUE(list.empty());
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
 branch  3 taken 0 (fallthrough)
 branch  4 taken 1
-    %%%%%:   80-block 10
+    %%%%%:   59-block 24
 call    5 never executed
 branch  6 never executed (fallthrough)
 branch  7 never executed (throw)
-    %%%%%:   80-block 11
+    %%%%%:   59-block 25
 call    8 never executed
 branch  9 never executed (fallthrough)
 branch 10 never executed (throw)
-    %%%%%:   80-block 12
+    %%%%%:   59-block 26
 call   11 never executed
 call   12 never executed
 branch 13 never executed (fallthrough)
 branch 14 never executed (throw)
-    %%%%%:   80-block 14
+    %%%%%:   59-block 28
 call   15 never executed
 branch 16 never executed (fallthrough)
 branch 17 never executed (throw)
-    %%%%%:   80-block 15
+    %%%%%:   59-block 29
 call   18 never executed
 call   19 never executed
 call   20 never executed
-        1:   80-block 19
+        1:   59-block 33
 call   21 returned 1
-    $$$$$:   80-block 38
+    $$$$$:   59-block 49
 call   22 never executed
-    $$$$$:   80-block 40
+    $$$$$:   59-block 51
 call   23 never executed
-    $$$$$:   80-block 42
-    $$$$$:   80-block 43
-    $$$$$:   80-block 44
+    $$$$$:   59-block 53
+    $$$$$:   59-block 54
+    $$$$$:   59-block 55
 call   24 never executed
-    $$$$$:   80-block 46
-    $$$$$:   80-block 47
+    $$$$$:   59-block 57
+    $$$$$:   59-block 58
 call   25 never executed
-       1*:   81:    EXPECT_TRUE(list.find(13));
+        1:   60:}
 call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   81-block 24
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   81-block 25
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   81-block 26
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   81-block 28
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   81-block 29
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   81-block 33
-call   21 returned 1
-    $$$$$:   81-block 50
-call   22 never executed
-    $$$$$:   81-block 52
-call   23 never executed
-    $$$$$:   81-block 54
-    $$$$$:   81-block 55
-    $$$$$:   81-block 56
-call   24 never executed
-    $$$$$:   81-block 58
-    $$$$$:   81-block 59
-call   25 never executed
-        1:   82:}
-call    0 returned 1
-    $$$$$:   82-block 62
+    $$$$$:   60-block 61
 call    1 never executed
 ------------------
-        -:   83:
-        -:   84:// 测试 pop_back 方法
-        4:   85:TEST(LinkedListTest, PopBack) {
-        1:   86:    LinkedList<int> list;
-        1:   87:    list.push_back(14);
-        1:   88:    list.push_back(15);
-        1:   89:    list.pop_back();
-       1*:   90:    EXPECT_TRUE(list.find(14));
-       1*:   91:    EXPECT_FALSE(list.find(15));
-        1:   92:}
+        -:   61:
+        -:   62:// 测试 pop_back 方法
+        4:   63:TEST(LinkedListTest, PopBack) {
+        1:   64:    LinkedList<int> list;
+        1:   65:    list.push_back(1);
+        1:   66:    list.push_back(2);
+        1:   67:    list.pop_back();
+       1*:   68:    EXPECT_EQ(*list.begin(), 1);
+        1:   69:    list.pop_back();
+       1*:   70:    EXPECT_TRUE(list.empty());
+        1:   71:}
 ------------------
 _ZN27LinkedListTest_PopBack_TestC2Ev:
 function _ZN27LinkedListTest_PopBack_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   85:TEST(LinkedListTest, PopBack) {
-        1:   85-block 2
+        1:   63:TEST(LinkedListTest, PopBack) {
+        1:   63-block 2
 call    0 returned 1
 ------------------
 _ZN27LinkedListTest_PopBack_TestD0Ev:
 function _ZN27LinkedListTest_PopBack_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   85:TEST(LinkedListTest, PopBack) {
-        1:   85-block 2
+        1:   63:TEST(LinkedListTest, PopBack) {
+        1:   63-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN27LinkedListTest_PopBack_TestD2Ev:
 function _ZN27LinkedListTest_PopBack_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   85:TEST(LinkedListTest, PopBack) {
-        1:   85-block 2
+        1:   63:TEST(LinkedListTest, PopBack) {
+        1:   63-block 2
 call    0 returned 1
 ------------------
 _ZN27LinkedListTest_PopBack_Test8TestBodyEv:
-function _ZN27LinkedListTest_PopBack_Test8TestBodyEv called 1 returned 100% blocks executed 27%
-        1:   85:TEST(LinkedListTest, PopBack) {
-        1:   86:    LinkedList<int> list;
-        1:   86-block 2
+function _ZN27LinkedListTest_PopBack_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   63:TEST(LinkedListTest, PopBack) {
+        1:   64:    LinkedList<int> list;
+        1:   64-block 2
 call    0 returned 1
-        1:   87:    list.push_back(14);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   87-block 36
-        1:   88:    list.push_back(15);
-        1:   88-block 4
+        1:   65:    list.push_back(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   88-block 37
-        1:   89:    list.pop_back();
-        1:   89-block 5
+    $$$$$:   65-block 36
+        1:   66:    list.push_back(2);
+        1:   66-block 4
 call    0 returned 1
-       1*:   90:    EXPECT_TRUE(list.find(14));
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   66-block 37
+        1:   67:    list.pop_back();
+        1:   67-block 5
+call    0 returned 1
+       1*:   68:    EXPECT_EQ(*list.begin(), 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   68-block 7
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   68-block 9
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   68-block 11
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   68-block 12
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   68-block 14
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   68-block 15
+call   20 never executed
+call   21 never executed
+        1:   68-block 18
+call   22 returned 1
+    $$$$$:   68-block 38
+    $$$$$:   68-block 39
+    $$$$$:   68-block 40
+call   23 never executed
+    $$$$$:   68-block 42
+    $$$$$:   68-block 43
+call   24 never executed
+    $$$$$:   68-block 45
+    $$$$$:   68-block 46
+call   25 never executed
+        1:   69:    list.pop_back();
+call    0 returned 1
+       1*:   70:    EXPECT_TRUE(list.empty());
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
 branch  3 taken 0 (fallthrough)
 branch  4 taken 1
-    %%%%%:   90-block 10
+    %%%%%:   70-block 24
 call    5 never executed
 branch  6 never executed (fallthrough)
 branch  7 never executed (throw)
-    %%%%%:   90-block 11
+    %%%%%:   70-block 25
 call    8 never executed
 branch  9 never executed (fallthrough)
 branch 10 never executed (throw)
-    %%%%%:   90-block 12
+    %%%%%:   70-block 26
 call   11 never executed
 call   12 never executed
 branch 13 never executed (fallthrough)
 branch 14 never executed (throw)
-    %%%%%:   90-block 14
+    %%%%%:   70-block 28
 call   15 never executed
 branch 16 never executed (fallthrough)
 branch 17 never executed (throw)
-    %%%%%:   90-block 15
+    %%%%%:   70-block 29
 call   18 never executed
 call   19 never executed
 call   20 never executed
-        1:   90-block 19
+        1:   70-block 33
 call   21 returned 1
-    $$$$$:   90-block 38
+    $$$$$:   70-block 49
 call   22 never executed
-    $$$$$:   90-block 40
+    $$$$$:   70-block 51
 call   23 never executed
-    $$$$$:   90-block 42
-    $$$$$:   90-block 43
-    $$$$$:   90-block 44
+    $$$$$:   70-block 53
+    $$$$$:   70-block 54
+    $$$$$:   70-block 55
 call   24 never executed
-    $$$$$:   90-block 46
-    $$$$$:   90-block 47
+    $$$$$:   70-block 57
+    $$$$$:   70-block 58
 call   25 never executed
-       1*:   91:    EXPECT_FALSE(list.find(15));
+        1:   71:}
 call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:   91-block 24
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:   91-block 25
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:   91-block 26
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:   91-block 28
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:   91-block 29
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:   91-block 33
-call   21 returned 1
-    $$$$$:   91-block 50
-call   22 never executed
-    $$$$$:   91-block 52
-call   23 never executed
-    $$$$$:   91-block 54
-    $$$$$:   91-block 55
-    $$$$$:   91-block 56
-call   24 never executed
-    $$$$$:   91-block 58
-    $$$$$:   91-block 59
-call   25 never executed
-        1:   92:}
-call    0 returned 1
-    $$$$$:   92-block 62
+    $$$$$:   71-block 61
 call    1 never executed
 ------------------
-        -:   93:
-        -:   94:// 测试 erase 方法
-        4:   95:TEST(LinkedListTest, Erase) {
-        1:   96:    LinkedList<int> list;
-        1:   97:    list.push_back(16);
-        1:   98:    list.push_back(17);
-        1:   99:    list.erase(0); // 删除头部元素
-       1*:  100:    EXPECT_FALSE(list.find(16));
-       1*:  101:    EXPECT_TRUE(list.find(17));
-        1:  102:}
+        -:   72:
+        -:   73:// 测试 erase 方法
+        4:   74:TEST(LinkedListTest, Erase) {
+        1:   75:    LinkedList<int> list;
+        1:   76:    list.push_back(1);
+        1:   77:    list.push_back(2);
+        1:   78:    list.push_back(3);
+        1:   79:    auto it = list.erase(++list.begin());
+       1*:   80:    EXPECT_EQ(*it, 3);
+       1*:   81:    EXPECT_EQ(*list.begin(), 1);
+       1*:   82:    EXPECT_EQ(*(++list.begin()), 3);
+        1:   83:}
 ------------------
 _ZN25LinkedListTest_Erase_TestC2Ev:
 function _ZN25LinkedListTest_Erase_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   95:TEST(LinkedListTest, Erase) {
-        1:   95-block 2
+        1:   74:TEST(LinkedListTest, Erase) {
+        1:   74-block 2
 call    0 returned 1
 ------------------
 _ZN25LinkedListTest_Erase_TestD0Ev:
 function _ZN25LinkedListTest_Erase_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   95:TEST(LinkedListTest, Erase) {
-        1:   95-block 2
+        1:   74:TEST(LinkedListTest, Erase) {
+        1:   74-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN25LinkedListTest_Erase_TestD2Ev:
 function _ZN25LinkedListTest_Erase_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   95:TEST(LinkedListTest, Erase) {
-        1:   95-block 2
+        1:   74:TEST(LinkedListTest, Erase) {
+        1:   74-block 2
 call    0 returned 1
 ------------------
 _ZN25LinkedListTest_Erase_Test8TestBodyEv:
-function _ZN25LinkedListTest_Erase_Test8TestBodyEv called 1 returned 100% blocks executed 27%
-        1:   95:TEST(LinkedListTest, Erase) {
-        1:   96:    LinkedList<int> list;
-        1:   96-block 2
+function _ZN25LinkedListTest_Erase_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:   74:TEST(LinkedListTest, Erase) {
+        1:   75:    LinkedList<int> list;
+        1:   75-block 2
 call    0 returned 1
-        1:   97:    list.push_back(16);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:   97-block 36
-        1:   98:    list.push_back(17);
-        1:   98-block 4
+        1:   76:    list.push_back(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:   98-block 37
-        1:   99:    list.erase(0); // 删除头部元素
-        1:   99-block 5
+    $$$$$:   76-block 50
+        1:   77:    list.push_back(2);
+        1:   77-block 4
 call    0 returned 1
-       1*:  100:    EXPECT_FALSE(list.find(16));
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   77-block 51
+        1:   78:    list.push_back(3);
+        1:   78-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   78-block 52
+        1:   79:    auto it = list.erase(++list.begin());
+        1:   79-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   79-block 7
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:   79-block 53
+       1*:   80:    EXPECT_EQ(*it, 3);
+        1:   80-block 9
 call    0 returned 1
 call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:  100-block 10
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:  100-block 11
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:  100-block 12
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   80-block 11
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   80-block 13
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   80-block 14
+call   10 never executed
 call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:  100-block 14
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   80-block 16
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   80-block 17
+call   17 never executed
+call   18 never executed
+        1:   80-block 20
+call   19 returned 1
+    $$$$$:   80-block 54
+    $$$$$:   80-block 55
+call   20 never executed
+    $$$$$:   80-block 57
+    $$$$$:   80-block 58
+call   21 never executed
+    $$$$$:   80-block 60
+    $$$$$:   80-block 61
+call   22 never executed
+       1*:   81:    EXPECT_EQ(*list.begin(), 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   81-block 22
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   81-block 24
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   81-block 26
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   81-block 27
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   81-block 29
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   81-block 30
+call   20 never executed
+call   21 never executed
+        1:   81-block 33
+call   22 returned 1
+    $$$$$:   81-block 64
+    $$$$$:   81-block 65
+    $$$$$:   81-block 66
+call   23 never executed
+    $$$$$:   81-block 68
+    $$$$$:   81-block 69
+call   24 never executed
+    $$$$$:   81-block 71
+    $$$$$:   81-block 72
+call   25 never executed
+       1*:   82:    EXPECT_EQ(*(++list.begin()), 3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82-block 35
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   82-block 38
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   82-block 40
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   82-block 41
+call   14 never executed
 call   15 never executed
 branch 16 never executed (fallthrough)
 branch 17 never executed (throw)
-    %%%%%:  100-block 15
+    %%%%%:   82-block 43
 call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:  100-block 19
-call   21 returned 1
-    $$$$$:  100-block 38
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   82-block 44
+call   21 never executed
 call   22 never executed
-    $$$$$:  100-block 40
-call   23 never executed
-    $$$$$:  100-block 42
-    $$$$$:  100-block 43
-    $$$$$:  100-block 44
+        1:   82-block 47
+call   23 returned 1
+    $$$$$:   82-block 75
+    $$$$$:   82-block 76
+    $$$$$:   82-block 77
 call   24 never executed
-    $$$$$:  100-block 46
-    $$$$$:  100-block 47
+    $$$$$:   82-block 79
+    $$$$$:   82-block 80
 call   25 never executed
-       1*:  101:    EXPECT_TRUE(list.find(17));
+    $$$$$:   82-block 82
+    $$$$$:   82-block 83
+call   26 never executed
+        1:   83:}
 call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:  101-block 24
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:  101-block 25
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:  101-block 26
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:  101-block 28
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:  101-block 29
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:  101-block 33
-call   21 returned 1
-    $$$$$:  101-block 50
-call   22 never executed
-    $$$$$:  101-block 52
-call   23 never executed
-    $$$$$:  101-block 54
-    $$$$$:  101-block 55
-    $$$$$:  101-block 56
-call   24 never executed
-    $$$$$:  101-block 58
-    $$$$$:  101-block 59
-call   25 never executed
-        1:  102:}
-call    0 returned 1
-    $$$$$:  102-block 62
+    $$$$$:   83-block 86
 call    1 never executed
 ------------------
-        -:  103:
-        -:  104:// 测试 find 方法
-        4:  105:TEST(LinkedListTest, Find) {
-        1:  106:    LinkedList<int> list;
-        1:  107:    list.push_back(18);
-       1*:  108:    EXPECT_TRUE(list.find(18));
-       1*:  109:    EXPECT_FALSE(list.find(19)); // 不在列表中的元素
-        1:  110:}
+        -:   84:
+        -:   85:// 测试 find 方法
+        4:   86:TEST(LinkedListTest, Find) {
+        1:   87:    LinkedList<int> list;
+        1:   88:    list.push_back(1);
+        1:   89:    list.push_back(2);
+        1:   90:    list.push_back(3);
+       1*:   91:    EXPECT_TRUE(list.find(2));
+       1*:   92:    EXPECT_FALSE(list.find(4));
+        1:   93:}
 ------------------
 _ZN24LinkedListTest_Find_TestC2Ev:
 function _ZN24LinkedListTest_Find_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:  105:TEST(LinkedListTest, Find) {
-        1:  105-block 2
+        1:   86:TEST(LinkedListTest, Find) {
+        1:   86-block 2
 call    0 returned 1
 ------------------
 _ZN24LinkedListTest_Find_TestD0Ev:
 function _ZN24LinkedListTest_Find_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:  105:TEST(LinkedListTest, Find) {
-        1:  105-block 2
+        1:   86:TEST(LinkedListTest, Find) {
+        1:   86-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN24LinkedListTest_Find_TestD2Ev:
 function _ZN24LinkedListTest_Find_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:  105:TEST(LinkedListTest, Find) {
-        1:  105-block 2
+        1:   86:TEST(LinkedListTest, Find) {
+        1:   86-block 2
 call    0 returned 1
 ------------------
 _ZN24LinkedListTest_Find_Test8TestBodyEv:
-function _ZN24LinkedListTest_Find_Test8TestBodyEv called 1 returned 100% blocks executed 25%
-        1:  105:TEST(LinkedListTest, Find) {
-        1:  106:    LinkedList<int> list;
-        1:  106-block 2
+function _ZN24LinkedListTest_Find_Test8TestBodyEv called 1 returned 100% blocks executed 27%
+        1:   86:TEST(LinkedListTest, Find) {
+        1:   87:    LinkedList<int> list;
+        1:   87-block 2
 call    0 returned 1
-        1:  107:    list.push_back(18);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-    $$$$$:  107-block 34
-       1*:  108:    EXPECT_TRUE(list.find(18));
-        1:  108-block 4
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:  108-block 8
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:  108-block 9
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:  108-block 10
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:  108-block 12
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:  108-block 13
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:  108-block 17
-call   21 returned 1
-    $$$$$:  108-block 35
-call   22 never executed
-    $$$$$:  108-block 37
-call   23 never executed
-    $$$$$:  108-block 39
-    $$$$$:  108-block 40
-    $$$$$:  108-block 41
-call   24 never executed
-    $$$$$:  108-block 43
-    $$$$$:  108-block 44
-call   25 never executed
-       1*:  109:    EXPECT_FALSE(list.find(19)); // 不在列表中的元素
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:  109-block 22
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:  109-block 23
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:  109-block 24
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:  109-block 26
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:  109-block 27
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:  109-block 31
-call   21 returned 1
-    $$$$$:  109-block 47
-call   22 never executed
-    $$$$$:  109-block 49
-call   23 never executed
-    $$$$$:  109-block 51
-    $$$$$:  109-block 52
-    $$$$$:  109-block 53
-call   24 never executed
-    $$$$$:  109-block 55
-    $$$$$:  109-block 56
-call   25 never executed
-        1:  110:}
-call    0 returned 1
-    $$$$$:  110-block 59
-call    1 never executed
-------------------
-        -:  111:
-        -:  112:// 测试 empty 方法
-        4:  113:TEST(LinkedListTest, Empty) {
-        1:  114:    LinkedList<int> list;
-       1*:  115:    EXPECT_TRUE(list.empty());
-        1:  116:    list.push_back(20);
-       1*:  117:    EXPECT_FALSE(list.empty());
-        1:  118:}
-------------------
-_ZN25LinkedListTest_Empty_TestC2Ev:
-function _ZN25LinkedListTest_Empty_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:  113:TEST(LinkedListTest, Empty) {
-        1:  113-block 2
-call    0 returned 1
-------------------
-_ZN25LinkedListTest_Empty_TestD0Ev:
-function _ZN25LinkedListTest_Empty_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:  113:TEST(LinkedListTest, Empty) {
-        1:  113-block 2
-call    0 returned 1
-call    1 returned 1
-------------------
-_ZN25LinkedListTest_Empty_TestD2Ev:
-function _ZN25LinkedListTest_Empty_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:  113:TEST(LinkedListTest, Empty) {
-        1:  113-block 2
-call    0 returned 1
-------------------
-_ZN25LinkedListTest_Empty_Test8TestBodyEv:
-function _ZN25LinkedListTest_Empty_Test8TestBodyEv called 1 returned 100% blocks executed 25%
-        1:  113:TEST(LinkedListTest, Empty) {
-        1:  114:    LinkedList<int> list;
-        1:  114-block 2
-call    0 returned 1
-       1*:  115:    EXPECT_TRUE(list.empty());
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
-    %%%%%:  115-block 7
-call    5 never executed
-branch  6 never executed (fallthrough)
-branch  7 never executed (throw)
-    %%%%%:  115-block 8
-call    8 never executed
-branch  9 never executed (fallthrough)
-branch 10 never executed (throw)
-    %%%%%:  115-block 9
-call   11 never executed
-call   12 never executed
-branch 13 never executed (fallthrough)
-branch 14 never executed (throw)
-    %%%%%:  115-block 11
-call   15 never executed
-branch 16 never executed (fallthrough)
-branch 17 never executed (throw)
-    %%%%%:  115-block 12
-call   18 never executed
-call   19 never executed
-call   20 never executed
-        1:  115-block 16
-call   21 returned 1
-    $$$$$:  115-block 34
-call   22 never executed
-    $$$$$:  115-block 36
-call   23 never executed
-    $$$$$:  115-block 38
-    $$$$$:  115-block 39
-    $$$$$:  115-block 40
-call   24 never executed
-    $$$$$:  115-block 42
-    $$$$$:  115-block 43
-call   25 never executed
-        1:  116:    list.push_back(20);
+        1:   88:    list.push_back(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:  116-block 46
-       1*:  117:    EXPECT_FALSE(list.empty());
-        1:  117-block 18
+    $$$$$:   88-block 36
+        1:   89:    list.push_back(2);
+        1:   89-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   89-block 37
+        1:   90:    list.push_back(3);
+        1:   90-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   90-block 38
+       1*:   91:    EXPECT_TRUE(list.find(2));
+        1:   91-block 6
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
 branch  3 taken 0 (fallthrough)
 branch  4 taken 1
-    %%%%%:  117-block 22
+    %%%%%:   91-block 10
 call    5 never executed
 branch  6 never executed (fallthrough)
 branch  7 never executed (throw)
-    %%%%%:  117-block 23
+    %%%%%:   91-block 11
 call    8 never executed
 branch  9 never executed (fallthrough)
 branch 10 never executed (throw)
-    %%%%%:  117-block 24
+    %%%%%:   91-block 12
 call   11 never executed
 call   12 never executed
 branch 13 never executed (fallthrough)
 branch 14 never executed (throw)
-    %%%%%:  117-block 26
+    %%%%%:   91-block 14
 call   15 never executed
 branch 16 never executed (fallthrough)
 branch 17 never executed (throw)
-    %%%%%:  117-block 27
+    %%%%%:   91-block 15
 call   18 never executed
 call   19 never executed
 call   20 never executed
-        1:  117-block 31
+        1:   91-block 19
 call   21 returned 1
-    $$$$$:  117-block 47
+    $$$$$:   91-block 39
 call   22 never executed
-    $$$$$:  117-block 49
+    $$$$$:   91-block 41
 call   23 never executed
-    $$$$$:  117-block 51
-    $$$$$:  117-block 52
-    $$$$$:  117-block 53
+    $$$$$:   91-block 43
+    $$$$$:   91-block 44
+    $$$$$:   91-block 45
 call   24 never executed
-    $$$$$:  117-block 55
-    $$$$$:  117-block 56
+    $$$$$:   91-block 47
+    $$$$$:   91-block 48
 call   25 never executed
-        1:  118:}
+       1*:   92:    EXPECT_FALSE(list.find(4));
 call    0 returned 1
-    $$$$$:  118-block 59
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   92-block 24
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   92-block 25
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   92-block 26
+call   11 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   92-block 28
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   92-block 29
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   92-block 33
+call   21 returned 1
+    $$$$$:   92-block 51
+call   22 never executed
+    $$$$$:   92-block 53
+call   23 never executed
+    $$$$$:   92-block 55
+    $$$$$:   92-block 56
+    $$$$$:   92-block 57
+call   24 never executed
+    $$$$$:   92-block 59
+    $$$$$:   92-block 60
+call   25 never executed
+        1:   93:}
+call    0 returned 1
+    $$$$$:   93-block 63
 call    1 never executed
 ------------------
-        -:  119:
-        -:  120:// 测试 clear 方法
-        4:  121:TEST(LinkedListTest, Clear) {
-        1:  122:    LinkedList<int> list;
-        1:  123:    list.push_back(21);
-        1:  124:    list.clear();
-       1*:  125:    EXPECT_TRUE(list.empty());
-        1:  126:}
+        -:   94:
+        -:   95:// 测试 clear 方法
+        4:   96:TEST(LinkedListTest, Clear) {
+        1:   97:    LinkedList<int> list;
+        1:   98:    list.push_back(1);
+        1:   99:    list.push_back(2);
+        1:  100:    list.clear();
+       1*:  101:    EXPECT_TRUE(list.empty());
+        1:  102:}
 ------------------
 _ZN25LinkedListTest_Clear_TestC2Ev:
 function _ZN25LinkedListTest_Clear_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:  121:TEST(LinkedListTest, Clear) {
-        1:  121-block 2
+        1:   96:TEST(LinkedListTest, Clear) {
+        1:   96-block 2
 call    0 returned 1
 ------------------
 _ZN25LinkedListTest_Clear_TestD0Ev:
 function _ZN25LinkedListTest_Clear_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:  121:TEST(LinkedListTest, Clear) {
-        1:  121-block 2
+        1:   96:TEST(LinkedListTest, Clear) {
+        1:   96-block 2
 call    0 returned 1
 call    1 returned 1
 ------------------
 _ZN25LinkedListTest_Clear_TestD2Ev:
 function _ZN25LinkedListTest_Clear_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:  121:TEST(LinkedListTest, Clear) {
-        1:  121-block 2
+        1:   96:TEST(LinkedListTest, Clear) {
+        1:   96-block 2
 call    0 returned 1
 ------------------
 _ZN25LinkedListTest_Clear_Test8TestBodyEv:
-function _ZN25LinkedListTest_Clear_Test8TestBodyEv called 1 returned 100% blocks executed 31%
-        1:  121:TEST(LinkedListTest, Clear) {
-        1:  122:    LinkedList<int> list;
-        1:  122-block 2
+function _ZN25LinkedListTest_Clear_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:   96:TEST(LinkedListTest, Clear) {
+        1:   97:    LinkedList<int> list;
+        1:   97-block 2
 call    0 returned 1
-        1:  123:    list.push_back(21);
+        1:   98:    list.push_back(1);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-    $$$$$:  123-block 21
-        1:  124:    list.clear();
-        1:  124-block 4
+    $$$$$:   98-block 22
+        1:   99:    list.push_back(2);
+        1:   99-block 4
 call    0 returned 1
-       1*:  125:    EXPECT_TRUE(list.empty());
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   99-block 23
+        1:  100:    list.clear();
+        1:  100-block 5
+call    0 returned 1
+       1*:  101:    EXPECT_TRUE(list.empty());
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
 branch  3 taken 0 (fallthrough)
 branch  4 taken 1
-    %%%%%:  125-block 9
+    %%%%%:  101-block 10
 call    5 never executed
 branch  6 never executed (fallthrough)
 branch  7 never executed (throw)
-    %%%%%:  125-block 10
+    %%%%%:  101-block 11
 call    8 never executed
 branch  9 never executed (fallthrough)
 branch 10 never executed (throw)
-    %%%%%:  125-block 11
+    %%%%%:  101-block 12
 call   11 never executed
 call   12 never executed
 branch 13 never executed (fallthrough)
 branch 14 never executed (throw)
-    %%%%%:  125-block 13
+    %%%%%:  101-block 14
 call   15 never executed
 branch 16 never executed (fallthrough)
 branch 17 never executed (throw)
-    %%%%%:  125-block 14
+    %%%%%:  101-block 15
 call   18 never executed
 call   19 never executed
 call   20 never executed
-        1:  125-block 18
+        1:  101-block 19
 call   21 returned 1
-    $$$$$:  125-block 22
+    $$$$$:  101-block 24
 call   22 never executed
-    $$$$$:  125-block 24
+    $$$$$:  101-block 26
 call   23 never executed
-    $$$$$:  125-block 26
-    $$$$$:  125-block 27
-    $$$$$:  125-block 28
+    $$$$$:  101-block 28
+    $$$$$:  101-block 29
+    $$$$$:  101-block 30
 call   24 never executed
-    $$$$$:  125-block 30
-    $$$$$:  125-block 31
+    $$$$$:  101-block 32
+    $$$$$:  101-block 33
 call   25 never executed
-        1:  126:}
+        1:  102:}
 call    0 returned 1
-    $$$$$:  126-block 34
+    $$$$$:  102-block 36
 call    1 never executed
 ------------------
-        -:  127:
-        -:  128:// 测试 print 方法（这是一个输出测试，通常不会在自动测试中进行）
-        -:  129:// TEST(LinkedListTest, Print) {
-        -:  130://     LinkedList<int> list;
-        -:  131://     list.push_back(22);
-        -:  132://     list.print(); // 这个测试需要人工检查输出
-        -:  133:// }
-        -:  134:
+        -:  103:
+        -:  104:// 测试 copy 构造函数
+        4:  105:TEST(LinkedListTest, CopyConstructor) {
+        1:  106:    LinkedList<int> list1;
+        1:  107:    list1.push_back(1);
+        1:  108:    list1.push_back(2);
+        1:  109:    LinkedList<int> list2 = list1;
+       1*:  110:    EXPECT_EQ(*list2.begin(), 1);
+       1*:  111:    EXPECT_EQ(*(++list2.begin()), 2);
+       1*:  112:    EXPECT_NE(&(*list1.begin()), &(*list2.begin()));
+        1:  113:}
+------------------
+_ZN35LinkedListTest_CopyConstructor_TestC2Ev:
+function _ZN35LinkedListTest_CopyConstructor_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  105:TEST(LinkedListTest, CopyConstructor) {
+        1:  105-block 2
+call    0 returned 1
+------------------
+_ZN35LinkedListTest_CopyConstructor_TestD0Ev:
+function _ZN35LinkedListTest_CopyConstructor_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  105:TEST(LinkedListTest, CopyConstructor) {
+        1:  105-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN35LinkedListTest_CopyConstructor_TestD2Ev:
+function _ZN35LinkedListTest_CopyConstructor_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  105:TEST(LinkedListTest, CopyConstructor) {
+        1:  105-block 2
+call    0 returned 1
+------------------
+_ZN35LinkedListTest_CopyConstructor_Test8TestBodyEv:
+function _ZN35LinkedListTest_CopyConstructor_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:  105:TEST(LinkedListTest, CopyConstructor) {
+        1:  106:    LinkedList<int> list1;
+        1:  106-block 2
+call    0 returned 1
+        1:  107:    list1.push_back(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  107-block 51
+        1:  108:    list1.push_back(2);
+        1:  108-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  108-block 52
+        1:  109:    LinkedList<int> list2 = list1;
+        1:  109-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  110:    EXPECT_EQ(*list2.begin(), 1);
+        1:  110-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  110-block 7
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  110-block 9
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  110-block 11
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  110-block 12
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  110-block 14
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  110-block 15
+call   20 never executed
+call   21 never executed
+        1:  110-block 18
+call   22 returned 1
+    $$$$$:  110-block 53
+    $$$$$:  110-block 54
+    $$$$$:  110-block 55
+call   23 never executed
+    $$$$$:  110-block 57
+    $$$$$:  110-block 58
+call   24 never executed
+    $$$$$:  110-block 60
+    $$$$$:  110-block 61
+call   25 never executed
+       1*:  111:    EXPECT_EQ(*(++list2.begin()), 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  111-block 20
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  111-block 23
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  111-block 25
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  111-block 26
+call   14 never executed
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  111-block 28
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  111-block 29
+call   21 never executed
+call   22 never executed
+        1:  111-block 32
+call   23 returned 1
+    $$$$$:  111-block 64
+    $$$$$:  111-block 65
+    $$$$$:  111-block 66
+call   24 never executed
+    $$$$$:  111-block 68
+    $$$$$:  111-block 69
+call   25 never executed
+    $$$$$:  111-block 71
+    $$$$$:  111-block 72
+call   26 never executed
+       1*:  112:    EXPECT_NE(&(*list1.begin()), &(*list2.begin()));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  112-block 34
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  112-block 36
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  112-block 38
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  112-block 40
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  112-block 41
+call   17 never executed
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  112-block 43
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  112-block 44
+call   24 never executed
+call   25 never executed
+        1:  112-block 47
+call   26 returned 1
+    $$$$$:  112-block 75
+    $$$$$:  112-block 76
+    $$$$$:  112-block 77
+    $$$$$:  112-block 78
+    $$$$$:  112-block 79
+call   27 never executed
+    $$$$$:  112-block 81
+    $$$$$:  112-block 82
+call   28 never executed
+    $$$$$:  112-block 84
+    $$$$$:  112-block 85
+call   29 never executed
+        1:  113:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  113-block 88
+call    2 never executed
+    $$$$$:  113-block 90
+call    3 never executed
+------------------
+        -:  114:
+        -:  115:// 测试赋值操作符
+        4:  116:TEST(LinkedListTest, AssignmentOperator) {
+        1:  117:    LinkedList<int> list1;
+        1:  118:    list1.push_back(1);
+        1:  119:    list1.push_back(2);
+        1:  120:    LinkedList<int> list2;
+        1:  121:    list2 = list1;
+       1*:  122:    EXPECT_EQ(*list2.begin(), 1);
+       1*:  123:    EXPECT_EQ(*(++list2.begin()), 2);
+       1*:  124:    EXPECT_NE(&(*list1.begin()), &(*list2.begin()));
+        1:  125:}
+------------------
+_ZN38LinkedListTest_AssignmentOperator_TestC2Ev:
+function _ZN38LinkedListTest_AssignmentOperator_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  116:TEST(LinkedListTest, AssignmentOperator) {
+        1:  116-block 2
+call    0 returned 1
+------------------
+_ZN38LinkedListTest_AssignmentOperator_TestD0Ev:
+function _ZN38LinkedListTest_AssignmentOperator_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  116:TEST(LinkedListTest, AssignmentOperator) {
+        1:  116-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN38LinkedListTest_AssignmentOperator_TestD2Ev:
+function _ZN38LinkedListTest_AssignmentOperator_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  116:TEST(LinkedListTest, AssignmentOperator) {
+        1:  116-block 2
+call    0 returned 1
+------------------
+_ZN38LinkedListTest_AssignmentOperator_Test8TestBodyEv:
+function _ZN38LinkedListTest_AssignmentOperator_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:  116:TEST(LinkedListTest, AssignmentOperator) {
+        1:  117:    LinkedList<int> list1;
+        1:  117-block 2
+call    0 returned 1
+        1:  118:    list1.push_back(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  118-block 52
+        1:  119:    list1.push_back(2);
+        1:  119-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  119-block 53
+        1:  120:    LinkedList<int> list2;
+        1:  120-block 5
+call    0 returned 1
+        1:  121:    list2 = list1;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  122:    EXPECT_EQ(*list2.begin(), 1);
+        1:  122-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  122-block 8
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  122-block 10
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  122-block 12
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  122-block 13
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  122-block 15
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  122-block 16
+call   20 never executed
+call   21 never executed
+        1:  122-block 19
+call   22 returned 1
+    $$$$$:  122-block 54
+    $$$$$:  122-block 55
+    $$$$$:  122-block 56
+call   23 never executed
+    $$$$$:  122-block 58
+    $$$$$:  122-block 59
+call   24 never executed
+    $$$$$:  122-block 61
+    $$$$$:  122-block 62
+call   25 never executed
+       1*:  123:    EXPECT_EQ(*(++list2.begin()), 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  123-block 21
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  123-block 24
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  123-block 26
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  123-block 27
+call   14 never executed
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  123-block 29
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  123-block 30
+call   21 never executed
+call   22 never executed
+        1:  123-block 33
+call   23 returned 1
+    $$$$$:  123-block 65
+    $$$$$:  123-block 66
+    $$$$$:  123-block 67
+call   24 never executed
+    $$$$$:  123-block 69
+    $$$$$:  123-block 70
+call   25 never executed
+    $$$$$:  123-block 72
+    $$$$$:  123-block 73
+call   26 never executed
+       1*:  124:    EXPECT_NE(&(*list1.begin()), &(*list2.begin()));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  124-block 35
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  124-block 37
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  124-block 39
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  124-block 41
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  124-block 42
+call   17 never executed
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  124-block 44
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  124-block 45
+call   24 never executed
+call   25 never executed
+        1:  124-block 48
+call   26 returned 1
+    $$$$$:  124-block 76
+    $$$$$:  124-block 77
+    $$$$$:  124-block 78
+    $$$$$:  124-block 79
+    $$$$$:  124-block 80
+call   27 never executed
+    $$$$$:  124-block 82
+    $$$$$:  124-block 83
+call   28 never executed
+    $$$$$:  124-block 85
+    $$$$$:  124-block 86
+call   29 never executed
+        1:  125:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  125-block 89
+call    2 never executed
+    $$$$$:  125-block 91
+call    3 never executed
+------------------

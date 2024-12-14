@@ -8,22 +8,23 @@ namespace ds {
 
 template <typename T1, typename T2>
 struct  Pair {
-	T1 first_;
-	T2 second_;
 
-	Pair() : first_(), second_() {}
-	Pair (const T1& a, const T2& b) : first_{a}, second_{b} {}
+	T1 first;
+	T2 second;
+
+	Pair() : first(), second() {}
+	Pair (const T1& a, const T2& b) : first{a}, second{b} {}
 
 	Pair& operator=(const Pair<T1, T2>& ano_pair) {
 		if (this != &ano_pair) {
-			first_ = ano_pair.first_;
-			second_ = ano_pair.second_;
+			first = ano_pair.first;
+			second = ano_pair.second;
 		}
 		return *this;
 	}
 
 	bool operator==(const Pair& ano_pair) const {
-		return first_ == ano_pair.first_ && second_ == ano_pair.second_;
+		return first == ano_pair.first && second == ano_pair.second;
 	}
 
 	bool operator!=(const Pair& ano_pair) const {

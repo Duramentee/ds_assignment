@@ -1,0 +1,288 @@
+        -:    0:Source:/home/drowlia/code_save/ds/SeqTable/SeqTable.hpp
+        -:    0:Graph:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.gcno
+        -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lsx31 on 24-12-9.
+        -:    3://
+        -:    4:
+        -:    5:#pragma once
+        -:    6:
+        -:    7:#include <iostream>
+        -:    8:#include <algorithm>
+        -:    9:
+        -:   10:namespace ds {
+        -:   11:
+        -:   12:template <typename ElemType>
+        -:   13:struct SeqTable {
+        -:   14:	size_t size_;
+        -:   15:	size_t capacity_;
+        -:   16:	ElemType *array_;
+        -:   17:
+        -:   18:	SeqTable() : size_{0}, capacity_{0}, array_{nullptr} {}
+        -:   19:
+function _ZN2ds8SeqTableINS_10LinkedListINS_4PairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEEEC2Em called 3 returned 100% blocks executed 46%
+        3:   20:	explicit SeqTable(size_t size) :
+        3:   21:		size_{size},
+       3*:   22:		capacity_{size ? 2 * size : 0},
+        3:   22-block 2
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   22-block 3
+    %%%%%:   22-block 4
+      33*:   23:		array_{size ? new ElemType[capacity_]() : nullptr} {
+        3:   23-block 5
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   23-block 6
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0
+        3:   23-block 7
+    %%%%%:   23-block 8
+        3:   23-block 9
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   23-block 10
+       30:   23-block 11
+call    7 returned 30
+       33:   23-block 13
+branch  8 taken 30
+branch  9 taken 3 (fallthrough)
+        3:   23-block 14
+    %%%%%:   23-block 15
+    $$$$$:   23-block 17
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   23-block 18
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   23-block 19
+    $$$$$:   23-block 20
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:   23-block 21
+call   16 never executed
+    $$$$$:   23-block 23
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:   23-block 24
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:   23-block 25
+branch 21 never executed (fallthrough)
+branch 22 never executed
+    $$$$$:   23-block 26
+    $$$$$:   23-block 27
+    $$$$$:   23-block 28
+call   23 never executed
+        3:   24:	}
+        3:   24-block 16
+        -:   25:
+function _ZN2ds8SeqTableINS_10LinkedListINS_4PairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEEED2Ev called 3 returned 100% blocks executed 100%
+        3:   26:	~SeqTable() {
+       33:   27:		delete[] array_;
+        3:   27-block 2
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   27-block 3
+       33:   27-block 4
+branch  2 taken 30 (fallthrough)
+branch  3 taken 3
+       30:   27-block 5
+call    4 returned 30
+        3:   27-block 6
+call    5 returned 3
+        3:   28:		array_ = nullptr;
+        3:   29:	}
+        -:   30:
+        -:   31:	SeqTable(const SeqTable& ano_table) :
+        -:   32:		size_{ano_table.size_},
+        -:   33:		capacity_{ano_table.capacity_},
+        -:   34:		array_{ano_table.size_ ? new ElemType[ano_table.capacity_]() : nullptr} {
+        -:   35:			if (ano_table.size_ > 0)
+        -:   36:				std::copy(ano_table.array_, ano_table.array_ + size_, array_);
+        -:   37:	}
+        -:   38:
+        -:   39:	SeqTable& operator=(const SeqTable& ano_table) {
+        -:   40:		if (this == &ano_table)
+        -:   41:			return *this;
+        -:   42:
+        -:   43:		delete[] array_;
+        -:   44:
+        -:   45:		size_ = ano_table.size_;
+        -:   46:		capacity_ = ano_table.capacity_;
+        -:   47:		array_ = ano_table.size_ ? new ElemType[ano_table.capacity_]() : nullptr;
+        -:   48:
+        -:   49:		if (ano_table.size_ > 0) {
+        -:   50:			std::copy(ano_table.array_, ano_table.array_ + size_, array_);
+        -:   51:		}
+        -:   52:
+        -:   53:		return *this;
+        -:   54:	}
+        -:   55:
+        -:   56:	SeqTable(SeqTable&& ano_table) noexcept :
+        -:   57:		size_{ano_table.size_},
+        -:   58:		capacity_{ano_table.capacity_},
+        -:   59:		array_{ano_table.array_} {
+        -:   60:			ano_table.size_ = 0;
+        -:   61:			ano_table.capacity_ = 0;
+        -:   62:			ano_table.array_ = nullptr;
+        -:   63:	}
+        -:   64:
+        -:   65:	SeqTable& operator=(SeqTable&& ano_table) noexcept {
+        -:   66:		if (this == &ano_table)
+        -:   67:			return *this;
+        -:   68:
+        -:   69:		delete[] array_;
+        -:   70:
+        -:   71:		size_ = ano_table.size_;
+        -:   72:		capacity_ = ano_table.capacity_;
+        -:   73:		array_ = ano_table.array_;
+        -:   74:
+        -:   75:		ano_table.size_ = 0;
+        -:   76:		ano_table.capacity_ = 0;
+        -:   77:		ano_table.array_ = nullptr;
+        -:   78:
+        -:   79:		return *this;
+        -:   80:	}
+        -:   81:
+        -:   82:	void resize(const size_t& new_size) {
+        -:   83:		if (new_size == 0) {
+        -:   84:			delete[] array_;
+        -:   85:			size_ = 0;
+        -:   86:			capacity_ = 0;
+        -:   87:			array_ = nullptr;
+        -:   88:			return;
+        -:   89:		}
+        -:   90:
+        -:   91:		auto *new_array = new ElemType[new_size]();
+        -:   92:		auto copy_size = std::min(size_, new_size);
+        -:   93:		std::copy(array_, array_ + copy_size, new_array);
+        -:   94:
+        -:   95:		delete[] array_;
+        -:   96:
+        -:   97:		if (new_size < size_)
+        -:   98:			size_ = new_size;
+        -:   99:
+        -:  100:		capacity_ = new_size;
+        -:  101:
+        -:  102:		array_ = new_array;
+        -:  103:	}
+        -:  104:
+        -:  105:	void push_back(const ElemType& elem) {
+        -:  106:		if (size_ >= capacity_)
+        -:  107:			resize(capacity_ == 0 ? 1 : capacity_ * 2);
+        -:  108:
+        -:  109:		array_[size_] = elem;
+        -:  110:		++size_;
+        -:  111:	}
+        -:  112:
+        -:  113:	void insert(const size_t& pos, const ElemType& elem) {
+        -:  114:		if (pos > size_)
+        -:  115:			throw std::out_of_range("Index out of range");
+        -:  116:
+        -:  117:		if (size_ >= capacity_)
+        -:  118:			resize(capacity_ == 0 ? 1 : capacity_ * 2);
+        -:  119:
+        -:  120:		std::move(array_ + pos, array_ + size_, array_ + pos + 1);
+        -:  121:
+        -:  122:		array_[pos] = elem;
+        -:  123:		++size_;
+        -:  124:	}
+        -:  125:
+        -:  126:	void pop_back() {
+        -:  127:		if (size_ > 0)
+        -:  128:			--size_;
+        -:  129:	}
+        -:  130:
+        -:  131:	void erase(const size_t& pos) {
+        -:  132:		if (pos >= size_)
+        -:  133:			throw std::out_of_range("Index out of range");
+        -:  134:
+        -:  135:		std::move(array_ + pos + 1, array_ + size_, array_ + pos);
+        -:  136:
+        -:  137:		--size_;
+        -:  138:	}
+        -:  139:
+        -:  140:	const ElemType& at(const size_t& pos) const {
+        -:  141:		if (pos >= size_)
+        -:  142:			throw std::out_of_range("Index out of range");
+        -:  143:
+        -:  144:		return array_[pos];
+        -:  145:	}
+        -:  146:
+function _ZN2ds8SeqTableINS_10LinkedListINS_4PairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEEEixERKm called 22 returned 100% blocks executed 50%
+       22:  147:	ElemType& operator[](const size_t& pos) {
+       22:  148:		if (pos >= size_)
+       22:  148-block 2
+branch  0 taken 0 (fallthrough)
+branch  1 taken 22
+    #####:  149:			throw std::out_of_range("Index out of range");
+    %%%%%:  149-block 3
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  149-block 5
+call    4 never executed
+    $$$$$:  149-block 8
+call    5 never executed
+        -:  150:
+       22:  151:		return array_[pos];
+       22:  151-block 6
+       22:  151-block 7
+        -:  152:	}
+        -:  153:
+function _ZNK2ds8SeqTableINS_10LinkedListINS_4PairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEEEixERKm called 10 returned 100% blocks executed 50%
+       10:  154:	const ElemType& operator[](const size_t& pos) const {
+       10:  155:		if (pos >= size_)
+       10:  155-block 2
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+    #####:  156:			throw std::out_of_range("Index out of range");
+    %%%%%:  156-block 3
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  156-block 5
+call    4 never executed
+    $$$$$:  156-block 8
+call    5 never executed
+        -:  157:
+       10:  158:		return array_[pos];
+       10:  158-block 6
+       10:  158-block 7
+        -:  159:	}
+        -:  160:
+        -:  161:	const ElemType& front() const {
+        -:  162:		return array_[0];
+        -:  163:	}
+        -:  164:
+        -:  165:	const ElemType& back() const {
+        -:  166:		return array_[size_ - 1];
+        -:  167:	}
+        -:  168:
+        -:  169:	[[nodiscard]] bool            empty()    const { return size_ == 0; }
+        -:  170:
+function _ZNK2ds8SeqTableINS_10LinkedListINS_4PairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEEE4sizeEv called 13 returned 100% blocks executed 100%
+       13:  171:	[[nodiscard]] size_t          size()     const { return size_; }
+       13:  171-block 2
+        -:  172:	[[nodiscard]] size_t          capacity() const { return capacity_; }
+        -:  173:
+        -:  174:	[[nodiscard]] ElemType*       begin()    const { return array_; }
+        -:  175:	[[nodiscard]] const ElemType* cbegin()   const { return array_; }
+        -:  176:
+        -:  177:	[[nodiscard]] ElemType*       end()      const { return array_ + size_; }
+        -:  178:	[[nodiscard]] const ElemType* cend()     const { return array_ + size_; }
+        -:  179:
+        -:  180:	void print() const {
+        -:  181:		for (size_t i = 0; i < size_; ++i) {
+        -:  182:			std::cout << array_[i] << " ";
+        -:  183:		}
+        -:  184:		std::cout << std::endl;
+        -:  185:	}
+        -:  186:};
+        -:  187:
+        -:  188:}

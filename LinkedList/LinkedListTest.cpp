@@ -123,8 +123,3 @@ TEST(LinkedListTest, AssignmentOperator) {
     EXPECT_EQ(*(++list2.begin()), 2);
     EXPECT_NE(&(*list1.begin()), &(*list2.begin()));
 }
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

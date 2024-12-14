@@ -287,7 +287,7 @@ struct Iterator {
     Iterator           begin()        { return Iterator(head_); }
     Iterator           end()          { return Iterator(nullptr); }
     Iterator           begin()  const { return Iterator(head_); }
-    Iterator           end()    const { return Iterator(head_); }
+    Iterator           end()    const { return Iterator(nullptr); }
 };
 
 }

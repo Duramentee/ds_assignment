@@ -9,38 +9,38 @@
         -:    5:using namespace ds;
         -:    6:
         -:    7:// Helper function to capture standard output
-function _Z13captureStdoutB5cxx11St8functionIFvvEE called 4 returned 100% blocks executed 85%
-        4:    8:std::string captureStdout(std::function<void()> func) {
-        4:    9:    std::stringstream buffer;
-        4:    9-block 2
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+function _Z13captureStdoutB5cxx11St8functionIFvvEE called 10 returned 100% blocks executed 85%
+       10:    8:std::string captureStdout(std::function<void()> func) {
+       10:    9:    std::stringstream buffer;
+       10:    9-block 2
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
 branch  2 taken 0 (throw)
-        4:   10:    std::streambuf* old = std::cout.rdbuf(buffer.rdbuf());
-        4:   10-block 3
-call    0 returned 4
-call    1 returned 4
-branch  2 taken 4 (fallthrough)
+       10:   10:    std::streambuf* old = std::cout.rdbuf(buffer.rdbuf());
+       10:   10-block 3
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
 branch  3 taken 0 (throw)
-        4:   11:    func();
-        4:   11-block 5
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+       10:   11:    func();
+       10:   11-block 5
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
 branch  2 taken 0 (throw)
-        4:   12:    std::cout.rdbuf(old);
-        4:   12-block 6
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+       10:   12:    std::cout.rdbuf(old);
+       10:   12-block 6
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
 branch  2 taken 0 (throw)
-        8:   13:    return buffer.str();
-        4:   13-block 7
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+       20:   13:    return buffer.str();
+       10:   13-block 7
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
 branch  2 taken 0 (throw)
-        4:   13-block 11
-        4:   14:}
-        4:   14-block 9
-call    0 returned 4
+       10:   13-block 11
+       10:   14:}
+       10:   14-block 9
+call    0 returned 10
     $$$$$:   14-block 12
 call    1 never executed
         -:   15:
@@ -3093,12 +3093,712 @@ call    0 returned 1
 call    1 never executed
 ------------------
         -:  284:
-        -:  285:
-        -:  286:
-        -:  287:
-        -:  288:
-        -:  289:
-        -:  290:
-        -:  291:
-        -:  292:
-        -:  293:
+        4:  285:TEST(BinaryTreeTest, EraseLeafNode) {
+        1:  286:    ds::BinaryTree<int> tree;
+        1:  287:    tree.insert(10);
+        1:  288:    tree.insert(5);
+        1:  289:    tree.insert(15);
+        1:  290:    tree.insert(3);
+        1:  291:    tree.insert(7);
+        1:  292:    tree.insert(12);
+        1:  293:    tree.insert(18);
+        -:  294:
+        1:  295:    tree.erase(3); // 删除叶子节点
+        2:  296:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  296-block 2
+call    0 returned 1
+       1*:  297:    EXPECT_EQ(output, "5 7 10 12 15 18 \n");
+        1:  298:}
+------------------
+_ZN33BinaryTreeTest_EraseLeafNode_TestC2Ev:
+function _ZN33BinaryTreeTest_EraseLeafNode_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  285:TEST(BinaryTreeTest, EraseLeafNode) {
+        1:  285-block 2
+call    0 returned 1
+------------------
+_ZN33BinaryTreeTest_EraseLeafNode_TestD0Ev:
+function _ZN33BinaryTreeTest_EraseLeafNode_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  285:TEST(BinaryTreeTest, EraseLeafNode) {
+        1:  285-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN33BinaryTreeTest_EraseLeafNode_TestD2Ev:
+function _ZN33BinaryTreeTest_EraseLeafNode_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  285:TEST(BinaryTreeTest, EraseLeafNode) {
+        1:  285-block 2
+call    0 returned 1
+------------------
+_ZN33BinaryTreeTest_EraseLeafNode_Test8TestBodyEv:
+function _ZN33BinaryTreeTest_EraseLeafNode_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:  285:TEST(BinaryTreeTest, EraseLeafNode) {
+        1:  286:    ds::BinaryTree<int> tree;
+        1:  286-block 2
+call    0 returned 1
+        1:  287:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  287-block 28
+        1:  288:    tree.insert(5);
+        1:  288-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  288-block 29
+        1:  289:    tree.insert(15);
+        1:  289-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  289-block 30
+        1:  290:    tree.insert(3);
+        1:  290-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  290-block 31
+        1:  291:    tree.insert(7);
+        1:  291-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  291-block 32
+        1:  292:    tree.insert(12);
+        1:  292-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  292-block 33
+        1:  293:    tree.insert(18);
+        1:  293-block 9
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  293-block 34
+        -:  294:
+        1:  295:    tree.erase(3); // 删除叶子节点
+        1:  295-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  295-block 35
+        1:  296:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  296-block 11
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  296-block 13
+call    4 returned 1
+    $$$$$:  296-block 36
+call    5 never executed
+    $$$$$:  296-block 38
+    $$$$$:  296-block 39
+       1*:  297:    EXPECT_EQ(output, "5 7 10 12 15 18 \n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  297-block 15
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  297-block 17
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  297-block 18
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  297-block 20
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  297-block 21
+call   16 never executed
+call   17 never executed
+        1:  297-block 24
+call   18 returned 1
+    $$$$$:  297-block 40
+call   19 never executed
+    $$$$$:  297-block 42
+    $$$$$:  297-block 43
+call   20 never executed
+    $$$$$:  297-block 45
+    $$$$$:  297-block 46
+call   21 never executed
+        1:  298:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  298-block 49
+call    2 never executed
+    $$$$$:  298-block 51
+call    3 never executed
+------------------
+        -:  299:
+        4:  300:TEST(BinaryTreeTest, EraseNodeWithOneChild) {
+        1:  301:    ds::BinaryTree<int> tree;
+        1:  302:    tree.insert(10);
+        1:  303:    tree.insert(5);
+        1:  304:    tree.insert(15);
+        1:  305:    tree.insert(3);
+        1:  306:    tree.insert(7);
+        1:  307:    tree.insert(12);
+        1:  308:    tree.insert(18);
+        -:  309:
+        1:  310:    tree.erase(5); // 删除只有一个右子节点的节点
+        2:  311:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  311-block 2
+call    0 returned 1
+       1*:  312:    EXPECT_EQ(output, "3 7 10 12 15 18 \n");
+        -:  313:
+        1:  314:    tree.erase(18); // 删除只有一个左子节点的节点
+        2:  315:    output = captureStdout([&tree]() { tree.in_order(); });
+        1:  315-block 2
+call    0 returned 1
+       1*:  316:    EXPECT_EQ(output, "3 7 10 12 15 \n");
+        1:  317:}
+------------------
+_ZN41BinaryTreeTest_EraseNodeWithOneChild_TestC2Ev:
+function _ZN41BinaryTreeTest_EraseNodeWithOneChild_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  300:TEST(BinaryTreeTest, EraseNodeWithOneChild) {
+        1:  300-block 2
+call    0 returned 1
+------------------
+_ZN41BinaryTreeTest_EraseNodeWithOneChild_TestD0Ev:
+function _ZN41BinaryTreeTest_EraseNodeWithOneChild_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  300:TEST(BinaryTreeTest, EraseNodeWithOneChild) {
+        1:  300-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN41BinaryTreeTest_EraseNodeWithOneChild_TestD2Ev:
+function _ZN41BinaryTreeTest_EraseNodeWithOneChild_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  300:TEST(BinaryTreeTest, EraseNodeWithOneChild) {
+        1:  300-block 2
+call    0 returned 1
+------------------
+_ZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEv:
+function _ZN41BinaryTreeTest_EraseNodeWithOneChild_Test8TestBodyEv called 1 returned 100% blocks executed 36%
+        1:  300:TEST(BinaryTreeTest, EraseNodeWithOneChild) {
+        1:  301:    ds::BinaryTree<int> tree;
+        1:  301-block 2
+call    0 returned 1
+        1:  302:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  302-block 45
+        1:  303:    tree.insert(5);
+        1:  303-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  303-block 46
+        1:  304:    tree.insert(15);
+        1:  304-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  304-block 47
+        1:  305:    tree.insert(3);
+        1:  305-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  305-block 48
+        1:  306:    tree.insert(7);
+        1:  306-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  306-block 49
+        1:  307:    tree.insert(12);
+        1:  307-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  307-block 50
+        1:  308:    tree.insert(18);
+        1:  308-block 9
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  308-block 51
+        -:  309:
+        1:  310:    tree.erase(5); // 删除只有一个右子节点的节点
+        1:  310-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  310-block 52
+        1:  311:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  311-block 11
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  311-block 13
+call    4 returned 1
+    $$$$$:  311-block 53
+call    5 never executed
+    $$$$$:  311-block 55
+    $$$$$:  311-block 56
+       1*:  312:    EXPECT_EQ(output, "3 7 10 12 15 18 \n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  312-block 15
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  312-block 17
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  312-block 18
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  312-block 20
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  312-block 21
+call   16 never executed
+call   17 never executed
+        1:  312-block 24
+call   18 returned 1
+    $$$$$:  312-block 57
+call   19 never executed
+    $$$$$:  312-block 59
+    $$$$$:  312-block 60
+call   20 never executed
+    $$$$$:  312-block 62
+    $$$$$:  312-block 63
+call   21 never executed
+        -:  313:
+        1:  314:    tree.erase(18); // 删除只有一个左子节点的节点
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  314-block 66
+        1:  315:    output = captureStdout([&tree]() { tree.in_order(); });
+        1:  315-block 26
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  315-block 28
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:  315-block 67
+call    7 never executed
+    $$$$$:  315-block 69
+    $$$$$:  315-block 70
+    $$$$$:  315-block 71
+       1*:  316:    EXPECT_EQ(output, "3 7 10 12 15 \n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  316-block 32
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  316-block 34
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  316-block 35
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  316-block 37
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  316-block 38
+call   16 never executed
+call   17 never executed
+        1:  316-block 41
+call   18 returned 1
+    $$$$$:  316-block 72
+call   19 never executed
+    $$$$$:  316-block 74
+    $$$$$:  316-block 75
+call   20 never executed
+    $$$$$:  316-block 77
+    $$$$$:  316-block 78
+call   21 never executed
+        1:  317:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  317-block 81
+call    2 never executed
+    $$$$$:  317-block 83
+call    3 never executed
+------------------
+        -:  318:
+        4:  319:TEST(BinaryTreeTest, EraseNodeWithTwoChildren) {
+        1:  320:    ds::BinaryTree<int> tree;
+        1:  321:    tree.insert(10);
+        1:  322:    tree.insert(5);
+        1:  323:    tree.insert(15);
+        1:  324:    tree.insert(3);
+        1:  325:    tree.insert(7);
+        1:  326:    tree.insert(12);
+        1:  327:    tree.insert(18);
+        -:  328:
+        1:  329:    tree.erase(15); // 删除有两个子节点的节点
+        2:  330:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  330-block 2
+call    0 returned 1
+       1*:  331:    EXPECT_EQ(output, "3 5 7 10 12 18 \n");
+        -:  332:
+        1:  333:    tree.erase(10); // 删除根节点，它有两个子节点
+        2:  334:    output = captureStdout([&tree]() { tree.in_order(); });
+        1:  334-block 2
+call    0 returned 1
+       1*:  335:    EXPECT_EQ(output, "3 5 7 12 18 \n");
+        1:  336:}
+------------------
+_ZN44BinaryTreeTest_EraseNodeWithTwoChildren_TestC2Ev:
+function _ZN44BinaryTreeTest_EraseNodeWithTwoChildren_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  319:TEST(BinaryTreeTest, EraseNodeWithTwoChildren) {
+        1:  319-block 2
+call    0 returned 1
+------------------
+_ZN44BinaryTreeTest_EraseNodeWithTwoChildren_TestD0Ev:
+function _ZN44BinaryTreeTest_EraseNodeWithTwoChildren_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  319:TEST(BinaryTreeTest, EraseNodeWithTwoChildren) {
+        1:  319-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN44BinaryTreeTest_EraseNodeWithTwoChildren_TestD2Ev:
+function _ZN44BinaryTreeTest_EraseNodeWithTwoChildren_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  319:TEST(BinaryTreeTest, EraseNodeWithTwoChildren) {
+        1:  319-block 2
+call    0 returned 1
+------------------
+_ZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEv:
+function _ZN44BinaryTreeTest_EraseNodeWithTwoChildren_Test8TestBodyEv called 1 returned 100% blocks executed 36%
+        1:  319:TEST(BinaryTreeTest, EraseNodeWithTwoChildren) {
+        1:  320:    ds::BinaryTree<int> tree;
+        1:  320-block 2
+call    0 returned 1
+        1:  321:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  321-block 45
+        1:  322:    tree.insert(5);
+        1:  322-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  322-block 46
+        1:  323:    tree.insert(15);
+        1:  323-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  323-block 47
+        1:  324:    tree.insert(3);
+        1:  324-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  324-block 48
+        1:  325:    tree.insert(7);
+        1:  325-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  325-block 49
+        1:  326:    tree.insert(12);
+        1:  326-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  326-block 50
+        1:  327:    tree.insert(18);
+        1:  327-block 9
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  327-block 51
+        -:  328:
+        1:  329:    tree.erase(15); // 删除有两个子节点的节点
+        1:  329-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  329-block 52
+        1:  330:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  330-block 11
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  330-block 13
+call    4 returned 1
+    $$$$$:  330-block 53
+call    5 never executed
+    $$$$$:  330-block 55
+    $$$$$:  330-block 56
+       1*:  331:    EXPECT_EQ(output, "3 5 7 10 12 18 \n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  331-block 15
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  331-block 17
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  331-block 18
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  331-block 20
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  331-block 21
+call   16 never executed
+call   17 never executed
+        1:  331-block 24
+call   18 returned 1
+    $$$$$:  331-block 57
+call   19 never executed
+    $$$$$:  331-block 59
+    $$$$$:  331-block 60
+call   20 never executed
+    $$$$$:  331-block 62
+    $$$$$:  331-block 63
+call   21 never executed
+        -:  332:
+        1:  333:    tree.erase(10); // 删除根节点，它有两个子节点
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  333-block 66
+        1:  334:    output = captureStdout([&tree]() { tree.in_order(); });
+        1:  334-block 26
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  334-block 28
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:  334-block 67
+call    7 never executed
+    $$$$$:  334-block 69
+    $$$$$:  334-block 70
+    $$$$$:  334-block 71
+       1*:  335:    EXPECT_EQ(output, "3 5 7 12 18 \n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  335-block 32
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  335-block 34
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  335-block 35
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  335-block 37
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  335-block 38
+call   16 never executed
+call   17 never executed
+        1:  335-block 41
+call   18 returned 1
+    $$$$$:  335-block 72
+call   19 never executed
+    $$$$$:  335-block 74
+    $$$$$:  335-block 75
+call   20 never executed
+    $$$$$:  335-block 77
+    $$$$$:  335-block 78
+call   21 never executed
+        1:  336:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  336-block 81
+call    2 never executed
+    $$$$$:  336-block 83
+call    3 never executed
+------------------
+        -:  337:
+        4:  338:TEST(BinaryTreeTest, EraseNonExistentNode) {
+        1:  339:    ds::BinaryTree<int> tree;
+        1:  340:    tree.insert(10);
+        1:  341:    tree.insert(5);
+        1:  342:    tree.insert(15);
+        1:  343:    tree.insert(3);
+        1:  344:    tree.insert(7);
+        1:  345:    tree.insert(12);
+        1:  346:    tree.insert(18);
+        -:  347:
+        1:  348:    tree.erase(20); // 尝试删除不存在的节点
+        2:  349:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  349-block 2
+call    0 returned 1
+       1*:  350:    EXPECT_EQ(output, "3 5 7 10 12 15 18 \n");
+        1:  351:}
+------------------
+_ZN40BinaryTreeTest_EraseNonExistentNode_TestC2Ev:
+function _ZN40BinaryTreeTest_EraseNonExistentNode_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  338:TEST(BinaryTreeTest, EraseNonExistentNode) {
+        1:  338-block 2
+call    0 returned 1
+------------------
+_ZN40BinaryTreeTest_EraseNonExistentNode_TestD0Ev:
+function _ZN40BinaryTreeTest_EraseNonExistentNode_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  338:TEST(BinaryTreeTest, EraseNonExistentNode) {
+        1:  338-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN40BinaryTreeTest_EraseNonExistentNode_TestD2Ev:
+function _ZN40BinaryTreeTest_EraseNonExistentNode_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  338:TEST(BinaryTreeTest, EraseNonExistentNode) {
+        1:  338-block 2
+call    0 returned 1
+------------------
+_ZN40BinaryTreeTest_EraseNonExistentNode_Test8TestBodyEv:
+function _ZN40BinaryTreeTest_EraseNonExistentNode_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:  338:TEST(BinaryTreeTest, EraseNonExistentNode) {
+        1:  339:    ds::BinaryTree<int> tree;
+        1:  339-block 2
+call    0 returned 1
+        1:  340:    tree.insert(10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  340-block 28
+        1:  341:    tree.insert(5);
+        1:  341-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  341-block 29
+        1:  342:    tree.insert(15);
+        1:  342-block 5
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  342-block 30
+        1:  343:    tree.insert(3);
+        1:  343-block 6
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  343-block 31
+        1:  344:    tree.insert(7);
+        1:  344-block 7
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  344-block 32
+        1:  345:    tree.insert(12);
+        1:  345-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  345-block 33
+        1:  346:    tree.insert(18);
+        1:  346-block 9
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  346-block 34
+        -:  347:
+        1:  348:    tree.erase(20); // 尝试删除不存在的节点
+        1:  348-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  348-block 35
+        1:  349:    std::string output = captureStdout([&tree]() { tree.in_order(); });
+        1:  349-block 11
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  349-block 13
+call    4 returned 1
+    $$$$$:  349-block 36
+call    5 never executed
+    $$$$$:  349-block 38
+    $$$$$:  349-block 39
+       1*:  350:    EXPECT_EQ(output, "3 5 7 10 12 15 18 \n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  350-block 15
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  350-block 17
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  350-block 18
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  350-block 20
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  350-block 21
+call   16 never executed
+call   17 never executed
+        1:  350-block 24
+call   18 returned 1
+    $$$$$:  350-block 40
+call   19 never executed
+    $$$$$:  350-block 42
+    $$$$$:  350-block 43
+call   20 never executed
+    $$$$$:  350-block 45
+    $$$$$:  350-block 46
+call   21 never executed
+        1:  351:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  351-block 49
+call    2 never executed
+    $$$$$:  351-block 51
+call    3 never executed
+------------------
+        -:  352:
+        -:  353:
+        -:  354:
+        -:  355:
+        -:  356:
+        -:  357:
+        -:  358:
+        -:  359:

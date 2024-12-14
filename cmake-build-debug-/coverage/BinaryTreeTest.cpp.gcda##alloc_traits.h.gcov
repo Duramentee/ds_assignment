@@ -113,7 +113,9 @@
         -:  107:
         -:  108:    [[__gnu__::__always_inline__]]
         -:  109:    static constexpr bool _S_propagate_on_move_assign()
-        -:  110:    { return _Base_type::propagate_on_container_move_assignment::value; }
+       2*:  110:    { return _Base_type::propagate_on_container_move_assignment::value; }
+        2:  110-block 4
+    %%%%%:  110-block 30
         -:  111:
         -:  112:    [[__gnu__::__always_inline__]]
         -:  113:    static constexpr bool _S_propagate_on_swap()

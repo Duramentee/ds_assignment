@@ -21,8 +21,8 @@
         -:   17:	BinaryTreeNode* left_;
         -:   18:	BinaryTreeNode* right_;
         -:   19:
-function _ZN2ds14BinaryTreeNodeIiEC2ERKi called 110 returned 100% blocks executed 100%
-      110:   20:	explicit BinaryTreeNode(const ElemType& value) : data_{value}, left_{nullptr}, right_{nullptr} {}
+function _ZN2ds14BinaryTreeNodeIiEC2ERKi called 138 returned 100% blocks executed 100%
+      138:   20:	explicit BinaryTreeNode(const ElemType& value) : data_{value}, left_{nullptr}, right_{nullptr} {}
         -:   21:};
         -:   22:
         -:   23:template <typename ElemType>
@@ -30,56 +30,56 @@ function _ZN2ds14BinaryTreeNodeIiEC2ERKi called 110 returned 100% blocks execute
         -:   25:private:
         -:   26:	BinaryTreeNode<ElemType>* root_;
         -:   27:
-function _ZN2ds10BinaryTreeIiE12destroy_treeEPNS_14BinaryTreeNodeIiEE called 239 returned 100% blocks executed 100%
-      239:   28:	void destroy_tree(BinaryTreeNode<ElemType>* node) {
-      239:   29:		if (node != nullptr) {
-      239:   29-block 2
-branch  0 taken 110 (fallthrough)
-branch  1 taken 129
-      110:   30:			destroy_tree(node->left_);
-      110:   30-block 3
-call    0 returned 110
-      110:   31:			destroy_tree(node->right_);
-call    0 returned 110
-      110:   32:			delete node;
-branch  0 taken 110 (fallthrough)
+function _ZN2ds10BinaryTreeIiE12destroy_treeEPNS_14BinaryTreeNodeIiEE called 289 returned 100% blocks executed 100%
+      289:   28:	void destroy_tree(BinaryTreeNode<ElemType>* node) {
+      289:   29:		if (node != nullptr) {
+      289:   29-block 2
+branch  0 taken 133 (fallthrough)
+branch  1 taken 156
+      133:   30:			destroy_tree(node->left_);
+      133:   30-block 3
+call    0 returned 133
+      133:   31:			destroy_tree(node->right_);
+call    0 returned 133
+      133:   32:			delete node;
+branch  0 taken 133 (fallthrough)
 branch  1 taken 0
-      110:   32-block 6
-call    2 returned 110
+      133:   32-block 6
+call    2 returned 133
         -:   33:		}
-      239:   34:	}
+      289:   34:	}
         -:   35:
-function _ZN2ds10BinaryTreeIiE11insert_utilERPNS_14BinaryTreeNodeIiEERKi called 284 returned 100% blocks executed 100%
-      284:   36:	void insert_util(BinaryTreeNode<ElemType>*& node, const ElemType& value) {
-      284:   37:		if (node == nullptr) {
-      284:   37-block 2
-branch  0 taken 110 (fallthrough)
-branch  1 taken 174
-      110:   38:			node = new BinaryTreeNode<ElemType>(value);
-      110:   38-block 3
-call    0 returned 110
-call    1 returned 110
-      174:   39:		} else if (value < node->data_) {
-      174:   39-block 6
-branch  0 taken 87 (fallthrough)
-branch  1 taken 87
-       87:   40:			insert_util(node->left_, value);
-       87:   40-block 7
-call    0 returned 87
+function _ZN2ds10BinaryTreeIiE11insert_utilERPNS_14BinaryTreeNodeIiEERKi called 352 returned 100% blocks executed 100%
+      352:   36:	void insert_util(BinaryTreeNode<ElemType>*& node, const ElemType& value) {
+      352:   37:		if (node == nullptr) {
+      352:   37-block 2
+branch  0 taken 138 (fallthrough)
+branch  1 taken 214
+      138:   38:			node = new BinaryTreeNode<ElemType>(value);
+      138:   38-block 3
+call    0 returned 138
+call    1 returned 138
+      214:   39:		} else if (value < node->data_) {
+      214:   39-block 6
+branch  0 taken 107 (fallthrough)
+branch  1 taken 107
+      107:   40:			insert_util(node->left_, value);
+      107:   40-block 7
+call    0 returned 107
         -:   41:		} else {
-       87:   42:			insert_util(node->right_, value);
-       87:   42-block 8
-call    0 returned 87
+      107:   42:			insert_util(node->right_, value);
+      107:   42-block 8
+call    0 returned 107
         -:   43:		}
-      284:   44:	}
+      352:   44:	}
         -:   45:
-function _ZN2ds10BinaryTreeIiE5visitEPNS_14BinaryTreeNodeIiEE called 21 returned 100% blocks executed 100%
-       21:   46:	static void visit(BinaryTreeNode<ElemType>* node) {
-       21:   47:		std::cout << node->data_ << " ";
-       21:   47-block 2
-call    0 returned 21
-call    1 returned 21
-       21:   48:	}
+function _ZN2ds10BinaryTreeIiE5visitEPNS_14BinaryTreeNodeIiEE called 56 returned 100% blocks executed 100%
+       56:   46:	static void visit(BinaryTreeNode<ElemType>* node) {
+       56:   47:		std::cout << node->data_ << " ";
+       56:   47-block 2
+call    0 returned 56
+call    1 returned 56
+       56:   48:	}
         -:   49:
 function _ZNK2ds10BinaryTreeIiE14pre_order_utilEPNS_14BinaryTreeNodeIiEE called 15 returned 100% blocks executed 100%
        15:   50:	void pre_order_util(BinaryTreeNode<ElemType>* node) const {
@@ -96,21 +96,21 @@ call    0 returned 7
 call    0 returned 7
         -:   55:		}
        15:   56:	}
-function _ZNK2ds10BinaryTreeIiE13in_order_utilEPNS_14BinaryTreeNodeIiEE called 15 returned 100% blocks executed 100%
-       15:   57:	void in_order_util(BinaryTreeNode<ElemType>* node) const {
-       15:   58:		if (node != nullptr) {
-       15:   58-block 2
-branch  0 taken 7 (fallthrough)
-branch  1 taken 8
-        7:   59:			in_order_util(node->left_);
-        7:   59-block 3
-call    0 returned 7
-        7:   60:			visit(node);
-call    0 returned 7
-        7:   61:			in_order_util(node->right_);
-call    0 returned 7
+function _ZNK2ds10BinaryTreeIiE13in_order_utilEPNS_14BinaryTreeNodeIiEE called 91 returned 100% blocks executed 100%
+       91:   57:	void in_order_util(BinaryTreeNode<ElemType>* node) const {
+       91:   58:		if (node != nullptr) {
+       91:   58-block 2
+branch  0 taken 42 (fallthrough)
+branch  1 taken 49
+       42:   59:			in_order_util(node->left_);
+       42:   59-block 3
+call    0 returned 42
+       42:   60:			visit(node);
+call    0 returned 42
+       42:   61:			in_order_util(node->right_);
+call    0 returned 42
         -:   62:		}
-       15:   63:	}
+       91:   63:	}
 function _ZNK2ds10BinaryTreeIiE15post_order_utilEPNS_14BinaryTreeNodeIiEE called 15 returned 100% blocks executed 100%
        15:   64:	void post_order_util(BinaryTreeNode<ElemType>* node) const {
        15:   65:		if (node != nullptr) {
@@ -190,17 +190,17 @@ branch  1 taken 4
         4:   96-block 4
 call    0 returned 4
         -:   97:	}
-function _ZNK2ds10BinaryTreeIiE13find_min_utilEPNS_14BinaryTreeNodeIiEE called 3 returned 100% blocks executed 100%
-        3:   98:	BinaryTreeNode<ElemType>* find_min_util(BinaryTreeNode<ElemType>* node) const {
-        3:   99:		if (node->left_ == nullptr)
-        3:   99-block 2
-branch  0 taken 1 (fallthrough)
-branch  1 taken 2
-        1:  100:			return node;
-        1:  100-block 3
-        2:  101:		return find_min_util(node->left_);
-        2:  101-block 4
-call    0 returned 2
+function _ZNK2ds10BinaryTreeIiE13find_min_utilEPNS_14BinaryTreeNodeIiEE called 7 returned 100% blocks executed 100%
+        7:   98:	BinaryTreeNode<ElemType>* find_min_util(BinaryTreeNode<ElemType>* node) const {
+        7:   99:		if (node->left_ == nullptr)
+        7:   99-block 2
+branch  0 taken 4 (fallthrough)
+branch  1 taken 3
+        4:  100:			return node;
+        4:  100-block 3
+        3:  101:		return find_min_util(node->left_);
+        3:  101-block 4
+call    0 returned 3
         -:  102:	}
         -:  103:
 function _ZNK2ds10BinaryTreeIiE21calculate_height_utilEPNS_14BinaryTreeNodeIiEE called 50 returned 100% blocks executed 90%
@@ -263,255 +263,326 @@ branch  2 taken 2
        24:  121-block 13
         -:  122:	}
         -:  123:
-        -:  124:public:
-function _ZN2ds10BinaryTreeIiEC2Ev called 19 returned 100% blocks executed 100%
-       19:  125:	BinaryTree() : root_{nullptr} {}
-        -:  126:
-function _ZN2ds10BinaryTreeIiED2Ev called 19 returned 100% blocks executed 100%
-       19:  127:	~BinaryTree() {
-       19:  128:		destroy_tree(root_);
-       19:  128-block 2
-call    0 returned 19
-       19:  129:	}
-        -:  130:
-function _ZN2ds10BinaryTreeIiE6insertERKi called 110 returned 100% blocks executed 100%
-      110:  131:	void insert(const ElemType& value) {
-      110:  132:		insert_util(root_, value);
-      110:  132-block 2
-call    0 returned 110
-      110:  133:	}
-        -:  134:
+function _ZN2ds10BinaryTreeIiE10erase_utilEPNS_14BinaryTreeNodeIiEERKi called 19 returned 100% blocks executed 86%
+       19:  124:	BinaryTreeNode<ElemType>* erase_util(BinaryTreeNode<ElemType>* node, const ElemType& data) {
+       19:  125:		if (node == nullptr) {
+       19:  125-block 2
+branch  0 taken 1 (fallthrough)
+branch  1 taken 18
+        1:  126:			return nullptr;
+        1:  126-block 3
+        -:  127:		}
+        -:  128:
+       18:  129:		if (data < node->data_) {
+       18:  129-block 4
+branch  0 taken 4 (fallthrough)
+branch  1 taken 14
+        4:  130:			node->left_ = erase_util(node->left_, data);
+        4:  130-block 5
+call    0 returned 4
+       14:  131:		} else if (data > node->data_) {
+       14:  131-block 7
+branch  0 taken 6 (fallthrough)
+branch  1 taken 8
+        6:  132:			node->right_ = erase_util(node->right_, data);
+        6:  132-block 8
+call    0 returned 6
+        -:  133:		} else {
+        8:  134:			if (node->left_ == nullptr) {
+        8:  134-block 10
+branch  0 taken 5 (fallthrough)
+branch  1 taken 3
+        5:  135:				BinaryTreeNode<ElemType>* temp = node->right_;
+        5:  136:				delete node;
+        5:  136-block 11
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:  136-block 12
+call    2 returned 5
+        5:  137:				return temp;
+        5:  137-block 13
+        3:  138:			} else if (node->right_ == nullptr) {
+        3:  138-block 14
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    #####:  139:				BinaryTreeNode<ElemType>* temp = node->left_;
+    #####:  140:				delete node;
+    %%%%%:  140-block 15
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  140-block 16
+call    2 never executed
+    #####:  141:				return temp;
+    %%%%%:  141-block 17
+        -:  142:			}
+        -:  143:
+        3:  144:			BinaryTreeNode<ElemType>* temp = find_min_util(node->right_);
+        3:  144-block 18
+call    0 returned 3
+        3:  145:			node->data_ = temp->data_;
+        3:  146:			node->right_ = erase_util(node->right_, temp->data_);
+call    0 returned 3
+        -:  147:		}
+       13:  148:		return node;
+       13:  148-block 21
+        -:  149:	}
+        -:  150:
+        -:  151:public:
+function _ZN2ds10BinaryTreeIiEC2Ev called 23 returned 100% blocks executed 100%
+       23:  152:	BinaryTree() : root_{nullptr} {}
+        -:  153:
+function _ZN2ds10BinaryTreeIiED2Ev called 23 returned 100% blocks executed 100%
+       23:  154:	~BinaryTree() {
+       23:  155:		destroy_tree(root_);
+       23:  155-block 2
+call    0 returned 23
+       23:  156:	}
+        -:  157:
+function _ZN2ds10BinaryTreeIiE6insertERKi called 138 returned 100% blocks executed 100%
+      138:  158:	void insert(const ElemType& value) {
+      138:  159:		insert_util(root_, value);
+      138:  159-block 2
+call    0 returned 138
+      138:  160:	}
+        -:  161:
 function _ZNK2ds10BinaryTreeIiE9pre_orderEv called 1 returned 100% blocks executed 100%
-        1:  135:	void pre_order() const {
-        1:  136:		pre_order_util(root_);
-        1:  136-block 2
+        1:  162:	void pre_order() const {
+        1:  163:		pre_order_util(root_);
+        1:  163-block 2
 call    0 returned 1
-        1:  137:		std::cout << std::endl;
+        1:  164:		std::cout << std::endl;
 call    0 returned 1
-        1:  138:	}
-        -:  139:
-function _ZNK2ds10BinaryTreeIiE8in_orderEv called 1 returned 100% blocks executed 100%
-        1:  140:	void in_order() const {
-        1:  141:		in_order_util(root_);
-        1:  141-block 2
-call    0 returned 1
-        1:  142:		std::cout << std::endl;
-call    0 returned 1
-        1:  143:	}
-        -:  144:
+        1:  165:	}
+        -:  166:
+function _ZNK2ds10BinaryTreeIiE8in_orderEv called 7 returned 100% blocks executed 100%
+        7:  167:	void in_order() const {
+        7:  168:		in_order_util(root_);
+        7:  168-block 2
+call    0 returned 7
+        7:  169:		std::cout << std::endl;
+call    0 returned 7
+        7:  170:	}
+        -:  171:
 function _ZNK2ds10BinaryTreeIiE10post_orderEv called 1 returned 100% blocks executed 100%
-        1:  145:	void post_order() const {
-        1:  146:		post_order_util(root_);
-        1:  146-block 2
+        1:  172:	void post_order() const {
+        1:  173:		post_order_util(root_);
+        1:  173-block 2
 call    0 returned 1
-        1:  147:		std::cout << std::endl;
+        1:  174:		std::cout << std::endl;
 call    0 returned 1
-        1:  148:	}
-        -:  149:
+        1:  175:	}
+        -:  176:
 function _ZNK2ds10BinaryTreeIiE11level_orderEv called 1 returned 100% blocks executed 86%
-        1:  150:	void level_order() const {
-        1:  151:		if (root_ == nullptr)
-        1:  151-block 2
+        1:  177:	void level_order() const {
+        1:  178:		if (root_ == nullptr)
+        1:  178-block 2
 branch  0 taken 0 (fallthrough)
 branch  1 taken 1
-    #####:  152:			return;
-    %%%%%:  152-block 3
-        -:  153:
-        1:  154:		ds::Queue<BinaryTreeNode<ElemType>*> q;
-        1:  154-block 4
+    #####:  179:			return;
+    %%%%%:  179-block 3
+        -:  180:
+        1:  181:		ds::Queue<BinaryTreeNode<ElemType>*> q;
+        1:  181-block 4
 call    0 returned 1
-        1:  155:		q.enqueue(root_);
+        1:  182:		q.enqueue(root_);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        -:  156:
-        8:  157:		while (!q.is_empty()) {
-        1:  157-block 6
-        8:  157-block 15
+        -:  183:
+        8:  184:		while (!q.is_empty()) {
+        1:  184-block 6
+        8:  184-block 15
 call    0 returned 8
 branch  1 taken 7
 branch  2 taken 1 (fallthrough)
-        7:  158:			BinaryTreeNode<ElemType>* current = q.peek();
-        7:  158-block 7
+        7:  185:			BinaryTreeNode<ElemType>* current = q.peek();
+        7:  185-block 7
 call    0 returned 7
 branch  1 taken 7 (fallthrough)
 branch  2 taken 0 (throw)
-        7:  159:			q.dequeue();
-        7:  159-block 8
+        7:  186:			q.dequeue();
+        7:  186-block 8
 call    0 returned 7
 branch  1 taken 7 (fallthrough)
 branch  2 taken 0 (throw)
-        -:  160:
-        7:  161:			std::cout << current->data_ << " ";
-        7:  161-block 9
+        -:  187:
+        7:  188:			std::cout << current->data_ << " ";
+        7:  188-block 9
 call    0 returned 7
 branch  1 taken 7 (fallthrough)
 branch  2 taken 0 (throw)
-        7:  161-block 10
+        7:  188-block 10
 call    3 returned 7
 branch  4 taken 7 (fallthrough)
 branch  5 taken 0 (throw)
-        -:  162:
-        7:  163:			if (current->left_ != nullptr) {
-        7:  163-block 11
+        -:  189:
+        7:  190:			if (current->left_ != nullptr) {
+        7:  190-block 11
 branch  0 taken 3 (fallthrough)
 branch  1 taken 4
-        3:  164:				q.enqueue(current->left_);
-        3:  164-block 12
+        3:  191:				q.enqueue(current->left_);
+        3:  191-block 12
 call    0 returned 3
 branch  1 taken 3 (fallthrough)
 branch  2 taken 0 (throw)
-        -:  165:			}
-        -:  166:
-        7:  167:			if (current->right_ != nullptr) {
-        7:  167-block 13
+        -:  192:			}
+        -:  193:
+        7:  194:			if (current->right_ != nullptr) {
+        7:  194-block 13
 branch  0 taken 3 (fallthrough)
 branch  1 taken 4
-        3:  168:				q.enqueue(current->right_);
-        3:  168-block 14
+        3:  195:				q.enqueue(current->right_);
+        3:  195-block 14
 call    0 returned 3
 branch  1 taken 3 (fallthrough)
 branch  2 taken 0 (throw)
-        -:  169:			}
-        -:  170:		}
-        1:  171:		std::cout << std::endl;
-        1:  171-block 17
+        -:  196:			}
+        -:  197:		}
+        1:  198:		std::cout << std::endl;
+        1:  198-block 17
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  172:	}
-        1:  172-block 18
+        1:  199:	}
+        1:  199-block 18
 call    0 returned 1
-    $$$$$:  172-block 21
+    $$$$$:  199-block 21
 call    1 never executed
-        -:  173:
+        -:  200:
 function _ZNK2ds10BinaryTreeIiE6searchERKi called 10 returned 100% blocks executed 100%
-       10:  174:	bool search(const ElemType& value) const {
-       10:  175:		return search_util(root_, value);
-       10:  175-block 2
+       10:  201:	bool search(const ElemType& value) const {
+       10:  202:		return search_util(root_, value);
+       10:  202-block 2
 call    0 returned 10
-        -:  176:	}
-        -:  177:
+        -:  203:	}
+        -:  204:
 function _ZNK2ds10BinaryTreeIiE14find_max_valueEv called 2 returned 50% blocks executed 89%
-        2:  178:	ElemType find_max_value() const {
-        2:  179:		if (root_ == nullptr)
-        2:  179-block 2
+        2:  205:	ElemType find_max_value() const {
+        2:  206:		if (root_ == nullptr)
+        2:  206-block 2
 branch  0 taken 1 (fallthrough)
 branch  1 taken 1
-        1:  180:			throw std::runtime_error("can't find on empty tree.");
-        1:  180-block 3
+        1:  207:			throw std::runtime_error("can't find on empty tree.");
+        1:  207-block 3
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:  180-block 5
+        1:  207-block 5
 call    4 returned 0
-    $$$$$:  180-block 9
+    $$$$$:  207-block 9
 call    5 never executed
-        -:  181:
-        1:  182:		return find_max_value_util(root_);
-        1:  182-block 6
+        -:  208:
+        1:  209:		return find_max_value_util(root_);
+        1:  209-block 6
 call    0 returned 1
-        1:  182-block 8
-        -:  183:	}
-        -:  184:
+        1:  209-block 8
+        -:  210:	}
+        -:  211:
 function _ZNK2ds10BinaryTreeIiE14find_min_valueEv called 2 returned 50% blocks executed 89%
-        2:  185:	ElemType find_min_value() const {
-        2:  186:		if (root_ == nullptr)
-        2:  186-block 2
+        2:  212:	ElemType find_min_value() const {
+        2:  213:		if (root_ == nullptr)
+        2:  213-block 2
 branch  0 taken 1 (fallthrough)
 branch  1 taken 1
-        1:  187:			throw std::runtime_error("can't find on empty tree.");
-        1:  187-block 3
+        1:  214:			throw std::runtime_error("can't find on empty tree.");
+        1:  214-block 3
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:  187-block 5
+        1:  214-block 5
 call    4 returned 0
-    $$$$$:  187-block 9
+    $$$$$:  214-block 9
 call    5 never executed
-        -:  188:
-        1:  189:		return find_min_value_util(root_);
-        1:  189-block 6
+        -:  215:
+        1:  216:		return find_min_value_util(root_);
+        1:  216-block 6
 call    0 returned 1
-        1:  189-block 8
-        -:  190:	}
-        -:  191:
+        1:  216-block 8
+        -:  217:	}
+        -:  218:
 function _ZNK2ds10BinaryTreeIiE8find_maxEv called 2 returned 100% blocks executed 80%
-        2:  192:	BinaryTreeNode<ElemType>* find_max() const {
-        2:  193:		if (root_ == nullptr)
-        2:  193-block 2
+        2:  219:	BinaryTreeNode<ElemType>* find_max() const {
+        2:  220:		if (root_ == nullptr)
+        2:  220-block 2
 branch  0 taken 0 (fallthrough)
 branch  1 taken 2
-    #####:  194:			return nullptr;
-    %%%%%:  194-block 3
-        -:  195:
-        2:  196:		return find_max_util(root_);
-        2:  196-block 4
+    #####:  221:			return nullptr;
+    %%%%%:  221-block 3
+        -:  222:
+        2:  223:		return find_max_util(root_);
+        2:  223-block 4
 call    0 returned 2
-        -:  197:	}
-        -:  198:
+        -:  224:	}
+        -:  225:
 function _ZNK2ds10BinaryTreeIiE8find_minEv called 1 returned 100% blocks executed 80%
-        1:  199:	BinaryTreeNode<ElemType>* find_min() const {
-        1:  200:		if (root_ == nullptr)
-        1:  200-block 2
+        1:  226:	BinaryTreeNode<ElemType>* find_min() const {
+        1:  227:		if (root_ == nullptr)
+        1:  227-block 2
 branch  0 taken 0 (fallthrough)
 branch  1 taken 1
-    #####:  201:			return nullptr;
-    %%%%%:  201-block 3
-        -:  202:
-        1:  203:		return find_min_util(root_);
-        1:  203-block 4
+    #####:  228:			return nullptr;
+    %%%%%:  228-block 3
+        -:  229:
+        1:  230:		return find_min_util(root_);
+        1:  230-block 4
 call    0 returned 1
-        -:  204:	}
-        -:  205:
+        -:  231:	}
+        -:  232:
 function _ZNK2ds10BinaryTreeIiE16calculate_heightEv called 4 returned 100% blocks executed 100%
-        4:  206:	[[nodiscard]] size_t calculate_height() const {
-        4:  207:		return calculate_height_util(root_);
-        4:  207-block 2
+        4:  233:	[[nodiscard]] size_t calculate_height() const {
+        4:  234:		return calculate_height_util(root_);
+        4:  234-block 2
 call    0 returned 4
-        -:  208:	}
-        -:  209:
+        -:  235:	}
+        -:  236:
 function _ZNK2ds10BinaryTreeIiE6is_bstEv called 6 returned 100% blocks executed 88%
-        6:  210:	[[nodiscard]] bool is_bst() const {
-        6:  211:		return is_bst_util(root_, std::numeric_limits<ElemType>::min(), std::numeric_limits<ElemType>::max());
-        6:  211-block 2
+        6:  237:	[[nodiscard]] bool is_bst() const {
+        6:  238:		return is_bst_util(root_, std::numeric_limits<ElemType>::min(), std::numeric_limits<ElemType>::max());
+        6:  238-block 2
 call    0 returned 6
 call    1 returned 6
 call    2 returned 6
 branch  3 taken 6 (fallthrough)
 branch  4 taken 0 (throw)
-        6:  211-block 5
-        6:  211-block 6
-        6:  211-block 7
-    $$$$$:  211-block 8
-        -:  212:	}
-        -:  213:};
-        -:  214:
-        -:  215:
-        -:  216:
-        -:  217:
-        -:  218:
-        -:  219:}
-        -:  220:
-        -:  221:
-        -:  222:
-        -:  223:
-        -:  224:
-        -:  225:
-        -:  226:
-        -:  227:
-        -:  228:
-        -:  229:
-        -:  230:
-        -:  231:
-        -:  232:
-        -:  233:
-        -:  234:
-        -:  235:
-        -:  236:
-        -:  237:
-        -:  238:
-        -:  239:
+        6:  238-block 5
+        6:  238-block 6
+        6:  238-block 7
+    $$$$$:  238-block 8
+        -:  239:	}
         -:  240:
+function _ZN2ds10BinaryTreeIiE5eraseERKi called 6 returned 100% blocks executed 100%
+        6:  241:	void erase(const ElemType& data) {
+        6:  242:		root_ = erase_util(root_, data);
+        6:  242-block 2
+call    0 returned 6
+        6:  243:	}
+        -:  244:};
+        -:  245:
+        -:  246:
+        -:  247:
+        -:  248:
+        -:  249:
+        -:  250:}
+        -:  251:
+        -:  252:
+        -:  253:
+        -:  254:
+        -:  255:
+        -:  256:
+        -:  257:
+        -:  258:
+        -:  259:
+        -:  260:
+        -:  261:
+        -:  262:
+        -:  263:
+        -:  264:
+        -:  265:
+        -:  266:
+        -:  267:
+        -:  268:
+        -:  269:
+        -:  270:
+        -:  271:

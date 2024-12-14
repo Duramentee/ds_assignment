@@ -180,10 +180,10 @@
         -:  176:#endif // __cpp_aligned_new
         -:  177:
         -:  178:// Default placement versions of operator new.
-function _ZnwmPv called 4 returned 100% blocks executed 100%
-        4:  179:_GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
-        4:  180:{ return __p; }
-        4:  180-block 2
+function _ZnwmPv called 10 returned 100% blocks executed 100%
+       10:  179:_GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+       10:  180:{ return __p; }
+       10:  180-block 2
         -:  181:_GLIBCXX_NODISCARD inline void* operator new[](std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
         -:  182:{ return __p; }
         -:  183:

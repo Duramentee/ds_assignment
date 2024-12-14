@@ -90,9 +90,9 @@
         -:   86:  template<size_t _Idx, typename _Head>
         -:   87:    struct _Head_base<_Idx, _Head, true>
         -:   88:    {
-function _ZNSt10_Head_baseILm1ESt14default_deleteINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev called 46 returned 100% blocks executed 100%
-       46:   89:      constexpr _Head_base()
-       46:   90:      : _M_head_impl() { }
+function _ZNSt10_Head_baseILm1ESt14default_deleteINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEELb1EEC2Ev called 42 returned 100% blocks executed 100%
+       42:   89:      constexpr _Head_base()
+       42:   90:      : _M_head_impl() { }
         -:   91:
         -:   92:      constexpr _Head_base(const _Head& __h)
         -:   93:      : _M_head_impl(__h) { }
@@ -211,9 +211,9 @@ function _ZNSt10_Head_baseILm1ESt14default_deleteINSt7__cxx1112basic_stringIcSt1
         -:  195:  template<size_t _Idx, typename _Head>
         -:  196:    struct _Head_base<_Idx, _Head, false>
         -:  197:    {
-function _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb0EEC2Ev called 46 returned 100% blocks executed 100%
-       46:  198:      constexpr _Head_base()
-       46:  199:      : _M_head_impl() { }
+function _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb0EEC2Ev called 42 returned 100% blocks executed 100%
+       42:  198:      constexpr _Head_base()
+       42:  199:      : _M_head_impl() { }
         -:  200:
         -:  201:      constexpr _Head_base(const _Head& __h)
         -:  202:      : _M_head_impl(__h) { }
@@ -256,12 +256,12 @@ function _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaI
         -:  239:	: _M_head_impl(std::forward<_UHead>(__uhead), *__a._M_a) { }
         -:  240:
         -:  241:      static constexpr _Head&
-     173*:  242:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
+     201*:  242:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
 ------------------
 _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb0EE7_M_headERS7_:
-function _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb0EE7_M_headERS7_ called 173 returned 100% blocks executed 100%
-      173:  242:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
-      173:  242-block 2
+function _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb0EE7_M_headERS7_ called 201 returned 100% blocks executed 100%
+      201:  242:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
+      201:  242-block 2
 ------------------
 _ZNSt10_Head_baseILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEELb0EE7_M_headERS7_:
 function _ZNSt10_Head_baseILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEELb0EE7_M_headERS7_ called 0 returned 0% blocks executed 0%
@@ -270,9 +270,18 @@ function _ZNSt10_Head_baseILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traits
 ------------------
         -:  243:
         -:  244:      static constexpr const _Head&
+    #####:  245:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
+------------------
+_ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb0EE7_M_headERKS7_:
 function _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb0EE7_M_headERKS7_ called 0 returned 0% blocks executed 0%
     #####:  245:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
     %%%%%:  245-block 2
+------------------
+_ZNSt10_Head_baseILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEELb0EE7_M_headERKS7_:
+function _ZNSt10_Head_baseILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEELb0EE7_M_headERKS7_ called 0 returned 0% blocks executed 0%
+    #####:  245:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
+    %%%%%:  245-block 2
+------------------
         -:  246:
         -:  247:      _Head _M_head_impl;
         -:  248:    };
@@ -320,13 +329,13 @@ function _ZNSt10_Head_baseILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaI
         -:  290:      typedef _Head_base<_Idx, _Head> _Base;
         -:  291:
         -:  292:      static constexpr _Head&
-     173*:  293:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+     201*:  293:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
 ------------------
 _ZNSt11_Tuple_implILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERS9_:
-function _ZNSt11_Tuple_implILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERS9_ called 173 returned 100% blocks executed 100%
-      173:  293:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-      173:  293-block 2
-call    0 returned 173
+function _ZNSt11_Tuple_implILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERS9_ called 201 returned 100% blocks executed 100%
+      201:  293:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+      201:  293-block 2
+call    0 returned 201
 ------------------
 _ZNSt11_Tuple_implILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERS9_:
 function _ZNSt11_Tuple_implILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERS9_ called 0 returned 0% blocks executed 0%
@@ -336,10 +345,20 @@ call    0 never executed
 ------------------
         -:  294:
         -:  295:      static constexpr const _Head&
+    #####:  296:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+------------------
+_ZNSt11_Tuple_implILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERKS9_:
 function _ZNSt11_Tuple_implILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERKS9_ called 0 returned 0% blocks executed 0%
     #####:  296:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
     %%%%%:  296-block 2
 call    0 never executed
+------------------
+_ZNSt11_Tuple_implILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERKS9_:
+function _ZNSt11_Tuple_implILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEE7_M_headERKS9_ called 0 returned 0% blocks executed 0%
+    #####:  296:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+    %%%%%:  296-block 2
+call    0 never executed
+------------------
         -:  297:
         -:  298:      static constexpr _Inherited&
         -:  299:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
@@ -347,12 +366,12 @@ call    0 never executed
         -:  301:      static constexpr const _Inherited&
         -:  302:      _M_tail(const _Tuple_impl& __t) noexcept { return __t; }
         -:  303:
-function _ZNSt11_Tuple_implILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEEC2Ev called 46 returned 100% blocks executed 100%
-       46:  304:      constexpr _Tuple_impl()
-       46:  305:      : _Inherited(), _Base() { }
-       46:  305-block 2
-call    0 returned 46
-call    1 returned 46
+function _ZNSt11_Tuple_implILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEEC2Ev called 42 returned 100% blocks executed 100%
+       42:  304:      constexpr _Tuple_impl()
+       42:  305:      : _Inherited(), _Base() { }
+       42:  305-block 2
+call    0 returned 42
+call    1 returned 42
         -:  306:
         -:  307:      explicit constexpr
         -:  308:      _Tuple_impl(const _Head& __head, const _Tail&... __tail)
@@ -622,11 +641,11 @@ call    0 never executed
         -:  559:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
         -:  560:
         -:  561:      constexpr
-function _ZNSt11_Tuple_implILm1EJSt14default_deleteINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEC2Ev called 46 returned 100% blocks executed 100%
-       46:  562:      _Tuple_impl()
-       46:  563:      : _Base() { }
-       46:  563-block 2
-call    0 returned 46
+function _ZNSt11_Tuple_implILm1EJSt14default_deleteINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEC2Ev called 42 returned 100% blocks executed 100%
+       42:  562:      _Tuple_impl()
+       42:  563:      : _Base() { }
+       42:  563-block 2
+call    0 returned 42
         -:  564:
         -:  565:      explicit constexpr
         -:  566:      _Tuple_impl(const _Head& __head)
@@ -1027,14 +1046,14 @@ call    0 returned 46
         -:  961:    public:
         -:  962:      constexpr
         -:  963:      explicit(!(__is_implicitly_default_constructible_v<_Elements> && ...))
-function _ZNSt5tupleIJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEEC2EvQfraa26is_default_constructible_vIT_E called 46 returned 100% blocks executed 100%
-       46:  964:      tuple()
+function _ZNSt5tupleIJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEEC2EvQfraa26is_default_constructible_vIT_E called 42 returned 100% blocks executed 100%
+       42:  964:      tuple()
         -:  965:      noexcept((is_nothrow_default_constructible_v<_Elements> && ...))
         -:  966:      requires (is_default_constructible_v<_Elements> && ...)
-       46:  967:      : _Inherited()
-       46:  967-block 2
-call    0 returned 46
-       46:  968:      { }
+       42:  967:      : _Inherited()
+       42:  967-block 2
+call    0 returned 42
+       42:  968:      { }
         -:  969:
         -:  970:      constexpr explicit(!__convertible<const _Elements&...>())
         -:  971:      tuple(const _Elements&... __elements)
@@ -2493,8 +2512,8 @@ call    0 returned 46
         -: 2424:
         -: 2425:  template<size_t __i, typename _Head, typename... _Tail>
         -: 2426:    constexpr _Head&
-     173*: 2427:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-     173*: 2428:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+     201*: 2427:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+     201*: 2428:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
 ------------------
 _ZSt12__get_helperILm1ESt14default_deleteINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEJEERT0_RSt11_Tuple_implIXT_EJS8_DpT1_EE:
 function _ZSt12__get_helperILm1ESt14default_deleteINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEEJEERT0_RSt11_Tuple_implIXT_EJS8_DpT1_EE called 0 returned 0% blocks executed 0%
@@ -2511,11 +2530,11 @@ function _ZSt12__get_helperILm1ESt14default_deleteINSt7__cxx1112basic_stringIcSt
 call    0 never executed
 ------------------
 _ZSt12__get_helperILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERT0_RSt11_Tuple_implIXT_EJS9_DpT1_EE:
-function _ZSt12__get_helperILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERT0_RSt11_Tuple_implIXT_EJS9_DpT1_EE called 173 returned 100% blocks executed 100%
-      173: 2427:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-      173: 2428:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
-      173: 2428-block 2
-call    0 returned 173
+function _ZSt12__get_helperILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERT0_RSt11_Tuple_implIXT_EJS9_DpT1_EE called 201 returned 100% blocks executed 100%
+      201: 2427:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+      201: 2428:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+      201: 2428-block 2
+call    0 returned 201
 ------------------
 _ZSt12__get_helperILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERT0_RSt11_Tuple_implIXT_EJS9_DpT1_EE:
 function _ZSt12__get_helperILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERT0_RSt11_Tuple_implIXT_EJS9_DpT1_EE called 0 returned 0% blocks executed 0%
@@ -2527,11 +2546,23 @@ call    0 never executed
         -: 2429:
         -: 2430:  template<size_t __i, typename _Head, typename... _Tail>
         -: 2431:    constexpr const _Head&
+    #####: 2432:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+    #####: 2433:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+------------------
+_ZSt12__get_helperILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERKT0_RKSt11_Tuple_implIXT_EJS9_DpT1_EE:
 function _ZSt12__get_helperILm0EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERKT0_RKSt11_Tuple_implIXT_EJS9_DpT1_EE called 0 returned 0% blocks executed 0%
     #####: 2432:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
     #####: 2433:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
     %%%%%: 2433-block 2
 call    0 never executed
+------------------
+_ZSt12__get_helperILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERKT0_RKSt11_Tuple_implIXT_EJS9_DpT1_EE:
+function _ZSt12__get_helperILm0EPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEJSt14default_deleteIS5_EEERKT0_RKSt11_Tuple_implIXT_EJS9_DpT1_EE called 0 returned 0% blocks executed 0%
+    #####: 2432:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+    #####: 2433:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+    %%%%%: 2433-block 2
+call    0 never executed
+------------------
         -: 2434:
         -: 2435:  // Deleted overload to improve diagnostics for invalid indices
         -: 2436:  template<size_t __i, typename... _Types>
@@ -2541,8 +2572,8 @@ call    0 never executed
         -: 2440:  /// Return a reference to the ith element of a tuple.
         -: 2441:  template<size_t __i, typename... _Elements>
         -: 2442:    constexpr __tuple_element_t<__i, tuple<_Elements...>>&
-     173*: 2443:    get(tuple<_Elements...>& __t) noexcept
-     173*: 2444:    { return std::__get_helper<__i>(__t); }
+     201*: 2443:    get(tuple<_Elements...>& __t) noexcept
+     201*: 2444:    { return std::__get_helper<__i>(__t); }
 ------------------
 _ZSt3getILm1EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSD_:
 function _ZSt3getILm1EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSD_ called 0 returned 0% blocks executed 0%
@@ -2559,11 +2590,11 @@ function _ZSt3getILm1EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14
 call    0 never executed
 ------------------
 _ZSt3getILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSD_:
-function _ZSt3getILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSD_ called 173 returned 100% blocks executed 100%
-      173: 2443:    get(tuple<_Elements...>& __t) noexcept
-      173: 2444:    { return std::__get_helper<__i>(__t); }
-      173: 2444-block 2
-call    0 returned 173
+function _ZSt3getILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSD_ called 201 returned 100% blocks executed 100%
+      201: 2443:    get(tuple<_Elements...>& __t) noexcept
+      201: 2444:    { return std::__get_helper<__i>(__t); }
+      201: 2444-block 2
+call    0 returned 201
 ------------------
 _ZSt3getILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSD_:
 function _ZSt3getILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSD_ called 0 returned 0% blocks executed 0%
@@ -2576,11 +2607,23 @@ call    0 never executed
         -: 2446:  /// Return a const reference to the ith element of a const tuple.
         -: 2447:  template<size_t __i, typename... _Elements>
         -: 2448:    constexpr const __tuple_element_t<__i, tuple<_Elements...>>&
+    #####: 2449:    get(const tuple<_Elements...>& __t) noexcept
+    #####: 2450:    { return std::__get_helper<__i>(__t); }
+------------------
+_ZSt3getILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSD_:
 function _ZSt3getILm0EJPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSD_ called 0 returned 0% blocks executed 0%
     #####: 2449:    get(const tuple<_Elements...>& __t) noexcept
     #####: 2450:    { return std::__get_helper<__i>(__t); }
     %%%%%: 2450-block 2
 call    0 never executed
+------------------
+_ZSt3getILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSD_:
+function _ZSt3getILm0EJPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSD_ called 0 returned 0% blocks executed 0%
+    #####: 2449:    get(const tuple<_Elements...>& __t) noexcept
+    #####: 2450:    { return std::__get_helper<__i>(__t); }
+    %%%%%: 2450-block 2
+call    0 never executed
+------------------
         -: 2451:
         -: 2452:  /// Return an rvalue reference to the ith element of a tuple rvalue.
         -: 2453:  template<size_t __i, typename... _Elements>

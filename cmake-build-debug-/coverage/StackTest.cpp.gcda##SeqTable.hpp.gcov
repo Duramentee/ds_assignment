@@ -202,52 +202,58 @@ branch  1 taken 0
         -:  137:		--size_;
         -:  138:	}
         -:  139:
-        -:  140:
-        -:  141:	const ElemType& at(const size_t& pos) const {
-        -:  142:		if (pos >= size_)
-        -:  143:			throw std::out_of_range("Index out of range");
-        -:  144:
-        -:  145:		return array_[pos];
-        -:  146:	}
-        -:  147:
-        -:  148:	ElemType& operator[](const size_t& pos) {
-        -:  149:		if (pos >= size_)
-        -:  150:			throw std::out_of_range("Index out of range");
-        -:  151:
-        -:  152:		return array_[pos];
-        -:  153:	}
-        -:  154:
-        -:  155:	const ElemType& front() const {
-        -:  156:		return array_[0];
-        -:  157:	}
-        -:  158:
-function _ZNK2ds8SeqTableIiE4backEv called 28 returned 100% blocks executed 100%
-       28:  159:	const ElemType& back() const {
-       28:  160:		return array_[size_ - 1];
-       28:  160-block 2
-        -:  161:	}
-        -:  162:
-function _ZNK2ds8SeqTableIiE5emptyEv called 15 returned 100% blocks executed 100%
-       15:  163:	[[nodiscard]] bool            empty()    const { return size_ == 0; }
-       15:  163-block 2
+        -:  140:	const ElemType& at(const size_t& pos) const {
+        -:  141:		if (pos >= size_)
+        -:  142:			throw std::out_of_range("Index out of range");
+        -:  143:
+        -:  144:		return array_[pos];
+        -:  145:	}
+        -:  146:
+        -:  147:	ElemType& operator[](const size_t& pos) {
+        -:  148:		if (pos >= size_)
+        -:  149:			throw std::out_of_range("Index out of range");
+        -:  150:
+        -:  151:		return array_[pos];
+        -:  152:	}
+        -:  153:
+        -:  154:	const ElemType& operator[](const size_t& pos) const {
+        -:  155:		if (pos >= size_)
+        -:  156:			throw std::out_of_range("Index out of range");
+        -:  157:
+        -:  158:		return array_[pos];
+        -:  159:	}
+        -:  160:
+        -:  161:	const ElemType& front() const {
+        -:  162:		return array_[0];
+        -:  163:	}
         -:  164:
-function _ZNK2ds8SeqTableIiE4sizeEv called 43 returned 100% blocks executed 100%
-       43:  165:	[[nodiscard]] size_t          size()     const { return size_; }
-       43:  165-block 2
-        -:  166:	[[nodiscard]] size_t          capacity() const { return capacity_; }
-        -:  167:
-        -:  168:	[[nodiscard]] ElemType*       begin()    const { return array_; }
-        -:  169:	[[nodiscard]] const ElemType* cbegin()   const { return array_; }
+function _ZNK2ds8SeqTableIiE4backEv called 28 returned 100% blocks executed 100%
+       28:  165:	const ElemType& back() const {
+       28:  166:		return array_[size_ - 1];
+       28:  166-block 2
+        -:  167:	}
+        -:  168:
+function _ZNK2ds8SeqTableIiE5emptyEv called 15 returned 100% blocks executed 100%
+       15:  169:	[[nodiscard]] bool            empty()    const { return size_ == 0; }
+       15:  169-block 2
         -:  170:
-        -:  171:	[[nodiscard]] ElemType*       end()      const { return array_ + size_; }
-        -:  172:	[[nodiscard]] const ElemType* cend()     const { return array_ + size_; }
+function _ZNK2ds8SeqTableIiE4sizeEv called 43 returned 100% blocks executed 100%
+       43:  171:	[[nodiscard]] size_t          size()     const { return size_; }
+       43:  171-block 2
+        -:  172:	[[nodiscard]] size_t          capacity() const { return capacity_; }
         -:  173:
-        -:  174:	void print() const {
-        -:  175:		for (size_t i = 0; i < size_; ++i) {
-        -:  176:			std::cout << array_[i] << " ";
-        -:  177:		}
-        -:  178:		std::cout << std::endl;
-        -:  179:	}
-        -:  180:};
-        -:  181:
-        -:  182:}
+        -:  174:	[[nodiscard]] ElemType*       begin()    const { return array_; }
+        -:  175:	[[nodiscard]] const ElemType* cbegin()   const { return array_; }
+        -:  176:
+        -:  177:	[[nodiscard]] ElemType*       end()      const { return array_ + size_; }
+        -:  178:	[[nodiscard]] const ElemType* cend()     const { return array_ + size_; }
+        -:  179:
+        -:  180:	void print() const {
+        -:  181:		for (size_t i = 0; i < size_; ++i) {
+        -:  182:			std::cout << array_[i] << " ";
+        -:  183:		}
+        -:  184:		std::cout << std::endl;
+        -:  185:	}
+        -:  186:};
+        -:  187:
+        -:  188:}

@@ -1,0 +1,42 @@
+        -:    0:Source:/home/drowlia/code_save/ds/Pair/Pair.hpp
+        -:    0:Graph:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.gcno
+        -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/HashTable/HashTableTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lsx31 on 24-12-14.
+        -:    3://
+        -:    4:
+        -:    5:#pragma once
+        -:    6:
+        -:    7:namespace ds {
+        -:    8:
+        -:    9:template <typename T1, typename T2>
+        -:   10:struct  Pair {
+        -:   11:
+        -:   12:	T1 first;
+        -:   13:	T2 second;
+        -:   14:
+        -:   15:	Pair() : first(), second() {}
+function _ZN2ds4PairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEC2ERKiRKS6_ called 12 returned 100% blocks executed 100%
+       12:   16:	Pair (const T1& a, const T2& b) : first{a}, second{b} {}
+       12:   16-block 2
+call    0 returned 12
+        -:   17:
+        -:   18:	Pair& operator=(const Pair<T1, T2>& ano_pair) {
+        -:   19:		if (this != &ano_pair) {
+        -:   20:			first = ano_pair.first;
+        -:   21:			second = ano_pair.second;
+        -:   22:		}
+        -:   23:		return *this;
+        -:   24:	}
+        -:   25:
+        -:   26:	bool operator==(const Pair& ano_pair) const {
+        -:   27:		return first == ano_pair.first && second == ano_pair.second;
+        -:   28:	}
+        -:   29:
+        -:   30:	bool operator!=(const Pair& ano_pair) const {
+        -:   31:		return !(*this == ano_pair);
+        -:   32:	}
+        -:   33:};
+        -:   34:
+        -:   35:}

@@ -551,12 +551,13 @@
         -:  547:    if consteval { return true; } else { return false; }
         -:  548:#elif __cplusplus >= 201103L && __has_builtin(__builtin_is_constant_evaluated)
         -:  549:# define _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED 1
-    1543*:  550:    return __builtin_is_constant_evaluated();
-      248:  550-block 2
+    3280*:  550:    return __builtin_is_constant_evaluated();
+      286:  550-block 2
+    %%%%%:  550-block 2
     %%%%%:  550-block 4
-      419:  550-block 4
-      130:  550-block 2
-      736:  550-block 2
+      828:  550-block 4
+      180:  550-block 2
+     1970:  550-block 2
         -:  551:#else
         -:  552:    return false;
         -:  553:#endif
@@ -612,7 +613,8 @@
         -:  603:  __attribute__((__always_inline__,__visibility__("default")))
         -:  604:  inline void
         -:  605:  __glibcxx_assert_fail()
-        -:  606:  { }
+    #####:  606:  { }
+    %%%%%:  606-block 7
         -:  607:}
         -:  608:# define __glibcxx_assert(cond)						\
         -:  609:  do {									\

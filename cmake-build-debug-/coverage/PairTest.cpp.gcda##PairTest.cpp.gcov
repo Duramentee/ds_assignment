@@ -1,0 +1,724 @@
+        -:    0:Source:/home/drowlia/code_save/ds/Pair/PairTest.cpp
+        -:    0:Graph:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Pair/PairTest.cpp.gcno
+        -:    0:Data:/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir/Pair/PairTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lsx31 on 24-12-14.
+        -:    3://
+        -:    4:#include <gtest/gtest.h>
+        -:    5:#include "Pair.hpp"
+        -:    6:
+        -:    7:namespace ds {
+        -:    8:
+        4:    9:TEST(PairTest, DefaultConstructor) {
+        1:   10:    Pair<int, std::string> pair;
+       1*:   11:    EXPECT_EQ(pair.first, 0);
+       1*:   12:    EXPECT_EQ(pair.second, "");
+        1:   13:}
+------------------
+_ZN2ds32PairTest_DefaultConstructor_TestC2Ev:
+function _ZN2ds32PairTest_DefaultConstructor_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:    9:TEST(PairTest, DefaultConstructor) {
+        1:    9-block 2
+call    0 returned 1
+------------------
+_ZN2ds32PairTest_DefaultConstructor_TestD0Ev:
+function _ZN2ds32PairTest_DefaultConstructor_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:    9:TEST(PairTest, DefaultConstructor) {
+        1:    9-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN2ds32PairTest_DefaultConstructor_TestD2Ev:
+function _ZN2ds32PairTest_DefaultConstructor_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:    9:TEST(PairTest, DefaultConstructor) {
+        1:    9-block 2
+call    0 returned 1
+------------------
+_ZN2ds32PairTest_DefaultConstructor_Test8TestBodyEv:
+function _ZN2ds32PairTest_DefaultConstructor_Test8TestBodyEv called 1 returned 100% blocks executed 26%
+        1:    9:TEST(PairTest, DefaultConstructor) {
+        1:   10:    Pair<int, std::string> pair;
+        1:   10-block 2
+call    0 returned 1
+       1*:   11:    EXPECT_EQ(pair.first, 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block 4
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   11-block 6
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   11-block 7
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   11-block 9
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   11-block 10
+call   16 never executed
+call   17 never executed
+        1:   11-block 13
+call   18 returned 1
+    $$$$$:   11-block 27
+    $$$$$:   11-block 28
+call   19 never executed
+    $$$$$:   11-block 30
+    $$$$$:   11-block 31
+call   20 never executed
+    $$$$$:   11-block 33
+    $$$$$:   11-block 34
+call   21 never executed
+       1*:   12:    EXPECT_EQ(pair.second, "");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block 15
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   12-block 17
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   12-block 18
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   12-block 20
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   12-block 21
+call   16 never executed
+call   17 never executed
+        1:   12-block 24
+call   18 returned 1
+    $$$$$:   12-block 37
+call   19 never executed
+    $$$$$:   12-block 39
+    $$$$$:   12-block 40
+call   20 never executed
+    $$$$$:   12-block 42
+    $$$$$:   12-block 43
+call   21 never executed
+        1:   13:}
+call    0 returned 1
+    $$$$$:   13-block 46
+call    1 never executed
+------------------
+        -:   14:
+        4:   15:TEST(PairTest, ParameterizedConstructor) {
+        1:   16:    Pair<int, std::string> pair(42, "Hello");
+       1*:   17:    EXPECT_EQ(pair.first, 42);
+       1*:   18:    EXPECT_EQ(pair.second, "Hello");
+        1:   19:}
+------------------
+_ZN2ds38PairTest_ParameterizedConstructor_TestC2Ev:
+function _ZN2ds38PairTest_ParameterizedConstructor_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(PairTest, ParameterizedConstructor) {
+        1:   15-block 2
+call    0 returned 1
+------------------
+_ZN2ds38PairTest_ParameterizedConstructor_TestD0Ev:
+function _ZN2ds38PairTest_ParameterizedConstructor_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(PairTest, ParameterizedConstructor) {
+        1:   15-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN2ds38PairTest_ParameterizedConstructor_TestD2Ev:
+function _ZN2ds38PairTest_ParameterizedConstructor_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(PairTest, ParameterizedConstructor) {
+        1:   15-block 2
+call    0 returned 1
+------------------
+_ZN2ds38PairTest_ParameterizedConstructor_Test8TestBodyEv:
+function _ZN2ds38PairTest_ParameterizedConstructor_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:   15:TEST(PairTest, ParameterizedConstructor) {
+        1:   15-block 2
+        1:   16:    Pair<int, std::string> pair(42, "Hello");
+        1:   16-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block 5
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   16-block 6
+call    6 returned 1
+    $$$$$:   16-block 32
+    $$$$$:   16-block 33
+call    7 never executed
+    $$$$$:   16-block 37
+    $$$$$:   16-block 38
+       1*:   17:    EXPECT_EQ(pair.first, 42);
+        1:   17-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block 9
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   17-block 11
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   17-block 12
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   17-block 14
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   17-block 15
+call   16 never executed
+call   17 never executed
+        1:   17-block 18
+call   18 returned 1
+    $$$$$:   17-block 39
+    $$$$$:   17-block 40
+call   19 never executed
+    $$$$$:   17-block 42
+    $$$$$:   17-block 43
+call   20 never executed
+    $$$$$:   17-block 45
+    $$$$$:   17-block 46
+call   21 never executed
+       1*:   18:    EXPECT_EQ(pair.second, "Hello");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block 20
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   18-block 22
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   18-block 23
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   18-block 25
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   18-block 26
+call   16 never executed
+call   17 never executed
+        1:   18-block 29
+call   18 returned 1
+    $$$$$:   18-block 49
+call   19 never executed
+    $$$$$:   18-block 51
+    $$$$$:   18-block 52
+call   20 never executed
+    $$$$$:   18-block 54
+    $$$$$:   18-block 55
+call   21 never executed
+        1:   19:}
+call    0 returned 1
+    $$$$$:   19-block 58
+call    1 never executed
+------------------
+        -:   20:
+        4:   21:TEST(PairTest, AssignmentOperator) {
+        1:   22:    Pair<int, std::string> pair1(42, "Hello");
+        1:   23:    Pair<int, std::string> pair2;
+        1:   24:    pair2 = pair1;
+       1*:   25:    EXPECT_EQ(pair2.first, 42);
+       1*:   26:    EXPECT_EQ(pair2.second, "Hello");
+        1:   27:}
+------------------
+_ZN2ds32PairTest_AssignmentOperator_TestC2Ev:
+function _ZN2ds32PairTest_AssignmentOperator_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   21:TEST(PairTest, AssignmentOperator) {
+        1:   21-block 2
+call    0 returned 1
+------------------
+_ZN2ds32PairTest_AssignmentOperator_TestD0Ev:
+function _ZN2ds32PairTest_AssignmentOperator_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   21:TEST(PairTest, AssignmentOperator) {
+        1:   21-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN2ds32PairTest_AssignmentOperator_TestD2Ev:
+function _ZN2ds32PairTest_AssignmentOperator_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   21:TEST(PairTest, AssignmentOperator) {
+        1:   21-block 2
+call    0 returned 1
+------------------
+_ZN2ds32PairTest_AssignmentOperator_Test8TestBodyEv:
+function _ZN2ds32PairTest_AssignmentOperator_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   21:TEST(PairTest, AssignmentOperator) {
+        1:   21-block 2
+        1:   22:    Pair<int, std::string> pair1(42, "Hello");
+        1:   22-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block 5
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   22-block 6
+call    6 returned 1
+    $$$$$:   22-block 35
+    $$$$$:   22-block 36
+call    7 never executed
+    $$$$$:   22-block 40
+    $$$$$:   22-block 41
+        1:   23:    Pair<int, std::string> pair2;
+        1:   23-block 8
+call    0 returned 1
+        1:   24:    pair2 = pair1;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   25:    EXPECT_EQ(pair2.first, 42);
+        1:   25-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block 11
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   25-block 13
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   25-block 14
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   25-block 16
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   25-block 17
+call   16 never executed
+call   17 never executed
+        1:   25-block 20
+call   18 returned 1
+    $$$$$:   25-block 42
+    $$$$$:   25-block 43
+call   19 never executed
+    $$$$$:   25-block 45
+    $$$$$:   25-block 46
+call   20 never executed
+    $$$$$:   25-block 48
+    $$$$$:   25-block 49
+call   21 never executed
+       1*:   26:    EXPECT_EQ(pair2.second, "Hello");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block 22
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   26-block 24
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   26-block 25
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   26-block 27
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   26-block 28
+call   16 never executed
+call   17 never executed
+        1:   26-block 31
+call   18 returned 1
+    $$$$$:   26-block 52
+call   19 never executed
+    $$$$$:   26-block 54
+    $$$$$:   26-block 55
+call   20 never executed
+    $$$$$:   26-block 57
+    $$$$$:   26-block 58
+call   21 never executed
+        1:   27:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   27-block 61
+call    2 never executed
+    $$$$$:   27-block 63
+call    3 never executed
+------------------
+        -:   28:
+        4:   29:TEST(PairTest, SelfAssignment) {
+        1:   30:    Pair<int, std::string> pair(42, "Hello");
+        1:   31:    pair = pair;
+       1*:   32:    EXPECT_EQ(pair.first, 42);
+       1*:   33:    EXPECT_EQ(pair.second, "Hello");
+        1:   34:}
+------------------
+_ZN2ds28PairTest_SelfAssignment_TestC2Ev:
+function _ZN2ds28PairTest_SelfAssignment_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   29:TEST(PairTest, SelfAssignment) {
+        1:   29-block 2
+call    0 returned 1
+------------------
+_ZN2ds28PairTest_SelfAssignment_TestD0Ev:
+function _ZN2ds28PairTest_SelfAssignment_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   29:TEST(PairTest, SelfAssignment) {
+        1:   29-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN2ds28PairTest_SelfAssignment_TestD2Ev:
+function _ZN2ds28PairTest_SelfAssignment_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   29:TEST(PairTest, SelfAssignment) {
+        1:   29-block 2
+call    0 returned 1
+------------------
+_ZN2ds28PairTest_SelfAssignment_Test8TestBodyEv:
+function _ZN2ds28PairTest_SelfAssignment_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:   29:TEST(PairTest, SelfAssignment) {
+        1:   29-block 2
+        1:   30:    Pair<int, std::string> pair(42, "Hello");
+        1:   30-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block 5
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   30-block 6
+call    6 returned 1
+    $$$$$:   30-block 33
+    $$$$$:   30-block 34
+call    7 never executed
+    $$$$$:   30-block 38
+    $$$$$:   30-block 39
+        1:   31:    pair = pair;
+        1:   31-block 8
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   32:    EXPECT_EQ(pair.first, 42);
+        1:   32-block 9
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block 10
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   32-block 12
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   32-block 13
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   32-block 15
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   32-block 16
+call   16 never executed
+call   17 never executed
+        1:   32-block 19
+call   18 returned 1
+    $$$$$:   32-block 40
+    $$$$$:   32-block 41
+call   19 never executed
+    $$$$$:   32-block 43
+    $$$$$:   32-block 44
+call   20 never executed
+    $$$$$:   32-block 46
+    $$$$$:   32-block 47
+call   21 never executed
+       1*:   33:    EXPECT_EQ(pair.second, "Hello");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block 21
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   33-block 23
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   33-block 24
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   33-block 26
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   33-block 27
+call   16 never executed
+call   17 never executed
+        1:   33-block 30
+call   18 returned 1
+    $$$$$:   33-block 50
+call   19 never executed
+    $$$$$:   33-block 52
+    $$$$$:   33-block 53
+call   20 never executed
+    $$$$$:   33-block 55
+    $$$$$:   33-block 56
+call   21 never executed
+        1:   34:}
+call    0 returned 1
+    $$$$$:   34-block 59
+call    1 never executed
+------------------
+        -:   35:
+        4:   36:TEST(PairTest, EqualityOperator) {
+        2:   37:    Pair<int, std::string> pair1(42, "Hello");
+        1:   38:    Pair<int, std::string> pair2(42, "Hello");
+       1*:   39:    EXPECT_TRUE(pair1 == pair2);
+        1:   40:}
+------------------
+_ZN2ds30PairTest_EqualityOperator_TestC2Ev:
+function _ZN2ds30PairTest_EqualityOperator_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   36:TEST(PairTest, EqualityOperator) {
+        1:   36-block 2
+call    0 returned 1
+------------------
+_ZN2ds30PairTest_EqualityOperator_TestD0Ev:
+function _ZN2ds30PairTest_EqualityOperator_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   36:TEST(PairTest, EqualityOperator) {
+        1:   36-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN2ds30PairTest_EqualityOperator_TestD2Ev:
+function _ZN2ds30PairTest_EqualityOperator_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   36:TEST(PairTest, EqualityOperator) {
+        1:   36-block 2
+call    0 returned 1
+------------------
+_ZN2ds30PairTest_EqualityOperator_Test8TestBodyEv:
+function _ZN2ds30PairTest_EqualityOperator_Test8TestBodyEv called 1 returned 100% blocks executed 35%
+        1:   36:TEST(PairTest, EqualityOperator) {
+        1:   36-block 2
+        2:   37:    Pair<int, std::string> pair1(42, "Hello");
+        1:   37-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block 5
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   37-block 6
+call    6 returned 1
+        1:   37-block 8
+    $$$$$:   37-block 31
+    $$$$$:   37-block 32
+call    7 never executed
+    $$$$$:   37-block 36
+    $$$$$:   37-block 37
+        1:   38:    Pair<int, std::string> pair2(42, "Hello");
+        1:   38-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block 11
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   38-block 12
+call    6 returned 1
+    $$$$$:   38-block 38
+    $$$$$:   38-block 39
+call    7 never executed
+    $$$$$:   38-block 43
+    $$$$$:   38-block 44
+       1*:   39:    EXPECT_TRUE(pair1 == pair2);
+        1:   39-block 14
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   39-block 18
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   39-block 19
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   39-block 20
+call   11 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   39-block 22
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   39-block 23
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   39-block 27
+call   21 returned 1
+    $$$$$:   39-block 45
+call   22 never executed
+    $$$$$:   39-block 47
+call   23 never executed
+    $$$$$:   39-block 49
+    $$$$$:   39-block 50
+    $$$$$:   39-block 51
+call   24 never executed
+    $$$$$:   39-block 53
+    $$$$$:   39-block 54
+call   25 never executed
+        1:   40:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   40-block 57
+call    2 never executed
+    $$$$$:   40-block 59
+call    3 never executed
+------------------
+        -:   41:
+        4:   42:TEST(PairTest, InequalityOperator) {
+        2:   43:    Pair<int, std::string> pair1(42, "Hello");
+        1:   44:    Pair<int, std::string> pair2(10, "World");
+       1*:   45:    EXPECT_TRUE(pair1 != pair2);
+        1:   46:}
+------------------
+_ZN2ds32PairTest_InequalityOperator_TestC2Ev:
+function _ZN2ds32PairTest_InequalityOperator_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(PairTest, InequalityOperator) {
+        1:   42-block 2
+call    0 returned 1
+------------------
+_ZN2ds32PairTest_InequalityOperator_TestD0Ev:
+function _ZN2ds32PairTest_InequalityOperator_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(PairTest, InequalityOperator) {
+        1:   42-block 2
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN2ds32PairTest_InequalityOperator_TestD2Ev:
+function _ZN2ds32PairTest_InequalityOperator_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(PairTest, InequalityOperator) {
+        1:   42-block 2
+call    0 returned 1
+------------------
+_ZN2ds32PairTest_InequalityOperator_Test8TestBodyEv:
+function _ZN2ds32PairTest_InequalityOperator_Test8TestBodyEv called 1 returned 100% blocks executed 35%
+        1:   42:TEST(PairTest, InequalityOperator) {
+        1:   42-block 2
+        2:   43:    Pair<int, std::string> pair1(42, "Hello");
+        1:   43-block 4
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block 5
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   43-block 6
+call    6 returned 1
+        1:   43-block 8
+    $$$$$:   43-block 31
+    $$$$$:   43-block 32
+call    7 never executed
+    $$$$$:   43-block 36
+    $$$$$:   43-block 37
+        1:   44:    Pair<int, std::string> pair2(10, "World");
+        1:   44-block 10
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block 11
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   44-block 12
+call    6 returned 1
+    $$$$$:   44-block 38
+    $$$$$:   44-block 39
+call    7 never executed
+    $$$$$:   44-block 43
+    $$$$$:   44-block 44
+       1*:   45:    EXPECT_TRUE(pair1 != pair2);
+        1:   45-block 14
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   45-block 18
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   45-block 19
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   45-block 20
+call   11 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   45-block 22
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   45-block 23
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   45-block 27
+call   21 returned 1
+    $$$$$:   45-block 45
+call   22 never executed
+    $$$$$:   45-block 47
+call   23 never executed
+    $$$$$:   45-block 49
+    $$$$$:   45-block 50
+    $$$$$:   45-block 51
+call   24 never executed
+    $$$$$:   45-block 53
+    $$$$$:   45-block 54
+call   25 never executed
+        1:   46:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   46-block 57
+call    2 never executed
+    $$$$$:   46-block 59
+call    3 never executed
+------------------
+        -:   47:
+        -:   48:}  // namespace ds

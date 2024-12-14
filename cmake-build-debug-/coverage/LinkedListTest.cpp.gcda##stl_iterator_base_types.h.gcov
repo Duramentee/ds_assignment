@@ -241,9 +241,9 @@
         -:  237:    inline _GLIBCXX_CONSTEXPR
         -:  238:    typename iterator_traits<_Iter>::iterator_category
         -:  239:    __iterator_category(const _Iter&)
-      126:  240:    { return typename iterator_traits<_Iter>::iterator_category(); }
-      126:  240-block 2
-      126:  240-block 3
+      163:  240:    { return typename iterator_traits<_Iter>::iterator_category(); }
+      163:  240-block 2
+      163:  240-block 3
         -:  241:
         -:  242:  ///@}
         -:  243:

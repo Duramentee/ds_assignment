@@ -7,394 +7,477 @@
         -:    3:#include <iostream>
         -:    4:
         -:    5:namespace ds {
-        -:    6:template <typename ElemType>
-        -:    7:struct Node {
-        -:    8:    ElemType data_;
-        -:    9:    Node* next_;
-        -:   10:
-function _ZN2ds4NodeIiEC2ERKi called 39 returned 100% blocks executed 100%
-       39:   11:    explicit Node(const ElemType& val) : data_{val}, next_{nullptr} {
-       39:   12:    }
-        -:   13:
-function _ZN2ds4NodeIiED2Ev called 39 returned 100% blocks executed 100%
-       39:   14:    ~Node() {
-       39:   15:        next_ = nullptr;
-       39:   16:    }
-        -:   17:
-        -:   18:    Node(const Node& ano_node) : data_{ano_node.data_}, next_{nullptr} {
-        -:   19:    }
-        -:   20:};
-        -:   21:
-        -:   22:template <typename ElemType>
-        -:   23:struct LinkedList {
-        -:   24:    Node<ElemType>* head_;
-        -:   25:
-function _ZN2ds10LinkedListIiEC2Ev called 13 returned 100% blocks executed 100%
-       13:   26:    LinkedList() : head_{nullptr} {
-       13:   27:    }
-        -:   28:
-function _ZN2ds10LinkedListIiEC2Ei called 1 returned 100% blocks executed 100%
-        1:   29:    explicit LinkedList(ElemType val) : head_{new Node<ElemType>(val)} {
-        1:   29-block 2
-call    0 returned 1
-call    1 returned 1
-        1:   30:    }
-        -:   31:
-function _ZN2ds10LinkedListIiED2Ev called 15 returned 100% blocks executed 100%
-       15:   32:    ~LinkedList() { clear(); }
-       15:   32-block 2
-call    0 returned 15
-        -:   33:
-function _ZN2ds10LinkedListIiEC2ERKS1_ called 1 returned 100% blocks executed 100%
-        1:   34:    LinkedList(const LinkedList& ano_list) : head_{nullptr} {
-        1:   35:        if (ano_list.head_ != nullptr) {
-        1:   35-block 2
-branch  0 taken 1 (fallthrough)
+        -:    6:
+        -:    7:template <typename ElemType>
+        -:    8:struct Node {
+        -:    9:    ElemType data_;
+        -:   10:    Node* next_;
+        -:   11:    Node* prev_;
+        -:   12:
+function _ZN2ds4NodeIiEC2ERKi called 41 returned 100% blocks executed 100%
+       41:   13:    explicit Node(const ElemType& val) : data_{val}, next_{nullptr}, prev_{nullptr} {
+       41:   14:    }
+        -:   15:
+function _ZN2ds4NodeIiED2Ev called 41 returned 100% blocks executed 100%
+       41:   16:    ~Node() {
+       41:   17:        next_ = nullptr;
+       41:   18:        prev_ = nullptr;
+       41:   19:    }
+        -:   20:
+        -:   21:    Node(const Node& ano_node) : data_{ano_node.data_}, next_{nullptr}, prev_{nullptr} {
+        -:   22:    }
+        -:   23:};
+        -:   24:
+        -:   25:template <typename ElemType>
+        -:   26:struct LinkedList {
+        -:   27:
+        -:   28:struct Iterator {
+        -:   29:    Node<ElemType>* node_;
+        -:   30:
+function _ZN2ds10LinkedListIiE8IteratorC2EPNS_4NodeIiEE called 26 returned 100% blocks executed 100%
+       26:   31:    explicit Iterator(Node<ElemType>* node = nullptr) : node_{node} {}
+        -:   32:
+function _ZN2ds10LinkedListIiE8IteratorppEv called 10 returned 100% blocks executed 100%
+       10:   33:    Iterator& operator++() {
+       10:   34:        if (node_ != nullptr) {
+       10:   34-block 2
+branch  0 taken 10 (fallthrough)
 branch  1 taken 0
-        1:   36:            head_ = ::new Node<ElemType>(ano_list.head_->data_);
-        1:   36-block 3
-call    0 returned 1
-call    1 returned 1
-        1:   37:            Node<ElemType>* this_current = head_;
-        1:   38:            Node<ElemType>* ano_current = ano_list.head_->next_;
-        -:   39:
-        2:   40:            while (ano_current != nullptr) {
-        2:   40-block 9
-branch  0 taken 1
-branch  1 taken 1 (fallthrough)
-        1:   41:                this_current->next_ = ::new Node<ElemType>(ano_current->data_);
-        1:   41-block 6
-call    0 returned 1
-call    1 returned 1
-        1:   42:                this_current = this_current->next_;
-        1:   43:                ano_current = ano_current->next_;
-        -:   44:            }
-        -:   45:        }
-        1:   46:    }
-        -:   47:
-function _ZN2ds10LinkedListIiEaSERKS1_ called 1 returned 100% blocks executed 92%
-        1:   48:    LinkedList& operator=(const LinkedList& ano_list) {
-        1:   49:        if (this != &ano_list) {
-        1:   49-block 2
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:   50:            clear();
-        1:   50-block 3
-call    0 returned 1
-        -:   51:
-        1:   52:            if (ano_list.head_ != nullptr) {
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:   53:                head_ = ::new Node<ElemType>(ano_list.head_->data_);
-        1:   53-block 5
-call    0 returned 1
-call    1 returned 1
-        1:   54:                Node<ElemType>* this_current = head_;
-        1:   55:                Node<ElemType>* ano_current = ano_list.head_->next_;
+       10:   35:            node_ = node_->next_;
+       10:   35-block 3
+        -:   36:        }
+       10:   37:        return *this;
+       10:   37-block 4
+        -:   38:    }
+        -:   39:    Iterator operator++(int) {
+        -:   40:        Iterator temp = *this;
+        -:   41:        ++(*this);
+        -:   42:        return temp;
+        -:   43:    }
+        -:   44:
+        -:   45:    Iterator& operator--() {
+        -:   46:        if (node_ != nullptr) {
+        -:   47:            node_ = node_->prev_;
+        -:   48:        }
+        -:   49:        return *this;
+        -:   50:    }
+        -:   51:    Iterator operator--(int) {
+        -:   52:        Iterator temp = *this;
+        -:   53:        --(*this);
+        -:   54:        return temp;
+        -:   55:    }
         -:   56:
-        2:   57:                while (ano_current != nullptr) {
-        2:   57-block 11
-branch  0 taken 1
-branch  1 taken 1
-        1:   58:                    this_current->next_ = ::new Node<ElemType>(ano_current->data_);
-        1:   58-block 8
-call    0 returned 1
-call    1 returned 1
-        1:   59:                    this_current = this_current->next_;
-        1:   60:                    ano_current = ano_current->next_;
-        -:   61:                }
-        -:   62:            }
-        -:   63:            else {
-    #####:   64:                head_ = nullptr;
-    %%%%%:   64-block 12
-        -:   65:            }
+        -:   57:    Iterator& operator+=(const size_t n) {
+        -:   58:        for (size_t i = 0; i < n && node_ != nullptr; ++i) {
+        -:   59:            node_ = node_->next_;
+        -:   60:        }
+        -:   61:        return *this;
+        -:   62:    }
+        -:   63:    Iterator& operator-=(const size_t n) {
+        -:   64:        for (size_t i = 0; i < n && node_ != nullptr; ++i) {
+        -:   65:            node_ = node_->prev_;
         -:   66:        }
-        1:   67:        return *this;
-        1:   67-block 13
+        -:   67:        return *this;
         -:   68:    }
         -:   69:
-        -:   70:
-function _ZN2ds10LinkedListIiE5clearEv called 17 returned 100% blocks executed 100%
-       17:   71:    void clear() {
-       17:   72:        Node<ElemType>* current = head_;
-       40:   73:        while (current != nullptr) {
-       17:   73-block 2
-       40:   73-block 7
-branch  0 taken 23
-branch  1 taken 17 (fallthrough)
-       23:   74:            Node<ElemType>* next = current->next_;
-       23:   75:            delete current;
-       23:   75-block 3
-branch  0 taken 23 (fallthrough)
-branch  1 taken 0
-       23:   75-block 4
-call    2 returned 23
-call    3 returned 23
-       23:   76:            current = next;
-       23:   76-block 6
-        -:   77:        }
-       17:   78:        head_ = nullptr;
-       17:   79:    }
-        -:   80:
-function _ZN2ds10LinkedListIiE10push_frontERKi called 2 returned 100% blocks executed 100%
-        2:   81:    void push_front(const ElemType& val) {
-        2:   82:        Node<ElemType>* new_node = new Node(val);
-        2:   82-block 2
-call    0 returned 2
-call    1 returned 2
-        2:   83:        new_node->next_ = head_;
-        2:   84:        head_ = new_node;
-        2:   85:    }
-        -:   86:
-function _ZN2ds10LinkedListIiE9push_backERKi called 16 returned 100% blocks executed 89%
-       16:   87:    void push_back(const ElemType& val) {
-       16:   88:        Node<ElemType>* new_node = new Node(val);
-       16:   88-block 2
-call    0 returned 16
-call    1 returned 16
-       16:   89:        Node<ElemType>* current = head_;
+function _ZN2ds10LinkedListIiE8IteratordeEv called 24 returned 100% blocks executed 100%
+       24:   70:    ElemType& operator*() {
+       24:   71:        return node_->data_;
+       24:   71-block 2
+        -:   72:    }
+        -:   73:    const ElemType& operator*() const {
+        -:   74:        return node_->data_;
+        -:   75:    }
+        -:   76:
+        -:   77:    ElemType* operator->() {
+        -:   78:        return &(node_->data_);
+        -:   79:    }
+        -:   80:    const ElemType* operator->() const {
+        -:   81:        return &(node_->data_);
+        -:   82:    }
+        -:   83:
+        -:   84:    bool operator==(const Iterator& other) const {
+        -:   85:        return node_ == other.node_;
+        -:   86:    }
+        -:   87:    bool operator!=(const Iterator& other) const {
+        -:   88:        return node_ != other.node_;
+        -:   89:    }
         -:   90:
-       16:   91:        if (head_ == nullptr) {
-branch  0 taken 10 (fallthrough)
-branch  1 taken 6
-       10:   92:            head_ = new_node;
-       10:   93:            return;
-       10:   93-block 5
-        -:   94:        }
+        -:   91:};
+        -:   92:
+        -:   93:    Node<ElemType>* head_;
+        -:   94:    Node<ElemType>* tail_;
         -:   95:
-        6:   96:        while (current->next_ != nullptr) {
-        6:   96-block 6
-        6:   96-block 8
-branch  0 taken 0
-branch  1 taken 6 (fallthrough)
-    #####:   97:            current = current->next_;
-    %%%%%:   97-block 7
-        -:   98:        }
+function _ZN2ds10LinkedListIiEC2Ev called 12 returned 100% blocks executed 100%
+       12:   96:    LinkedList() : head_{nullptr}, tail_{nullptr} {}
+        -:   97:
+function _ZN2ds10LinkedListIiEC2Ei called 1 returned 100% blocks executed 100%
+        1:   98:    explicit LinkedList(ElemType val) : head_{new Node<ElemType>(val)}, tail_{head_} {}
+        1:   98-block 2
+call    0 returned 1
+call    1 returned 1
         -:   99:
-        6:  100:        current->next_ = new_node;
-        6:  100-block 9
-        -:  101:    }
-        -:  102:
-function _ZN2ds10LinkedListIiE6insertERKiS3_ called 3 returned 100% blocks executed 78%
-        3:  103:    void insert(const int& pos, const ElemType& val) {
-        3:  104:        if (pos < 0)
-        3:  104-block 2
-branch  0 taken 0 (fallthrough)
-branch  1 taken 3
-    #####:  105:            return;
-    %%%%%:  105-block 3
-        -:  106:
-        3:  107:        Node<ElemType>* new_node = new Node(val);
-        3:  107-block 4
-call    0 returned 3
-call    1 returned 3
+function _ZN2ds10LinkedListIiED2Ev called 14 returned 100% blocks executed 100%
+       14:  100:    ~LinkedList() { clear(); }
+       14:  100-block 2
+call    0 returned 14
+        -:  101:
+function _ZN2ds10LinkedListIiEC2ERKS1_ called 1 returned 100% blocks executed 100%
+        1:  102:    LinkedList(const LinkedList& ano_list) : head_{nullptr}, tail_{nullptr} {
+        1:  103:        if (ano_list.head_ != nullptr) {
+        1:  103-block 2
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  104:            head_ = new Node<ElemType>(ano_list.head_->data_);
+        1:  104-block 3
+call    0 returned 1
+call    1 returned 1
+        1:  105:            tail_ = head_;
+        1:  106:            Node<ElemType>* this_current = head_;
+        1:  107:            Node<ElemType>* ano_current = ano_list.head_->next_;
         -:  108:
-        3:  109:        if (pos == 0) {
-branch  0 taken 1 (fallthrough)
-branch  1 taken 2
-        1:  110:            new_node->next_ = head_;
-        1:  111:            head_ = new_node;
-        1:  112:            return;
-        1:  112-block 7
-        -:  113:        }
-        -:  114:
-        2:  115:        Node<ElemType>* current = head_;
-        2:  116:        Node<ElemType>* prev = nullptr;
-        2:  117:        int index = 0;
-        -:  118:
-        5:  119:        while (current != nullptr && index < pos) {
-        2:  119-block 8
-        5:  119-block 10
-branch  0 taken 4 (fallthrough)
-branch  1 taken 1
-        4:  119-block 11
-branch  2 taken 3
-branch  3 taken 1 (fallthrough)
-        3:  120:            prev = current;
-        3:  121:            current = current->next_;
-        3:  122:            index++;
-        3:  122-block 9
-        -:  123:        }
-        -:  124:
-        2:  125:        if (prev != nullptr) {
-        2:  125-block 12
-branch  0 taken 2 (fallthrough)
-branch  1 taken 0
-        2:  126:            prev->next_ = new_node;
-        2:  127:            new_node->next_ = current;
-        2:  127-block 13
-        -:  128:        }
-        -:  129:
-        2:  130:        if (current == nullptr && index != pos) {
-        2:  130-block 14
-branch  0 taken 1 (fallthrough)
-branch  1 taken 1
-        1:  130-block 15
-branch  2 taken 0 (fallthrough)
-branch  3 taken 1
-    #####:  131:            delete new_node;
-    %%%%%:  131-block 16
-branch  0 never executed (fallthrough)
-branch  1 never executed
-    %%%%%:  131-block 17
-call    2 never executed
-call    3 never executed
-        -:  132:        }
-        -:  133:    }
-        -:  134:
-function _ZN2ds10LinkedListIiE9pop_frontEv called 2 returned 100% blocks executed 83%
-        2:  135:    void pop_front() {
-        2:  136:        if (head_ == nullptr)
-        2:  136-block 2
-branch  0 taken 0 (fallthrough)
-branch  1 taken 2
-    #####:  137:            return;
-    %%%%%:  137-block 3
-        -:  138:
-        2:  139:        Node<ElemType>* old_head = head_;
-        2:  140:        head_ = head_->next_;
-        -:  141:
-        2:  142:        delete old_head;
-        2:  142-block 4
-branch  0 taken 2 (fallthrough)
-branch  1 taken 0
-        2:  142-block 5
-call    2 returned 2
-call    3 returned 2
-        -:  143:    }
-        -:  144:
-function _ZN2ds10LinkedListIiE8pop_backEv called 1 returned 100% blocks executed 67%
-        1:  145:    void pop_back() {
-        1:  146:        if (head_ == nullptr)
-        1:  146-block 2
-branch  0 taken 0 (fallthrough)
-branch  1 taken 1
-    #####:  147:            return;
-    %%%%%:  147-block 3
-        1:  148:        if (head_->next_ == nullptr) {
-        1:  148-block 4
-branch  0 taken 0 (fallthrough)
-branch  1 taken 1
-    #####:  149:            delete head_;
-    %%%%%:  149-block 5
-branch  0 never executed (fallthrough)
-branch  1 never executed
-    %%%%%:  149-block 6
-call    2 never executed
-call    3 never executed
-    #####:  150:            head_ = nullptr;
-    #####:  151:            return;
-    %%%%%:  151-block 8
-        -:  152:        }
-        -:  153:
-        1:  154:        Node<ElemType>* current = head_;
-        1:  155:        Node<ElemType>* prev = nullptr;
-        -:  156:
-        2:  157:        while (current->next_ != nullptr) {
-        1:  157-block 9
-        2:  157-block 11
+        2:  109:            while (ano_current != nullptr) {
+        2:  109-block 9
 branch  0 taken 1
 branch  1 taken 1 (fallthrough)
-        1:  158:            prev = current;
-        1:  159:            current = current->next_;
-        1:  159-block 10
-        -:  160:        }
-        -:  161:
-        1:  162:        delete current;
-        1:  162-block 12
+        1:  110:                this_current->next_ = new Node<ElemType>(ano_current->data_);
+        1:  110-block 6
+call    0 returned 1
+call    1 returned 1
+        1:  111:                this_current->next_->prev_ = this_current;
+        1:  112:                this_current = this_current->next_;
+        1:  113:                tail_ = this_current;
+        1:  114:                ano_current = ano_current->next_;
+        -:  115:            }
+        -:  116:        }
+        1:  117:    }
+        -:  118:
+function _ZN2ds10LinkedListIiEaSERKS1_ called 1 returned 100% blocks executed 92%
+        1:  119:    LinkedList& operator=(const LinkedList& ano_list) {
+        1:  120:        if (this != &ano_list) {
+        1:  120-block 2
 branch  0 taken 1 (fallthrough)
 branch  1 taken 0
-        1:  162-block 13
-call    2 returned 1
-call    3 returned 1
-        1:  163:        prev->next_ = nullptr;
-        1:  163-block 15
-        -:  164:    }
-        -:  165:
-function _ZN2ds10LinkedListIiE5eraseERKi called 1 returned 100% blocks executed 36%
-        1:  166:    void erase(const int& pos) {
-        1:  167:        if (head_ == nullptr)
-        1:  167-block 2
+        1:  121:            clear();
+        1:  121-block 3
+call    0 returned 1
+        -:  122:
+        1:  123:            if (ano_list.head_ != nullptr) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  124:                head_ = new Node<ElemType>(ano_list.head_->data_);
+        1:  124-block 5
+call    0 returned 1
+call    1 returned 1
+        1:  125:                tail_ = head_;
+        1:  126:                Node<ElemType>* this_current = head_;
+        1:  127:                Node<ElemType>* ano_current = ano_list.head_->next_;
+        -:  128:
+        2:  129:                while (ano_current != nullptr) {
+        2:  129-block 11
+branch  0 taken 1
+branch  1 taken 1
+        1:  130:                    this_current->next_ = new Node<ElemType>(ano_current->data_);
+        1:  130-block 8
+call    0 returned 1
+call    1 returned 1
+        1:  131:                    this_current->next_->prev_ = this_current;
+        1:  132:                    this_current = this_current->next_;
+        1:  133:                    tail_ = this_current;
+        1:  134:                    ano_current = ano_current->next_;
+        -:  135:                }
+        -:  136:            }
+        -:  137:            else {
+    #####:  138:                head_ = nullptr;
+    #####:  139:                tail_ = nullptr;
+    %%%%%:  139-block 12
+        -:  140:            }
+        -:  141:        }
+        1:  142:        return *this;
+        1:  142-block 13
+        -:  143:    }
+        -:  144:
+        -:  145:
+function _ZN2ds10LinkedListIiE5clearEv called 16 returned 100% blocks executed 100%
+       16:  146:    void clear() {
+       16:  147:        Node<ElemType>* current = head_;
+       39:  148:        while (current != nullptr) {
+       16:  148-block 2
+       39:  148-block 7
+branch  0 taken 23
+branch  1 taken 16 (fallthrough)
+       23:  149:            Node<ElemType>* next = current->next_;
+       23:  150:            delete current;
+       23:  150-block 3
+branch  0 taken 23 (fallthrough)
+branch  1 taken 0
+       23:  150-block 4
+call    2 returned 23
+call    3 returned 23
+       23:  151:            current = next;
+       23:  151-block 6
+        -:  152:        }
+       16:  153:        head_ = nullptr;
+       16:  154:        tail_ = nullptr;
+       16:  155:    }
+        -:  156:
+function _ZN2ds10LinkedListIiE10push_frontERKi called 4 returned 100% blocks executed 100%
+        4:  157:    void push_front(const ElemType& val) {
+        4:  158:        Node<ElemType>* new_node = new Node(val);
+        4:  158-block 2
+call    0 returned 4
+call    1 returned 4
+        4:  159:        new_node->next_ = head_;
+        4:  160:        if (head_ != nullptr) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:  161:            head_->prev_ = new_node;
+        2:  161-block 5
+        -:  162:        }
+        4:  163:        head_ = new_node;
+        4:  164:        if (tail_ == nullptr) {
+        4:  164-block 6
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:  165:            tail_ = new_node;
+        2:  165-block 7
+        -:  166:        }
+        4:  167:    }
+        -:  168:
+function _ZN2ds10LinkedListIiE9push_backERKi called 18 returned 100% blocks executed 100%
+       18:  169:    void push_back(const ElemType& val) {
+       18:  170:        Node<ElemType>* new_node = new Node(val);
+       18:  170-block 2
+call    0 returned 18
+call    1 returned 18
+       18:  171:        if (tail_ != nullptr) {
+branch  0 taken 10 (fallthrough)
+branch  1 taken 8
+       10:  172:            tail_->next_ = new_node;
+       10:  173:            new_node->prev_ = tail_;
+       10:  173-block 5
+        -:  174:        }
+       18:  175:        tail_ = new_node;
+       18:  176:        if (head_ == nullptr) {
+       18:  176-block 6
+branch  0 taken 8 (fallthrough)
+branch  1 taken 10
+        8:  177:            head_ = new_node;
+        8:  177-block 7
+        -:  178:        }
+       18:  179:    }
+        -:  180:
+function _ZN2ds10LinkedListIiE6insertENS1_8IteratorERKi called 1 returned 100% blocks executed 64%
+        1:  181:    Iterator insert(Iterator pos, const ElemType& val) {
+        1:  182:        Node<ElemType>* new_node = new Node(val);
+        1:  182-block 2
+call    0 returned 1
+call    1 returned 1
+        1:  183:        Node<ElemType>* current = pos.node_;
+        -:  184:
+        1:  185:        if (current == nullptr) {
 branch  0 taken 0 (fallthrough)
 branch  1 taken 1
-    #####:  168:            return;
-    %%%%%:  168-block 3
-        1:  169:        if (pos == 0) {
-        1:  169-block 4
+    #####:  186:            push_back(val);
+    %%%%%:  186-block 5
+call    0 never executed
+    #####:  187:            return Iterator(tail_);
+call    0 never executed
+    %%%%%:  187-block 8
+        -:  188:        }
+        -:  189:
+        1:  190:        new_node->next_ = current;
+        1:  191:        new_node->prev_ = current->prev_;
+        -:  192:
+        1:  193:        if (current->prev_ != nullptr) {
+        1:  193-block 9
 branch  0 taken 1 (fallthrough)
 branch  1 taken 0
-        1:  170:            pop_front();
-        1:  170-block 5
+        1:  194:            current->prev_->next_ = new_node;
+        1:  194-block 10
+        -:  195:        }
+        -:  196:        else {
+    #####:  197:            head_ = new_node;
+    %%%%%:  197-block 11
+        -:  198:        }
+        -:  199:
+        1:  200:        current->prev_ = new_node;
+        -:  201:
+        1:  202:        return Iterator(new_node);
+        1:  202-block 12
 call    0 returned 1
-        1:  171:            return;
-        -:  172:        }
-        -:  173:
-    #####:  174:        Node<ElemType>* current = head_;
-    #####:  175:        Node<ElemType>* prev = nullptr;
-    #####:  176:        int index = 0;
-        -:  177:
-    #####:  178:        while (current != nullptr && index < pos) {
-    %%%%%:  178-block 7
-    %%%%%:  178-block 9
-branch  0 never executed (fallthrough)
-branch  1 never executed
-    %%%%%:  178-block 10
-branch  2 never executed
-branch  3 never executed (fallthrough)
-    #####:  179:            prev = current;
-    #####:  180:            current = current->next_;
-    #####:  181:            ++index;
-    %%%%%:  181-block 8
-        -:  182:        }
-        -:  183:
-    #####:  184:        if (current != nullptr) {
-    %%%%%:  184-block 11
-branch  0 never executed (fallthrough)
-branch  1 never executed
-    #####:  185:            prev->next_ = current->next_;
-    #####:  186:            delete current;
-    %%%%%:  186-block 12
-branch  0 never executed (fallthrough)
-branch  1 never executed
-    %%%%%:  186-block 13
-call    2 never executed
-call    3 never executed
-        -:  187:        }
-        -:  188:    }
-        -:  189:
-function _ZNK2ds10LinkedListIiE4findERKi called 20 returned 100% blocks executed 100%
-       20:  190:    [[nodiscard]] bool find(const ElemType& val) const {
-       20:  191:        Node<ElemType>* current = head_;
-       32:  192:        while (current != nullptr) {
-       20:  192-block 2
-       32:  192-block 6
-branch  0 taken 28
-branch  1 taken 4 (fallthrough)
-       28:  193:            if (current->data_ == val)
-       28:  193-block 3
-branch  0 taken 16 (fallthrough)
-branch  1 taken 12
-       16:  194:                return true;
-       16:  194-block 4
-       12:  195:            current = current->next_;
-       12:  195-block 5
-        -:  196:        }
-        -:  197:
-        4:  198:        return false;
-        4:  198-block 7
-        -:  199:    }
-        -:  200:
-function _ZNK2ds10LinkedListIiE5emptyEv called 7 returned 100% blocks executed 100%
-        7:  201:    [[nodiscard]] bool empty() const { return head_ == nullptr; }
-        7:  201-block 2
-        -:  202:
-        -:  203:    void print() const {
-        -:  204:        Node<ElemType>* current = head_;
-        -:  205:        while (current != nullptr) {
-        -:  206:            std::cout << current->data_ << " ";
-        -:  207:            current = current->next_;
-        -:  208:        }
-        -:  209:        std::cout << std::endl;
-        -:  210:    }
-        -:  211:};
-        -:  212:}
+        1:  202-block 14
+        -:  203:    }
+        -:  204:
+function _ZN2ds10LinkedListIiE9pop_frontEv called 2 returned 100% blocks executed 89%
+        2:  205:    void pop_front() {
+        2:  206:        if (head_ == nullptr)
+        2:  206-block 2
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:  207:            return;
+    %%%%%:  207-block 3
+        -:  208:
+        2:  209:        Node<ElemType>* old_head = head_;
+        2:  210:        head_ = head_->next_;
+        -:  211:
+        2:  212:        if (head_ != nullptr) {
+        2:  212-block 4
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  213:            head_->prev_ = nullptr;
+        1:  213-block 5
+        -:  214:        } else {
+        1:  215:            tail_ = nullptr;
+        1:  215-block 6
+        -:  216:        }
+        -:  217:
+        2:  218:        delete old_head;
+        2:  218-block 7
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  218-block 8
+call    2 returned 2
+call    3 returned 2
+        -:  219:    }
+        -:  220:
+function _ZN2ds10LinkedListIiE8pop_backEv called 2 returned 100% blocks executed 91%
+        2:  221:    void pop_back() {
+        2:  222:        if (head_ == nullptr)
+        2:  222-block 2
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:  223:            return;
+    %%%%%:  223-block 3
+        2:  224:        if (head_->next_ == nullptr) {
+        2:  224-block 4
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  225:            delete head_;
+        1:  225-block 5
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  225-block 6
+call    2 returned 1
+call    3 returned 1
+        1:  226:            head_ = nullptr;
+        1:  227:            tail_ = nullptr;
+        1:  228:            return;
+        1:  228-block 8
+        -:  229:        }
+        -:  230:
+        1:  231:        Node<ElemType>* current = tail_;
+        1:  232:        tail_ = tail_->prev_;
+        1:  233:        tail_->next_ = nullptr;
+        -:  234:
+        1:  235:        delete current;
+        1:  235-block 9
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  235-block 10
+call    2 returned 1
+call    3 returned 1
+        -:  236:    }
+        -:  237:
+function _ZN2ds10LinkedListIiE5eraseENS1_8IteratorE called 1 returned 100% blocks executed 80%
+        1:  238:    Iterator erase(Iterator pos) {
+        1:  239:        Node<ElemType>* current = pos.node_;
+        1:  240:        if (current == nullptr) {
+        1:  240-block 2
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  241:            return end();
+    %%%%%:  241-block 3
+call    0 never executed
+        -:  242:        }
+        -:  243:
+        1:  244:        Node<ElemType>* next = current->next_;
+        1:  245:        Node<ElemType>* prev = current->prev_;
+        -:  246:
+        1:  247:        if (prev != nullptr) {
+        1:  247-block 4
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  248:            prev->next_ = next;
+        1:  248-block 5
+        -:  249:        }
+        -:  250:        else {
+    #####:  251:            head_ = next;
+    %%%%%:  251-block 6
+        -:  252:        }
+        -:  253:
+        1:  254:        if (next != nullptr) {
+        1:  254-block 7
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  255:            next->prev_ = prev;
+        1:  255-block 8
+        -:  256:        }
+        -:  257:        else {
+    #####:  258:            tail_ = prev;
+    %%%%%:  258-block 9
+        -:  259:        }
+        -:  260:
+        1:  261:        delete current;
+        1:  261-block 10
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  261-block 11
+call    2 returned 1
+call    3 returned 1
+        -:  262:
+        1:  263:        return Iterator(next);
+        1:  263-block 13
+call    0 returned 1
+        1:  263-block 15
+        -:  264:    }
+        -:  265:
+function _ZNK2ds10LinkedListIiE4findERKi called 2 returned 100% blocks executed 100%
+        2:  266:    [[nodiscard]] bool find(const ElemType& val) const {
+        2:  267:        Node<ElemType>* current = head_;
+        6:  268:        while (current != nullptr) {
+        2:  268-block 2
+        6:  268-block 6
+branch  0 taken 5
+branch  1 taken 1 (fallthrough)
+        5:  269:            if (current->data_ == val)
+        5:  269-block 3
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:  270:                return true;
+        1:  270-block 4
+        4:  271:            current = current->next_;
+        4:  271-block 5
+        -:  272:        }
+        -:  273:
+        1:  274:        return false;
+        1:  274-block 7
+        -:  275:    }
+        -:  276:
+        -:  277:    void print() const {
+        -:  278:        Node<ElemType>* current = head_;
+        -:  279:        while (current != nullptr) {
+        -:  280:            std::cout << current->data_ << " ";
+        -:  281:            current = current->next_;
+        -:  282:        }
+        -:  283:        std::cout << std::endl;
+        -:  284:    }
+        -:  285:
+function _ZNK2ds10LinkedListIiE5emptyEv called 5 returned 100% blocks executed 100%
+        5:  286:    [[nodiscard]] bool empty()  const { return head_ == nullptr; }
+        5:  286-block 2
+function _ZN2ds10LinkedListIiE5beginEv called 24 returned 100% blocks executed 100%
+       24:  287:    Iterator           begin()        { return Iterator(head_); }
+       24:  287-block 2
+call    0 returned 24
+       24:  287-block 4
+function _ZN2ds10LinkedListIiE3endEv called 0 returned 0% blocks executed 0%
+    #####:  288:    Iterator           end()          { return Iterator(nullptr); }
+    %%%%%:  288-block 2
+call    0 never executed
+    %%%%%:  288-block 4
+        -:  289:    Iterator           begin()  const { return Iterator(head_); }
+        -:  290:    Iterator           end()    const { return Iterator(nullptr); }
+        -:  291:};
+        -:  292:
+        -:  293:}
