@@ -1,4 +1,0 @@
-/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/ds.dir
-/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/test.dir
-/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/edit_cache.dir
-/home/drowlia/code_save/ds/cmake-build-debug-/CMakeFiles/rebuild_cache.dir
